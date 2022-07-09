@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+
+/*Login*/
+.InnerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: #1c2257bb;
+}
+.OuterContainer {
+  background-image: url("../../assets/bg.jpg");
+  background-size: cover;
+  background-position: -120px;
+}
+
+.Logo > img {
+  margin-top: 120%;
+  margin-bottom: 100%;
+  height: 150px;
+  width: 150px;
+}
+
+.Input {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.Input > input {
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+  width: 70%;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-align: center;
+}
+
+.Input > input:focus {
+  outline: none;
+}
+
+.Button {
+  margin-top: 10px;
+  height: 50px;
+  color: white;
+}
+
+.Button > button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: white;
+  font-family: "Alata", sans-serif;
+  transition: background-color 0.5s;
+  border-radius: 25px;
+}
+
+.Button > button:active {
+  background-color: rgb(0, 157, 255);
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.Create-Account {
+  margin-top: 25px;
+  color: white;
+}
+
+
+/*Register*/
+
+.InnerContainer1 {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: #1c2257bb;
+}
+
+.CreateAccount1 {
+  margin-top: 120px;
+  color: black;
+  text-align: left;
+  font-size: 30px;
+  margin-left: 55px;
+}
+.Input-item{
+ margin-top: 30px;
+ justify-content: center;
+ position: relative;
+}
+
+.InputContainer{
+  display: flex;
+  margin-right: 50px;
+  margin-left: 40px;
+}
+
+.Input1{
+  width: 80%;
+}
+
+.Input1 > input {
+  border-radius: 20px;
+  padding: 10px;
+  width: 80%;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+  text-align: center;
+}
+
+.Input1 > input:focus {
+  outline: none;
+}
+
+.Input2{
+  width: 30%;  
+}
+
+.Input2 > input {
+  border-radius: 20px;
+  padding: 10px;
+  width: 50%;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+  text-align: center;
+}
+
+.Input2 > input:focus {
+  outline: none;
+}
+
+.InputContainer2{
+  margin-right: 50px;
+  margin-left: 40px;
+  display: flex;
+}
+
+.Input3{
+  width: 45%;
+}
+
+.Input3 > input {
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 30px;
+  width: 55%;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+  text-align: center;
+}
+
+.Input3 > input:focus {
+  outline: none;
+}
+
+.Input4{
+  width: 45%;
+}
+
+.Input4 > input {
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 30px;
+  width: 55%;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+  text-align: center;
+}
+
+.Input4 > input:focus {
+  outline: none;
+}
+
+.Input5{
+  width: 45%;
+}
+
+.Input5 > input {
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 30px;
+  width: 55%;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+  text-align: center;
+}
+
+.Input5 > input:focus {
+  outline: none;
+}
+
+.InputContainer3{
+  margin-right: 50px;
+  margin-left: 50px;
+ }
+
+.Input6{
+  width: 90%;
+  justify-content: center;
+}
+
+.Input6 > input {
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 30px;
+  width: 100%;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+  text-align: center;
+}
+
+.Input6 > input:focus {
+  outline: none;
+}
+
+.Button1 {
+  margin-top: 20px;
+  margin-right: 60px;
+  height: 50px;
+  color: white;
+  position: relative;
+  text-align: right;
+}
+
+.Button1 > button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: black;
+  font-family: "Alata", sans-serif;
+  transition: background-color 0.5s;
+  border-radius: 25px;
+}
+
+.Button1 > button:active {
+  background-color: rgb(0, 157, 255);
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.Next{
+  color: black;
+}
+
+/*Verification*/
+
+.InnerContainer2 {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: #1c2257bb;
+}
+
+.Code{
+  display: flex;
+  margin-top: 150px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.line {
+  margin-top: 200px;
+  word-spacing: 30px;
+}
+
+.ConfirmButton {
+  margin-top: 540px;
+  margin-left: 116px;
+  width: 187px;
+  height: 29px;
+  color: white;
+  position: absolute;
+  text-align: center;
+}
+
+.ConfirmButton > button {
+  border-radius: 25px;
+  width: 148px;
+  height: 29px;
+  background-color: #77A3F3;
+  border: none;
+  padding: 8px;
+  color: black;
+  font-family: "Alata", sans-serif;
+  transition: background-color 0.5s;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+}
+
+.ConfirmButton > button:active {
+  background-color: rgb(0, 157, 255);
+  padding: 8px;
+}
+
+.RequestButton {
+  position: absolute;
+  width: 220px;
+  height: 22px;
+  top: 654px;
+ margin-left: 100px;
+}
+
+.RequestButton > button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: black;
+  transition: background-color 0.5s;
+  font-family: 'Alata';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  
+}
+
+.RequestButton > button:active {
+  background-color: rgb(0, 157, 255);
+  padding: 10px;
+  border-radius: 25px;
+}
+
+/*Verified*/
+
+.VerifiedEmail{
+  justify-content: center;
+  width: 255px;
+  height: 44px;
+  left: 85px;
+  top: 413px;
+  font-family: 'Alata';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+ 
+}
+
+.ProceedButton {
+  color: white;
+  position:fixed;
+  text-align: center;
+  width: 194px;
+  height: 38px;
+  left: 119px;
+  top: 626px;
+}
+
+.ProceedButton > button {
+  border-radius: 25px;
+  width: 148px;
+  height: 29px;
+  background-color: #77A3F3;
+  border: none;
+  color: black;
+  font-family: "Alata", sans-serif;
+  transition: background-color 0.5s;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+}
+
+.ProceedButton > button:active {
+  background-color: rgb(0, 157, 255);
+  padding: 8px;
+}
+
+/*Home*/
+
