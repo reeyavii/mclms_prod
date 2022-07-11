@@ -1,10 +1,13 @@
 import React from "react";
 import "./Auth.styles.css";
+import {useNavigate} from "react-router-dom";
 
 function Verification() {
-
+     const navigate = useNavigate();
 
     const handleConfirm = () => {
+      //go to verified
+      navigate("/verified")
     console.log("login clicked");
 
   };

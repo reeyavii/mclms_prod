@@ -8,13 +8,13 @@ import {BrowserRouter as Router} from "react-router-dom";
 //import Home from "./components/auth/Home"
 //import Verified from "./components/auth/Verified";
 import Public from "./Router/Public";
-
+//import Home from "./components/auth/Home";
 
 function App() {
   return (
     <Router>
      <div className= "App">
-      <Public />
+      <Public/>
       </div>
     </Router>
   );

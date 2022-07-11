@@ -5,13 +5,15 @@ import Register from '../components/auth/Register'
 import Verification from '../components/auth/Verification'
 import Verified from '../components/auth/Verified'
 
+
 function Public() {
   return (
     <Routes>
         <Route path="/" element={<Login/>} /> 
+        <Route path="/Login" element={<Login/>} /> 
         <Route path="/register" element={<Register/>} /> 
         <Route path="/verification" element={<Verification/>} /> 
-        
+        <Route path="/verified" element={<Verified/>} /> 
     </Routes>
   )
 }

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./Auth.styles.css";
-
+import {useNavigate} from "react-router-dom";
+//import arrow from "../../assets/arrowback.png";
 
 function Register() {
-    
+    const navigate = useNavigate();
+
     const [fullName, setFullName] = useState("");
     const [suffix, setSuffix] =  useState("");
     const [age, setAge] =  useState("");
@@ -45,14 +47,24 @@ function Register() {
     const retypePassChange =  (e) => {
          setRetypePass (e.target.value); };
     
+    const handleGoBack = (e) => {
+          //go to verification
+          navigate("/login");
+          console.log("create clicked");
+          };
     const handleNext = () => {
           //go to verification
-    console.log("create clicked");
+          navigate("/verification");
+          console.log("create clicked");
     };
-        
+      //mg src={arrow} alt="arrow"  
     return (
     
         <div className="InnerContainer1">
+          <div className="Button1">
+            <button onClick={handleGoBack}>Go Back</button>
+          </div>        
+         
           <div className="CreateAccount1">
             Create Account
           </div>
@@ -138,10 +150,12 @@ function Register() {
           </div>
           </div>
           </div> 
-          <div className="Button1">
-      <button onClick={handleNext}>Next</button>
+               
+          <div className="Button2">
+             <button onClick={handleNext}>Next</button>
+          </div>
+
     </div>
-         </div>
        
    
 

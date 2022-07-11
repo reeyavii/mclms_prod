@@ -19,13 +19,15 @@ function Login() {
 
   const handleLogin = () => {
     //login code
-      navigate("/register");
+      navigate("");
+      //home page
     console.log("login clicked");
   };
 
   const handleCreateAccount = () => {
     //go to registration
-    console.log("create clicked");
+    navigate("/register")
+    console.log("login clicked");
   };
   return (
     <div className="OuterContainer">

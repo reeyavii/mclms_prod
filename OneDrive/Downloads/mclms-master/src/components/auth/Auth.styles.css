@@ -83,8 +83,32 @@
   background-color: #1c2257bb;
 }
 
+.Button1 {
+  margin-top: 20px;
+  height: 50px;
+  color: white;
+  position: fixed;
+  text-align: left;
+}
+
+.Button1 > button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: black;
+  font-family: "Alata", sans-serif;
+  transition: background-color 0.5s;
+  border-radius: 25px;
+}
+
+.Button1 > button:active {
+  background-color: rgb(0, 157, 255);
+  padding: 10px;
+  border-radius: 25px;
+}
+
 .CreateAccount1 {
-  margin-top: 120px;
+  margin-top: 100px;
   color: black;
   text-align: left;
   font-size: 30px;
@@ -94,6 +118,7 @@
  margin-top: 30px;
  justify-content: center;
  position: relative;
+ box-sizing: border-box;
 }
 
 .InputContainer{
@@ -220,28 +245,28 @@
   outline: none;
 }
 
-.Button1 {
-  margin-top: 20px;
-  margin-right: 60px;
+.Button2 {
+  margin-top: 5px;
+  margin-right: 50px;
   height: 50px;
   color: white;
   position: relative;
   text-align: right;
 }
 
-.Button1 > button {
+.Button2 > button {
   background-color: transparent;
   border: none;
-  padding: 10px;
+  padding: 8px;
   color: black;
   font-family: "Alata", sans-serif;
   transition: background-color 0.5s;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 
-.Button1 > button:active {
+.Button2 > button:active {
   background-color: rgb(0, 157, 255);
-  padding: 10px;
+  padding: 8px;
   border-radius: 25px;
 }
 
@@ -275,7 +300,7 @@
 
 .ConfirmButton {
   margin-top: 540px;
-  margin-left: 116px;
+  margin-left: 85px;
   width: 187px;
   height: 29px;
   color: white;
@@ -307,7 +332,7 @@
   width: 220px;
   height: 22px;
   top: 654px;
- margin-left: 100px;
+  margin-left: 70px;
 }
 
 .RequestButton > button {
@@ -336,8 +361,8 @@
   justify-content: center;
   width: 255px;
   height: 44px;
-  left: 85px;
-  top: 413px;
+  margin-left: 50px;
+  margin-top: 300px;
   font-family: 'Alata';
   font-style: normal;
   font-weight: 400;
@@ -353,8 +378,8 @@
   text-align: center;
   width: 194px;
   height: 38px;
-  left: 119px;
-  top: 626px;
+  margin-left: 80px;
+  margin-top: 600px;
 }
 
 .ProceedButton > button {
@@ -376,4 +401,3 @@
 }
 
 /*Home*/
-
