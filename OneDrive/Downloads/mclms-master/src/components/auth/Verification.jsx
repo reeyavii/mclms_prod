@@ -21,14 +21,16 @@ function Verification() {
     return (
         <div className="InnerContainer2">
         <div className="Code">
-        <p>A 4-digit code is sent to your phone number +639******741. 
-        Please enter the code below to complete creating your account</p>
+        <p>A 4-digit code is sent to <br></br> 
+        your phone number +639******741. <br></br> 
+        Please enter the code below to complete <br></br> 
+        creating your account.</p>
         </div>
         <div className="line"> 
-          <p>__      __       __       __</p>
+          <p>___      ___       ___       ___</p>
         </div>  
         <div className="ConfirmButton">
-          <button onClick={handleConfirm}>CONFIRM</button>
+          <button onClick={handleConfirm}>Confirm</button>
         </div>
         <div className="RequestButton">
           <button onClick={handleRequest}>Request for a code again.</button>

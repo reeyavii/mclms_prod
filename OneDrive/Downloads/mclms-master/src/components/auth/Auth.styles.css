@@ -80,15 +80,15 @@
   width: 100vw;
   height: 100vh;
   max-height: 100vh;
-  background-color: #1c2257bb;
+  background-color:#c9def8;
 }
 
 .Button1 {
   margin-top: 20px;
   height: 50px;
   color: white;
-  position: fixed;
   text-align: left;
+  margin-left: 40px;
 }
 
 .Button1 > button {
@@ -108,36 +108,42 @@
 }
 
 .CreateAccount1 {
-  margin-top: 100px;
+  margin-top: 65px;
   color: black;
   text-align: left;
-  font-size: 30px;
+  font-size: 35px;
   margin-left: 55px;
+  font-family: 'Alata', sans-serif;
 }
+
 .Input-item{
- margin-top: 30px;
+ margin-top: 82px;
  justify-content: center;
  position: relative;
  box-sizing: border-box;
+ align-items: center;
 }
 
 .InputContainer{
   display: flex;
-  margin-right: 50px;
-  margin-left: 40px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .Input1{
-  width: 80%;
+  width: 60%;
 }
 
 .Input1 > input {
-  border-radius: 20px;
+  border-radius: 25px;
   padding: 10px;
-  width: 80%;
+  width: 85%;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
   text-align: center;
+  font-family: 'Alata', sans-serif;
+  font-size: 16px;
 }
 
 .Input1 > input:focus {
@@ -149,12 +155,14 @@
 }
 
 .Input2 > input {
-  border-radius: 20px;
+  border-radius: 25px;
   padding: 10px;
-  width: 50%;
+  width: 70%;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
   text-align: center;
+  font-family: 'Alata', sans-serif;
+  font-size: 16px;
 }
 
 .Input2 > input:focus {
@@ -162,23 +170,27 @@
 }
 
 .InputContainer2{
-  margin-right: 50px;
-  margin-left: 40px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .Input3{
-  width: 45%;
+  width: 30%;
 }
 
 .Input3 > input {
   border-radius: 20px;
   padding: 10px;
-  margin-top: 30px;
-  width: 55%;
+  margin-top: 45px;
+  width: 70%;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
   text-align: center;
+  justify-content: center;
+  font-family: 'Alata', sans-serif;
+  font-size: 16px;
 }
 
 .Input3 > input:focus {
@@ -186,17 +198,19 @@
 }
 
 .Input4{
-  width: 45%;
+  width: 30%;
 }
 
 .Input4 > input {
   border-radius: 20px;
   padding: 10px;
-  margin-top: 30px;
-  width: 55%;
+  margin-top: 45px;
+  width: 70%;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
   text-align: center;
+  font-family: 'Alata', sans-serif;
+  font-size: 16px;
 }
 
 .Input4 > input:focus {
@@ -204,17 +218,19 @@
 }
 
 .Input5{
-  width: 45%;
+  width: 30%;
 }
 
 .Input5 > input {
   border-radius: 20px;
   padding: 10px;
-  margin-top: 30px;
-  width: 55%;
+  margin-top: 45px;
+  width: 70%;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
   text-align: center;
+  font-family: 'Alata', sans-serif;
+  font-size: 16px;
 }
 
 .Input5 > input:focus {
@@ -222,23 +238,27 @@
 }
 
 .InputContainer3{
-  margin-right: 50px;
-  margin-left: 50px;
- }
-
-.Input6{
-  width: 90%;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  display: flex;
+  
+}
+  
+.Input6{
+  width:90%;
 }
 
 .Input6 > input {
   border-radius: 20px;
   padding: 10px;
-  margin-top: 30px;
-  width: 100%;
+  margin-top: 35px;
+  width: 90%;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
   text-align: center;
+  font-family: 'Alata', sans-serif;
+  font-size: 16px;
 }
 
 .Input6 > input:focus {
@@ -246,36 +266,36 @@
 }
 
 .Button2 {
-  margin-top: 5px;
-  margin-right: 50px;
+  margin-top: 20px;
   height: 50px;
   color: white;
-  position: relative;
   text-align: right;
+  margin-right: 50px;
 }
 
 .Button2 > button {
   background-color: transparent;
   border: none;
-  padding: 8px;
+  padding: 10px;
   color: black;
+  font-size: 16px;
   font-family: "Alata", sans-serif;
   transition: background-color 0.5s;
-  border-radius: 20px;
+  border-radius: 25px;
+  justify-content: right;
+  
 }
 
 .Button2 > button:active {
   background-color: rgb(0, 157, 255);
-  padding: 8px;
-  border-radius: 25px;
-}
+  padding: 10px;
+ }
 
 .Next{
   color: black;
 }
 
 /*Verification*/
-
 .InnerContainer2 {
   display: flex;
   flex-direction: column;
@@ -283,43 +303,40 @@
   width: 100vw;
   height: 100vh;
   max-height: 100vh;
-  background-color: #1c2257bb;
+  background-color: #c9def8;
+  align-items: center;
 }
 
 .Code{
-  display: flex;
-  margin-top: 150px;
-  margin-right: 50px;
-  margin-left: 50px;
+ margin-top: 180px;
+ justify-content: center;
 }
 
 .line {
-  margin-top: 200px;
+  margin-top: 160px;
   word-spacing: 30px;
 }
 
 .ConfirmButton {
-  margin-top: 540px;
-  margin-left: 85px;
+  color: white;
+  position:fixed;
+  text-align: center;
   width: 187px;
   height: 29px;
-  color: white;
-  position: absolute;
-  text-align: center;
-}
+  margin-top: 540px;
+ }
 
 .ConfirmButton > button {
   border-radius: 25px;
   width: 148px;
-  height: 29px;
+  height: 35px;
   background-color: #77A3F3;
   border: none;
-  padding: 8px;
   color: black;
   font-family: "Alata", sans-serif;
+  font-size: 16px;
   transition: background-color 0.5s;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  
 }
 
 .ConfirmButton > button:active {
@@ -331,8 +348,7 @@
   position: absolute;
   width: 220px;
   height: 22px;
-  top: 654px;
-  margin-left: 70px;
+  top: 647px;
 }
 
 .RequestButton > button {
@@ -346,7 +362,6 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  
 }
 
 .RequestButton > button:active {
@@ -359,45 +374,43 @@
 
 .VerifiedEmail{
   justify-content: center;
+  text-align: center;
+  align-items: center;
   width: 255px;
   height: 44px;
-  margin-left: 50px;
-  margin-top: 300px;
+  margin-top: 395px;
   font-family: 'Alata';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  text-align: center;
- 
+  
 }
 
 .ProceedButton {
   color: white;
   position:fixed;
   text-align: center;
-  width: 194px;
-  height: 38px;
-  margin-left: 80px;
-  margin-top: 600px;
+  margin-top: 615px;
+  padding: 10px;
 }
 
 .ProceedButton > button {
   border-radius: 25px;
-  width: 148px;
-  height: 29px;
+  width: 200px;
+  height: 40px;
   background-color: #77A3F3;
   border: none;
   color: black;
+  font-size: 16px;
   font-family: "Alata", sans-serif;
   transition: background-color 0.5s;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  
 }
 
 .ProceedButton > button:active {
   background-color: rgb(0, 157, 255);
-  padding: 8px;
+  padding: 10px;
 }
 
 /*Home*/
