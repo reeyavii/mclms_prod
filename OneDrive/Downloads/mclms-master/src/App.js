@@ -2,6 +2,7 @@ import "./App.css";
 import React from "react";
 import {BrowserRouter as Router} from "react-router-dom";
 
+
 //import Login from "./components/auth/Login";
 //import Register from "./components/auth/Register";
 //import Verification from "./components/auth/Verification"
@@ -10,11 +11,12 @@ import {BrowserRouter as Router} from "react-router-dom";
 import Public from "./Router/Public";
 //import Home from "./components/auth/Home";
 
+
 function App() {
   return (
     <Router>
      <div className= "App">
-      <Public/>
+      <Public />
       </div>
     </Router>
   );

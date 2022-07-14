@@ -306,9 +306,32 @@
   background-color: #c9def8;
   align-items: center;
 }
+.ButtonB {
+  margin-top: 20px;
+  height: 50px;
+  color: white;
+  text-align: left;
+ 
+}
+
+.ButtonB > button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: black;
+  font-family: "Alata", sans-serif;
+  transition: background-color 0.5s;
+  border-radius: 25px;
+}
+
+.ButtonB > button:active {
+  background-color: rgb(0, 157, 255);
+  padding: 10px;
+  border-radius: 25px;
+}
 
 .Code{
- margin-top: 180px;
+ margin-top: 120px;
  justify-content: center;
 }
 
@@ -414,3 +437,41 @@
 }
 
 /*Home*/
+ .Nav{
+  background-color: #c9def8;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1000px) /2);
+  z-index: 10;
+ }
+ .NavLink{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+ }
+ .NavLink :active{
+  color: #15cdfc;
+ }
+
+ .Bars{
+  display: none;
+  color: #fff;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform:translate(-100%, 75%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+}
+ 
+

@@ -1,12 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Auth.styles.css";
 import logo from "../../assets/logo-alimodian.png";
 import {useNavigate} from "react-router-dom";
+import {useSelector, useDispatch} from "react-redux";
+import { getStalls } from "../../app/reducer/stallSlice";
+import { authLogin } from "../../app/reducer/authSlice";
 
 
 function Login() {
+  const {stalls} = useSelector(state=>state.stall);
+  const {token} = useSelector(state=>state.auth);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  useEffect(()=> {
+    dispatch(getStalls());
+  }, [])
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -19,9 +28,20 @@ function Login() {
 
   const handleLogin = () => {
     //login code
-      navigate("");
+    const data={
+      username: email,
+      password: password,
+    }
+    dispatch(authLogin(data));
       //home page
-    console.log("login clicked");
+    console.log(stalls);
+
+    if (token !== null ){
+      navigate("/verified");
+    }
+    console.log(password);
+    
+    
   };
 
   const handleCreateAccount = () => {
@@ -52,7 +72,11 @@ function Login() {
           />
         </div>
         <div className="Button">
-          <button onClick={handleLogin}>LOG IN</button>
+          {
+            email=== ""|| password === "" ? <button disabled={true} onClick={handleLogin}>LOG IN</button> : <button onClick={handleLogin}>LOG IN</button>
+          
+          }
+          
         </div>
         <div className="Button">
           <button onClick={handleCreateAccount}>Create account</button>

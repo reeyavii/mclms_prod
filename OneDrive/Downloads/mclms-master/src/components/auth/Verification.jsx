@@ -5,21 +5,29 @@ import {useNavigate} from "react-router-dom";
 function Verification() {
      const navigate = useNavigate();
 
-    const handleConfirm = () => {
+     const handleGoBack = (e) => {
+      //go to verification
+      navigate("/register");
+      console.log("register clicked");
+      };
+ 
+      const handleConfirm = () => {
       //go to verified
       navigate("/verified")
-    console.log("login clicked");
-
-  };
+    console.log("verified clicked");
+      };
 
     const handleRequest = () => {
-    console.log("login clicked");
-
-    
-  };
+    console.log("create clicked");
+    };
 
     return (
         <div className="InnerContainer2">
+
+          <div className="ButtonB">
+            <button onClick={handleGoBack}> Back </button>
+          </div>        
+         
         <div className="Code">
         <p>A 4-digit code is sent to <br></br> 
         your phone number +639******741. <br></br> 

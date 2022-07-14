@@ -14,7 +14,7 @@ function Register() {
     const [address, setAddress] =  useState("");
     const [emailAdd, setEmailAdd] =  useState("");
     const [contactNum, setContactNum] =  useState("");
-    const [cPassword, setCPassword] =  useState("");
+    const [setPassword, setSetPassword] =  useState("");
     const [retypePass, setRetypePass] =  useState("");
 
     const fullNameChange = (e) => {
@@ -41,8 +41,8 @@ function Register() {
     const contactNumChange =  (e) => { 
         setContactNum (e.target.value); };
 
-    const cPasswordChange =  (e) => { 
-        setCPassword (e.target.value); };
+    const setPasswordChange =  (e) => { 
+        setSetPassword (e.target.value); };
 
     const retypePassChange =  (e) => {
          setRetypePass (e.target.value); };
@@ -62,7 +62,7 @@ function Register() {
     
         <div className="InnerContainer1">
           <div className="Button1">
-            <button onClick={handleGoBack}>Go Back</button>
+            <button onClick={handleGoBack}> Back </button>
           </div>        
          
           <div className="CreateAccount1">
@@ -72,7 +72,7 @@ function Register() {
             <div className="InputContainer">
               <div className="Input1">
                   <input
-                      placeholder="Full Name"
+                      placeholder="First Name | Last Name"
                       value={fullName}
                       onChange={fullNameChange}
                  />
@@ -120,7 +120,7 @@ function Register() {
           </div>
           <div className="Input6">
             <input
-              placeholder="Email Address"
+              placeholder="E-mail Address"
               value={emailAdd}
               onChange={emailAddChange}
             />
@@ -134,15 +134,15 @@ function Register() {
           </div>
           <div className="Input6">
             <input
-              placeholder="Change Password"
+              placeholder="Set your Password"
               type="Password"
-              value={cPassword}
-              onChange={cPasswordChange}
+              value={setPassword}
+              onChange={setPasswordChange}
             />
           </div>
           <div className="Input6">
             <input
-              placeholder="Retype Password"
+              placeholder="Re-type your Password"
               type="Password"
               value={retypePass}
               onChange={retypePassChange}
