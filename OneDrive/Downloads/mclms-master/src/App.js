@@ -9,7 +9,10 @@ import {BrowserRouter as Router} from "react-router-dom";
 //import Home from "./components/auth/Home"
 //import Verified from "./components/auth/Verified";
 import Public from "./Router/Public";
+//import MarketRules from "./components/auth/MarketRules";
+//import Application from "./components/auth/ApplicationForm";
 //import Home from "./components/auth/Home";
+
 
 
 function App() {

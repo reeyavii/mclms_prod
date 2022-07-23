@@ -9,6 +9,7 @@
   height: 100vh;
   max-height: 100vh;
   background-color: #1c2257bb;
+ 
 }
 .OuterContainer {
   background-image: url("../../assets/bg.jpg");
@@ -290,9 +291,25 @@
   background-color: rgb(0, 157, 255);
   padding: 10px;
  }
+ .Button2 :disabled {
+  opacity: 50%;
+}
+
+.Button2 :disabled :active {
+  opacity: 50%;
+}
+
+.Button2 > button:disabled:active {
+  background-color: transparent;
+}
 
 .Next{
   color: black;
+}
+
+span {
+  font-size: small;
+  color: red;
 }
 
 /*Verification*/
@@ -393,6 +410,7 @@
   border-radius: 25px;
 }
 
+
 /*Verified*/
 
 .VerifiedEmail{
@@ -401,7 +419,7 @@
   align-items: center;
   width: 255px;
   height: 44px;
-  margin-top: 395px;
+  margin-top: 240px;
   font-family: 'Alata';
   font-style: normal;
   font-weight: 400;
@@ -435,43 +453,245 @@
   background-color: rgb(0, 157, 255);
   padding: 10px;
 }
+.LogoV > img {
+  height: 80px;
+  width: 80px;
+  padding-bottom: 50px;
+}
+
+
 
 /*Home*/
- .Nav{
-  background-color: #c9def8;
-  height: 100vh;
+ .bar{
+  background-color: #77A3F3;
+  height: 12vh;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1000px) /2);
   z-index: 10;
+  
  }
- .NavLink{
-  color: #fff;
+ .Logo1 >  img {
+    margin-top: 55px;
+    margin-bottom: 100%;
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
+  }
+  .Logo2 >  img {
+    margin-top: 30px;
+    margin-bottom: 100%;
+    height: 80px;
+    width: 80px;
+  }
+  .Economic{
+    margin-top: 65px;
+    font-size: 12px;
+    margin-right: 10px;
+    font-family: 'Alata', sans-serif;
+  }
+  .Search{
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+  }
+  .Search > input{
+    border-radius: 25px;
+    padding: 12px;
+    margin-top: 8px;
+    width: 80%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 12px;
+  }
+.box1{
+   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+.box2{
+  display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+}
+
+.Stalls{
+   justify-content: center ;
+  flex-direction: column;
   display: flex;
   align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
-  cursor: pointer;
- }
- .NavLink :active{
-  color: #15cdfc;
- }
+  width: 160px;
+  height: 160px;
+  background-color: #ACC2ED;
+  border-radius: 25px;
+  margin: 10px;
+}
+.Stalls :active{
+  background-color: rgb(0, 157, 255);
+  
+}
 
- .Bars{
-  display: none;
-  color: #fff;
 
-  @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform:translate(-100%, 75%);
-    font-size: 1.8rem;
-    cursor: pointer;
+.Stalls > img{
+  width: 50px;
+  object-fit: contain;
+}
+.smalltext{
+  font-size: 12px;
+  
+}
+
+
+/* Reset */ 
+.InnerContainerE{
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background-color:#c9def8;
+}
+
+  .InputContainerE{
+    flex-direction: column;
+    display: flex;
+    margin-top: 70px;
+    align-items: center;
   }
 
+  .ResetPasswordE {
+    margin-top: 185px;
+    color: black;
+    text-align: left;
+    font-size: 35px;
+    margin-left: 20px;
+    font-family: 'Alata', sans-serif;
+  }
+ 
+  .InputE{
+    width: 80%;
+    align-items: center;
+  }
+  
+  .InputE > input {
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 25px;
+    width: 90%;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 16px;
+  }
+  
+  .InputE > input:focus {
+    outline: none;
+  }
+  
+  .ButtonE {
+    margin-top: 100px;
+    color: white;
+    text-align: center;
+  }
+  
+  .ButtonE > button {
+    background-color: #77A3F3;
+    border: none;
+    color: black;
+    font-size: 16px;
+    font-family: "Alata", sans-serif;
+    transition: background-color 0.5s;
+    border-radius: 25px;
+    justify-content: center;
+    text-align: center;
+    width: 150px; 
+    height: 35px;
+    
+  }
+  
+  .ButtonE > button:active {
+    background-color: rgb(0, 157, 255);
+    padding: 8px;
+   }
+  
+  .Confirm{
+    color: black;
+  }
+
+/* Reset Password Sucessful */ 
+.InnerContainerE{
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background-color:#c9def8;
+}
+
+.InputContainerE{
+    flex-direction: column;
+    display: flex;
+    margin-top: 70px;
+    align-items: center;
+ }
+
+.ResetPasswordF {
+    
+    color: black;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Alata', sans-serif;
 }
  
+.ButtonF {
+    margin-top: 140px;
+    color: white;
+    text-align: center;
+}
+  
+.ButtonF > button {
+    background-color: #77A3F3;
+    border: none;
+    color: black;
+    font-size: 16px;
+    font-family: "Alata", sans-serif;
+    transition: background-color 0.5s;
+    border-radius: 25px;
+    justify-content: center;
+    text-align: center;
+    width: 150px; 
+    height: 35px;
+    
+}
+  
+.ButtonF > button:active {
+    background-color: rgb(0, 157, 255);
+    padding: 8px;
+}
+  
+.Loginagain{
+    color: black;
+}
 
+.LogoCheck > img {
+  height: 80px;
+  width: 80px;
+  padding-bottom: 50px;
+  margin-top: 180px;
+}
+
+
+/*MarketRules*/
+.h1{
+  text-align: center;
+  justify-content: center;
+
+}

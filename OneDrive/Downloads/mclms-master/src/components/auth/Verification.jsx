@@ -13,7 +13,7 @@ function Verification() {
  
       const handleConfirm = () => {
       //go to verified
-      navigate("/verified")
+      navigate("/verified");
     console.log("verified clicked");
       };
 
@@ -29,10 +29,10 @@ function Verification() {
           </div>        
          
         <div className="Code">
-        <p>A 4-digit code is sent to <br></br> 
-        your phone number +639******741. <br></br> 
-        Please enter the code below to complete <br></br> 
-        creating your account.</p>
+        A 4-digit code is sent to <br/>
+        your phone number +639******741. <br/> 
+        Please enter the code below to complete <br/>
+        creating your account.
         </div>
         <div className="line"> 
           <p>___      ___       ___       ___</p>

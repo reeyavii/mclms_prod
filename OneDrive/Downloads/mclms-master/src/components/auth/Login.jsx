@@ -29,7 +29,7 @@ function Login() {
   const handleLogin = () => {
     //login code
     const data={
-      username: email,
+      userName: email,
       password: password,
     }
     dispatch(authLogin(data));
@@ -37,16 +37,20 @@ function Login() {
     console.log(stalls);
 
     if (token !== null ){
-      navigate("/verified");
+      navigate("/Home");
     }
     console.log(password);
-    
-    
+    navigate("/Home");
   };
 
   const handleCreateAccount = () => {
     //go to registration
     navigate("/register")
+    console.log("login clicked");
+  };
+  const handleForgotPassword = () => {
+    //go to reset-password
+    navigate("/reset-password")
     console.log("login clicked");
   };
   return (
@@ -58,7 +62,7 @@ function Login() {
         </div>
         <div className="Input">
           <input
-            placeholder="Email or Phone Number"
+            placeholder="E-mail or Phone Number"
             value={email}
             onChange={emailChange}
           />
@@ -80,6 +84,9 @@ function Login() {
         </div>
         <div className="Button">
           <button onClick={handleCreateAccount}>Create account</button>
+        </div>
+        <div className="Button">
+          <button onClick={handleForgotPassword}>Forgot Password</button>
         </div>
       </div>
     </div>
