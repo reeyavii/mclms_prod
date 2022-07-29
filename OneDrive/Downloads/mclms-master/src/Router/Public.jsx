@@ -9,6 +9,13 @@ import Home from '../components/auth/Home'
 import MarketRules from '../components/auth/MarketRules'
 import ApplicationForm from '../components/auth/ApplicationForm'
 import ResetSucessful from '../components/auth/ResetSucessful'
+import ApplicationFormSubmission from '../components/auth/ApplicationFormSubmission'
+import ProfileSetting from '../components/auth/ProfileSetting'
+import PSPNVerification from '../components/auth/PSPNVerification'
+import ProfileChangedSucessfully from '../components/auth/ProfileChangedSucessfully' 
+import PSChangedAddress from '../components/auth/PSChangedAddress'
+
+
 
 function Public() {
   return (
@@ -19,12 +26,15 @@ function Public() {
         <Route path="/verification" element={<Verification/>} /> 
         <Route path="/verified" element={<Verified/>} /> 
         <Route path="/reset" element={<Reset/>} /> 
-        
         <Route path="/home" element={<Home/>} />
         <Route path="/application-form" element={<ApplicationForm/>} />
         <Route path="/market-rules" element={<MarketRules/>} />
         <Route path="/reset-sucessful" element={<ResetSucessful/>} />
-
+        <Route path="/application-form-submission" element={<ApplicationFormSubmission/>} />
+        <Route path="/profile-setting" element={<ProfileSetting/>} />
+        <Route path="/profile-setting-changed-address" element={<PSChangedAddress/>} />
+        <Route path="/pspn-verification" element={<PSPNVerification/>} />
+        <Route path="/profile-changed-sucessfully" element={<ProfileChangedSucessfully/>} />
     </Routes>
   )
 }

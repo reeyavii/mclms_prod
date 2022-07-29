@@ -20,7 +20,7 @@ function Reset() {
 
   const handleReset = () => {
     //go to verification
-    navigate("/verification");
+    navigate("/reset-sucessful");
     console.log("login clicked");
   };
       

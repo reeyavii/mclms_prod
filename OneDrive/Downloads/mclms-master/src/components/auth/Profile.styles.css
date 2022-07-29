@@ -41,11 +41,30 @@
     border-radius: 25px;
 }
 
+.Logo3 > img {
+    margin-top: 20px;
+    height: 80px;
+    width: 80px;
+}
+
+.Name > p {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: large;
+}
+
+
 h2{
     margin-top: -15px;
 }
 
-.a{
+.Profile{
+    margin-top: 70px;
+}
+.Email{
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -53,68 +72,7 @@ h2{
     font-size: 18px;
     box-sizing: border-box;
 }
-.a > input{
-    border-bottom: 2px solid black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    background: transparent; 
-    width: 120px;
-    padding: 8px;
-}
-
-.b{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: left;
-    font-size: 18px;
-    box-sizing: border-box;
-    margin-left: 3px;
-}
-   
-.b > input{
-    border-bottom: 2px solid black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    background: transparent; 
-    width: 120px;
-    padding: 8px;
-    margin-top: 25px;
-}
-.c{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: left;
-    font-size: 18px;
-    box-sizing: border-box;
-    margin-left: 3px;
-}
-   
-.c > input{
-    border-bottom: 2px solid black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    background: transparent; 
-    width: 120px;
-    padding: 8px;
-    margin-top: 25px;
-}
-
-.d{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: left;
-    font-size: 18px;
-    box-sizing: border-box;
-    margin-left: 3px;
-}
-   
-.d > input{
+.Email > input{
     border-bottom: 2px solid black;
     border-top: none;
     border-left: none;
@@ -122,10 +80,9 @@ h2{
     background: transparent; 
     width: 188px;
     padding: 8px;
-    margin-top: 25px;
 }
 
-.e{
+.Phone{
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -135,7 +92,7 @@ h2{
     margin-left: 3px;
 }
    
-.e > input{
+.Phone > input{
     border-bottom: 2px solid black;
     border-top: none;
     border-left: none;
@@ -143,33 +100,73 @@ h2{
     background: transparent; 
     width: 188px;
     padding: 8px;
-    margin-top: 25px;
+    margin-top: 40px;
 }
-.StallTA{
-    text-align: left;
-    margin-top: 30px;
-    margin-left: 15px;
-}
-.f{
+.Pass{
     display: flex;
     align-items: center;
     justify-content: flex-start;
     text-align: left;
     font-size: 18px;
     box-sizing: border-box;
-    margin-left: 10px;
+    margin-left: 3px;
 }
    
-.f > input{
-    border: none;
+.Pass > input{
+    border-bottom: 2px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
     background: transparent; 
-    width: 50px;
+    width: 188px;
     padding: 8px;
-    margin-top: 20px;
+    margin-top: 40px;
+}
+
+.Add{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin-left: 3px;
+}
+   
+.Add > input{
+    border-bottom: 2px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: transparent; 
+    width: 188px;
+    padding: 8px;
+    margin-top: 40px;
+}
+
+
+.Address{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin-left: 3px;
     
 }
-
-.g{
+   
+.Address > input{
+    border-bottom: 2px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: transparent; 
+    width: 120px;
+    padding: 8px;
+    margin-top: 40px;
+}
+.Add1{
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -179,7 +176,7 @@ h2{
     margin-left: 3px;
 }
    
-.g > input{
+.Add1 > input{
     border-bottom: 2px solid black;
     border-top: none;
     border-left: none;
@@ -187,37 +184,17 @@ h2{
     background: transparent; 
     width: 188px;
     padding: 8px;
-    margin-top: 20px;
-}
-.h{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: left;
-    font-size: 18px;
-    box-sizing: border-box;
-    margin-left: 3px;
-}
-   
-.h > input{
-    border-bottom: 2px solid black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    background: transparent; 
-    width: 188px;
-    padding: 8px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
-.Submit {
+.LogOut {
     color: black;
     text-align: center;
-    margin-top: -50px;
+    margin-top: 100px;
   }
   
-.Submit > button {
-    background-color: #77A3F3;
+  .LogOut > button {
+    background-color: transparent;
     border: none;
     color: black;
     font-size: 16px;
@@ -230,7 +207,7 @@ h2{
     height: 35px;   
 }
   
-.Submit > button:active {
+.LogOut > button:active {
     background-color: rgb(0, 157, 255);
     padding: 8px;
 }
@@ -245,6 +222,27 @@ h5{
     font-size: 12px;
 }
 
-
+.Confirm1 {
+    color: black;
+    text-align: center;
+    margin-top: 180px;
+  }
   
+.Confirm1 > button {
+    background-color: #77A3F3;
+    border: none;
+    color: black;
+    font-size: 16px;
+    font-family: "Alata", sans-serif;
+    transition: background-color 0.5s;
+    border-radius: 25px;
+    justify-content: center;
+    text-align: center;
+    width: 150px; 
+    height: 35px;   
+}
   
+.Confirm1 > button:active {
+    background-color: rgb(0, 157, 255);
+    padding: 8px;
+}

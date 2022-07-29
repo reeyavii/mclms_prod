@@ -18,11 +18,10 @@ function Verified() {
       <div className="InnerContainer2">
         <div className="VerifiedEmail">
             <div className="LogoV">
-             <img src={logoV} alt="logoV" />
-            </div>  
-        
-          Your e-mail has been verified,<br></br> you can now log in to your account.
-        </div>
+              <img src={logoV} alt="logoV" />
+              </div>  
+                Your e-mail has been verified,<br></br> you can now log in to your account. 
+         </div>
         <div className="ProceedButton">
           <button onClick={handleProceed}>Proceed to log in</button>
         </div>

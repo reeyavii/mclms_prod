@@ -2,7 +2,7 @@ import React from "react";
 import "./Auth.styles.css";
 import {useNavigate} from "react-router-dom";
 
-function Verification() {
+function PSPNVerification() {
      const navigate = useNavigate();
 
      const handleGoBack = (e) => {
@@ -28,25 +28,25 @@ function Verification() {
             <button onClick={handleGoBack}> Back </button>
           </div>        
          
-          <div className="Code">
-             A 4-digit code is sent to <br/>
-             your phone number +639******741. <br/> 
-             Please enter the code below to complete <br/>
-             creating your account.
-         </div>
-         <div className="line"> 
-           <p>___      ___       ___       ___</p>
-         </div>  
-         <div className="ConfirmButton">
-            <button onClick={handleConfirm}>Confirm</button>
-         </div>
-          <div className="RequestButton">
-           <button onClick={handleRequest}>Request for a code again.</button>
-         </div>
+        <div className="Code">
+        A 4-digit code is sent to <br/>
+        your phone number +639******741. <br/> 
+        Please enter the code below to complete <br/>
+        changing your phone number.
+        </div>
+        <div className="line"> 
+          <p>___      ___       ___       ___</p>
+        </div>  
+        <div className="ConfirmButton">
+          <button onClick={handleConfirm}>Confirm</button>
+        </div>
+        <div className="RequestButton">
+          <button onClick={handleRequest}>Request for a code again.</button>
+        </div>
       </div>
 
 
     );
   }
   
-  export default Verification;
+  export default PSPNVerification;
