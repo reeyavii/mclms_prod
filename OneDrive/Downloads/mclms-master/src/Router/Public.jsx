@@ -14,6 +14,9 @@ import ProfileSetting from '../components/auth/ProfileSetting'
 import PSPNVerification from '../components/auth/PSPNVerification'
 import ProfileChangedSucessfully from '../components/auth/ProfileChangedSucessfully' 
 import PSChangedAddress from '../components/auth/PSChangedAddress'
+import PSChangedPassword from '../components/auth/PSChangedPassword'
+import PSChangedEmail from '../components/auth/PSChangedEmail'
+import PSChangedPhoneNumber from '../components/auth/PSChangedPhoneNumber'
 
 
 
@@ -32,6 +35,9 @@ function Public() {
         <Route path="/reset-sucessful" element={<ResetSucessful/>} />
         <Route path="/application-form-submission" element={<ApplicationFormSubmission/>} />
         <Route path="/profile-setting" element={<ProfileSetting/>} />
+        <Route path="/profile-setting-changed-phone-number" element={<PSChangedPhoneNumber/>} />
+        <Route path="/profile-setting-changed-email" element={<PSChangedEmail/>} />
+        <Route path="/profile-setting-changed-password" element={<PSChangedPassword/>} />
         <Route path="/profile-setting-changed-address" element={<PSChangedAddress/>} />
         <Route path="/pspn-verification" element={<PSPNVerification/>} />
         <Route path="/profile-changed-sucessfully" element={<ProfileChangedSucessfully/>} />
