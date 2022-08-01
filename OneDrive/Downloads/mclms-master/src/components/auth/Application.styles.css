@@ -63,6 +63,10 @@ h2{
     padding: 8px;
 }
 
+.a > input:focus {
+    outline: none ;
+}
+
 .b{
     display: flex;
     align-items: center;
@@ -83,6 +87,10 @@ h2{
     padding: 8px;
     margin-top: 25px;
 }
+.b > input:focus {
+    outline: none ;
+}
+
 .c{
     display: flex;
     align-items: center;
@@ -102,6 +110,9 @@ h2{
     width: 120px;
     padding: 8px;
     margin-top: 25px;
+}
+.c > input:focus {
+    outline: none ;
 }
 
 .d{
@@ -125,6 +136,9 @@ h2{
     margin-top: 25px;
 }
 
+.d > input:focus {
+    outline: none ;
+}
 .e{
     display: flex;
     align-items: center;
@@ -144,6 +158,9 @@ h2{
     width: 188px;
     padding: 8px;
     margin-top: 25px;
+}
+.e > input:focus {
+    outline: none ;
 }
 .StallTA{
     text-align: left;
@@ -168,6 +185,9 @@ h2{
     margin-top: 20px;
     
 }
+.f > input:focus {
+    outline: none ;
+}
 
 .g{
     display: flex;
@@ -189,6 +209,9 @@ h2{
     padding: 8px;
     margin-top: 20px;
 }
+.g > input:focus {
+    outline: none ;
+}
 .h{
     display: flex;
     align-items: center;
@@ -209,7 +232,9 @@ h2{
     padding: 8px;
     margin-top: 20px;
 }
-
+.h > input:focus {
+    outline: none ;
+}
 .Submit {
     color: black;
     text-align: center;
@@ -245,6 +270,91 @@ h5{
     font-size: 12px;
 }
 
+/* Password Pop Up */
 
+.PopBox{
+    justify-content: center ;  
+    align-items: center;
+    width: 270px;
+    height: 140px;
+    background-color: #ACC2ED;
+    border-radius: 25px;
+    margin: 10px;
+    margin-top: 400px;
+    z-index: 100;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+ }
+
+.PopUp{
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+    z-index: 100;
+    
+}
+.PopUp > p{  
+    text-align:center;
+    margin: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    padding-top: 25px;
+    z-index: 100;
+    
+}
+
+.Pbox > input{
+    padding: 8px;
+    border-radius: 25px;
+    justify-content: center;
+    margin: 10px;
+    margin-top: 5px;
+    width: 160px;
+    border: none;
+    z-index: 100;
+}
+
+.PopButton{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: -35px;
+    z-index: 100;
+}
+
+.Cancel{
+    justify-items: center;
+    padding: 10px;
+    margin: 10px;
+    z-index: 100;
+}
+.Cancel > button{
+    background-color: transparent;
+    border: none;
+    z-index: 100;
+}
+
+.Cancel :active{
+    background-color: rgb(0, 157, 255);       
+}
+
+.PopSubmit{
+    justify-items: center;
+    padding: 10px;
+    margin: 10px;
+    z-index: 100;
+}
+
+.PopSubmit> button{
+    background-color: transparent;
+    border: none;
+    z-index: 100;
+}
+.PopSubmit :active{
+    background-color: rgb(0, 157, 255);       
+}
   
   

@@ -73,6 +73,7 @@ function ProfileSetting() {
             <div className="Profile">
               <div className="Email">
                   <input
+                      disabled = {true}
                       placeholder="E-mail:"
                    />
                    <input
@@ -86,6 +87,7 @@ function ProfileSetting() {
           
                <div className="Phone">
                      <input
+                        disabled = {true}
                         placeholder="Phone Number"
                      />          
                      <input
@@ -97,6 +99,7 @@ function ProfileSetting() {
 
               <div className="Pass">
                     <input
+                        disabled = {true}
                         placeholder="Password"
                     />
 
@@ -109,6 +112,7 @@ function ProfileSetting() {
           
               <div className="Add">
                      <input
+                        disabled = {true}
                         placeholder="Permanent Address"
                      />
                     <input

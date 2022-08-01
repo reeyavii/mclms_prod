@@ -3,10 +3,11 @@ import "./Application.styles.css";
 import {useNavigate} from "react-router-dom";
 import logo1 from "../../assets/Profile.png";
 import logo2 from "../../assets/logo-alimodian.png";
+import PasswordPopUp from "./PasswordPopUp.jsx";
 
 function ApplicationForm() {
     const navigate = useNavigate();
-
+    const [showPopUp, setShowPopUp] = useState(false)
     const [lastName, setLastName] =  useState("");
     const [firstName, setFirstName] =  useState("");
     const [age, setAge] =  useState("");
@@ -70,7 +71,7 @@ function ApplicationForm() {
           console.log("create clicked");
           };
     const handleSubmit = () => {    
-          navigate('/');
+          setShowPopUp(true);
           console.log();
     
         }
@@ -110,8 +111,10 @@ function ApplicationForm() {
            <div div className="Item">
             <div className="InputContainer">
               <div className="a">
-                  <input
+                  <input 
+                      disabled = {true}
                       placeholder="Name:"
+                      
                    />
                    <input
                       placeholder="Last Name"
@@ -177,9 +180,9 @@ function ApplicationForm() {
             </div>
             <div className="e">
              <input
+              disabled = {true}
               placeholder="Phone Number:"
-              value= {phoneNum}
-              onChange={phoneNumChange}
+              
             />
              <input
               placeholder=" +63"
@@ -237,6 +240,9 @@ function ApplicationForm() {
              <button onClick={handleSubmit}>Submit</button>
            </div>
           
+           { showPopUp && 
+            <PasswordPopUp/> 
+          }
       </div>
        
     );

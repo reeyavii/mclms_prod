@@ -182,7 +182,7 @@ h2{
     border-left: none;
     border-right: none;
     background: transparent; 
-    width: 188px;
+    width: 120px;
     padding: 8px;
     margin-top: 40px;
 }
@@ -193,7 +193,7 @@ h2{
     margin-top: 100px;
   }
   
-  .LogOut > button {
+.LogOut > button {
     background-color: transparent;
     border: none;
     color: black;

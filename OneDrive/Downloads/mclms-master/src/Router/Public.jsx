@@ -20,6 +20,7 @@ import PSChangedPhoneNumber from '../components/auth/PSChangedPhoneNumber'
 
 
 
+
 function Public() {
   return (
     <Routes>
@@ -33,6 +34,7 @@ function Public() {
         <Route path="/application-form" element={<ApplicationForm/>} />
         <Route path="/market-rules" element={<MarketRules/>} />
         <Route path="/reset-sucessful" element={<ResetSucessful/>} />
+       
         <Route path="/application-form-submission" element={<ApplicationFormSubmission/>} />
         <Route path="/profile-setting" element={<ProfileSetting/>} />
         <Route path="/profile-setting-changed-phone-number" element={<PSChangedPhoneNumber/>} />

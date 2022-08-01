@@ -72,7 +72,8 @@ function PSChangedAddress() {
                         
             <div className="Address">
                      <input
-                        placeholder="Address"
+                        disabled = {true}
+                        placeholder="Permanent Address:"
                      />
               <input
                         placeholder="Brgy."
@@ -86,6 +87,12 @@ function PSChangedAddress() {
                     />    
             </div>
              <div className="Add1">
+             <input
+                        disabled = {true}
+                        placeholder=""
+                        
+                    />
+             
               <input
                         placeholder="Province"
                         value= {province}
