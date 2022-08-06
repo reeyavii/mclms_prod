@@ -7,7 +7,7 @@ import logoCheck from "../../assets/Verified.png";
  
 
 
-function ResetSucessful () {
+function ResetSuccessful () {
     const navigate = useNavigate();
 
     const handleLoginAgain = () => {
@@ -54,4 +54,4 @@ return (
 );
 }
 
-export default ResetSucessful;
+export default ResetSuccessful;

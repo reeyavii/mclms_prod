@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./Auth.styles.css";
-import {useNavigate} from "react-router-dom";
-
+//import {useNavigate} from "react-router-dom";
+import SuccessPopUp from "./SuccessPopUp";
 
 
 
 function Reset() {
-  const navigate = useNavigate();
-
+  //const navigate = useNavigate();
+  const [showPopUp, setShowPopUp] = useState(false)
   const [password, setPassword] = useState("");
   const [retypePassword, setRetypePassword] = useState("");
 
@@ -20,7 +20,7 @@ function Reset() {
 
   const handleReset = () => {
     //go to verification
-    navigate("/reset-sucessful");
+    setShowPopUp(true);
     console.log("login clicked");
   };
       
@@ -53,6 +53,8 @@ function Reset() {
         </div>
        
         </div> 
+           {showPopUp &&
+            <SuccessPopUp labeledName={"Password changed successfully!"} navigateToHome={false}/>}
       </div>
    
   );

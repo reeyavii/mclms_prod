@@ -1,9 +1,11 @@
 import React, {useState} from "react";
 import "./Profile.styles.css";
 import {useNavigate} from "react-router-dom";
-import logo1 from "../../assets/Profile.png";
 import logo2 from "../../assets/logo-alimodian.png";
 import logo3 from "../../assets/User.png";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import EditIcon from '@mui/icons-material/Edit';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 function ProfileSetting() {
     const navigate = useNavigate();
@@ -32,13 +34,36 @@ function ProfileSetting() {
            navigate("/login");
            console.log("create clicked");
           };
-
+    const handleEdit = (e) => {
+          //go to verification
+          navigate("/profile-setting-changed-email");
+          console.log("Edit clicked");
+           };
+    const handlePhone = (e) => {
+          //go to verification
+          navigate("/profile-setting-changed-phone-number");
+          console.log("Edit clicked");
+         };
+    const handlePass = (e) => {
+           //go to verification
+           navigate("/profile-setting-changed-password");
+           console.log("Edit clicked");
+            };
+    const handleAddress = (e) => {
+           //go to verification
+           navigate("/profile-setting-changed-address");
+           console.log("Edit clicked");
+           };
     const handleLogOut = (e) => {
           //go to verification
           navigate("/login");
           console.log("LogOut clicked");
           };
-  
+    const handleProfile = (e) => {
+          navigate("/profile-setting");
+          console.log("Profile clicked");
+          };
+      
  
     return (
     
@@ -46,7 +71,7 @@ function ProfileSetting() {
           <div className="InnerContainer1">
             <div className="bar">
             <div className="Logo1">
-             <img src={logo1} alt="logo1" />
+            <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 60 }}/>  </button> 
 
             </div>
             <div className="Logo2">
@@ -58,7 +83,7 @@ function ProfileSetting() {
            </div>
            </div>
            <div className="BackA">
-            <button onClick={handleGoBack}> Back </button>
+           <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1 }}/>  </button> <p>BACK</p>
            </div>        
          
            <div className="Logo3">
@@ -77,13 +102,16 @@ function ProfileSetting() {
                       placeholder="E-mail:"
                    />
                    <input
-                      placeholder="abc@gmail.com"
+                      placeholder="abc@gmail.com" 
                       value={email}
                       onChange={emailChange}
                    />  
-              </div>
+                  <div className="edit">   
+                     <button onClick={handleEdit}>  <EditIcon sx={{ fontSize: 23 }}/>  </button> 
          
-          
+                  </div>
+                     
+              </div> 
           
                <div className="Phone">
                      <input
@@ -95,7 +123,12 @@ function ProfileSetting() {
                         value={phoneNum}
                         onChange={phoneNumChange}
                      />
-              </div>
+                      <div className="edit1">
+                      <button onClick={handlePhone}>  <EditIcon sx={{ fontSize: 23 }}/>  </button> 
+                    </div>
+                     
+                </div>
+              
 
               <div className="Pass">
                     <input
@@ -108,6 +141,9 @@ function ProfileSetting() {
                         value= {password}
                         onChange={passwordChange}
                     />
+                     <div className="edit2">
+                     <button onClick={handlePass}>  <EditIcon sx={{ fontSize: 23 }}/>  </button> 
+                    </div>
              </div>
           
               <div className="Add">
@@ -120,7 +156,9 @@ function ProfileSetting() {
                         value={permanentAddress}
                         onChange={permanentAddressChange}
                      />
-           
+                    <div className="edit3">
+                    <button onClick={handleAddress}>  <EditIcon sx={{ fontSize: 23 }}/>  </button> 
+                    </div>
               </div>   
                
              <div className="LogOut">
@@ -128,8 +166,10 @@ function ProfileSetting() {
              </div>
           
             </div>
-         </div>
-         </div>
+       
+            </div>
+          </div>
+        
        
     );
   

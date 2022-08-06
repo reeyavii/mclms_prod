@@ -1,26 +1,35 @@
 import React from 'react';
 import "./Market.styles.css";
 import {useNavigate} from "react-router-dom";
-import logo1 from "../../assets/Profile.png";
 import logo2 from "../../assets/logo-alimodian.png";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { useState } from "react";
+
 
 function MarketRules() {
   const navigate = useNavigate();
+  const {checked, setChecked} = useState(true);
 
 
     const handleGoBack = (e) => {
     navigate("/Home");
     console.log("Home clicked");
     };
+    const handleProfile = (e) => {
+      navigate("/profile-setting");
+      console.log("Profile clicked");
+      };
+
 
     const handleApplicationForm = () => {
     navigate("/application-form");
   console.log("AppForm clicked");
     };
-    const handleCheckbox = (e) => {
-        navigate("/Home");
-        console.log("Home clicked");
+    const checkedChange =  (e) => {
+      setChecked(e.target.checked);
         };
+
   
     return (
        
@@ -29,7 +38,8 @@ function MarketRules() {
         <div className="InnerContainer1">
             <div className="bar">
             <div className="Logo1">
-             <img src={logo1} alt="logo1" />
+            <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 60 }}/>  
+            </button> 
 
             </div>
             <div className="Logo2">
@@ -40,9 +50,10 @@ function MarketRules() {
             ECONOMIC<br></br>DEPARTMENT
           </div>
           </div>
-            <div className='ButtonB'>
-            < button onClick={handleGoBack}> Back </button>
+          <div className='BackA'>
+            <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1 }}/>  </button> <p>BACK</p>
             </div>
+
 
 
         <h2>MARKET RULES</h2>
@@ -76,7 +87,7 @@ function MarketRules() {
      
    
         <div className="check">
-            <input onClick={handleCheckbox} type="checkbox"/>
+            <input onClick={checkedChange} type="checkbox"/>
               <p>I agree to Alimodian Public Market Rules</p> 
               
        <div className='btn1'>

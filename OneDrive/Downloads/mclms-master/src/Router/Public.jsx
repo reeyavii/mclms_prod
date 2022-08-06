@@ -8,16 +8,21 @@ import Reset from '../components/auth/Reset'
 import Home from '../components/auth/Home'
 import MarketRules from '../components/auth/MarketRules'
 import ApplicationForm from '../components/auth/ApplicationForm'
-import ResetSucessful from '../components/auth/ResetSucessful'
-import ApplicationFormSubmission from '../components/auth/ApplicationFormSubmission'
+import ResetSuccessful from '../components/auth/ResetSuccessful'
+
 import ProfileSetting from '../components/auth/ProfileSetting'
 import PSPNVerification from '../components/auth/PSPNVerification'
-import ProfileChangedSucessfully from '../components/auth/ProfileChangedSucessfully' 
+
 import PSChangedAddress from '../components/auth/PSChangedAddress'
 import PSChangedPassword from '../components/auth/PSChangedPassword'
 import PSChangedEmail from '../components/auth/PSChangedEmail'
 import PSChangedPhoneNumber from '../components/auth/PSChangedPhoneNumber'
-
+import ApplicationFormSubmission from '../components/auth/ApplicationFormSubmission'
+import Payments from '../components/auth/Payments'
+import Sample from '../components/auth/Sample'
+import Gcash from '../components/auth/Gcash'
+import AddGCash from '../components/auth/AddGCash'
+import StallDetails from '../components/auth/StallDetails'
 
 
 
@@ -33,16 +38,23 @@ function Public() {
         <Route path="/home" element={<Home/>} />
         <Route path="/application-form" element={<ApplicationForm/>} />
         <Route path="/market-rules" element={<MarketRules/>} />
-        <Route path="/reset-sucessful" element={<ResetSucessful/>} />
-       
-        <Route path="/application-form-submission" element={<ApplicationFormSubmission/>} />
+        <Route path="/stall-details" element={<StallDetails/>} />
+        <Route path="/reset-successful" element={<ResetSuccessful/>} />
+        <Route path="/application-form-submitted" element={<ApplicationFormSubmission/>} />
         <Route path="/profile-setting" element={<ProfileSetting/>} />
         <Route path="/profile-setting-changed-phone-number" element={<PSChangedPhoneNumber/>} />
         <Route path="/profile-setting-changed-email" element={<PSChangedEmail/>} />
         <Route path="/profile-setting-changed-password" element={<PSChangedPassword/>} />
         <Route path="/profile-setting-changed-address" element={<PSChangedAddress/>} />
-        <Route path="/pspn-verification" element={<PSPNVerification/>} />
-        <Route path="/profile-changed-sucessfully" element={<ProfileChangedSucessfully/>} />
+        <Route path="/profile-setting-verification" element={<PSPNVerification/>} />
+        <Route path="/payments" element={<Payments/>} />
+        <Route path="/gcash" element={<Gcash/>} />
+        <Route path="/add-GCash" element={<AddGCash/>} />
+
+
+
+        <Route path="/sample" element={<Sample/>} />
+   
     </Routes>
   )
 }

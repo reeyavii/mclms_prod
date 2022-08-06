@@ -1,20 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Auth.styles.css";
 import {useNavigate} from "react-router-dom";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import SuccessPopUp from "./SuccessPopUp";
+;
 
 function PSPNVerification() {
      const navigate = useNavigate();
-
+     const [showPopUp, setShowPopUp] = useState(false);
+     
      const handleGoBack = (e) => {
       //go to verification
-      navigate("/register");
+      navigate("/profile-setting");
       console.log("register clicked");
       };
  
-      const handleConfirm = () => {
-      //go to verified
-      navigate("/verified");
-    console.log("verified clicked");
+      const handleConfirm1 = (e) => {
+        //go to reset sucessful
+        setShowPopUp(true);
+        console.log("confirm clicked");
       };
 
     const handleRequest = () => {
@@ -23,9 +27,9 @@ function PSPNVerification() {
 
     return (
         <div className="InnerContainer2">
-
+       
           <div className="ButtonB">
-            <button onClick={handleGoBack}> Back </button>
+          <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18 , marginTop: 1}}/>  </button> <p>BACK</p>
           </div>        
          
         <div className="Code">
@@ -38,11 +42,13 @@ function PSPNVerification() {
           <p>___      ___       ___       ___</p>
         </div>  
         <div className="ConfirmButton">
-          <button onClick={handleConfirm}>Confirm</button>
+          <button onClick={handleConfirm1}>Confirm</button>
         </div>
         <div className="RequestButton">
           <button onClick={handleRequest}>Request for a code again.</button>
         </div>
+        {showPopUp &&
+          <SuccessPopUp labeledName={"Phone Number changed successfully!"} navigateToHome={true} />}
       </div>
 
 

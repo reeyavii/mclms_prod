@@ -4,7 +4,7 @@ import {useNavigate} from "react-router-dom";
 
 
 
-function PasswordPopUP() {
+function PasswordPopUp() {
   
     const navigate = useNavigate(); 
   
@@ -20,7 +20,7 @@ function PasswordPopUP() {
         };
     const handlePopSubmit = (e) => {
             //go to Application Form Submission
-            navigate("/application-form-submission");
+            navigate("/application-form-submitted");
             console.log("Submit clicked");
         };
         
@@ -52,9 +52,12 @@ function PasswordPopUP() {
                         <div className="PopSubmit">
                              <button onClick={handlePopSubmit}>Submit</button>
                         </div>
-                  </div>
-               
 
+                      
+                 
+                 </div>
+               
+                  
          
          </div>
                     
@@ -63,4 +66,4 @@ function PasswordPopUP() {
     );
   
 }
-  export default PasswordPopUP;
+  export default PasswordPopUp;

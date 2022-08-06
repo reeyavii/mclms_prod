@@ -1,10 +1,10 @@
 import React from "react";
 import "./Auth.styles.css";
 import {useNavigate} from "react-router-dom";
-import logo1 from "../../assets/Profile.png";
 import logo2 from "../../assets/logo-alimodian.png";
 import logoCheck from "../../assets/Verified.png";
- 
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
 
 
 function ApplicationFormSubmission () {
@@ -15,6 +15,11 @@ function ApplicationFormSubmission () {
         navigate("/Home");
         console.log("Home clicked");
       };
+      const handleProfile = (e) => {
+        navigate("/profile-setting");
+        console.log("Profile clicked");
+        };
+  
 
 return (
 
@@ -22,7 +27,7 @@ return (
          <div className="InnerContainer1">
             <div className="bar">
             <div className="Logo1">
-             <img src={logo1} alt="logo1" />
+            <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 60 }}/>  </button> 
 
             </div>
             <div className="Logo2">

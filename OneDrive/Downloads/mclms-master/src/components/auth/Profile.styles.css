@@ -71,15 +71,36 @@ h2{
     text-align: left;
     font-size: 18px;
     box-sizing: border-box;
+    margin-left: 2px;
+    background: transparent;
+    border-bottom: 2px solid black;
+    width: 410px;
+    box-shadow: none;
 }
 .Email > input{
-    border-bottom: 2px solid black;
+    border-bottom: none;
     border-top: none;
     border-left: none;
     border-right: none;
     background: transparent; 
-    width: 188px;
-    padding: 8px;
+    width: 180px;
+    padding: 8px;  
+}
+.Email > input:focus {
+    outline: none ;
+}
+
+.edit > button{
+    width: 25px;
+    height: 25px;
+    border-bottom:none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 6px;
+    margin-right: 5px;
+    background-color: transparent;
+ 
 }
 
 .Phone{
@@ -90,18 +111,33 @@ h2{
     font-size: 18px;
     box-sizing: border-box;
     margin-left: 3px;
+    background: transparent;
+    border-bottom: 2px solid black;
+    width: 410px;
 }
    
 .Phone > input{
-    border-bottom: 2px solid black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border: none;
     background: transparent; 
     width: 188px;
     padding: 8px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
+.Phone > input:focus {
+    outline: none ;
+}
+.edit1 > button{
+    width: 25px;
+    height: 25px;
+    border:none;
+    padding: 6px;
+    margin-right: 5px;
+    margin-top: 25px;
+    background-color: transparent;
+ 
+}
+
+
 .Pass{
     display: flex;
     align-items: center;
@@ -110,17 +146,29 @@ h2{
     font-size: 18px;
     box-sizing: border-box;
     margin-left: 3px;
+    border-bottom: 2px solid black;
+    width: 410px;
+    
 }
    
 .Pass > input{
-    border-bottom: 2px solid black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border: none;
     background: transparent; 
     width: 188px;
     padding: 8px;
-    margin-top: 40px;
+    margin-top: 30px;
+}
+.Pass > input:focus {
+    outline: none ;
+}
+.edit2 > button{
+    width: 25px;
+    height: 25px;
+    border:none;
+    padding: 6px;
+    margin-right: 5px;
+    margin-top: 25px;
+    background-color: transparent;
 }
 
 .Add{
@@ -131,17 +179,27 @@ h2{
     font-size: 18px;
     box-sizing: border-box;
     margin-left: 3px;
+    border-bottom: 2px solid black;
 }
    
 .Add > input{
-    border-bottom: 2px solid black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border: none;
     background: transparent; 
     width: 188px;
     padding: 8px;
-    margin-top: 40px;
+    margin-top: 30px;
+}
+.edit3 > button{
+    width: 25px;
+    height: 25px;
+    border:none;
+    padding: 6px;
+    margin-right: 5px;
+    margin-top: 25px;
+    background-color: transparent;   
+}
+.Add > input:focus {
+    outline: none ;
 }
 
 
@@ -153,14 +211,13 @@ h2{
     font-size: 18px;
     box-sizing: border-box;
     margin-left: 3px;
-    
+    width: 410px;
+    border-bottom: 2px solid black;
+
 }
    
 .Address > input{
-    border-bottom: 2px solid black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border: none;
     background: transparent; 
     width: 120px;
     padding: 8px;
@@ -186,7 +243,9 @@ h2{
     padding: 8px;
     margin-top: 40px;
 }
-
+.Address > input:focus {
+    outline: none ;
+}
 .LogOut {
     color: black;
     text-align: center;
@@ -270,3 +329,52 @@ h5{
     padding: 10px;
     border-radius: 25px;
   }
+
+/* Success Pop Up */
+.SuccessPop{
+    justify-content: center ;  
+    align-items: center;
+    width: 100%;
+    height: 770px;
+    background-color: #c9def8;
+    margin: 10px;
+    margin-top: 125px;
+    z-index: 100;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.PopU > img{
+    width: 80px;
+    height: 80px;   
+}
+
+.PopU{
+    margin: 70px;
+    margin-bottom: 120px;
+    
+}
+
+.ButtonPopSuccess{
+    margin: 20px;
+    margin-top: 180px;
+    padding: 8px;
+    background-color:#77A3F3;
+    border-radius: 25px;
+    width: 150px;
+}
+
+.ButtonPopSuccess > button {
+    text-align: center;
+    justify-content: center;
+}
+
+.PopSub > button{
+    background-color:#77A3F3 ;
+    border: none;
+}
+
+
+

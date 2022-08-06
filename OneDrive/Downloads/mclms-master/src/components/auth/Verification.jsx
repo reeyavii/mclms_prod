@@ -1,6 +1,7 @@
 import React from "react";
 import "./Auth.styles.css";
 import {useNavigate} from "react-router-dom";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 function Verification() {
      const navigate = useNavigate();
@@ -25,7 +26,7 @@ function Verification() {
         <div className="InnerContainer2">
 
           <div className="ButtonB">
-            <button onClick={handleGoBack}> Back </button>
+          <button onClick={handleGoBack}> <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1 }} /> </button> <p>BACK</p>
           </div>        
          
           <div className="Code">

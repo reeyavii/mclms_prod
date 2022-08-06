@@ -1,14 +1,15 @@
 import React, {useState} from "react";
 import "./Profile.styles.css";
 import {useNavigate} from "react-router-dom";
-import logo1 from "../../assets/Profile.png";
 import logo2 from "../../assets/logo-alimodian.png";
 import logo3 from "../../assets/User.png";
+import SuccessPopUp from "./SuccessPopUp";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 function PSChangedAddress() {
     const navigate = useNavigate();
-
-    
+    const [showPopUp, setShowPopUp] = useState(false)
     const [brgy, setBrgy] =  useState("");
     const [province, setProvince] =  useState("");
     const [zipCode, setZipCode] =  useState("");
@@ -27,13 +28,18 @@ function PSChangedAddress() {
           
     const handleGoBack = (e) => {
            //go to verification
-           navigate("/login");
+           navigate("/profile-setting");
            console.log("create clicked");
           };
-
+    
+          const handleProfile = (e) => {
+            navigate("/profile-setting");
+            console.log("Profile clicked");
+            };
+      
     const handleConfirm1 = (e) => {
           //go to verification
-          navigate("/pspn-verification");
+          setShowPopUp(true);
           console.log("LogOut clicked");
           };
   
@@ -44,7 +50,7 @@ function PSChangedAddress() {
           <div className="InnerContainer1">
             <div className="bar">
             <div className="Logo1">
-             <img src={logo1} alt="logo1" />
+            <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 60 }}/>  </button> 
 
             </div>
             <div className="Logo2">
@@ -56,7 +62,7 @@ function PSChangedAddress() {
            </div>
            </div>
            <div className="BackA">
-            <button onClick={handleGoBack}> Back </button>
+           <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1 }}/>  </button> <p>BACK</p>
            </div>        
          
            <div className="Logo3">
@@ -111,6 +117,9 @@ function PSChangedAddress() {
              </div>
           
           </div>
+            {showPopUp &&
+            <SuccessPopUp labeledName={"Address changed successfully!"} navigateToHome={true}/>}
+          
          </div>
         
        

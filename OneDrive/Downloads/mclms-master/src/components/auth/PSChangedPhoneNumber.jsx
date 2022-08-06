@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./Auth.styles.css";
 import {useNavigate} from "react-router-dom";
-import logo1 from "../../assets/Profile.png";
+
 import logo2 from "../../assets/logo-alimodian.png";
 import logo3 from "../../assets/User.png";
-
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 
 function PSChangedPhoneNumber() {
@@ -40,9 +41,14 @@ function PSChangedPhoneNumber() {
 
     const handleConfirm1 = (e) => {
           //go to reset sucessful
-          navigate("/reset-sucessful");
+          navigate("/profile-setting-verification");
           console.log("confirm clicked");
      };
+     const handleProfile = (e) => {
+      navigate("/profile-setting");
+      console.log("Profile clicked");
+      };
+
            
  
     return (
@@ -51,7 +57,7 @@ function PSChangedPhoneNumber() {
           <div className="InnerContainer1">
             <div className="bar">
             <div className="Logo1">
-             <img src={logo1} alt="logo1" />
+            <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 60 }}/>  </button> 
 
             </div>
             <div className="Logo2">
@@ -63,7 +69,7 @@ function PSChangedPhoneNumber() {
            </div>
            </div>
            <div className="BackA">
-            <button onClick={handleGoBack}> Back </button>
+           <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1}}/>  </button> <p>BACK</p>
            </div>        
          
            <div className="Logo3">

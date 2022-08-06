@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css2?family=Alata&display=swap);
+
+.Reminder {
+   justify-content: center ;
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   font-size: 14px;
+   width: 300px;
+   height: 190px;
+   background-color: white;
+   border-radius: 25px;
+   margin: 10px;  
+   margin-left: 50px;
+   margin-top: 35px;
+   
+ }
+ 
+ .Reminder > p{
+    font-size: 16px;
+    font-family: 'Alata', sans-serif;
+    color: gray;
+    margin-top: 6px;
+ }
+ .Reminder > h3{
+    margin-top: -35px;
+    padding-left: 35px;
+
+    
+ }
+ 
+ .Payment{
+    margin-top: 20px;
+    padding: 25px;
+    justify-content: center;
+     margin-left: 10px;
+ }
+
+ .Pay{
+    padding: 5px;
+    width: 340px;
+    height: 80px;
+    background-color: aliceblue;
+    box-sizing: border-box;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0em 0em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+    margin-top: 40px;
+    margin-right: 20px;
+    
+ }
+ 
+ .Pay > button > img{
+    width: 100px;
+    height: 60px;
+    margin-right: 20px;
+    margin-left: -120px;
+    margin-top: 0.5px;
+ }
+ .Pay > button{
+   margin-right: 5px;
+   font-size: 16px;
+   font-weight:bold; 
+ }
+ /*G cash*/
+ .Container3{
+   background-color:#77A3F3 ;
+   margin-top: -4px;
+ }
+.GcashAddAccount{
+   background-color: aliceblue;
+   box-sizing: border-box;
+   height: 80vh;
+   justify-content: center ;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   font-size: 14px;
+   width: 413px;
+   border-top-right-radius: 45px;
+   border-top-left-radius: 45px;
+   margin: 10px;  
+   margin-left: 2px;
+   margin-top: 30px;
+}
+ .GcashAddAccount > img{
+   width: 250px;
+   height: 150px;
+   margin-top: -50px;
+   margin-bottom: 50px;
+   justify-items: center;
+   align-items: center;
+   text-align: center;
+ }
+.GcashAccnt{
+   width: 300px;
+   
+}
+.GcashAccnt > input{
+   height: 40px;
+   width: 300px;
+   border: none;
+   background-color: rgba(105, 100, 100, 0.212);
+   border-radius: 10px;
+   padding: 2px;
+   margin-bottom: 10px;
+   font-size: 14px;
+   
+}
+.GcashAccnt > input:focus{
+   outline: none;
+   
+}
+.GcashAccnt > p{
+   margin-bottom: -5px;
+   font-family: 'Alata', sans-serif;
+   font-size: 16px;
+}
+.GcashVerify{
+   color: white;
+   text-align: center;
+   margin-top: 60px;
+}
+ 
+.ButtonE {
+   margin-top: 100px;
+   color: white;
+   text-align: center;
+ }
+ 
+ .GcashVerify  > button {
+   background-color: #77A3F3;
+   border: none;
+   color: black;
+   font-size: 16px;
+   font-family: "Alata", sans-serif;
+   transition: background-color 0.5s;
+   border-radius: 25px;
+   justify-content: center;
+   text-align: center;
+   width: 150px; 
+   height: 35px;
+   
+ }
+ 
+ .GcashVerify > button:active {
+   background-color: rgb(0, 157, 255);
+   padding: 8px;
+  }
+ 
+/*Add G Cash*/
+.AccntDefault {
+   flex-direction: row;
+   display: flex;
+   word-spacing: 2px;
+   margin-left: 15px;
+   margin-right: 10px;
+   margin-top: -20px;
+   padding-left: 8px;
+   border-spacing: 20px; 
+
+}
+.AccntDefault > input{
+   background-color: transparent;
+   border: none;
+   width: 130px;
+   height: 50px;
+   margin-top: 30px;
+   font-size: 18px;
+   font-family: 'Alata', sans-serif;
+   font-weight: bold;
+}
+.Pay1{
+   padding: 5px;
+   width: 340px;
+   height: 150px;
+   background-color: aliceblue;
+   box-sizing: border-box;
+   border-radius: 25px;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 0em 0em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+   margin-top: -40px;
+   margin-bottom: 50px;
+   
+   
+}
+
