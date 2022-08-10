@@ -34,9 +34,7 @@ function PasswordPopUp() {
                <div className="PopUp">
                   
                     <p>Enter your password to submit.</p>
-                  </div>
-                  
-                
+                </div>
 
                   <div className="Pbox">
                  

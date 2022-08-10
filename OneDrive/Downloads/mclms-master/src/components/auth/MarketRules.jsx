@@ -13,7 +13,7 @@ function MarketRules() {
 
 
     const handleGoBack = (e) => {
-    navigate("/Home");
+    navigate("/home");
     console.log("Home clicked");
     };
     const handleProfile = (e) => {
@@ -51,14 +51,14 @@ function MarketRules() {
           </div>
           </div>
           <div className='BackA'>
-            <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1 }}/>  </button> <p>BACK</p>
+            <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1 }}/>  </button> <p>BACK</p> 
             </div>
 
 
 
         <h2>MARKET RULES</h2>
-      Note: Read the following guidelines carefully before proceeding to 
-        application form. <br/>
+        <div className='Note'>
+      <p>Note: Read the following guidelines carefully before proceeding to application form.</p></div>
       <p>
       1. While I am occupying or leasing this stall/space, I shall at all times 
       have my picture conveniently framed and hung up conspIcuously in the stall. <br/><br/>

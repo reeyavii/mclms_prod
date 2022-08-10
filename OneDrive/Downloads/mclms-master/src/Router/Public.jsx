@@ -23,6 +23,7 @@ import Sample from '../components/auth/Sample'
 import Gcash from '../components/auth/Gcash'
 import AddGCash from '../components/auth/AddGCash'
 import StallDetails from '../components/auth/StallDetails'
+import AboutUs from '../components/auth/AboutUs'
 
 
 
@@ -50,7 +51,7 @@ function Public() {
         <Route path="/payments" element={<Payments/>} />
         <Route path="/gcash" element={<Gcash/>} />
         <Route path="/add-GCash" element={<AddGCash/>} />
-
+        <Route path="/about-us" element={<AboutUs/>} />
 
 
         <Route path="/sample" element={<Sample/>} />

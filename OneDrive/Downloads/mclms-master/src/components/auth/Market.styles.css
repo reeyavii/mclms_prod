@@ -37,6 +37,12 @@ p{
     text-align: justify;
     margin: 15px;  
 }
+.Note > p{
+    color: rgba(83, 80, 80, 0.642);
+    font-style: italic;
+    margin-top: -4px;
+    text-align: center;
+}
 a{
     font-size: 14px;
 }

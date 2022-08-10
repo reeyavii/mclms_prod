@@ -45,6 +45,6 @@ function SuccessPopUp(props) {
   )
 }
 
-export default SuccessPopUp
+export default SuccessPopUp;
 
 

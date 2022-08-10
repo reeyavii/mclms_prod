@@ -25,7 +25,7 @@ function Home() {
 
     const handleStalls = (e) => {
           //go to verification
-          navigate("/");
+          navigate("/stall-details");
           console.log("stalls clicked");
           };
     
@@ -42,7 +42,7 @@ function Home() {
                 };
     const handleAboutUs = (e) => {
                     //go to verification
-                    navigate("/");
+                    navigate("/about-us");
                     console.log("about clicked");
                     };
         

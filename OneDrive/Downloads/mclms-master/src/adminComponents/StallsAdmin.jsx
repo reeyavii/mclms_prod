@@ -1,20 +1,20 @@
 import React, {useState} from "react";
-import "./Stalls.styles.css";
+import "./AdminAuth.styles.css";
 import {useNavigate} from "react-router-dom";
-import logo2 from "../../assets/logo-alimodian.png";
-
+import logo2 from "../assets/logo-alimodian.png";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import { green } from "@mui/material/colors";
+import StallPopUp from "./StallPopUp.jsx";
 
-function StallDetails() {
+function StallAdmin() {
     const navigate = useNavigate();
   
     const [area, setArea] =  useState("");
     const [monthlyRate, setMonthlyRate] =  useState("");
     const [rate, setRate] =  useState("");
-
+    const [showSavePopUp, setShowSavePopUp] = useState(false);
   
     
     const monthlyRateChange =  (e) => { 
@@ -27,27 +27,26 @@ function StallDetails() {
          setRate (e.target.value); };
           
     const handleGoBack = (e) => {
-          //go to verification
-          navigate("/market-rules");
+          //go back to home
+          navigate("/home");
           console.log("create clicked");
           };
-    const handleAcquire = () => {    
-          navigate("/");
-          console.log();
+    const handleUpdate = () => {    
+          navigate("/stallPopUp");
+          // setShowSavePopUp(true);
+          console.log("update clicked");
         }
     const handleProfile = (e) => {
          navigate("/profile-setting");
          console.log("Profile clicked");
         };
-    
-
-     
+   
  
     return (
     
         <div className="ContainerA">
           <div className="InnerContainer1">
-            <div className="bar">
+            <div className="bar1">
             <div className="Logo1">
             <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 60 }}/>  
             </button> 
@@ -84,13 +83,14 @@ function StallDetails() {
                         value={area}
                         onChange={areaChange}
                  /> 
-                    <h5>Monthly Rate:</h5>
-                      <input
+                      <h5>Occupant:</h5>
+                     <input
                         placeholder=""
-                        type="monthlyRate"
-                        value={monthlyRate}
-                        onChange={monthlyRateChange}
-                    />
+                        type="areaLeasses"
+                        value={area}
+                        onChange={areaChange}
+                 /> 
+                    
                 </div>
                 <div className="Area">
                         
@@ -101,23 +101,43 @@ function StallDetails() {
                         value={rate}
                         onChange={rateChange}
                     />
+                    <h5>Date of <br/>Occupant:</h5>
+                      <input
+                        placeholder=""
+                        type="monthlyRate"
+                        value={monthlyRate}
+                        onChange={monthlyRateChange}
+                    />
                 </div>
-           
+                <div className="Area">
+                <h5>Monthly Rate:</h5>
+                      <input
+                        placeholder=""
+                        type="monthlyRate"
+                        value={monthlyRate}
+                        onChange={monthlyRateChange}
+                    />
+                </div>
                 <div className="click">
                    <div className="BackA">
-                      <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 5  }}/>  </button> <p>BACK</p>
+                      <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 6.5  }}/>  </button> <p>BACK</p>
                     </div>  
 
                     <div className="Acquire">
-                     <button onClick={handleAcquire}>Acquire Now</button>
+                     <button onClick={handleUpdate}>Update</button>
                     </div>
+                    { showSavePopUp && 
+                       <StallPopUp/> 
+                    }
                 </div>
             </div>
+            
             </div>
           </div>
+         
       </div>
        
     );
   
 }
-  export default StallDetails;
+  export default StallAdmin;

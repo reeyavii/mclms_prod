@@ -29,32 +29,32 @@ function Home() {
          };
 
     const handleStalls = (e) => {
-          //go to verification
-          navigate("/");
-          console.log("stalls clicked");
-          };
+         //go to verification
+         navigate("/stalls");
+         console.log("stalls clicked");
+         };
     
     const handleApplicationForm = (e) => {
-            //go to verification
-            navigate("/");
-            console.log("AF clicked");
-            };
+         //go to verification
+         navigate("/");
+         console.log("AF clicked");
+         };
 
     const handlePayments = (e) => {
-                //go to verification
-                navigate("/");
-                console.log("payments clicked");
-                };
+         //go to verification
+         navigate("/");
+         console.log("payments clicked");
+         };
     const handleNotice = (e) => {
-                    //go to verification
-                    navigate("/");
-                    console.log("about clicked");
-                    };
+         //go to verification
+         navigate("/");
+         console.log("about clicked");
+         };
         
     return (
     
         <div className="InnerContainer1">
-            <div className="bar">
+            <div className="bar1">
             <div className="Logo1">
 
              <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 60 }}/>  </button> 
@@ -72,7 +72,7 @@ function Home() {
           <div className="Input-item">
             <div className="InputContainer">
                
-               
+            <div className="boxes">
             <div className=" box1">
                 
                 <div onClick={handleLessee} className="Stalls">
@@ -110,7 +110,8 @@ function Home() {
                </div>
                </div>
          </div>
-     </div>                
+     </div>    
+     </div>            
    
        
     );
