@@ -56,8 +56,9 @@ function MarketRules() {
 
 
 
-        <h2>MARKET RULES</h2>
+        
         <div className='Note'>
+        <h2>MARKET RULES</h2>
       <p>Note: Read the following guidelines carefully before proceeding to application form.</p></div>
       <p>
       1. While I am occupying or leasing this stall/space, I shall at all times 

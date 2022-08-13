@@ -1,0 +1,53 @@
+.Dashboard{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100vw;
+    box-sizing: border-box;
+    background-color: #D8E2F4;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #3B4E70;
+    box-sizing: border-box;
+}
+.LogoLeft{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    margin-top: 5px;
+}
+.LogoAlim > img{
+    width: 40px;
+    height: 40px ;
+    margin-left: 10px;
+}
+.LogoRight > button{
+    background-color: transparent;
+    border: none;
+    justify-content: center;
+}
+.Office{
+    display: flex;
+    flex-direction: column;
+    width:200px;
+    margin-top: 5px;
+}
+.Econ{
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 14px;
+    color: white;
+
+}
+.Dept{
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: white;
+}

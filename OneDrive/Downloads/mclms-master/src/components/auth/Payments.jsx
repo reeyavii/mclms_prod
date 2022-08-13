@@ -22,7 +22,7 @@ function Payments() {
           };
     const handlePayBills = (e) => {
           //go to verification
-          navigate("/");
+          navigate("/gcash");
           console.log("Edit clicked");
            };
     const handleReceipts = (e) => {
@@ -32,7 +32,7 @@ function Payments() {
          };
     const handleAddGCash = (e) => {
            //go to verification
-           navigate("/profile-setting-changed-password");
+           navigate("/");
            console.log("Edit clicked");
             };
    
@@ -80,13 +80,13 @@ function Payments() {
               </div> 
           
                <div className="Pay"> 
-                     <Button onClick={handleReceipts}><ReceiptRoundedIcon sx={{ fontSize: 60,marginLeft: -13, marginRight: 5, color:  [500] }}/>Receipts</Button>      
+                     <Button onClick={handleReceipts}><ReceiptRoundedIcon sx={{ fontSize: 50,marginLeft: 1, marginRight: 5, color:  [500] }}/>Receipts</Button>      
                 </div>
               
 
               <div className="Pay">
                         
-                        <Button onClick={handleAddGCash}> <AddCircleIcon sx={{ fontSize: 60, marginLeft: -1 ,marginRight: 3,}} /> Add G-cash Account</Button> 
+                        <Button onClick={handleAddGCash}> <AddCircleIcon sx={{ fontSize: 50, marginLeft: 1 ,marginRight: 3,}} /> Add G-cash Account</Button> 
                     
              </div>
           

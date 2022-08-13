@@ -32,7 +32,7 @@ function StallDetails() {
           console.log("create clicked");
           };
     const handleAcquire = () => {    
-          navigate("/");
+          navigate("/market-rules");
           console.log();
         }
     const handleProfile = (e) => {

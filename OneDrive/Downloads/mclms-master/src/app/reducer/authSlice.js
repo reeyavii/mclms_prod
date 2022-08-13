@@ -37,7 +37,7 @@ export const authLogin = createAsyncThunk(
 
 export const authRegister = createAsyncThunk(
     `${namespace}/authRegister`,
-    async ({username, password, email, phoneNumber, firstName, lastName}) => {
+    async ({username, password, email, phoneNumber, firstName, lastName, middleInitial,sex,age,address, status}) => {
         const { data } = await axios.post(`${API_URL}auth/register/`, {
             username: username,
             password: password,
@@ -45,6 +45,11 @@ export const authRegister = createAsyncThunk(
             phoneNumber: phoneNumber,
             firstName: firstName,
             lastName: lastName,
+            middleInitial: middleInitial,
+            sex: sex,
+            age: age,
+            address: address,
+            status: status,
         })
         return data
     }
@@ -85,10 +90,7 @@ export const authSlice = createSlice({
             localStorage.removeItem("user");
         },
         authSuccess: (state, { payload }) => {
-            var isAdmin = false;
-            if (payload.isAdmin === "true"){
-              isAdmin = true;
-            }
+         
             state.loading = false;
             state.token = payload.token;
             state.username = payload.username;
@@ -96,7 +98,7 @@ export const authSlice = createSlice({
             state.firstName = payload.firstName;
             state.lastName = payload.lastName;
             state.phoneNumber = payload.phoneNumber;
-            state.isAdmin = isAdmin;
+            state.isAdmin = payload.isAdmin;
             state.isAuth = true;
             state.userId = payload.id;
             saveLocal(payload)
@@ -163,14 +165,7 @@ export const {
   } = authSlice.actions;
 
 const saveLocal = (payload) => {
-  var isAdmin = "";
-    console.log(payload.isAdmin)
-    if (payload.isAdmin || payload.isAdmin === "true"){
-      isAdmin = "true";
-    }
-    else {
-      isAdmin = "false";
-    }
+  
     const user = {
         token: payload.token,
         id: payload.id,
@@ -179,7 +174,7 @@ const saveLocal = (payload) => {
         lastName: payload.lastName,
         email: payload.email,
         phoneNumber: payload.phoneNumber,
-        isAdmin: isAdmin,
+        isAdmin: payload.isAdmin,
         expiration: payload.expiration,
     }
     localStorage.setItem("user", JSON.stringify(user));

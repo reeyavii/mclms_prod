@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Auth.styles.css";
+import "./Profile.styles.css";
 import {useNavigate} from "react-router-dom";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import SuccessPopUp from "./SuccessPopUp";
@@ -33,10 +33,10 @@ function PSPNVerification() {
           </div>        
          
         <div className="Code">
-        A 4-digit code is sent to <br/>
+        <p>A 4-digit code is sent to <br/>
         your phone number +639******741. <br/> 
         Please enter the code below to complete <br/>
-        changing your phone number.
+        changing your phone number.</p>
         </div>
         <div className="line"> 
           <p>___      ___       ___       ___</p>

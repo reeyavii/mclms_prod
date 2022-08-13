@@ -40,7 +40,11 @@
     transition: background-color 0.5s;
     border-radius: 25px;
 }
-
+.Logo3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .Logo3 > img {
     margin-top: 20px;
     height: 80px;
@@ -312,6 +316,9 @@ h5{
     margin-top: 10px;
     height: 50px;
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .ButtonP > button {
@@ -354,6 +361,10 @@ h5{
 .PopU{
     margin: 70px;
     margin-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -374,7 +385,23 @@ h5{
 .PopSub > button{
     background-color:#77A3F3 ;
     border: none;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
-
+.PopSub > p{
+    text-align: center;
+    align-items: center;
+    padding: 2px;
+}
+.Code > p{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family: 'Alata', sans-serif;
+    
+}
 
 

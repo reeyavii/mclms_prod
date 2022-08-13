@@ -33,7 +33,7 @@ function SuccessPopUp(props) {
                     
                       <div className="PopSub">
                            {
-                              props.navigateToHome ? <button onClick={handlePopSubmit}>go back to home </button> : <button onClick={handlePopSubmit}>Log in again </button>
+                              props.navigateToHome ? <button onClick={handlePopSubmit}> <p>go back to home</p> </button> : <button onClick={handlePopSubmit}>Log in again </button>
                            }
                            
                       </div>

@@ -54,20 +54,20 @@ function AdminLogin() {
     console.log("login clicked");
   };
   return (
-    <div className="OuterContainer">
-      <div className="InnerContainer">
+    <div className="BgrContainer">
+      <div className="BgInnerContainer">
         <div className="BGLayer"></div>
-        <div className="Logo">
+        <div className="LoginLogo">
           <img src={logo} alt="logo" />
         </div>
-        <div className="Input">
+        <div className="InputChange">
           <input
             placeholder="E-mail or Phone Number"
             value={email}
             onChange={emailChange}
           />
         </div>
-        <div className="Input">
+        <div className="InputChange">
           <input
             placeholder="Password"
             type="password"
@@ -75,17 +75,19 @@ function AdminLogin() {
             onChange={passwordChange}
           />
         </div>
-        <div className="Button">
+        <div className="ButtonClick">
           {
             email=== ""|| password === "" ? <button disabled={true} onClick={handleLogin}>LOG IN</button> : <button onClick={handleLogin}>LOG IN</button>
           
           }
           
         </div>
-        <div className="Button">
+        <div className="ButtonClick">
+          <div className="ButtonClick">
           <button onClick={handleCreateAccount}>Create account</button>
         </div>
-        <div className="Button">
+        </div>
+        <div className="ButtonClick">
           <button onClick={handleForgotPassword}>Forgot Password</button>
         </div>
       </div>

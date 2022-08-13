@@ -78,15 +78,15 @@ function Login() {
         <div className="Button">
           {
             email=== ""|| password === "" ? <button disabled={true} onClick={handleLogin}>LOG IN</button> : <button onClick={handleLogin}>LOG IN</button>
-          
           }
-          
         </div>
+        <div className="Button">
         <div className="Button">
           <button onClick={handleCreateAccount}>Create account</button>
         </div>
         <div className="Button">
           <button onClick={handleForgotPassword}>Forgot Password</button>
+        </div>
         </div>
       </div>
     </div>

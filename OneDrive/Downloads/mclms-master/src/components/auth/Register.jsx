@@ -126,6 +126,11 @@ function Register() {
         phoneNumber: contactNum,
         firstName: firstName,
         lastName: lastName,
+        middleInitial: suffix,
+        sex: sex,
+        age: parseInt(age),
+        address: address,
+        status:status
       };
       dispatch(authRegister(data));
     } else {

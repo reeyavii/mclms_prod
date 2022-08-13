@@ -13,10 +13,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 function Home() {
   
     const navigate = useNavigate(); 
-   
-    
-    
- 
+
     const handleProfile = (e) => {
          //go to verification
          navigate("/profile-setting");
@@ -53,66 +50,43 @@ function Home() {
         
     return (
     
-        <div className="InnerContainer1">
-            <div className="bar1">
-            <div className="Logo1">
-
-             <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 60 }}/>  </button> 
-
-            </div>
-            <div className="Logo2">
-             <img src={logo2} alt="logo1" />
-            </div>  
-         
-          <div className="Economic">
-            ECONOMIC<br></br>DEPARTMENT
-          </div>
-          </div>
         
-          <div className="Input-item">
-            <div className="InputContainer">
+          
                
-            <div className="boxes">
-            <div className=" box1">
+            <div className="Adminboxes">
+            <div className=" Adminbox1">
                 
-                <div onClick={handleLessee} className="Stalls">
+                <div onClick={handleLessee} className="AStalls">
                     <img src={logoF} alt="logoF"/>
                     <p>Lessee's List</p>
                </div>  
 
-               <div onClick={handleStalls} className="Stalls">
+               <div onClick={handleStalls} className="AStalls">
                   <img src={logoA} alt="logoA"/>
                   <p>Stalls Status</p>
                </div>
 
-               
-            </div>
-            <div className=" box2">
-
-                <div onClick={handleApplicationForm} className="Stalls">
+               <div onClick={handleApplicationForm} className="AStalls">
                     <img src={logoB} alt="logoB"/>
                     <p>Application Form</p>
                </div>
-
-               <div onClick={handlePayments} className="Stalls">
+               <div onClick={handlePayments} className="AStalls">
                    <img src={logoC} alt="logoC"/>
                    <p>Payments</p> 
-                   <div className="smalltext">MOP and receipts</div>
+                  
                </div>
-                </div>
-            <div className="box3">
-
-               <div onClick={handleNotice} className="Stalls">
+               <div onClick={handleNotice} className="AStalls">
                     <img src={logoE} alt="logoE"/>
                     <p>Notice of Deliquencies</p>
                    
                </div>
-               </div>
-               </div>
-         </div>
-     </div>    
-     </div>            
-   
+               
+            </div>
+           
+          </div>
+        
+              
+  
        
     );
   

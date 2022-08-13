@@ -23,39 +23,26 @@ function SavePopUp () {
 
 return (
 
-    <div className="ContainerA">   
-         <div className="InnerContainer1">
-            <div className="bar1">
-            <div className="Logo1">
-            <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 60 }}/>  </button> 
+     
+    <div className="Dashboard">
+      <div className="Save">
 
-            </div>
-            <div className="Logo2">
-             <img src={logo2} alt="logo1" />
-            </div>  
-         
-          <div className="Economic">
-            ECONOMIC<br></br>DEPARTMENT
-          </div>
-          </div>
-
-          <div className="LogoCheck">
-             <img src={logoCheck} alt="logoCheck" />
-            </div> 
+       <div className="Check">
+        <img src={logoCheck} alt="logoCheck" />
+       </div> 
 
        <div className="ResetPasswordF">
-            Changes Save Successfully.
-          </div>
+        Changes Save Successfully.
+       </div>
       
-        <div className="ButtonF">
-          {
-           <button onClick={handleBacktoHome}>Go back to Home</button>
-          }
-        </div>
-       
+       <div className="ButtonF">
+        {
+          <button onClick={handleBacktoHome}>Go back to Home</button>
+        }
+       </div>
+      </div>
     </div> 
-    </div>
-    
+ 
 );
 }
 

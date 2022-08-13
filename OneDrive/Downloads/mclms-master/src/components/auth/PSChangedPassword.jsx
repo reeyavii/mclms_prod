@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Auth.styles.css";
+import "./Profile.styles.css";
 import {useNavigate} from "react-router-dom";
 import logo2 from "../../assets/logo-alimodian.png";
 import logo3 from "../../assets/User.png";

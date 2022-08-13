@@ -1,5 +1,5 @@
 /*Login*/
-.InnerContainer {
+.BgInnerContainer {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -8,67 +8,67 @@
   height: 100vh;
   max-height: 100vh;
   background-color: #1c2257bb;
- 
 }
-.OuterContainer {
+.BgContainer {
   background-image: url("../assets/bg.jpg");
   background-size: cover;
-  background-position: -120px;
+  background-position: 0px;
 }
 
-.Logo > img {
-  margin-top: 120%;
-  margin-bottom: 100%;
-  height: 150px;
-  width: 150px;
+.LoginLogo > img {
+  margin-top: -10px;
+  margin-bottom: 100px;
+  height: 80px;
+  width: 80px;
 }
 
-.Input {
+.InputChange {
   display: flex;
-  width: 100%;
+  width: 40%;
+  height: 40px;
+  margin: -5px;
   justify-content: center;
 }
 
-.Input > input {
+.InputChange > input {
   border-radius: 25px;
-  padding: 10px;
+  padding: 5px;
   margin: 10px;
-  width: 70%;
+  width: 50%;
+  font-size: 8px;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   text-align: center;
 }
 
-.Input > input:focus {
+.InputChange > input:focus {
   outline: none;
 }
 
-.Button {
-  margin-top: 10px;
-  height: 50px;
+.ButtonClick {
+  margin-top: 15px;
+  height: 20px;
   color: white;
 }
 
-.Button > button {
+.ButtonClick > button {
   background-color: transparent;
   border: none;
   padding: 10px;
   color: white;
   font-family: "Alata", sans-serif;
+  font-size: 10px;
   transition: background-color 0.5s;
   border-radius: 25px;
+  margin-top: -5px;
 }
 
-.Button > button:active {
+.ButtonClick > button:active {
   background-color: rgb(0, 157, 255);
   padding: 10px;
   border-radius: 25px;
 }
 
-.Create-Account {
-  margin-top: 25px;
-  color: white;
-}
 
 .p{
     color: black;
@@ -84,228 +84,50 @@
     background-color:#D8E2F4;
   }
 /*Home*/
-.bar1{
-    background-color: #3B4E70;
-    height: 13vh;
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 1%;
-    z-index: 10;  
-   }
-   .Logo1 >  button {
-      margin-top: 40px;
-      margin-bottom: 100%;
-      margin-left: -2px;
-      height: 50px;
-      width: 50px;
-      border:none;
-      padding: 6px;
-      margin-right: 5px;
-      background-color: transparent;
-    }
-    .Logo2 >  img {
-      margin-top: 30px;
-      margin-bottom: 100%;
-      height: 80px;
-      width: 80px;
-     margin-left: 10px;
-      align-items: center;
-  }
-  
-  .Economic{
-    margin-top: 65px;
-    font-size: 12px;
-    margin-right: 10px;
-    font-family: 'Alata', sans-serif;
-    color: aliceblue;
-  }
-  .boxes{
+ .Adminboxes{
     display: flex;
     flex-direction: column;
-    margin-top: 120px;
-   
+    margin-top: 85px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
-  .box1{
+
+  .Adminbox1{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
-  .box2{
-    display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
+  .Adminbox1 :hover{
+    background-color:rgb(125, 164, 227);
+    cursor: pointer;
+    transition: background-color 1s;
   }
-  .box3{
-    display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-  }
-  
-  .Stalls{
-     justify-content: center ;
+
+  .AStalls{
+    justify-content: center ;
     flex-direction: column;
     display: flex;
     align-items: center;
-    width: 160px;
-    height: 160px;
+    width: 300px;
+    height: 140px;
     background-color: #BAC6DD;
-    border-radius: 25px;
+    border-radius: 15px;
     margin: 10px;
-  }
-  .Stalls :active{
-    background-color: rgb(166, 197, 216);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     
   }
+  .AStalls :active{
+    background-color: rgb(166, 197, 216);
+  }
+ 
+  .AStalls > P{
+    font-size: 10px;
+    font-weight: 600;
+  }
   
-  
-  .Stalls > img{
-    width: 60px;
+  .AStalls > img{
+    width: 40px;
     object-fit: contain;
   }
-  .smalltext{
-    font-size: 12px;
-  }
-
-/*Stalls*/
-@import url(https://fonts.googleapis.com/css2?family=Alata&display=swap);
-
-.Details{
-   flex-direction: row; 
-   margin-left: 15px;
-}
-
-.Stall {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    margin-top: 255px;
-}
-.Stall > p{
-    font-family: 'Alata', sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    align-items: center;
-    margin-left: 25px;
-    margin-right: 15px;
-}
-.Stall > h4{
-      font-family: 'Alata', sans-serif;
-      align-items: center;
-      margin-left: 155px;
-      margin-top: 25px;
-      font-size: 14px;
-      font-weight: lighter;
-}
-.Area{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    box-sizing: border-box;
-    margin-left: -5px;
-    margin-top: -25px;
-}
-.Area > input{
-    border-bottom: 2px solid rgb(136, 161, 244);
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    background: transparent; 
-    width: 60px;
-    padding: 8px;
-    margin-top: -5px;
-}
-.Area > input:focus {
-    outline: none ;
-}
-.Area > h5{
-    margin-left: 15px;
-    margin-right: 10px;
-    text-align: left;
-    font-size: 14px;
-    
-}
-
-.SD > p{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: left;
-    font-size: 18px;
-    font-weight: bold;
-    box-sizing: border-box;
-    margin-left: 10px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-.Groceries > p{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: left;
-    font-size: 18px;
-    box-sizing: border-box;
-    margin-left: 10px;
-}
-   
-.Acquire {
-    color: black;
-    text-align: center;
-    margin-top: -5px;
-  }
-  
-.Acquire > button {
-    background-color: #728BB8;
-    border: none;
-    color: black;
-    font-size: 16px;
-    font-family: "Alata", sans-serif;
-    transition: background-color 0.5s;
-    border-radius: 25px;
-    justify-content: center;
-    text-align: center;
-    width: 180px; 
-    height: 48px;   
-}
-  
-.Acquire > button:active {
-    background-color: rgb(0, 157, 255);
-    padding: 10px;
-}
-.click{
-    flex-direction: row;
-    margin-left: 5px;
-    background-color: transparent;
-    border: none;
-}
-.BackA{
-  margin-top: -5px;
-  text-align: left;
-  height:40px;
-  color: black;
-  margin-left: -6px;
-  
-}
-.BackA > p{
-  margin-top: -31px;
-  text-align: left;
-  height: 50px;
-  color: black;
-  margin-left: 25px;
-  font-size: 12px;
-  padding-left: 5px;
-  font-family: "Alata", sans-serif;
-}
-
-.BackA > button{
-  color: black;
-  background-color: transparent;
-  border: none;
-  padding: 10px;
-  color: black;
-  transition: background-color 0.5s;
-  border-radius: 25px;  
-}
-  
+ 
