@@ -1,7 +1,7 @@
 import React from "react";
-import "./About.styles.css";
-import "./Application.styles.css";
-import logo from "../../assets/Alim_Logo.png";
+import "./auth/About.styles.css";
+import "./auth/Application.styles.css";
+import logo from "../assets/Alim_Logo.png";
 import {useNavigate} from "react-router-dom";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
@@ -22,7 +22,7 @@ function AboutUs() {
         
         <div className="Content">
         <div className='BackAbout'>
-            <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1 }}/>  </button> <p>BACK</p>
+            <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 3 }}/>  </button> <p>BACK</p>
             </div>
             <div className="Alimodian">   
                  <img src={logo} alt="Logo"/>
@@ -33,13 +33,10 @@ function AboutUs() {
             </div>
 
             <div className="Lgu">
-
-
                 <p>LGU: Alimodian</p>
-            </div>
-            <div className="Office">
                 <p>Office: Municipal Economic Enterprise</p>
             </div>
+           
             <div className="Mandate">
                 <p>Mandate: Economic enterprise</p>
             </div>

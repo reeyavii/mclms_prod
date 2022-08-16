@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import "./Profile.styles.css";
+import "./auth/Profile.styles.css";
 import {useNavigate} from "react-router-dom";
-import logo2 from "../../assets/logo-alimodian.png";
-import logo3 from "../../assets/User.png";
+import logo2 from "../assets/logo-alimodian.png";
+import logo3 from "../assets/User.png";
 import SuccessPopUp from "./SuccessPopUp";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -48,19 +48,26 @@ function PSChangedAddress() {
     
         <div className="ContainerA">
           <div className="InnerContainer1">
-            <div className="bar">
-            <div className="Logo1">
-            <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 60 }}/>  </button> 
-
-            </div>
+          <div className="bar">
             <div className="Logo2">
-             <img src={logo2} alt="logo2" />
+                <div className="Logo2Alim">
+             <img src={logo2} alt="logo1" />
             </div>  
+            </div>
          
-           <div className="Economic">
-            ECONOMIC<br></br>DEPARTMENT
-           </div>
-           </div>
+          <div className="Economic">
+                <div className='Nomic'>
+                    ECONOMIC
+                </div>
+                <div className='Department'>
+                    DEPARTMENT
+                </div>
+          </div>
+           
+            <div className="Logo1">
+              <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 35, marginTop: 2, marginRight:2, color:'white' }}/>  </button> 
+            </div>
+          </div>
            <div className="BackA">
            <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1 }}/>  </button> <p>BACK</p>
            </div>        

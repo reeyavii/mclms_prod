@@ -3,7 +3,7 @@ import {Routes, Route} from "react-router-dom"
 import Home from "../adminComponents/Home"
 import StallAdmin from '../adminComponents/StallsAdmin'
 
-import SuccessPopUp from '../components/auth/SuccessPopUp'
+import SuccessPopUp from '../components/SuccessPopUp'
 import StallPopUp from '../adminComponents/StallPopUp'
 import SavePopUp from '../adminComponents/SavePopUp'
 import Dashboard from '../adminComponents/Dashboard'

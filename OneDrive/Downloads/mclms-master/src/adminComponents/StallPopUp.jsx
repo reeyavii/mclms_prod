@@ -32,7 +32,7 @@ function StallPopUp() {
                     <p>Review Changes</p>
                </div>
             
-               <div className="PopUp">
+               <div className="PopUpx">
                   
                   <p>You have made changes.<br/>
                     Do you want to discard or save them?</p>
@@ -40,10 +40,10 @@ function StallPopUp() {
                   
 
                   <div className="StallPopButton">
-                        <div className="Cancel">
+                        <div className="Cancelx">
                              <button onClick={handleCancel}> Discard </button>
                         </div>
-                        <div className="PopSave">
+                        <div className="PopSavex">
                              <button onClick={handlePopSave}>Save</button>
                         </div>
 

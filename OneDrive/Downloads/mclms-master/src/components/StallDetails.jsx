@@ -1,8 +1,7 @@
 import React, {useState} from "react";
-import "./Stalls.styles.css";
+import "./auth/Stalls.styles.css";
 import {useNavigate} from "react-router-dom";
-import logo2 from "../../assets/logo-alimodian.png";
-
+import logo2 from "../assets/logo-alimodian.png";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
@@ -47,20 +46,27 @@ function StallDetails() {
     
         <div className="ContainerA">
           <div className="InnerContainer1">
-            <div className="bar">
-            <div className="Logo1">
-            <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 60 }}/>  
-            </button> 
-
-            </div>
+          <div className="bar">
             <div className="Logo2">
-             <img src={logo2} alt="logo1" />
-            </div>  
+               <div className="Logo2Alim">
+                  <img src={logo2} alt="logo1" />
+               </div>  
+            </div>
          
-           <div className="Economic">
-            ECONOMIC<br></br>DEPARTMENT
-           </div>
-           </div>
+            <div className="Economic">
+               <div className='Nomic'>
+                    ECONOMIC
+               </div>
+               <div className='Department'>
+                    DEPARTMENT
+               </div>
+            </div>
+           
+            <div className="Logo1">
+
+            <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 35, marginTop: 2, marginRight:2, color:'white' }}/>  </button> 
+            </div>
+          </div>
                 
          
            <div className="StallDetails">
@@ -79,6 +85,7 @@ function StallDetails() {
                  <div className="Area">
                         <h5>Area Leasses:</h5>
                      <input
+                        disabled = {true}
                         placeholder=""
                         type="areaLeasses"
                         value={area}
@@ -86,6 +93,7 @@ function StallDetails() {
                  /> 
                     <h5>Monthly Rate:</h5>
                       <input
+                        disabled = {true}
                         placeholder=""
                         type="monthlyRate"
                         value={monthlyRate}
@@ -96,6 +104,7 @@ function StallDetails() {
                         
                         <h5>Rate per sq.m</h5>
                     <input
+                        disabled = {true}
                         placeholder=""
                         type="rate"
                         value={rate}

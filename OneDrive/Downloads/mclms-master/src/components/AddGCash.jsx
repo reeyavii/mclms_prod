@@ -1,10 +1,10 @@
 import React , { useState }  from "react";
-import "./Payments.styles.css";
+import "./auth/Header";
 import {useNavigate} from "react-router-dom";
-import logo2 from "../../assets/logo-alimodian.png";
+import logo2 from "../assets/logo-alimodian.png";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Button from '@mui/material/Button';
-import logoGcash from "../../assets/gcash.png";
+import logoGcash from "../assets/gcash.png";
 
 
 

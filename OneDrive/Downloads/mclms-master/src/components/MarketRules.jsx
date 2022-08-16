@@ -1,7 +1,7 @@
 import React from 'react';
-import "./Market.styles.css";
+import "./auth/Market.styles.css";
 import {useNavigate} from "react-router-dom";
-import logo2 from "../../assets/logo-alimodian.png";
+import logo2 from "../assets/logo-alimodian.png";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { useState } from "react";
@@ -36,30 +36,39 @@ function MarketRules() {
     <div className="Container">
 
         <div className="InnerContainer1">
-            <div className="bar">
-            <div className="Logo1">
-            <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 60 }}/>  
-            </button> 
-
-            </div>
+        <div className="bar">
             <div className="Logo2">
+                <div className="Logo2Alim">
              <img src={logo2} alt="logo1" />
             </div>  
+            </div>
          
           <div className="Economic">
-            ECONOMIC<br></br>DEPARTMENT
+                <div className='Nomic'>
+                    ECONOMIC
+                </div>
+                <div className='Department'>
+                    DEPARTMENT
+                </div>
           </div>
-          </div>
-          <div className='BackA'>
-            <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1 }}/>  </button> <p>BACK</p> 
-            </div>
+           
+            <div className="Logo1">
 
+            <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 35, marginTop: 2, marginRight:2, color:'white' }}/>  </button> 
+
+            </div>
+            
+          </div>
+          <div className="BackA">
+            <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1 }}/>  </button> <p>BACK</p>
+           </div>
 
 
         
         <div className='Note'>
         <h2>MARKET RULES</h2>
-      <p>Note: Read the following guidelines carefully before proceeding to application form.</p></div>
+      <h4>Note: Read the following guidelines carefully before proceeding to application form.</h4></div>
+      <div className='Note'>
       <p>
       1. While I am occupying or leasing this stall/space, I shall at all times 
       have my picture conveniently framed and hung up conspIcuously in the stall. <br/><br/>
@@ -83,7 +92,7 @@ function MarketRules() {
       business therein, without prior approval from the Market Task 
       Force and the Municipal Mayor. 
       </p>
-      
+      </div>
       
      
    

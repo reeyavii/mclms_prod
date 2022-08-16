@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import "./Profile.styles.css";
+import "./auth/Profile.styles.css";
 import {useNavigate} from "react-router-dom";
-import logo2 from "../../assets/logo-alimodian.png";
-import logo3 from "../../assets/User.png";
+import logo2 from "../assets/logo-alimodian.png";
+import logo3 from "../assets/User.png";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import EditIcon from '@mui/icons-material/Edit';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -70,18 +70,25 @@ function ProfileSetting() {
         <div className="ContainerA">
           <div className="InnerContainer1">
             <div className="bar">
-            <div className="Logo1">
-            <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 60 }}/>  </button> 
-
-            </div>
             <div className="Logo2">
-             <img src={logo2} alt="logo2" />
+                <div className="Logo2Alim">
+             <img src={logo2} alt="logo1" />
             </div>  
+            </div>
          
-           <div className="Economic">
-            ECONOMIC<br></br>DEPARTMENT
-           </div>
-           </div>
+          <div className="Economic">
+                <div className='Nomic'>
+                    ECONOMIC
+                </div>
+                <div className='Department'>
+                    DEPARTMENT
+                </div>
+          </div>
+           
+            <div className="Logo1">
+              <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 35, marginTop: 2, marginRight:2, color:'white' }}/>  </button> 
+            </div>
+          </div>
            <div className="BackA">
            <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1 }}/>  </button> <p>BACK</p>
            </div>        
@@ -102,7 +109,8 @@ function ProfileSetting() {
                       placeholder="E-mail:"
                    />
                    <input
-                      placeholder="abc@gmail.com" 
+                      disabled = {true}
+                      placeholder="@gmail.com" 
                       value={email}
                       onChange={emailChange}
                    />  
@@ -119,6 +127,7 @@ function ProfileSetting() {
                         placeholder="Phone Number"
                      />          
                      <input
+                        disabled = {true}
                         placeholder="+63"
                         value={phoneNum}
                         onChange={phoneNumChange}
@@ -137,7 +146,8 @@ function ProfileSetting() {
                     />
 
                     <input
-                        placeholder="********"
+                        disabled = {true}
+                        placeholder=" "
                         value= {password}
                         onChange={passwordChange}
                     />
@@ -152,7 +162,8 @@ function ProfileSetting() {
                         placeholder="Permanent Address"
                      />
                     <input
-                        placeholder="Alibango, Alimodian, Iloilo"
+                        disabled = {true}
+                        placeholder=""
                         value={permanentAddress}
                         onChange={permanentAddressChange}
                      />

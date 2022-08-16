@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Auth.styles.css";
+import "./auth/Auth.styles.css";
 //import {useNavigate} from "react-router-dom";
 import SuccessPopUp from "./SuccessPopUp";
 

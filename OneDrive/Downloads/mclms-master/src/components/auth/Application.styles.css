@@ -52,7 +52,7 @@
 }
 
 .ApplicationForm > h2{
-    margin-top: -15px;
+    margin-top: 15px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -251,7 +251,7 @@
 .Submit {
     color: black;
     text-align: center;
-    margin-top: -50px;
+    margin-top: -60px;
   }
   
 .Submit > button {
@@ -261,10 +261,10 @@
     font-size: 16px;
     font-family: "Alata", sans-serif;
     transition: background-color 0.5s;
-    border-radius: 25px;
+    border-radius: 15px;
     justify-content: center;
     text-align: center;
-    width: 150px; 
+    width: 100px; 
     height: 35px;   
 }
   
@@ -342,7 +342,7 @@ h5{
 .Cancel{
     justify-items: center;
     padding: 10px;
-    margin: 10px;
+    margin: 15px 0px 5px 0px;
     z-index: 100;
 }
 .Cancel > button{
@@ -358,7 +358,7 @@ h5{
 .PopSubmit{
     justify-items: center;
     padding: 10px;
-    margin: 10px;
+    margin: 15px 0px 5px 0px;;
     z-index: 100;
 }
 

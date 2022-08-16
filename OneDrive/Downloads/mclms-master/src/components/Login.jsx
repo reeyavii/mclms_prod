@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "./Auth.styles.css";
-import logo from "../../assets/logo-alimodian.png";
+import "./auth/Auth.styles.css";
+import logo from "../assets/logo-alimodian.png";
 import {useNavigate} from "react-router-dom";
 import {useSelector, useDispatch} from "react-redux";
-import { getStalls } from "../../app/reducer/stallSlice";
-import { authLogin } from "../../app/reducer/authSlice";
+import { getStalls } from "../app/reducer/stallSlice";
+import { authLogin } from "../app/reducer/authSlice";
 
 
 function Login() {

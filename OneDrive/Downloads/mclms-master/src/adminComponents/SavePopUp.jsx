@@ -1,9 +1,9 @@
 import React from "react";
 import "./PopUp.styles.css";
 import {useNavigate} from "react-router-dom";
-import logo2 from "../assets/logo-alimodian.png";
+// import logo2 from "../assets/logo-alimodian.png";
 import logoCheck from "../assets/Verified.png";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 
 
@@ -15,10 +15,10 @@ function SavePopUp () {
      navigate("/Home");
      console.log("Home clicked");
    };
-   const handleProfile = (e) => {
-     navigate("/profile-setting");
-     console.log("Profile clicked");
-     };
+  //  const handleProfile = (e) => {
+  //    navigate("/profile-setting");
+  //    console.log("Profile clicked");
+  //    };
   
 
 return (
@@ -31,11 +31,11 @@ return (
         <img src={logoCheck} alt="logoCheck" />
        </div> 
 
-       <div className="ResetPasswordF">
+       <div className="ResetPasswordx">
         Changes Save Successfully.
        </div>
       
-       <div className="ButtonF">
+       <div className="Buttonx">
         {
           <button onClick={handleBacktoHome}>Go back to Home</button>
         }

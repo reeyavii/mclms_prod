@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Profile.styles.css";
+import "./auth/Profile.styles.css";
 import {useNavigate} from "react-router-dom";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import SuccessPopUp from "./SuccessPopUp";

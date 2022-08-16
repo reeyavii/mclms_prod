@@ -1,9 +1,10 @@
 import React, { useState, useMemo } from "react";
-import "./Auth.styles.css";
+import "./auth/Auth.styles.css";
 import { useNavigate } from "react-router-dom";
-import { authRegister } from "../../app/reducer/authSlice";
+import { authRegister } from "../app/reducer/authSlice";
 import { useDispatch } from "react-redux";
-//import arrow from "../../assets/arrowback.png";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+
 
 function Register() {
   const dispatch = useDispatch();
@@ -142,8 +143,8 @@ function Register() {
   //mg src={arrow} alt="arrow"
   return (
     <div className="InnerContainer1">
-      <div className="Button1">
-        <button onClick={handleGoBack}> Back </button>
+      <div className="BackA">
+      <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1 }}/>  </button> <p>BACK</p>
       </div>
 
       <div className="CreateAccount1">Create Account</div>

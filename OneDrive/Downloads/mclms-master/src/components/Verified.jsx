@@ -1,7 +1,7 @@
 import React from "react";
-import "./Auth.styles.css";
+import "./auth/Auth.styles.css";
 import {useNavigate} from "react-router-dom";
-import logoV from "../../assets/Verified1.png";
+import logoV from "../assets/Verified1.png";
 
 function Verified() {
     const navigate = useNavigate();

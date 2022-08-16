@@ -81,7 +81,7 @@
 .Acquire {
     color: black;
     text-align: center;
-    margin-top: -5px;
+    margin-top: -4px;
   }
   
 .Acquire > button {
@@ -91,11 +91,11 @@
     font-size: 16px;
     font-family: "Alata", sans-serif;
     transition: background-color 0.5s;
-    border-radius: 25px;
+    border-radius: 15px;
     justify-content: center;
     text-align: center;
-    width: 180px; 
-    height: 48px;   
+    width: 130px; 
+    height: 40px;   
 }
   
 .Acquire > button:active {
@@ -104,5 +104,5 @@
 }
 .click{
     flex-direction: row;
-    margin-left: 5px;
+    margin: 50px 0px 0px 5px;
 }

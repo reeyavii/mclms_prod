@@ -1,9 +1,9 @@
 import React from "react";
-import "./Auth.styles.css";
+import "./auth/Auth.styles.css";
 import {useNavigate} from "react-router-dom";
-import logo1 from "../../assets/Profile.png";
-import logo2 from "../../assets/logo-alimodian.png";
-import logoCheck from "../../assets/Verified.png";
+import logo1 from "../assets/Profile.png";
+import logo2 from "../assets/logo-alimodian.png";
+import logoCheck from "../assets/Verified.png";
  
 
 

@@ -2,7 +2,7 @@ import React from "react";
 import "./AdminAuth.styles.css";
 
 import {useNavigate} from "react-router-dom";
-import logo2 from "../assets/logo-alimodian.png";
+// import logo2 from "../assets/logo-alimodian.png";
 import logoA from "../assets/Stalls.png";
 import logoB from "../assets/Form.png";
 import logoC from "../assets/Payment.png";

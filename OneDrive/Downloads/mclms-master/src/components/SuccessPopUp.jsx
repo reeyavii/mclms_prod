@@ -1,7 +1,7 @@
 import React from 'react'
-import "./Profile.styles.css";
+import "./auth/Profile.styles.css";
 import {useNavigate} from "react-router-dom";
-import PopLogo from "../../assets/Verified.png";
+import PopLogo from "../assets/Verified.png";
 
 
 function SuccessPopUp(props) {

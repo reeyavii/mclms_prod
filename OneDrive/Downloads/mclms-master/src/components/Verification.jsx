@@ -1,5 +1,5 @@
 import React from "react";
-import "./Auth.styles.css";
+import "./auth/Auth.styles.css";
 import {useNavigate} from "react-router-dom";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
