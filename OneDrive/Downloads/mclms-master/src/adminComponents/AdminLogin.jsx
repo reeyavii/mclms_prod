@@ -37,15 +37,15 @@ function AdminLogin() {
     console.log(stalls);
 
     if (token !== null ){
-      navigate("/home");
+      navigate("/admin-homepage");
     }
     console.log(password);
-    navigate("/home");
+    navigate("/admin-homepage");
   };
 
   const handleCreateAccount = () => {
     //go to registration
-    navigate("/register")
+    navigate("/admin-register");
     console.log("login clicked");
   };
   const handleForgotPassword = () => {
@@ -54,7 +54,7 @@ function AdminLogin() {
     console.log("login clicked");
   };
   return (
-    <div className="BgrContainer">
+    <div className="BgContainer">
       <div className="BgInnerContainer">
         <div className="BGLayer"></div>
         <div className="LoginLogo">
@@ -75,19 +75,19 @@ function AdminLogin() {
             onChange={passwordChange}
           />
         </div>
-        <div className="ButtonClick">
+        <div className="AdminButtonClick">
           {
             email=== ""|| password === "" ? <button disabled={true} onClick={handleLogin}>LOG IN</button> : <button onClick={handleLogin}>LOG IN</button>
           
           }
           
         </div>
-        <div className="ButtonClick">
-          <div className="ButtonClick">
+        <div className="AdminButtonClick">
+          <div className="AdminButtonClick">
           <button onClick={handleCreateAccount}>Create account</button>
         </div>
         </div>
-        <div className="ButtonClick">
+        <div className="AdminButtonClick">
           <button onClick={handleForgotPassword}>Forgot Password</button>
         </div>
       </div>

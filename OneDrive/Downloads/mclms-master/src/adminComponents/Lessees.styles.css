@@ -1,0 +1,158 @@
+.Lessee{
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    max-width: 100vw;
+    box-sizing: border-box;
+    background-color: white;
+}
+.LesseeBar{
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    align-items: center;
+    height: 100vh;
+    width: 300px;
+    background-color: #D8E2F4;
+    box-sizing: border-box;
+}
+.List{
+    display: flex;
+}
+.LesseesList{
+    display: flex;
+    flex-direction: column;
+    width:200px;
+    margin-top: 2px;
+}
+.LesseesList > p{
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: 1px;
+    text-align: right;
+    margin-right: 1px;
+    color: rgb(126, 136, 172);
+
+}
+
+.Return{
+    margin-top: -5px;
+    text-align: left;
+    height:40px;
+    color: black;
+    margin-left: -50px;    
+}
+.Return > p{
+    margin-top: -26px;
+    text-align: left;
+    height: 50px;
+    color: black;
+    margin-left: 55px;
+    font-size: 8px;
+    padding-left: -5px;
+    font-family: "Alata", sans-serif;
+}
+
+.Return> button{
+    color: black;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    color: black;
+    transition: background-color 0.5s;
+    border-radius: 25px;  
+}
+
+.ListItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    margin-left: -5px;
+    margin-top: 90px;
+    
+}
+
+.Inside > p{
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+.Inside{
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+}
+.ListItem > button {
+    background-color: transparent;
+    border: none;
+    padding: 2px;
+    width: 200px;
+    margin-left: -5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.Tables{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.TableContent{
+    /* background-color: antiquewhite; */
+    justify-content: right;
+    align-items: center;
+    box-sizing: border-box;
+    width: 80vw;
+    height: 100vh;
+}
+
+.TableContent > table{
+    width: 550px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 60px;    
+}
+/* table{
+    border-collapse:collapse; 
+}
+table, tr, td{
+    border: 1px solid; 
+    
+}
+th{
+    height: 30px;
+} */
+.label1 {
+    font-size: 14px; 
+    border: 1px solid; 
+    width: 250px; 
+}
+.label2 {
+    font-size: 14px; 
+    border: 1px solid;  
+}
+.label3 {
+    font-size: 14px; 
+    border: 1px solid;  
+    width: 150px;
+}
+.tdName{
+    text-align: left;
+}
+.Details{
+    display: flex;
+    flex-direction:column;
+    justify-content: right;
+    align-items: center;
+}
+.DetailsContent{
+    display: flex;
+    flex-direction:column;
+    justify-content: right;
+    align-items: center;
+   margin-right: 5px;
+   margin-top: 60px;
+}

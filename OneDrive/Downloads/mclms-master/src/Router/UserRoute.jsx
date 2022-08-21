@@ -29,7 +29,8 @@ function UserRoute() {
     <Routes>
         <Route path="/" element={<Login/>} /> 
         <Route path="/Login" element={<Login/>} /> 
-        <Route path="/AdminLogin" element={<AdminLogin/>} /> 
+        <Route path="/admin-login" element={<AdminLogin/>} /> 
+       
         <Route path="/register" element={<Register/>} /> 
         <Route path="/verification" element={<Verification/>} /> 
         <Route path="/verified" element={<Verified/>} /> 

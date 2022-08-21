@@ -8,20 +8,21 @@ import logoB from "../assets/Form.png";
 import logoC from "../assets/Payment.png";
 import logoE from "../assets/Notice.png"; 
 import logoF from "../assets/List.png";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import "./Dashboard.jsx";
 
-function Home() {
+function AdminHome() {
   
     const navigate = useNavigate(); 
 
-    const handleProfile = (e) => {
-         //go to verification
-         navigate("/profile-setting");
-         console.log("profile clicked");
-         };
+//     const handleProfile = (e) => {
+//          //go to verification
+//          navigate("/profile-setting");
+//          console.log("profile clicked");
+//          };
     const handleLessee = (e) => {
          //go to verification
-         navigate("/");
+         navigate("/lessees-list");
          console.log("profile clicked");
          };
 
@@ -54,6 +55,7 @@ function Home() {
           
                
             <div className="Adminboxes">
+               
             <div className=" Adminbox1">
                 
                 <div onClick={handleLessee} className="AStalls">
@@ -82,7 +84,7 @@ function Home() {
                </div>
                
             </div>
-           
+         
           </div>
         
               
@@ -91,4 +93,4 @@ function Home() {
     );
   
 }
-  export default Home;
+  export default AdminHome;

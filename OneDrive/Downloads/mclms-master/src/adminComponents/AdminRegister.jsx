@@ -1,20 +1,18 @@
 import React, { useState, useMemo } from "react";
-import "./auth/Auth.styles.css";
+import "./AdminAuth.styles.css";
 import { useNavigate } from "react-router-dom";
 import { authRegister } from "../app/reducer/authSlice";
 import { useDispatch } from "react-redux";
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+// import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 
-function Register() {
+function AdminRegister() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const [fullName, setFullName] = useState("");
   const [suffix, setSuffix] = useState("");
-  const [age, setAge] = useState("");
-  const [sex, setSex] = useState("");
-  const [status, setStatus] = useState("");
+  const [employeeId, setEmployeeId] = useState("");
   const [address, setAddress] = useState("");
   const [emailAdd, setEmailAdd] = useState("");
   const [contactNum, setContactNum] = useState("");
@@ -26,9 +24,7 @@ function Register() {
     if (
       fullName !== "" &&
       suffix !== "" &&
-      age !== "" &&
-      sex !== "" &&
-      status !== "" &&
+      employeeId !== "" &&
       address !== "" &&
       emailAdd !== "" &&
       contactNum !== "" &&
@@ -44,9 +40,7 @@ function Register() {
   const enableNext = useMemo(() => fieldComplete(), [
     fullName,
     suffix,
-    age,
-    sex,
-    status,
+    employeeId,
     address,
     emailAdd,
     contactNum,
@@ -62,16 +56,8 @@ function Register() {
     setSuffix(e.target.value);
   };
 
-  const ageChange = (e) => {
-    setAge(e.target.value);
-  };
-
-  const sexChange = (e) => {
-    setSex(e.target.value);
-  };
-
-  const statusChange = (e) => {
-    setStatus(e.target.value);
+  const employeeIdChange = (e) => {
+    setEmployeeId(e.target.value);
   };
 
   const addressChange = (e) => {
@@ -104,13 +90,8 @@ function Register() {
     }
   };
 
-  const handleGoBack = (e) => {
-    //go to verification
-    navigate("/login");
-    console.log("create clicked");
-  };
-  const handleNext = () => {
-    //go to verification
+  const handleAdminNext = () => {
+    //go to verification 
 
     var nameArray = fullName.split(" ");
     const lastName = nameArray[nameArray.length - 1];
@@ -128,68 +109,78 @@ function Register() {
         firstName: firstName,
         lastName: lastName,
         middleInitial: suffix,
-        sex: sex,
-        age: parseInt(age),
+        employeeId: employeeId,
         address: address,
-        status:status
       };
       dispatch(authRegister(data));
     } else {
     }
 
-    navigate("/verification");
+    navigate("/creating-account");
     console.log("create clicked");
   };
-  //mg src={arrow} alt="arrow"
+ 
   return (
-    <div className="InnerContainer1">
-      <div className="BackA">
-      <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1 }}/>  </button> <p>BACK</p>
-      </div>
+    <div className="BgInnerContainer1">
 
-      <div className="CreateAccount1">Create Account</div>
-      <div className="Input-item">
-        <div className="InputContainer">
-          <div className="Input1">
+      <div className="AdminAccount">Create Account</div>
+      <div className="Input-AdminItem">
+        <div className="RegisterContainer">
+          <div className="Input1Admin">
+            <p>First Name | Last Name*</p>
             <input
-              placeholder="First Name | Last Name"
+              placeholder="Enter your name"
               value={fullName}
               onChange={fullNameChange}
             />
-          </div>
-          <div className="Input2">
-            <input
-              placeholder="Suffix"
+            </div>
+            <div className="Input2Admin">
+              <p>Suffix*</p>
+             <input
+              placeholder="Enter your Middle Initial"
               value={suffix}
               onChange={suffixChange}
             />
           </div>
         </div>
 
-      
-        <div className="InputContainer3">
-          <div className="Input6">
+        <div className="RegisterContainer2">
+            <div className="Input3Admin">
+            <p>Employee ID*</p>
+             <input placeholder="Enter employee ID" value={employeeId} onChange={employeeIdChange} />
+            </div>
+            <div className="Input4Admin">
+            <p>Contact Number*</p>
+            <input
+              placeholder="Enter your contact number"
+              value={contactNum}
+              onChange={contactNumChange}
+            />
+          </div>
+          </div>
+
+          <div className="RegisterContainer3">
+          <div className="Input5Admin">
+          <p>Address*</p>
             <input
               placeholder="Address"
               value={address}
               onChange={addressChange}
             />
           </div>
-          <div className="Input6">
+          <div className="Input6Admin">
+          <p>Email Address*</p>
             <input
-              placeholder="E-mail Address"
+              placeholder="Enter your e-mail address"
               value={emailAdd}
               onChange={emailAddChange}
             />
           </div>
-          <div className="Input6">
-            <input
-              placeholder="Contact Number"
-              value={contactNum}
-              onChange={contactNumChange}
-            />
-          </div>
-          <div className="Input6">
+        </div>
+
+        <div className="RegisterContainer4">
+          <div className="Input7Admin">
+          <p>Password*</p>
             <input
               placeholder="Set your Password"
               type="Password"
@@ -197,7 +188,8 @@ function Register() {
               onChange={setPasswordChange}
             />
           </div>
-          <div className="Input6">
+          <div className="Input8Admin">
+          <p>Confirm Password*</p>
             <input
               placeholder="Re-type your Password"
               type="Password"
@@ -209,14 +201,13 @@ function Register() {
         </div>
       </div>
 
-      <div className="Button2">
-        <button disabled={!enableNext} onClick={handleNext}>
-          Next
+      <div className="ButtonAdmin">
+        <button disabled={!enableNext} onClick={handleAdminNext}>
+          SUBMIT
         </button>
       </div>
     </div>
   );
 }
 
-
-export default Register;
+export default AdminRegister;

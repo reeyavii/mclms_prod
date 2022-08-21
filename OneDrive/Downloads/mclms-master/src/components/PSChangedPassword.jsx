@@ -46,7 +46,7 @@ function PSChangedPassword() {
      };
     const handleForgotPassword = () => {
           //go to reset-password**
-          navigate("/reset-password")
+          navigate("/reset")
           console.log("login clicked");
      };
         
