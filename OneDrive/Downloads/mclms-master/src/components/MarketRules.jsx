@@ -9,7 +9,7 @@ import { useState } from "react";
 
 function MarketRules() {
   const navigate = useNavigate();
-  const {checked, setChecked} = useState(true);
+  const {setChecked} = useState(true);
 
 
     const handleGoBack = (e) => {

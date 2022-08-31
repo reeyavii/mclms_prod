@@ -11,11 +11,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 function Home() {
   
     const navigate = useNavigate(); 
-    // const [search, setSearch] = useState("");   
     
-    
-    // const searchChange = (e) => {
-    //     setSearch(e.target.value); };
 
     const handleProfile = (e) => {
          //go to verification
@@ -72,13 +68,7 @@ function Home() {
         
           <div className="Input-item">
             <div className="InputContainer">
-                {/* <div className="Search">
-                 <input
-                     placeholder="Search any keyword"
-                     value={search}
-                     onChange={searchChange}
-                 />
-                </div> */}
+               
                 </div>
             <div className=" box1">
                                 

@@ -6,13 +6,14 @@
     box-sizing: border-box;
     background-color: white;
 }
+
 .LesseeBar{
     display: flex;
     flex-direction: column;
     justify-content:left;
     align-items: center;
     height: 100vh;
-    width: 300px;
+    width: 250px;
     background-color: #D8E2F4;
     box-sizing: border-box;
 }
@@ -22,25 +23,26 @@
 .LesseesList{
     display: flex;
     flex-direction: column;
-    width:200px;
-    margin-top: 2px;
+    width:300px;
+    margin-top: 8px;
 }
 .LesseesList > p{
     font-weight: 500;
     font-size: 25px;
     letter-spacing: 1px;
     text-align: right;
-    margin-right: 1px;
+    margin-right: 60px;
     color: rgb(126, 136, 172);
 
 }
 
 .Return{
     margin-top: -5px;
+    margin-bottom: 10px;
     text-align: left;
     height:40px;
     color: black;
-    margin-left: -50px;    
+    margin-left: 5px;    
 }
 .Return > p{
     margin-top: -26px;
@@ -58,7 +60,6 @@
     background-color: transparent;
     border: none;
     padding: 10px;
-    color: black;
     transition: background-color 0.5s;
     border-radius: 25px;  
 }
@@ -69,7 +70,7 @@
     justify-content: left;
     align-items: center;
     margin-left: -5px;
-    margin-top: 90px;
+    margin-top: 50px;
     
 }
 
@@ -77,7 +78,7 @@
     text-align: left;
     font-size: 14px;
     font-weight: 600;
-    margin-bottom: 35px;
+    margin-bottom: 8px;
 }
 .Inside{
     display: flex;
@@ -89,12 +90,42 @@
     border: none;
     padding: 2px;
     width: 200px;
-    margin-left: -5px;
+    margin-left: -25px;
     align-items: center;
     text-align: center;
     justify-content: center;
 }
-
+.LO{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-direction: row;
+    width: 250px;
+}
+.LO > p{
+    text-align: right;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 140px;
+    margin-right: 50px;
+}
+/* .Search{
+    width: 200px;
+    align-items: center;
+    margin-bottom: 10px;
+   
+  }
+  .Search > input{
+    border-radius: 25px;
+    padding: 12px;
+    margin-top: 8px;
+    width: 200px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 12px;
+  }  */
 .Tables{
     box-sizing: border-box;
     display: flex;
@@ -113,7 +144,7 @@
     width: 550px;
     text-align: center;
     margin-left: 10px;
-    margin-top: 60px;    
+    margin-top: 70px;    
 }
 /* table{
     border-collapse:collapse; 
@@ -142,17 +173,88 @@ th{
 .tdName{
     text-align: left;
 }
+/*Details*/
 .Details{
     display: flex;
     flex-direction:column;
-    justify-content: right;
-    align-items: center;
+    align-content: center;
+    margin-right:10px ;
+    margin-top: 70px;
+    background-color: white;
+    width: 600px;
+    height:500px;
 }
 .DetailsContent{
     display: flex;
     flex-direction:column;
-    justify-content: right;
     align-items: center;
-   margin-right: 5px;
-   margin-top: 60px;
+    justify-content: left;
+    margin-right: 8px;
+    margin-top: 20px;
+}
+.DetailsContent > h2{
+    margin-bottom: 40px;
+}
+
+.DetailsForm{
+    margin: 8px;
+    margin-left: -20px;
+   
+}
+.DetailsForm > input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 350px;  
+}
+
+.DetailsForm1{
+   margin: 8px;
+   display: flex;
+   flex-direction: row;
+   margin-left: -20px;
+
+}
+.DetailsForm1 > input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 350px;  
+}
+.DetailsForm2 > input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 172px;  
+    margin-left: 2px;
+    
+}
+.CancelDetails {
+    color: red;
+   justify-content: left;
+   align-items: center;
+   text-align: left;
+   margin-left: -15px;
+}
+.DetailsButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.AddDetails {
+    color: black;
+   justify-content: right;
+   align-items: center;
+   text-align: right;
+   margin-right: 20px;
+}
+
+.DetailsButton> button{
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    transition: background-color 0.5s;
+    border-radius: 25px;  
+  
 }

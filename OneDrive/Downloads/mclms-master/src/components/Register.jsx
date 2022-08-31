@@ -165,6 +165,29 @@ function Register() {
             />
           </div>
         </div>
+        <div className="InputContainer2">
+          <div className="Input3">
+            <input
+              placeholder="Age"
+              value={age}
+              onChange={ageChange}
+            />
+          </div>
+          <div className="Input4">
+            <input
+              placeholder="Sex"
+              value={sex}
+              onChange={sexChange}
+            />
+          </div>
+          <div className="Input5">
+            <input
+              placeholder="Status"
+              value={status}
+              onChange={statusChange}
+            />
+          </div>
+        </div>
 
       
         <div className="InputContainer3">

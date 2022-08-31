@@ -8,6 +8,9 @@ import Dashboard from '../adminComponents/Dashboard'
 import AdminLogin from '../adminComponents/AdminLogin'
 import AdminRegister from '../adminComponents/AdminRegister'
 import LesseesList from '../adminComponents/LesseesList'
+import Navbar from '../adminComponents/Navbar'
+import AdminHome from "../adminComponents/AdminHome"
+import LesseesListUpdate from "../adminComponents/LesseesListUpdate"
 
 
 function AdminRoute(){
@@ -21,7 +24,9 @@ function AdminRoute(){
             <Route path="/save-changed-successfully" element={<SavePopUp/>} />
             <Route path="/dashboard" element={<Dashboard/>}/>
             <Route path="/lessees-list" element={<LesseesList/>}/>
-
+            <Route path="/lessees-list-update" element={<LesseesListUpdate/>}/>
+            <Route path="/navBar" element={<Navbar/>}/>
+            <Route path="/admin-home" element={<AdminHome/>}/>
         </Routes>
 
     )

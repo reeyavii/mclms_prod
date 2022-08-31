@@ -6,10 +6,9 @@ import { getLessees } from '../app/reducer/lesseeSlice';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
-function LesseesList() {
+function LesseesListUpdate() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    // const [search, setSearch] = useState("");   
     const {lessees} = useSelector(state=>state.lessee);
     const {fName, setFName} = useState(" ");
     const {lName, setLName} = useState(" ");
@@ -19,8 +18,6 @@ function LesseesList() {
     const {status, setStatus} = useState(" ");
     const {address, setAddress} = useState(" ");
     const {email, setEmail} = useState(" ");
-    const {stallNum, setStallNum} = useState(" ");
-    const {StallType, setStallType} = useState(" ");
     const {dateAcquired, setDateAcquired} = useState(" ");
 
 
@@ -29,8 +26,7 @@ function LesseesList() {
     },[])
     console.log(lessees);
 
-    // const searchChange = (e) => {
-    //      setSearch(e.target.value); };
+
     const fNameChange =  (e) => { 
         setFName (e.target.value); };
     const lNameChange =  (e) => { 
@@ -47,10 +43,6 @@ function LesseesList() {
         setAddress (e.target.value); }; 
     const emailChange =  (e) => { 
         setEmail (e.target.value); }; 
-    const stallNumChange =  (e) => { 
-        setStallNum (e.target.value); }; 
-    const stallTypeChange =  (e) => { 
-        setStallType (e.target.value); }; 
     const dateAcquiredChange =  (e) => { 
         setDateAcquired (e.target.value); }; 
 
@@ -88,11 +80,11 @@ function LesseesList() {
             console.log("Home clicked");
                 };
 //
-    const handleCancelDetails = (e) => {
+    const handleDiscardDetails = (e) => {
         navigate("/home");
         console.log("Home clicked");
         };
-    const handleAddDetails = (e) => {
+    const handleSaveDetails = (e) => {
         navigate("/home");
         console.log("Home clicked");
         };
@@ -168,8 +160,7 @@ function LesseesList() {
                         <td >{lesseeData.stall.stallNumber}</td>
                         <td>{lesseeData.stall.stallType}</td>
                         <td>{lesseeData.firstName}</td>    
-                        
-                        
+                       
                      </tr>
                     )
                 })
@@ -235,22 +226,6 @@ function LesseesList() {
                          onChange={emailChange}
                          />
                     </div>
-                    <div className="DetailsForm1">
-                        <div className="DetailsForm2">
-                        <input
-                         placeholder="Stall Number"
-                         value={stallNum}
-                         onChange={stallNumChange}
-                         />
-                        </div>
-                        <div className="DetailsForm2">
-                        <input
-                         placeholder="Stall Type"
-                         value={StallType}
-                         onChange={stallTypeChange}
-                         />
-                         </div>
-                    </div>
                     <div className="DetailsForm">
                         <input
                          placeholder="Date Acquired"
@@ -260,11 +235,11 @@ function LesseesList() {
                     </div>
                       </div>
                     <div className='DetailsButton'>
-                    <button onClick={handleCancelDetails} >
-                        <div className="CancelDetails"> CANCEL</div>
+                    <button onClick={handleDiscardDetails} >
+                        <div className="CancelDetails"> DISCARD CHANGES</div>
                     </button>
-                    <button onClick={handleAddDetails} >
-                        <div className="AddDetails"> ADD</div>
+                    <button onClick={handleSaveDetails} >
+                        <div className="AddDetails"> SAVE</div>
                     </button>
                     </div>
               
@@ -273,4 +248,4 @@ function LesseesList() {
         </div>
   );
 }
-export default LesseesList;
+export default LesseesListUpdate;
