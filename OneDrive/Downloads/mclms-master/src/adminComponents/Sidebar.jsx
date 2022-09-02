@@ -2,15 +2,25 @@ import React from 'react'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { useNavigate } from 'react-router';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout } from '../app/reducer/authSlice';
+import { useEffect } from 'react';
 
-function Navbar(props) {
+function Sidebar(props) {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const {token} = useSelector(state=>state.auth);
+    useEffect(()=>{
+        if (token === null){
+            navigate("/admin-login");
+        }
+    },[token])
     const handleGoBack = (e) => {
-        navigate("/home");
+        navigate(-1);
         console.log("Home clicked");
         };
     const handleAccountList = (e) => {
-        navigate("/");
+        navigate("/lessees-list");
         console.log("Home clicked");
         };
     const handleStallStatus = (e) => {
@@ -34,9 +44,9 @@ function Navbar(props) {
         console.log("Home clicked");
         };
     const handleLO = (e) => {
-        navigate("/home");
-        console.log("Home clicked");
-            };
+        dispatch(logout())
+        };
+
   return (
 <div className="LesseeBar">
             <div className='List'>
@@ -91,4 +101,4 @@ function Navbar(props) {
   )
 }
 
-export default Navbar
+export default Sidebar;

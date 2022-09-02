@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     min-height: 100vh;
-    max-width: 100vw;
+    width: 100%;
     box-sizing: border-box;
     background-color: white;
 }
@@ -85,6 +85,24 @@
     flex-direction: row;
     width: 250px;
 }
+/* .Inside :hover{
+    background-color: rgb(128, 142, 171);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.Inside ::after{
+    z-index: -1;
+ -webkit-transition: all 0.4s;
+ -moz-transition: all 0.4s;
+ transition: all 0.4s;
+ width: 100%;
+ height: 0;
+ top: 0;
+ left: 0;
+ background: #fff;
+} */
+
 .ListItem > button {
     background-color: transparent;
     border: none;
@@ -136,7 +154,7 @@
     justify-content: right;
     align-items: center;
     box-sizing: border-box;
-    width: 80vw;
+    min-width: 200px;
     height: 100vh;
 }
 
@@ -145,6 +163,14 @@
     text-align: center;
     margin-left: 10px;
     margin-top: 70px;    
+}
+td > button{
+  height: 15px;
+  width: 40px;
+  font-size: 10px;
+  text-align: center;
+  padding: 2px;
+  margin: 2px;
 }
 /* table{
     border-collapse:collapse; 
@@ -181,8 +207,9 @@ th{
     margin-right:10px ;
     margin-top: 70px;
     background-color: white;
-    width: 600px;
+    width: 380px;
     height:500px;
+    box-sizing: border-box;
 }
 .DetailsContent{
     display: flex;

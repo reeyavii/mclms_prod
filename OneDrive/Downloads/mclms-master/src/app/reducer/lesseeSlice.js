@@ -47,6 +47,25 @@ export const getLessees = createAsyncThunk(
         }
     }
 )
+export const getLessee = createAsyncThunk(
+    `${namespace}/getLessee`,
+    async ({Id}, { rejectWithValue }) => {
+        try {
+            axios.defaults.headers = {
+                "Content-Type": "application/json",
+              };
+            const response = await axios.get(`${API_URL}api/userinfo/${Id}`)
+            return response.data;
+        }
+        catch (err){
+            if (!err.response){
+                throw err
+            }
+            return rejectWithValue(err.response.data);
+        }
+    }
+)
+
 export const lesseeSlice = createSlice({
     name: namespace,
     initialState: initialState,
@@ -69,6 +88,23 @@ export const lesseeSlice = createSlice({
             state.error = payload;
             console.log(payload);
         },
+
+        [getLessee.pending]: (state) => {
+            state.loading = true;
+            state.error = null;
+            
+        },
+        [getLessee.fulfilled]: (state, { payload }) => {
+            state.lessee = payload;
+            state.error = null;
+            state.loading = false;
+        },
+        [getLessee.rejected]: (state, { payload }) => {
+            state.loading = false;
+            state.error = payload;
+            console.log(payload);
+        },
+
         // [getStallDetail.pending]: (state) => {
         //     state.loading = true;
         //     state.error = null;  

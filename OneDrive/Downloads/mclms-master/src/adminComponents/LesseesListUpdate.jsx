@@ -48,11 +48,11 @@ function LesseesListUpdate() {
 
     //navBar
         const handleGoBack = (e) => {
-            navigate("/home");
+            navigate("/admin-home");
             console.log("Home clicked");
             };
         const handleAccountList = (e) => {
-            navigate("/");
+            navigate("/lessees-list");
             console.log("Home clicked");
             };
         const handleStallStatus = (e) => {
@@ -76,7 +76,7 @@ function LesseesListUpdate() {
             console.log("Home clicked");
             };
         const handleLO = (e) => {
-            navigate("/home");
+            navigate("/login");
             console.log("Home clicked");
                 };
 //

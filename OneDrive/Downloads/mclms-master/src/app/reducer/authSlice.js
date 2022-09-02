@@ -57,16 +57,19 @@ export const authRegister = createAsyncThunk(
 
 export const authRegisterAdmin = createAsyncThunk(
   `${namespace}/authRegisterAdmin`,
-  async ({username, password, email, phoneNumber, firstName, lastName, storeName, storeDescription}) => {
+  async ({username, password, email, phoneNumber, firstName, lastName, employeeId, middleInitial, address}) => {
       const { data } = await axios.post(`${API_URL}auth/register-admin/`, {
           username: username,
           password: password,
           email: email,
+          phoneNumber: phoneNumber,
           firstName: firstName,
           lastName: lastName,
-          phoneNumber: phoneNumber,
-          storeName: storeName,
-          storeDescription: storeDescription,
+          middleInitial: middleInitial,
+          employeeId: employeeId,
+          address: address,
+
+
       })
       return data
   }

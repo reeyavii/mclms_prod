@@ -9,21 +9,22 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 function LesseesList() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    // const [search, setSearch] = useState("");   
+    // const [search, setSearch] = useState("");
     const {lessees} = useSelector(state=>state.lessee);
-    const {fName, setFName} = useState(" ");
-    const {lName, setLName} = useState(" ");
-    const {middleInitial, setMiddleInitial} = useState(" ");
-    const {birthDate, setBirthDate} = useState(" ");
-    const {contNum, setContNum} = useState(" ");
-    const {status, setStatus} = useState(" ");
-    const {address, setAddress} = useState(" ");
-    const {email, setEmail} = useState(" ");
-    const {stallNum, setStallNum} = useState(" ");
-    const {StallType, setStallType} = useState(" ");
-    const {dateAcquired, setDateAcquired} = useState(" ");
+    const [fName, setFName] = useState("");
+    const [lName, setLName] = useState("");
+    const [middleInitial, setMiddleInitial] = useState("");
+    const [birthDate, setBirthDate] = useState("");
+    const [contNum, setContNum] = useState("");
+    const [status, setStatus] = useState("");
+    const [address, setAddress] = useState("");
+    const [email, setEmail] = useState("");
+    const [stallNum, setStallNum] = useState("");
+    const [StallType, setStallType] = useState("");
+    const [dateAcquired, setDateAcquired] = useState("");
+    const [isEdit, setIsEdit] = useState(false);
 
-
+    
     useEffect(()=>{
         dispatch(getLessees())
     },[])
@@ -31,64 +32,47 @@ function LesseesList() {
 
     // const searchChange = (e) => {
     //      setSearch(e.target.value); };
-    const fNameChange =  (e) => { 
+    const fNameChange =  (e) => {
         setFName (e.target.value); };
-    const lNameChange =  (e) => { 
+    const lNameChange =  (e) => {
         setLName (e.target.value); };
-    const middleInitialChange =  (e) => { 
-        setMiddleInitial (e.target.value); };   
-    const birthDateChange =  (e) => { 
-        setBirthDate (e.target.value); };  
-    const contNumChange =  (e) => { 
-        setContNum (e.target.value); }; 
-    const statusChange =  (e) => { 
-        setStatus(e.target.value); }; 
-    const addressChange =  (e) => { 
-        setAddress (e.target.value); }; 
-    const emailChange =  (e) => { 
-        setEmail (e.target.value); }; 
-    const stallNumChange =  (e) => { 
-        setStallNum (e.target.value); }; 
-    const stallTypeChange =  (e) => { 
-        setStallType (e.target.value); }; 
-    const dateAcquiredChange =  (e) => { 
-        setDateAcquired (e.target.value); }; 
+    const middleInitialChange =  (e) => {
+        setMiddleInitial (e.target.value); };
+    const birthDateChange =  (e) => {
+        setBirthDate (e.target.value); };
+    const contNumChange =  (e) => {
+        setContNum (e.target.value); };
+    const statusChange =  (e) => {
+        setStatus(e.target.value); };
+    const addressChange =  (e) => {
+        setAddress (e.target.value); };
+    const emailChange =  (e) => {
+        setEmail (e.target.value); };
+    const stallNumChange =  (e) => {
+        setStallNum (e.target.value); };
+    const stallTypeChange =  (e) => {
+        setStallType (e.target.value); };
+    const dateAcquiredChange =  (e) => {
+        setDateAcquired (e.target.value); };
 
     //navBar
-        const handleGoBack = (e) => {
-            navigate("/home");
-            console.log("Home clicked");
-            };
-        const handleAccountList = (e) => {
-            navigate("/");
-            console.log("Home clicked");
-            };
-        const handleStallStatus = (e) => {
-            navigate("/home");
-            console.log("Home clicked");
-            };
-        const handlePending = (e) => {
-            navigate("/home");
-            console.log("Home clicked");
-            };
-        const handlePayment = (e) => {
-            navigate("/home");
-            console.log("Home clicked");
-            };
-        const handleNotice = (e) => {
-            navigate("/home");
-            console.log("Home clicked");
-            };
-        const handleArchive = (e) => {
-            navigate("/home");
-            console.log("Home clicked");
-            };
-        const handleLO = (e) => {
-            navigate("/home");
-            console.log("Home clicked");
-                };
+     
 //
     const handleCancelDetails = (e) => {
+        setIsEdit(false);
+        setFName("");
+        setLName("");
+        setMiddleInitial("");
+        setBirthDate("");
+        setContNum("");
+        setStatus("");
+        setAddress("");
+        setEmail("");
+        setStallNum("");
+        setStallType("");
+        setDateAcquired("");
+        };
+    const handleEditDetails = (e) => {
         navigate("/home");
         console.log("Home clicked");
         };
@@ -99,86 +83,46 @@ function LesseesList() {
 
   return (
     <div className="Lessee">
-    <div className="LesseeBar">
-    <div className='List'>
-        <div className='LesseesList'>
-          <div className="Return">
-              <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 12, marginTop: 2, marginLeft:4}}/>  </button> 
-         </div>
-             <p>LESSEE'S LIST</p>
-       </div>
-       
-    </div>
-    <div className="ListItem">
-        
-        <button onClick={handleAccountList} >
-            <div className="Inside"><p>Lessee List</p>
-            <NavigateNextIcon sx={{ fontSize: 14, marginTop: 2, marginLeft: 2
-  }} /> </div> </button>
-
-  <button onClick={handleStallStatus} >
-            <div className="Inside"><p>Stall Status </p>
-            <NavigateNextIcon sx={{ fontSize: 14, marginTop: 2, marginLeft: 2
-  }} /> </div> </button> 
-   <button onClick={handlePending} >
-            <div className="Inside"><p>Pending Applications </p>
-            <NavigateNextIcon sx={{ fontSize: 14, marginTop: 2, marginLeft: 2
-  }} /> </div> </button> 
-   <button onClick={handlePayment} >
-            <div className="Inside"><p>Payments </p>
-            <NavigateNextIcon sx={{ fontSize: 14, marginTop: 2, marginLeft: 2
-  }} /> </div> </button> 
-   <button onClick={handleNotice} >
-            <div className="Inside"><p>Notice of Deliquencies </p>
-            <NavigateNextIcon sx={{ fontSize: 14, marginTop: 2, marginLeft: 2
-  }} /> </div> </button> 
-
-  <button onClick={handleArchive} >
-            <div className="Inside"><p>Archive</p>
-            <NavigateNextIcon sx={{ fontSize: 14, marginTop: 2, marginLeft: 2
-  }} /> </div> </button>   
-
-<button onClick={handleLO} >
-            <div className="LO"><p>Logout</p>
-             </div> </button> 
-             
-       </div>
-       </div>
-
-    
-             
-        <div className="Tables"></div>       
-         <div className="TableContent">    
+            <div className="Tables"></div>
+         <div className="TableContent">
 
         <table>
-             <tr>
+            <thead>
+            <tr >
                 <th>#</th>
                 <th>STALL NUMBER</th>
                 <th>STALL TYPE</th>
                 <th>ACCOUNT NAME</th>
-                
-                
+                <th>Actions</th>
+
              </tr>
+             </thead>
+             
              {
 
                 lessees.filter(item=>item.status==="requested").map((lesseeData, index) => {
                     return(
-                        <tr key={lesseeData.id}>
+                        <tbody key={lesseeData.id}> 
+                            
+                        <tr >
                         <td>{index+1}</td>
                         <td >{lesseeData.stall.stallNumber}</td>
                         <td>{lesseeData.stall.stallType}</td>
-                        <td>{lesseeData.firstName}</td>    
-                        
-                        
+                        <td>{lesseeData.firstName}</td>
+                        <td>
+                            <button onClick={() => setIsEdit(true)}  >Edit</button>
+                            <button>Delete</button>
+                        </td>
                      </tr>
+                     </tbody>
                     )
                 })
              }
         </table>
-        </div> 
+        </div>
              <div className="Details">
                 <div className="DetailsContent">
-                    <h2>Details</h2>
+                    <h2>{isEdit ? "Edit" : "Add"} Lessee</h2>
                     <div className="DetailsForm">
                         <input
                          placeholder="First Name"
@@ -235,7 +179,8 @@ function LesseesList() {
                          onChange={emailChange}
                          />
                     </div>
-                    <div className="DetailsForm1">
+                    {isEdit ? null : <> 
+                     <div className="DetailsForm1">
                         <div className="DetailsForm2">
                         <input
                          placeholder="Stall Number"
@@ -251,6 +196,10 @@ function LesseesList() {
                          />
                          </div>
                     </div>
+                    </>  }
+                    
+                  
+
                     <div className="DetailsForm">
                         <input
                          placeholder="Date Acquired"
@@ -259,17 +208,22 @@ function LesseesList() {
                          />
                     </div>
                       </div>
-                    <div className='DetailsButton'>
+                    <div className='DetailsButton' >
+
                     <button onClick={handleCancelDetails} >
                         <div className="CancelDetails"> CANCEL</div>
                     </button>
-                    <button onClick={handleAddDetails} >
+
+                    {isEdit ? <button onClick={handleEditDetails} >
+                        <div className="AddDetails"> EDIT</div>
+                    </button> : <button onClick={handleAddDetails} >
                         <div className="AddDetails"> ADD</div>
-                    </button>
+                    </button> }
+                    
                     </div>
-              
+
              </div>
-             
+
         </div>
   );
 }

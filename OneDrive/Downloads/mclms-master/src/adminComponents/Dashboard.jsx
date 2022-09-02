@@ -3,20 +3,23 @@ import "./Dashboard.styles.css";
 import { useNavigate } from 'react-router';
 import logoAlim from "../assets/Alim_Logo.png";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-
+import Sidebar from "./Sidebar.jsx";
 
 function Dashboard(props) {
     const navigate = useNavigate(); 
-
+    const {children}= props;
     const handleProfile = (e) => {
          //go to verification
          navigate("/profile-setting");
          console.log("profile clicked");
          };
 
+        
+
 
   return (
     <div className='Dashboard'>
+
         <div className='navbar'>
             <div className='LogoLeft'>
                 <div className='LogoAlim'>
@@ -39,8 +42,8 @@ function Dashboard(props) {
         </div>
 
         <div className='content'>
-
-        {props.children}
+        <Sidebar/>
+        {children}
 
         </div>
 

@@ -15,7 +15,11 @@ function AdminLogin() {
 
   useEffect(()=> {
     dispatch(getStalls());
-  }, [])
+    if (token !== null ){
+      navigate("/admin-home");
+    }
+  }, [token] ) 
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -36,11 +40,8 @@ function AdminLogin() {
       //home page
     console.log(stalls);
 
-    if (token !== null ){
-      navigate("/admin-homepage");
-    }
     console.log(password);
-    navigate("/admin-homepage");
+    navigate("/admin-home");
   };
 
   const handleCreateAccount = () => {

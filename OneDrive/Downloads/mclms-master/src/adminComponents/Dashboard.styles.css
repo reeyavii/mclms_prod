@@ -51,3 +51,8 @@
     margin-left: 10px;
     color: white;
 }
+.content{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
