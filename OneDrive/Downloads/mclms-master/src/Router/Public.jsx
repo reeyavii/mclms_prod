@@ -5,7 +5,8 @@ import Register from '../components/Register'
 import AdminLogin from '../adminComponents/AdminLogin'
 import AdminRegister from '../adminComponents/AdminRegister'
 
-// import StallStatus from '../adminComponents/StallStatus'
+
+import StallStatus from '../adminComponents/StallStatus'
 
 
 function Public() {
@@ -16,6 +17,8 @@ function Public() {
     <Route path="/admin-login" element={<AdminLogin/>} />
     <Route path="/admin-register" element={<AdminRegister/>} />
     <Route path="/register" element={<Register/>} /> 
+
+
     {/* <Route path="/stall-status" element={<StallStatus/>}/> */}
     </Routes>
     

@@ -69,7 +69,7 @@ function ApplicationForm() {
           
     const handleGoBack = (e) => {
           //go to verification
-          navigate("/market-rules");
+          navigate(-1);
           console.log("create clicked");
           };
     const handleSubmit = () => {    

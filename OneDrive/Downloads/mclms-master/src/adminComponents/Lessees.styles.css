@@ -85,22 +85,36 @@
     flex-direction: row;
     width: 250px;
 }
-/* .Inside :hover{
-    background-color: rgb(128, 142, 171);
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    transition: all 0.4s;
+.Inside :hover{
+   color: rgb(128, 142, 171);
 }
-.Inside ::after{
-    z-index: -1;
- -webkit-transition: all 0.4s;
- -moz-transition: all 0.4s;
- transition: all 0.4s;
- width: 100%;
- height: 0;
- top: 0;
- left: 0;
- background: #fff;
+.Inside :visited{
+ color: rgb(19, 97, 193);
+ background-color: bisque;
+ transition-duration: 100s;
+}
+/*
+.nav a :hover{
+    color: #b9c7d488;
+    animation: shake 0.5s;
+   animation-iteration-count: infinite;
+}
+.nav a :active{
+    color:purple;
+}
+
+.Inside a {
+    text-decoration: none;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+} */
+/* .Inside ::after{
+    color: blueviolet;
+} */
+/* .Inside  :active{
+    color:rgb(0, 21, 255);
 } */
 
 .ListItem > button {
@@ -198,6 +212,23 @@ th{
 }
 .tdName{
     text-align: left;
+}
+
+.StatusContent{
+    /* background-color: antiquewhite; */
+    justify-content: right;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: 200px;
+    height: 100vh;
+}
+
+.StatusContent > table{
+    width: 900px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 50px;    
+    color: black;
 }
 /*Details*/
 .Details{

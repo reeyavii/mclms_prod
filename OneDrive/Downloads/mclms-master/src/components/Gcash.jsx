@@ -29,7 +29,7 @@ function Gcash() {
 
     const handleGoBack = (e) => {
            //go to verification
-           navigate("/payments");
+           navigate(-1);
            console.log("create clicked");
           };
 

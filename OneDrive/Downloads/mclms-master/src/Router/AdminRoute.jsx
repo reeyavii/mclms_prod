@@ -7,7 +7,7 @@ import AdminLogin from '../adminComponents/AdminLogin'
 import AdminRegister from '../adminComponents/AdminRegister'
 import LesseesList from '../adminComponents/LesseesList'
 import LesseesListUpdate from "../adminComponents/LesseesListUpdate"
-// import StallStatus from '../adminComponents/StallStatus'
+import StallStatus from '../adminComponents/StallStatus'
 
 
 function AdminRoute(){
@@ -20,7 +20,7 @@ function AdminRoute(){
             <Route path="/save-changed-successfully" element={<SavePopUp/>} />
             <Route path="/lessees-list" element={<LesseesList/>}/>
             <Route path="/lessees-list-update" element={<LesseesListUpdate/>}/>
-            {/* <Route path="/stall-status" element={<StallStatus/>}/> */}
+            <Route path="/stall-status" element={<StallStatus/>}/>
         </Routes>
 
     )

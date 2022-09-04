@@ -13,7 +13,7 @@ function MarketRules() {
 
 
     const handleGoBack = (e) => {
-    navigate("/home");
+      navigate(-1);
     console.log("Home clicked");
     };
     const handleProfile = (e) => {

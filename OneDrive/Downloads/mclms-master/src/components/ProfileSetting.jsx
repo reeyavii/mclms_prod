@@ -31,7 +31,7 @@ function ProfileSetting() {
           
     const handleGoBack = (e) => {
            //go to verification
-           navigate("/login");
+           navigate("/Home");
            console.log("create clicked");
           };
     const handleEdit = (e) => {

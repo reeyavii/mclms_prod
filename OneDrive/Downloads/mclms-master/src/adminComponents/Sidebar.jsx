@@ -61,9 +61,12 @@ function Sidebar(props) {
             <div className="ListItem">
                 
                 <button onClick={handleAccountList} >
-                    <div className="Inside"><p>Lessee List</p>
-                    <NavigateNextIcon sx={{ fontSize: 14, marginTop: 2, marginLeft: 2
-          }} /> </div> </button>
+                    <div className="Inside">
+                    <p>Lessee List</p>
+                    {/* <nav> */}
+                    {/* <a href='http://localhost:3000/lessees-list'>Lessee List</a>
+                    </nav> */}
+                    </div> </button>
 
           <button onClick={handleStallStatus} >
                     <div className="Inside"><p>Stall Status </p>

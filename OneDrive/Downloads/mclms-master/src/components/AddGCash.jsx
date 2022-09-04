@@ -26,7 +26,7 @@ function AddGCash() {
 
     const handleGoBack = (e) => {
            //go to verification
-           navigate("/login");
+           navigate(-1);
            console.log("create clicked");
           };
 

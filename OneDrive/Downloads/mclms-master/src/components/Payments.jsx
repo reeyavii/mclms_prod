@@ -17,7 +17,7 @@ function Payments() {
 
     const handleGoBack = (e) => {
            //go to verification
-           navigate("/home");
+           navigate(-1);
            console.log("create clicked");
           };
     const handlePayBills = (e) => {

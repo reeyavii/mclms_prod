@@ -11,7 +11,7 @@ function AboutUs() {
   const navigate = useNavigate();
 
   const handleGoBack = (e) => {
-    navigate("/Home");
+    navigate(-1);
     console.log("Home clicked");
     };
   

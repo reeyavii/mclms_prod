@@ -3,8 +3,6 @@ import "./Lessees.styles.css";
 import { useNavigate } from 'react-router';
 import {useDispatch, useSelector} from 'react-redux';
 import { getLessees } from '../app/reducer/lesseeSlice';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 function LesseesList() {
     const navigate = useNavigate();
