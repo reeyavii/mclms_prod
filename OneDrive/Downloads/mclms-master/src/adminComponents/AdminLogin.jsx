@@ -1,24 +1,23 @@
 import React, { useEffect, useState } from "react";
 import "./AdminAuth.styles.css";
 import logo from "../assets/logo-alimodian.png";
-import {useNavigate} from "react-router-dom";
-import {useSelector, useDispatch} from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import { getStalls } from "../app/reducer/stallSlice";
 import { authLogin } from "../app/reducer/authSlice";
 
-
 function AdminLogin() {
-  const {stalls} = useSelector(state=>state.stall);
-  const {token} = useSelector(state=>state.auth);
+  const { stalls } = useSelector((state) => state.stall);
+  const { token } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  useEffect(()=> {
+  useEffect(() => {
     dispatch(getStalls());
-    if (token !== null ){
+    if (token !== null) {
       navigate("/admin-home");
     }
-  }, [token] ) 
+  }, [token]);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -32,14 +31,17 @@ function AdminLogin() {
 
   const handleLogin = () => {
     //login code
-    const data={
+    const data = {
       userName: email,
       password: password,
-    }
+    };
     dispatch(authLogin(data));
-      //home page
+    //home page
     console.log(stalls);
 
+    if (token !== null) {
+      navigate("/admin-home");
+    }
     console.log(password);
     navigate("/admin-home");
   };
@@ -51,7 +53,7 @@ function AdminLogin() {
   };
   const handleForgotPassword = () => {
     //go to reset-password
-    navigate("/reset")
+    navigate("/reset");
     console.log("login clicked");
   };
   return (
@@ -77,16 +79,18 @@ function AdminLogin() {
           />
         </div>
         <div className="AdminButtonClick">
-          {
-            email=== ""|| password === "" ? <button disabled={true} onClick={handleLogin}>LOG IN</button> : <button onClick={handleLogin}>LOG IN</button>
-          
-          }
-          
+          {email === "" || password === "" ? (
+            <button disabled={true} onClick={handleLogin}>
+              LOG IN
+            </button>
+          ) : (
+            <button onClick={handleLogin}>LOG IN</button>
+          )}
         </div>
         <div className="AdminButtonClick">
           <div className="AdminButtonClick">
-          <button onClick={handleCreateAccount}>Create account</button>
-        </div>
+            <button onClick={handleCreateAccount}>Create account</button>
+          </div>
         </div>
         <div className="AdminButtonClick">
           <button onClick={handleForgotPassword}>Forgot Password</button>

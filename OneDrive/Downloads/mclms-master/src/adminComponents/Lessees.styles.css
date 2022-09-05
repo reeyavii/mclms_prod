@@ -1,97 +1,97 @@
-.Lessee{
-    display: flex;
-    flex-direction: row;
-    min-height: 100vh;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: white;
+.Lessee {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
 }
 
-.LesseeBar{
-    display: flex;
-    flex-direction: column;
-    justify-content:left;
-    align-items: center;
-    height: 100vh;
-    width: 250px;
-    background-color: #D8E2F4;
-    box-sizing: border-box;
+.LesseeBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  height: 100vh;
+  width: 250px;
+  background-color: #d8e2f4;
+  box-sizing: border-box;
 }
-.List{
-    display: flex;
+.List {
+  display: flex;
 }
-.LesseesList{
-    display: flex;
-    flex-direction: column;
-    width:300px;
-    margin-top: 8px;
+.LesseesList {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-top: 8px;
 }
-.LesseesList > p{
-    font-weight: 500;
-    font-size: 25px;
-    letter-spacing: 1px;
-    text-align: right;
-    margin-right: 60px;
-    color: rgb(126, 136, 172);
-
-}
-
-.Return{
-    margin-top: -5px;
-    margin-bottom: 10px;
-    text-align: left;
-    height:40px;
-    color: black;
-    margin-left: 5px;    
-}
-.Return > p{
-    margin-top: -26px;
-    text-align: left;
-    height: 50px;
-    color: black;
-    margin-left: 55px;
-    font-size: 8px;
-    padding-left: -5px;
-    font-family: "Alata", sans-serif;
+.LesseesList > p {
+  font-weight: 500;
+  font-size: 25px;
+  letter-spacing: 1px;
+  text-align: right;
+  margin-right: 60px;
+  color: rgb(126, 136, 172);
 }
 
-.Return> button{
-    color: black;
-    background-color: transparent;
-    border: none;
-    padding: 10px;
-    transition: background-color 0.5s;
-    border-radius: 25px;  
+.Return {
+  margin-top: -5px;
+  margin-bottom: 10px;
+  text-align: left;
+  height: 40px;
+  color: black;
+  margin-left: 5px;
+}
+.Return > p {
+  margin-top: -26px;
+  text-align: left;
+  height: 50px;
+  color: black;
+  margin-left: 55px;
+  font-size: 8px;
+  padding-left: -5px;
+  font-family: "Alata", sans-serif;
+}
+
+.Return > button {
+  color: black;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  transition: background-color 0.5s;
+  border-radius: 25px;
 }
 
 .ListItem {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: center;
-    margin-left: -5px;
-    margin-top: 50px;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  margin-left: -5px;
+  margin-top: 50px;
 }
 
-.Inside > p{
-    text-align: left;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 8px;
+.Inside > p {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  opacity: 1;
 }
-.Inside{
-    display: flex;
-    flex-direction: row;
-    width: 250px;
+.Inside {
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+  opacity: 1;
 }
-.Inside :hover{
-   color: rgb(128, 142, 171);
+.Inside :hover {
+  color: rgb(128, 142, 171);
 }
-.Inside :visited{
- color: rgb(19, 97, 193);
- background-color: bisque;
- transition-duration: 100s;
+.Inside :visited {
+  color: rgb(19, 97, 193);
+  background-color: bisque;
+  transition-duration: 100s;
 }
 /*
 .nav a :hover{
@@ -118,67 +118,67 @@
 } */
 
 .ListItem > button {
-    background-color: transparent;
-    border: none;
-    padding: 2px;
-    width: 200px;
-    margin-left: -25px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+  background-color: transparent;
+  border: none;
+  padding: 2px;
+  width: 200px;
+  margin-left: -25px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
-.LO{
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    flex-direction: row;
-    width: 250px;
+.LO {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: row;
+  width: 250px;
 }
-.LO > p{
-    text-align: right;
-    font-size: 14px;
-    font-weight: 600;
-    margin-top: 140px;
-    margin-right: 50px;
+.LO > p {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 160px;
+  margin-right: 50px;
 }
-/* .Search{
-    width: 200px;
-    align-items: center;
-    margin-bottom: 10px;
-   
-  }
-  .Search > input{
-    border-radius: 25px;
-    padding: 12px;
-    margin-top: 8px;
-    width: 200px;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
-    text-align: center;
-    font-family: 'Alata', sans-serif;
-    font-size: 12px;
-  }  */
-.Tables{
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+.Search {
+  width: 200px;
+  align-items: center;
+  margin: 50px 0px -50px 30px;
 }
-.TableContent{
-    /* background-color: antiquewhite; */
-    justify-content: right;
-    align-items: center;
-    box-sizing: border-box;
-    min-width: 200px;
-    height: 100vh;
+.Search > input {
+  border-radius: 15px;
+  padding: 5px;
+  margin-top: 8px;
+  width: 200px;
+  border: none;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  text-align: center;
+  font-family: "Alata", sans-serif;
+  font-size: 12px;
+}
+.Tables {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.TableContent {
+  /* background-color: antiquewhite; */
+  justify-content: right;
+  align-items: center;
+  box-sizing: border-box;
+  min-width: 200px;
+  height: 100vh;
 }
 
-.TableContent > table{
-    width: 550px;
-    text-align: center;
-    margin-left: 10px;
-    margin-top: 70px;    
+.TableContent > table {
+  width: 550px;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 70px;
 }
-td > button{
+td > button {
   height: 15px;
   width: 40px;
   font-size: 10px;
@@ -197,122 +197,118 @@ th{
     height: 30px;
 } */
 .label1 {
-    font-size: 14px; 
-    border: 1px solid; 
-    width: 250px; 
+  font-size: 14px;
+  border: 1px solid;
+  width: 250px;
 }
 .label2 {
-    font-size: 14px; 
-    border: 1px solid;  
+  font-size: 14px;
+  border: 1px solid;
 }
 .label3 {
-    font-size: 14px; 
-    border: 1px solid;  
-    width: 150px;
+  font-size: 14px;
+  border: 1px solid;
+  width: 150px;
 }
-.tdName{
-    text-align: left;
-}
-
-.StatusContent{
-    /* background-color: antiquewhite; */
-    justify-content: right;
-    align-items: center;
-    box-sizing: border-box;
-    min-width: 200px;
-    height: 100vh;
+.tdName {
+  text-align: left;
 }
 
-.StatusContent > table{
-    width: 900px;
-    text-align: center;
-    margin-left: 10px;
-    margin-top: 50px;    
-    color: black;
+.StatusContent {
+  /* background-color: antiquewhite; */
+  justify-content: right;
+  align-items: center;
+  box-sizing: border-box;
+  min-width: 200px;
+  height: 100vh;
+}
+
+.StatusContent > table {
+  width: 900px;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 50px;
+  color: black;
 }
 /*Details*/
-.Details{
-    display: flex;
-    flex-direction:column;
-    align-content: center;
-    margin-right:10px ;
-    margin-top: 70px;
-    background-color: white;
-    width: 380px;
-    height:500px;
-    box-sizing: border-box;
+.Details {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-left: 50px;
+  margin-top: 60px;
+  background-color: white;
+  width: 380px;
+  height: 500px;
+  box-sizing: border-box;
 }
-.DetailsContent{
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: left;
-    margin-right: 8px;
-    margin-top: 20px;
+.DetailsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  margin-right: 8px;
+  margin-top: 20px;
 }
-.DetailsContent > h2{
-    margin-bottom: 40px;
-}
-
-.DetailsForm{
-    margin: 8px;
-    margin-left: -20px;
-   
-}
-.DetailsForm > input{
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid black;
-    width: 350px;  
+.DetailsContent > h2 {
+  margin-bottom: 30px;
 }
 
-.DetailsForm1{
-   margin: 8px;
-   display: flex;
-   flex-direction: row;
-   margin-left: -20px;
+.DetailsForm {
+  margin: 8px;
+  margin-left: -20px;
+}
+.DetailsForm > input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 350px;
+}
 
+.DetailsForm1 {
+  margin: 8px;
+  display: flex;
+  flex-direction: row;
+  margin-left: -20px;
 }
-.DetailsForm1 > input{
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid black;
-    width: 350px;  
+.DetailsForm1 > input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 350px;
 }
-.DetailsForm2 > input{
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid black;
-    width: 172px;  
-    margin-left: 2px;
-    
+.DetailsForm2 > input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 172px;
+  margin-left: 2px;
 }
 .CancelDetails {
-    color: red;
-   justify-content: left;
-   align-items: center;
-   text-align: left;
-   margin-left: -15px;
+  color: red;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+  margin-left: -15px;
 }
-.DetailsButton{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 30px;
+.DetailsButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 .AddDetails {
-    color: black;
-   justify-content: right;
-   align-items: center;
-   text-align: right;
-   margin-right: 20px;
+  color: black;
+  justify-content: right;
+  align-items: center;
+  text-align: right;
+  margin-right: 20px;
 }
 
-.DetailsButton> button{
-    background-color: transparent;
-    border: none;
-    padding: 10px;
-    transition: background-color 0.5s;
-    border-radius: 25px;  
-  
+.DetailsButton > button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  transition: background-color 0.5s;
+  border-radius: 25px;
 }

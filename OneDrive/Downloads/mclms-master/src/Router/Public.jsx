@@ -19,7 +19,7 @@ function Public() {
     <Route path="/register" element={<Register/>} /> 
 
 
-    {/* <Route path="/stall-status" element={<StallStatus/>}/> */}
+  
     </Routes>
     
   )

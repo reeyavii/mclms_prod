@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+.sidebarItem {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items:flex-start;
+
+}
+
