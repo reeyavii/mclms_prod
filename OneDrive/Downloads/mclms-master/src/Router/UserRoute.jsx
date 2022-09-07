@@ -22,6 +22,7 @@ import AddGCash from '../components/AddGCash'
 import StallDetails from '../components/StallDetails'
 import AboutUs from '../components/AboutUs'
 import AdminLogin from '../adminComponents/AdminLogin'
+import Layout from '../components/Layout'
 
 
 function UserRoute() {
@@ -51,6 +52,7 @@ function UserRoute() {
         <Route path="/gcash" element={<Gcash/>} />
         <Route path="/add-GCash" element={<AddGCash/>} />
         <Route path="/about-us" element={<AboutUs/>} />
+        <Route path="/area-blue-print" element={<Layout/>} />
 
 
    

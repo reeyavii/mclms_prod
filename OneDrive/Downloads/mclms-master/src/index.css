@@ -18,13 +18,24 @@ table {
   width: 100%;
 }
 
-td, th {
-  border: 1px solid #dddddd;
+td {
+  border: 1px solid black;
   text-align: center;
   padding: 2px;
   font-size: 12px;
 }
 
+th {
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
+
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #8fa8b781;
+}
+tr > button {
+  background-color: transparent;
+  border: none;
 }

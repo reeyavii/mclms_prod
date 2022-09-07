@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { API_URL } from "../constants";
-// import {toast} from "react-toastify";
 
 const namespace = "lessees";
 const initialState = {
@@ -9,7 +8,9 @@ const initialState = {
   lessee: null,
   loading: false,
   error: null,
+  showAlert: false,
 };
+
 export const addLessees = createAsyncThunk(
   `${namespace}/addLessees`,
   async (data, { rejectWithValue }) => {
@@ -82,7 +83,11 @@ export const EditLessee = createAsyncThunk(
 export const lesseeSlice = createSlice({
   name: namespace,
   initialState: initialState,
-  reducers: {},
+  reducers: {
+    hideAlert: (state) => {
+      state.showAlert = false;
+    },
+  },
   extraReducers: {
     [getLessees.pending]: (state) => {
       state.loading = true;
@@ -119,7 +124,7 @@ export const lesseeSlice = createSlice({
       state.error = null;
     },
     [EditLessee.fulfilled]: (state, { payload }) => {
-      // notify();
+      state.showAlert = true;
       state.lessee = payload;
       state.error = null;
       state.loading = false;
@@ -146,14 +151,5 @@ export const lesseeSlice = createSlice({
   },
 });
 
-// const notify = () => toast('🦄 Success!', {
-//     position: "top-right",
-//     autoClose: 5000,
-//     hideProgressBar: false,
-//     closeOnClick: true,
-//     pauseOnHover: true,
-//     draggable: true,
-//     progress: undefined,
-//     });
-
+export const { hideAlert } = lesseeSlice.actions;
 export default lesseeSlice.reducer;

@@ -1,20 +1,23 @@
 import React, {useEffect} from 'react'
 import "./Lessees.styles.css";
 import {useDispatch, useSelector} from 'react-redux';
-import { getLessees } from '../app/reducer/lesseeSlice';
+import { getStalls } from '../app/reducer/stallSlice';
 
 function StallStatus() {
 
   const dispatch = useDispatch();
   const {lessees} = useSelector(state=>state.lessee);
+  const {stalls, stall} = useSelector(state=>state.stall);
 
   useEffect(()=>{
-    dispatch(getLessees())
+    dispatch(getStalls())
 },[])
-console.log(lessees);
+console.log(stalls);
+
+
 
   return (
-    <div className="Lessees">
+    <div className="Lessee">
     <div className="Tables"></div>  
     <div className="StatusContent">    
 
@@ -24,23 +27,23 @@ console.log(lessees);
                 <th>Stall Number</th>
                 <th>Section</th>
                 <th>Area Leased</th>
-                <th>Rate per Sq.M.</th>
+                <th>Monthly Payment</th>
                 <th>Occupant</th>
                 
                 
              </tr>
              {
 
-                lessees.filter(item=>item.status==="requested").map((lesseeData, index) => {
+                stalls.map((stallData, index) => {
                     return(
-                        <tr key={lesseeData.id}>
+                        <tr key={stallData.id}>
                         {/* <td>{index+1}</td> */}
-                        <td >{lesseeData.stall.status}</td>
-                        <td >{lesseeData.stall.stallNumber}</td>
-                        <td>{lesseeData.stall.section}</td>
-                        <td>{lesseeData.areaLeased}</td>    
-                        <td>{lesseeData.ratePerSqm}</td>  
-                        <td>{lesseeData.occupant}</td>       
+                        <td >{stallData.status}</td>
+                        <td >{stallData.stallNumber}</td>
+                        <td>{stallData.stallType}</td>
+                        <td>{stallData.dimension}</td>    
+                        <td>{stallData.monthlyPayment}</td>  
+                        <td>{stallData.user}</td>       
                      </tr>
                     )
                 })

@@ -7,6 +7,7 @@ import AdminRegister from '../adminComponents/AdminRegister'
 
 
 import StallStatus from '../adminComponents/StallStatus'
+import Layout from '../components/Layout'
 
 
 function Public() {
@@ -19,7 +20,7 @@ function Public() {
     <Route path="/register" element={<Register/>} /> 
 
 
-  
+    <Route path="/area-blue-print" element={<Layout/>} />
     </Routes>
     
   )

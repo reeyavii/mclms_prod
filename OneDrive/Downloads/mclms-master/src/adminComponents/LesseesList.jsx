@@ -2,15 +2,20 @@ import React, { useState, useEffect } from "react";
 import "./Lessees.styles.css";
 import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
-import { getLessee, getLessees, EditLessee } from "../app/reducer/lesseeSlice";
-// import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import {
+  getLessee,
+  getLessees,
+  EditLessee,
+  hideAlert,
+} from "../app/reducer/lesseeSlice";
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
 
 function LesseesList() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [search, setSearch] = useState("");
-  const { lessees, lessee } = useSelector((state) => state.lessee);
+  const { lessees, lessee, showAlert } = useSelector((state) => state.lessee);
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
   const [middleInitial, setMiddleInitial] = useState("");
@@ -26,7 +31,12 @@ function LesseesList() {
 
   useEffect(() => {
     dispatch(getLessees());
-  }, []);
+    if (showAlert === true) {
+      setTimeout(() => {
+        dispatch(hideAlert());
+      }, 5000);
+    }
+  }, [showAlert]);
   console.log(lessees);
 
   useEffect(() => {
@@ -127,7 +137,6 @@ function LesseesList() {
 
   return (
     <div className="Lessee">
-      {/* <ToastContainer /> */}
       <div className="Tables"></div>
       <div className="TableContent">
         <div className="Search">
@@ -144,12 +153,27 @@ function LesseesList() {
               <th>STALL #</th>
               <th>STALL TYPE</th>
               <th>ACCOUNT NAME</th>
-              <th>Actions</th>
+              {/* <th>Actions</th> */}
             </tr>
           </thead>
 
           {lessees
-            .filter((item) => item.status === "approved")
+            .filter((item) => {
+              if (item.status === "approved" && search !== "") {
+                if (
+                  `${item.firstName.toLowerCase()} ${item.lastName.toLowerCase()}`.includes(
+                    search.toLowerCase()
+                  ) ||
+                  item.stall.stallNumber === parseInt(search)
+                ) {
+                  return item;
+                } else {
+                  return null;
+                }
+              } else if (item.status === "approved") {
+                return item;
+              }
+            })
             .map((lesseeData, index) => {
               return (
                 <tbody key={lesseeData.id}>
@@ -157,13 +181,13 @@ function LesseesList() {
                     <td>{index + 1}</td>
                     <td>{lesseeData.stall.stallNumber}</td>
                     <td>{lesseeData.stall.stallType}</td>
-                    <td>{lesseeData.firstName}</td>
-                    <td>
-                      <button onClick={() => handleEdit(lesseeData.id)}>
-                        Edit
-                      </button>
-                      <button>Delete</button>
-                    </td>
+                    <td>{`${lesseeData.firstName} ${lesseeData.lastName}`} </td>
+                    {/* <td> */}
+                    <button onClick={() => handleEdit(lesseeData.id)}>
+                      Edit
+                    </button>
+                    <button>Delete</button>
+                    {/* </td> */}
                   </tr>
                 </tbody>
               );
@@ -225,6 +249,7 @@ function LesseesList() {
           <div className="DetailsForm">
             <input placeholder="Email" value={email} onChange={emailChange} />
           </div>
+
           {isEdit ? null : (
             <>
               <div className="DetailsForm1">
@@ -269,6 +294,12 @@ function LesseesList() {
             </button>
           )}
         </div>
+        {showAlert && (
+          <Alert severity="success">
+            <AlertTitle>Success</AlertTitle>
+            <strong>Edit Lessee success! </strong>
+          </Alert>
+        )}
       </div>
     </div>
   );
