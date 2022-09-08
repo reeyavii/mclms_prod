@@ -7,6 +7,7 @@ import {
   getLessees,
   EditLessee,
   hideAlert,
+  addLessees,
 } from "../app/reducer/lesseeSlice";
 import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
@@ -126,14 +127,30 @@ function LesseesList() {
       email: email,
       stallNumber: stallNum,
       stallType: stallType,
+
     };
     dispatch(EditLessee({ id, data }));
     console.log("Home clicked");
   };
   const handleAddDetails = (e) => {
-    navigate("/home");
-    console.log("Home clicked");
+      const data = {
+      firstName: fName,
+      lastName: lName,
+      middleInitial: middleInitial,
+      age: birthDate,
+      contactNumber: contNum,
+      status: status,
+      address: address,
+      email: email,
+      stallNumber: stallNum,
+      stallType: stallType,
+      sex: dateAcquired,
+      }
+      dispatch(addLessees(data)); 
+      console.log("Home clicked");
   };
+  
+ 
 
   return (
     <div className="Lessee">

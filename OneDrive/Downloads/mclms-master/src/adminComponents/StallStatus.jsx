@@ -27,8 +27,9 @@ console.log(stalls);
                 <th>Stall Number</th>
                 <th>Section</th>
                 <th>Area Leased</th>
+                <th>Rate per Sq.M</th>
                 <th>Monthly Payment</th>
-                <th>Occupant</th>
+               
                 
                 
              </tr>
@@ -42,8 +43,9 @@ console.log(stalls);
                         <td >{stallData.stallNumber}</td>
                         <td>{stallData.stallType}</td>
                         <td>{stallData.dimension}</td>    
+                        <td>x (5.00 x 30days) = </td>
                         <td>{stallData.monthlyPayment}</td>  
-                        <td>{stallData.user}</td>       
+                               
                      </tr>
                     )
                 })
