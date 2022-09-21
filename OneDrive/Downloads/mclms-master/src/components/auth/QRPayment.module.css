@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css2?family=Alata&display=swap);
+
+
+.Container3 {
+  background-color: #007cff;
+  background-image: conic-gradient( from 50deg,#007CFF,rgba(124, 190, 241, 0.811),rgba(124, 190, 241, 0.811),rgba(255, 255, 255, 0.811),rgba(179, 202, 236, 0.811),rgba(124, 190, 241, 0.811),rgba(124, 190, 241, 0.811),#007CFF, #007CFF,#007CFF,#007CFF);
+  /* margin-top: 10px; */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.gcashContainer{
+  display: flex;
+  position: relative;
+  background-color: white;
+  width: 350px;
+  height: 470px;
+  justify-content: center;
+  flex-direction: column;
+align-items: center;
+text-align: center;
+margin: 40px 0px 0px 30px;
+border-radius: 20px;
+
+}
+.GcashVerify {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 2px;
+  
+}
+.GcashVerify > button {
+  color: black;
+  margin-top: 50px;
+  background-color: #5aa6f8dd;
+  border-radius: 10px;
+  width: 90px;
+  height: 28px;
+  font-family: 'Alata', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+ letter-spacing:1px;
+ 
+}
+.GcashAccnt {
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2px 50px 0px 50px;
+}
+.GcashAccnt > input {
+  height: 30px;
+  width: 200px;
+  border: none;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 2px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+.GcashAccnt > input:focus {
+  outline: none;
+  
+}
+.GcashAccnt > p {
+  margin-bottom: -15px;
+  font-family: "Alata", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  color:#007cff;
+}
+.Gcash {
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.logoGcash {
+  margin-top: 90px;
+  margin: 30px 0px 0px 125px;
+}
+.logoGcash > img {
+  width: 150px;
+  height: 110px;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+.qr {
+  margin: 40px 0px 0px 2px;
+}
+.qr > img {
+  width: 200px;
+  height: 200px;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}

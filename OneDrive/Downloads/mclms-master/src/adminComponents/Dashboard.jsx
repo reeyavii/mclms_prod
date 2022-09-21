@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router';
 import logoAlim from "../assets/Alim_Logo.png";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Sidebar from "./Sidebar.jsx";
+import styles from "./dashboard/DashBoard.module.css";
 
 function Dashboard(props) {
     const navigate = useNavigate(); 
@@ -18,10 +19,9 @@ function Dashboard(props) {
 
 
   return (
-    <div className='Dashboard'>
-
-        <div className='navbar'>
-            <div className='LogoLeft'>
+    <div className={styles.dashboard}> 
+        <div className={styles.navbar}>
+            <div className={styles.logoLeft}>
                 <div className='LogoAlim'>
                      <img src={logoAlim} alt="logo1" />
                 </div>

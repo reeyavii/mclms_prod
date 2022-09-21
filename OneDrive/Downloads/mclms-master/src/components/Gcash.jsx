@@ -12,7 +12,7 @@ function Gcash() {
     const navigate = useNavigate();
     const [gcashNumber, setGcashNumber] = useState("");
     const [gcashName, setGcashName] = useState("");
-    const [amount, setAmount] = useState("");
+    // const [amount, setAmount] = useState("");
 
     
      const gcashNumberChange = (e) => {
@@ -23,9 +23,9 @@ function Gcash() {
       setGcashName(e.target.value);
      };
 
-     const amountChange = (e) => {
-     setAmount(e.target.value);
-     };
+    //  const amountChange = (e) => {
+    //  setAmount(e.target.value);
+    //  };
 
     const handleGoBack = (e) => {
            //go to verification
@@ -87,14 +87,14 @@ function Gcash() {
                 </div>
               
 
-                <div className="GcashAccnt">
+                {/* <div className="GcashAccnt">
                       <p>Enter Amount</p><br/>
                         <input 
                        placeholder=" PHP 0.00"
                        value={amount}
                        onChange={amountChange} 
                        />     
-                </div>
+                </div> */}
 
                 <div className="GcashVerify">
                         

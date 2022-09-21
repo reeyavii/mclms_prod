@@ -1,0 +1,364 @@
+.container {
+  background-color: white;
+  min-height: 90vh;
+  display: flex;
+  width: 414px;
+  max-height: 760px;
+  position: relative;
+}
+
+.store {
+  height: 30px;
+  width: 30px;
+  border: 3px solid gray;
+  display: flex;
+}
+
+.leftSide {
+  flex: 0.1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upperLeft {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+}
+.lowerLeft {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+}
+
+.leftMidSide {
+  display: flex;
+  flex-direction: column;
+  flex: 0.7;
+}
+
+.midTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 0.12;
+}
+
+.midMid {
+  flex: 0.47;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.midBot {
+  flex: 0.41;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.horizontalBoxesContainer {
+  display: flex;
+  flex-direction: column;
+}
+.horizontalBoxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.breadFishSection {
+  flex: 0.8;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.breadSection {
+  border: 3px solid gray;
+  flex: 0.35;
+  display: flex;
+  justify-content: center;
+  height: 336px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.label {
+  text-align: center;
+  font-family: "Alata", "sans-serif";
+  font-weight: bold;
+}
+
+.bottomSection {
+  flex: 0.65;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottomSectionHalf {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.vendors {
+  flex: 0.5;
+  display: flex;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.permanentVendors {
+  border: 3px solid gray;
+  flex: 0.8;
+}
+.meatSection {
+  border: 3px solid gray;
+  flex: 0.6;
+}
+.leftBottomStores {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 10px;
+  align-items: flex-start;
+}
+
+.leftBottomStoreBoxes {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  width: 130px;
+}
+.bottomStoreBox {
+  border: 3px solid gray;
+  flex-grow: 1;
+}
+
+.leftRightSide {
+  flex: 0.2;
+  display: flex;
+  flex-direction: column;
+}
+
+.gym {
+  border: 3px solid gray;
+  border-right: none;
+  margin-top: 160px;
+  height: 42%;
+  margin-left: -25px;
+  z-index: 1;
+  background-color: white;
+}
+.stage {
+  border: 3px solid gray;
+  height: 60px;
+  right: 0px;
+  z-index: 2;
+  background-color: white;
+  position: absolute;
+  width: 40px;
+  bottom: 315px;
+  border-right: none;
+}
+.cr {
+  height: 30px;
+  border: 3px solid gray;
+  width: 25px;
+  height: 35px;
+  margin-left: 20px;
+  margin-top: 2px;
+  text-align: center;
+  font-family: "Alata", "sans-serif";
+  font-weight: bold;
+  position: absolute;
+  right: 0px;
+  bottom: 280px;
+  border-right: none;
+}
+.frozenGoods {
+  border: 3px solid gray;
+  z-index: 2;
+  position: absolute;
+  bottom: 100px;
+  right: 0px;
+  width: 150px;
+  height: 50px;
+  border-right: none;
+}
+.terminal {
+  border: 3px solid gray;
+  z-index: 2;
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+  width: 120px;
+  height: 40px;
+  border-right: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.storeLabel {
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  font-family: "Alata", "sans-serif";
+  text-align: center;
+}
+.rightFront {
+  width: 216px;
+  height: 66px;
+  border: 3px solid gray;
+  position: absolute;
+  left: 80px;
+  top: 35px;
+  display: flex;
+  flex-direction: column;
+}
+.rightFrontBoxes {
+  display: flex;
+  flex: 1;
+}
+.rightFrontBox {
+  border: 3px solid gray;
+  flex: 1;
+}
+.rightGym {
+  border: 3px solid gray;
+  border-left: none;
+  height: 370px;
+  width: 77px;
+  position: absolute;
+  top: 160px;
+}
+.rightRelief {
+  width: 100px;
+  border: 3px solid gray;
+  height: 330px;
+  position: absolute;
+  left: 85px;
+  top: 160px;
+}
+.rightTobacco {
+  width: 100px;
+  border: 3px solid gray;
+  height: 330px;
+  position: absolute;
+  left: 215px;
+  top: 160px;
+}
+.rightRightBoxes {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 36px;
+  height: 396px;
+  border: 3px solid gray;
+  right: 20px;
+  top: 110px;
+}
+.rightRightBackBoxes {
+  width: 36px;
+  height: 72px;
+  border: 3px solid gray;
+  right: 20px;
+  position: absolute;
+  bottom: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.rightSSR {
+  width: 230px;
+  height: 60px;
+  border: 3px solid gray;
+  position: absolute;
+  bottom: 220px;
+  right: 95px;
+}
+.rightCr {
+  width: 36px;
+  height: 36px;
+  border: 3px solid gray;
+  position: absolute;
+  bottom: 170px;
+  right: 95px;
+}
+.rightMRF {
+  width: 36px;
+  height: 45px;
+  border: 3px solid gray;
+  position: absolute;
+  bottom: 130px;
+  right: 55px;
+}
+.rightFish {
+  height: 80px;
+  width: 190px;
+  border: 3px solid gray;
+  position: absolute;
+  bottom: 95px;
+  right: 136px;
+}
+.rightBack {
+  display: flex;
+  flex-direction: row;
+  border: 3px solid gray;
+  height: 36px;
+  width: 108px;
+  bottom: 20px;
+  position: absolute;
+  right: 96px;
+}
+.rightVeg {
+  position: absolute;
+  left: 0px;
+  bottom: 100px;
+  border: 3px solid gray;
+  border-left: none;
+  width: 70px;
+  height: 50px;
+}
+.rightStockRoom {
+  width: 45px;
+  height: 30px;
+  position: absolute;
+  border: 3px solid gray;
+  bottom: 65px;
+  left: 25px;
+}
+.rightTerminal {
+  position: absolute;
+  bottom: 20px;
+  border: 3px solid gray;
+  width: 80px;
+  height: 40px;
+  border-left: none;
+}
+
+.rightStage {
+  border: 3px solid gray;
+  height: 60px;
+  left: 0px;
+  z-index: 2;
+  background-color: white;
+  position: absolute;
+  width: 30px;
+  bottom: 315px;
+  border-left: none;
+}
+.rightSideCr {
+  height: 30px;
+  border: 3px solid gray;
+  width: 20px;
+  height: 35px;
+
+  text-align: center;
+  font-family: "Alata", "sans-serif";
+  font-weight: bold;
+  position: absolute;
+  left: 0px;
+  bottom: 280px;
+  border-left: none;
+}

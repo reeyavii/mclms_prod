@@ -1,10 +1,9 @@
 import React, { useState, useMemo } from "react";
 import "./auth/Auth.styles.css";
 import { useNavigate } from "react-router-dom";
-import { authRegister } from "../app/reducer/authSlice";
+import { authLogin, authRegister } from "../app/reducer/authSlice";
 import { useDispatch } from "react-redux";
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 function Register() {
   const dispatch = useDispatch();
@@ -130,20 +129,31 @@ function Register() {
         sex: sex,
         age: parseInt(age),
         address: address,
-        status:status
+        status: status,
       };
       dispatch(authRegister(data));
+      setTimeout(() => {
+        dispatch(
+          authLogin({
+            username: emailAdd,
+            password: setPassword,
+          })
+        );
+        navigate("/verification");
+        console.log("create clicked");
+      }, 800);
     } else {
     }
-
-    navigate("/verification");
-    console.log("create clicked");
   };
   //mg src={arrow} alt="arrow"
   return (
     <div className="InnerContainer1">
       <div className="BackA">
-      <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1 }}/>  </button> <p>BACK</p>
+        <button onClick={handleGoBack}>
+          {" "}
+          <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1 }} />{" "}
+        </button>{" "}
+        <p>BACK</p>
       </div>
 
       <div className="CreateAccount1">Create Account</div>
@@ -166,18 +176,10 @@ function Register() {
         </div>
         <div className="InputContainer2">
           <div className="Input3">
-            <input
-              placeholder="Age"
-              value={age}
-              onChange={ageChange}
-            />
+            <input placeholder="Age" value={age} onChange={ageChange} />
           </div>
           <div className="Input4">
-            <input
-              placeholder="Sex"
-              value={sex}
-              onChange={sexChange}
-            />
+            <input placeholder="Sex" value={sex} onChange={sexChange} />
           </div>
           <div className="Input5">
             <input
@@ -188,7 +190,6 @@ function Register() {
           </div>
         </div>
 
-      
         <div className="InputContainer3">
           <div className="Input6">
             <input
@@ -239,6 +240,5 @@ function Register() {
     </div>
   );
 }
-
 
 export default Register;

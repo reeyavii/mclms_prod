@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css2?family=Alata&display=swap);
+/* .appForm {
+  display: flexbox;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: -350px; 
+  flex-grow: 0.5;
+} */
+/* .appFormContent {
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  margin-right: 20px;
+}
+.info {
+  justify-content: center;
+  text-align: left;
+  margin-top: 80px;
+  font-size: 15px;
+  font-weight:bolder;
+  
+} */
+.pending {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width:100vw;
+  box-sizing: border-box;
+  background-color: #f1f4fb;
+}
+.appForm {
+  display: flex;
+  margin: 80px 0px 0px 580px;
+}
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 250px;
+}
+.information > p {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 30px 0px 35px 47px;
+}
+.inside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 250px;
+}
+.input {
+  display: flex;
+  border: none;
+  margin-top: -30px;
+}
+.input :focus {
+  outline: none;
+}
+.inputContent {
+  margin: 18px 60px 0px 50px;
+}
+.inputContent > input {
+  background-color: transparent;
+  border: none;
+  width: 200px;
+}
+.holdername {
+  margin: 0px -30px 10px 50px;
+}
+.holdername > h5 {
+  width: 90px;
+  background-color: transparent;
+  border: none;
+  font-size: 12.5px;
+  font-family: "Alata";
+}
+.holderName {
+  margin: 0px -30px 10px 50px;
+}
+.holderName > h5 {
+  width: 120px;
+  background-color: transparent;
+  border: none;
+  font-size: 12.5px;
+  font-family: "Alata";
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  margin: -40px 30px 10px 0px;
+}
+.decline > button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #dc1a1a;
+  font-size: larger;
+  margin: 0px 20px 0px 20px;
+}
+.approve > button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #20a445;
+  font-size: larger;
+  margin: 0px 20px 0px 20px;
+}

@@ -127,13 +127,12 @@ function LesseesList() {
       email: email,
       stallNumber: stallNum,
       stallType: stallType,
-
     };
     dispatch(EditLessee({ id, data }));
     console.log("Home clicked");
   };
   const handleAddDetails = (e) => {
-      const data = {
+    const data = {
       firstName: fName,
       lastName: lName,
       middleInitial: middleInitial,
@@ -145,12 +144,10 @@ function LesseesList() {
       stallNumber: stallNum,
       stallType: stallType,
       sex: dateAcquired,
-      }
-      dispatch(addLessees(data)); 
-      console.log("Home clicked");
+    };
+    dispatch(addLessees(data));
+    console.log("Home clicked");
   };
-  
- 
 
   return (
     <div className="Lessee">
@@ -163,16 +160,15 @@ function LesseesList() {
             onChange={searchChange}
           />
         </div>
+
         <table>
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>STALL #</th>
-              <th>STALL TYPE</th>
-              <th>ACCOUNT NAME</th>
-              {/* <th>Actions</th> */}
-            </tr>
-          </thead>
+          <tr>
+            <th>#</th>
+            <th>STALL #</th>
+            <th>STALL TYPE</th>
+            <th>ACCOUNT NAME</th>
+            <th> </th>
+          </tr>
 
           {lessees
             .filter((item) => {
@@ -199,12 +195,12 @@ function LesseesList() {
                     <td>{lesseeData.stall.stallNumber}</td>
                     <td>{lesseeData.stall.stallType}</td>
                     <td>{`${lesseeData.firstName} ${lesseeData.lastName}`} </td>
-                    {/* <td> */}
-                    <button onClick={() => handleEdit(lesseeData.id)}>
-                      Edit
-                    </button>
-                    <button>Delete</button>
-                    {/* </td> */}
+                    <td>
+                      <button onClick={() => handleEdit(lesseeData.id)}>
+                        Edit
+                      </button>
+                      <button>Delete</button>
+                    </td>
                   </tr>
                 </tbody>
               );

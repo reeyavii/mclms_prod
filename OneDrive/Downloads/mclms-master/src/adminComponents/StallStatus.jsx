@@ -1,59 +1,65 @@
-import React, {useEffect} from 'react'
+import React, { useEffect, useState } from "react";
 import "./Lessees.styles.css";
-import {useDispatch, useSelector} from 'react-redux';
-import { getStalls } from '../app/reducer/stallSlice';
+import { useDispatch, useSelector } from "react-redux";
+import { getStalls } from "../app/reducer/stallSlice";
+import styles from "./Auth/StallStatus.module.css";
+import BorderColorOutlinedIcon from '@mui/icons-material/BorderColorOutlined';
+
 
 function StallStatus() {
-
   const dispatch = useDispatch();
-  const {lessees} = useSelector(state=>state.lessee);
-  const {stalls, stall} = useSelector(state=>state.stall);
+  const { lessees } = useSelector((state) => state.lessee);
+  const { stalls, stall } = useSelector((state) => state.stall);
+  const [search, setSearch] = useState("");
 
-  useEffect(()=>{
-    dispatch(getStalls())
-},[])
-console.log(stalls);
+  const searchChange = (e) => {
+    setSearch(e.target.value);
+  };
 
-
+  useEffect(() => {
+    dispatch(getStalls());
+  }, []);
+  console.log(stalls);
 
   return (
-    <div className="Lessee">
-    <div className="Tables"></div>  
-    <div className="StatusContent">    
-
-        <table>
-             <tr>
-                <th>STATUS</th>
-                <th>Stall Number</th>
-                <th>Section</th>
-                <th>Area Leased</th>
-                <th>Rate per Sq.M</th>
-                <th>Monthly Payment</th>
-               
-                
-                
-             </tr>
-             {
-
-                stalls.map((stallData, index) => {
-                    return(
-                        <tr key={stallData.id}>
-                        {/* <td>{index+1}</td> */}
-                        <td >{stallData.status}</td>
-                        <td >{stallData.stallNumber}</td>
-                        <td>{stallData.stallType}</td>
-                        <td>{stallData.dimension}</td>    
-                        <td>x (5.00 x 30days) = </td>
-                        <td>{stallData.monthlyPayment}</td>  
-                               
-                     </tr>
-                    )
-                })
-             }
-        </table>
-        </div> 
+    <div className={styles.lessee}>
+      <div className={styles.tables}></div>
+      <div className={styles.statusContent}>
+      <div className={styles.search}>
+          <input
+            placeholder="Search any keyword"
+            value={search}
+            onChange={searchChange}
+          />
         </div>
-  )
+        <table>
+          
+            <th>STATUS</th>
+            <th>Stall #</th>
+            <th>Section</th>
+            <th>Area Leased</th>
+            <th>Rate per Sq.M</th>
+            <th>Monthly Payment</th>
+            <th></th>
+        
+          {stalls.map((stallData, index) => {
+            return (
+              <tr key={stallData.id}>
+                {/* <td>{index+1}</td> */}
+                <td>{stallData.status}</td>
+                <td>{stallData.stallNumber}</td>
+                <td>{stallData.stallType}</td>
+                <td>{stallData.dimension}</td>
+                <td>x (5.00 x 30days) = </td>
+                <td>{stallData.monthlyPayment}</td>
+                <td><BorderColorOutlinedIcon sx={{fontSize:12, padding:.1}}/></td>
+              </tr>
+            );
+          })}
+        </table>
+      </div>
+    </div>
+  );
 }
 
 export default StallStatus;

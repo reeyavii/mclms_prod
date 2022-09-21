@@ -46,7 +46,6 @@
     background-color: transparent;
     border: none;
     padding: 10px;
-    color: black;
     transition: background-color 0.5s;
     border-radius: 25px;  
 }

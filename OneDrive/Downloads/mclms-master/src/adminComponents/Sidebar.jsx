@@ -7,6 +7,7 @@ import { logout } from "../app/reducer/authSlice";
 import { useEffect } from "react";
 import styles from "./sidebar/SideBar.module.css";
 import { useState } from "react";
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const menu = [
   "Lessee List",
@@ -38,9 +39,9 @@ function Sidebar(props) {
     } else if (index === 1) {
       navigate("/stall-status");
     } else if (index === 2) {
-      navigate("/");
+      navigate("/pending-application");
     } else if (index === 3) {
-      navigate("/");
+      navigate("/lessees-payment");
     } else if (index === 4) {
       navigate("/");
     } else if (index === 5) {
@@ -59,7 +60,7 @@ function Sidebar(props) {
         <div onClick={handleGoBack} className={styles.sidebarItem}>
           {" "}
           <ArrowBackIosNewIcon
-            sx={{ fontSize: 12, marginTop: 2, marginLeft: 4 }}
+            sx={{ fontSize: 12, marginTop: 2, marginBottom:8, marginLeft: 1 }}
           />
         </div>
 
@@ -79,8 +80,8 @@ function Sidebar(props) {
           );
         })}
 
-        <div onClick={handleLO} className={styles.sidebarItem}>
-          <p>Logout</p>
+        <div onClick={handleLO} className={styles.LO}><p>Logout</p>
+          <LogoutIcon sx={{fontSize:16,marginTop:16, marginRight:9}}/>
         </div>
       </div>
 

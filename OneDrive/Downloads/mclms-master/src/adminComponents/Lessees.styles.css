@@ -4,7 +4,7 @@
   min-height: 100vh;
   width: 100%;
   box-sizing: border-box;
-  background-color: white;
+  background-color: #f1f4fb;
 }
 
 .LesseeBar {
@@ -16,6 +16,7 @@
   width: 250px;
   background-color: #d8e2f4;
   box-sizing: border-box;
+  position: fixed;
 }
 .List {
   display: flex;
@@ -72,7 +73,7 @@
   margin-top: 50px;
 }
 
-.Inside > p {
+/* .Inside > p {
   text-align: left;
   font-size: 14px;
   font-weight: 600;
@@ -92,7 +93,7 @@
   color: rgb(19, 97, 193);
   background-color: bisque;
   transition-duration: 100s;
-}
+} */
 
 .ListItem > button {
   background-color: transparent;
@@ -115,19 +116,19 @@
   text-align: right;
   font-size: 14px;
   font-weight: 600;
-  margin-top: 160px;
-  margin-right: 50px;
+  /* margin-top: 160px;
+  margin-right: 50px; */
 }
 .Search {
-  width: 200px;
+  /* width: 200px; */
   align-items: center;
-  margin: 50px 0px -50px 30px;
+  /* margin: 50px 0px -50px 30px; */
 }
 .Search > input {
   border-radius: 15px;
   padding: 5px;
-  margin-top: 8px;
-  width: 200px;
+  /* margin-top: 8px; */
+  /* width: 200px; */
   border: none;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -139,35 +140,45 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  margin-right: 200px;
+  /* flex-grow: 0.4; */
+  display: flex;
 }
 .TableContent {
   /* background-color: antiquewhite; */
   justify-content: right;
   align-items: center;
   box-sizing: border-box;
-  min-width: 200px;
-  height: 100vh;
+  /* min-width: 200px;
+  height: 100vh; */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
 }
 
 .TableContent > table {
   width: 550px;
   text-align: center;
-  margin-left: 10px;
-  margin-top: 70px;
+  /* margin-left: 10px; */
+  margin-top: 20px;
 }
-tr > button {
-  height: 15px;
-  width: 30px;
+tr > td > button {
+  height: 14px;
+  width: 25px;
   font-size: 8px;
-  font-weight: 600;
+  font-weight: bold;
   text-align: center;
   padding: 1px;
-  margin: 2px;
+  margin: 1px;
   border-radius: 2px;
   border: none;
   background-color: rgb(155, 177, 211);
+  
 }
-
+/* tr :hover {
+  background-color: #ddd;
+} */
 /* table{
     border-collapse:collapse; 
 }
@@ -196,30 +207,31 @@ th{
   text-align: left;
 }
 
-.StatusContent {
-  /* background-color: antiquewhite; */
-  justify-content: right;
+/* .StatusContent {
+  background-color: antiquewhite;
+  justify-content: center;
   align-items: center;
   box-sizing: border-box;
   min-width: 200px;
   height: 100vh;
-}
+  margin-top: 90px;
+} */
 
-.StatusContent > table {
+/* .StatusContent > table {
   width: 900px;
   text-align: center;
-  margin-left: 10px;
+  margin-left: 1px;
   margin-top: 50px;
   color: black;
-}
+} */
 /*Details*/
 .Details {
   display: flex;
   flex-direction: column;
   align-content: center;
   margin-left: 50px;
-  margin-top: 60px;
-  background-color: white;
+  margin-top: 30px;
+  background-color: #f1f4fb;
   width: 380px;
   height: 500px;
   box-sizing: border-box;
@@ -229,8 +241,8 @@ th{
   flex-direction: column;
   align-items: center;
   justify-content: left;
-  margin-right: 8px;
-  margin-top: 20px;
+  margin-right: 40px;
+  margin-top: 25px;
 }
 .DetailsContent > h2 {
   margin-bottom: 30px;
@@ -239,6 +251,7 @@ th{
 .DetailsForm {
   margin: 8px;
   margin-left: -20px;
+
 }
 .DetailsForm > input {
   background-color: transparent;
@@ -294,3 +307,27 @@ th{
   transition: background-color 0.5s;
   border-radius: 25px;
 }
+/*Pending Application*/
+/* .Pending {
+  background-color: antiquewhite; 
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  min-width: 200px;
+  height: 100vh;
+  display: flex;
+  flex-grow: 0.5;
+  margin-left: 50px;
+  margin-top: 90px;
+} */
+
+ /* .Pending > table {
+  width: 700px;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: black;
+}  */
+/* .Pending > th {
+  width: 80px;
+} */

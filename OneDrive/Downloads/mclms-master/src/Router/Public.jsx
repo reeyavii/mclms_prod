@@ -1,29 +1,28 @@
-import React from 'react'
-import {Routes, Route} from "react-router-dom"
-import Login from '../components/Login'
-import Register from '../components/Register'
-import AdminLogin from '../adminComponents/AdminLogin'
-import AdminRegister from '../adminComponents/AdminRegister'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Login from "../components/Login";
+import Register from "../components/Register";
+import AdminLogin from "../adminComponents/AdminLogin";
+import AdminRegister from "../adminComponents/AdminRegister";
+import ReceiptDetails from "../components/ReceiptDetails";
+import HistoryPayment from "../components/HistoryPayment";
 
-
-import StallStatus from '../adminComponents/StallStatus'
-import Layout from '../components/Layout'
-
+// import Blueprint from "../components/Blueprint";
 
 function Public() {
   return (
     <Routes>
-    <Route path="/" element={<Login/>} /> 
-    <Route path="/Login" element={<Login/>} /> 
-    <Route path="/admin-login" element={<AdminLogin/>} />
-    <Route path="/admin-register" element={<AdminRegister/>} />
-    <Route path="/register" element={<Register/>} /> 
+      <Route path="/" element={<Login />} />
+      <Route path="/Login" element={<Login />} />
+      <Route path="/admin-login" element={<AdminLogin />} />
+      <Route path="/admin-register" element={<AdminRegister />} />
+      <Route path="/register" element={<Register />} />
 
-
-    <Route path="/area-blue-print" element={<Layout/>} />
+      {/* <Route path="/area-blueprint" element={<Blueprint />} /> */}
+      <Route path="/receipt-details" element={<ReceiptDetails />} />
+      <Route path="/payment-history" element={<HistoryPayment/>} />
     </Routes>
-    
-  )
+  );
 }
 
-export default Public
+export default Public;

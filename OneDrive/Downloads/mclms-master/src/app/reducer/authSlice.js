@@ -3,6 +3,7 @@ import {API_URL} from "../../app/constants";
 import axios from "axios";
 
 
+
 const namespace = "auth";
 const initialState = {
     username: null,
@@ -139,6 +140,7 @@ export const authSlice = createSlice({
         },
         [authRegister.fulfilled]: (state) => {
             state.loading = false;
+
         },
         [authRegister.rejected]: (state, { payload }) => {
             state.loading = false;

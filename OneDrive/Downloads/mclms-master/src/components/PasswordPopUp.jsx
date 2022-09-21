@@ -15,7 +15,7 @@ function PasswordPopUp() {
     
     const handleCancel = (e) => {
         //go to Application
-        navigate("/application-form");
+        navigate(-1);
         console.log("Cancel clicked");
         };
     const handlePopSubmit = (e) => {
@@ -28,9 +28,9 @@ function PasswordPopUp() {
     return (
     
        
-          <div className="PopBox">
-                   
-                                
+          <div className="PopBox">   
+
+
                <div className="PopUp">
                   
                     <p>Enter your password to submit.</p>
@@ -54,12 +54,16 @@ function PasswordPopUp() {
                       
                  
                  </div>
-               
+
+                 
+                  </div>
                   
-         
-         </div>
+    
+
+              
+          
                     
-   
+  
        
     );
   

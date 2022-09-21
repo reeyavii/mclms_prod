@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.receipts {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 350px;
+}
+.header > h5 {
+  display: flex;
+  justify-content: left;
+  margin: 20px 90px 0px 20px;
+}
+.header > p {
+  display: flex;
+  justify-content: right;
+  font-size: 12px;
+  margin: 20px 0px 0px 120px;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(138, 168, 228);
+  width: 350px;
+  border: 2px solid black;
+}
+.content > p {
+  display: flex;
+  justify-content: center;
+}
+.profile {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.profile > p {
+  display: flex;
+  justify-content: center;
+}
+.profile > h4 {
+  display: flex;
+  justify-content: center;
+}
+.details {
+  display: flex;
+  flex-direction: row;
+}
+.details > input {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
