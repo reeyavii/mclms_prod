@@ -7,6 +7,8 @@ import logoB from "../assets/Form.png";
 import logoC from "../assets/Payment.png";
 import logoD from "../assets/About Us.png";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import stallPicture from "../assets/stallPicture.jpg";
+import styles from "./auth/Home.module.css";
 
 function Home() {
   const navigate = useNavigate();
@@ -63,36 +65,37 @@ function Home() {
           </button>
         </div>
       </div>
-{/* 
+
       <div className={styles.picture}>
-          <img src={stallPicture} alt="stallPicture " />
-        </div> */}
-      <div className="Input-item">
-        <div className="InputContainer"></div>
-        <div className=" box1">
-          <div onClick={handleStalls} className="Stalls">
+        <img src={stallPicture} alt="stallPicture " />
+      </div>
+
+      <div className={styles.InputItem}>
+        <div className={styles.InputContainer}></div>
+        <div className={styles.box1}>
+          <div onClick={handleStalls} className={styles.Stalls}>
             <img src={logoA} alt="logoA" />
             <p>Stalls</p>
-            <div className="smalltext">See available stalls here</div>
+            <div className={styles.smalltext}>See available stalls here</div>
           </div>
 
-          <div onClick={handleApplicationForm} className="Stalls">
+          <div onClick={handleApplicationForm} className={styles.Stalls}>
             <img src={logoB} alt="logoB" />
             <p>Application Form</p>
-            <div className="smalltext">Fill up to acquire stall</div>
+            <div className={styles.smalltext}>Check Pending Applications</div>
           </div>
         </div>
-        <div className=" box2">
-          <div onClick={handlePayments} className="Stalls">
+        <div className={styles.box2}>
+          <div onClick={handlePayments} className={styles.Stalls}>
             <img src={logoC} alt="logoC" />
             <p>Payments</p>
-            <div className="smalltext">MOP and receipts</div>
+            <div className={styles.smalltext}>MOP and receipts</div>
           </div>
 
-          <div onClick={handleAboutUs} className="Stalls">
+          <div onClick={handleAboutUs} className={styles.Stalls}>
             <img src={logoD} alt="logoD" />
             <p>About Us</p>
-            <div className="smalltext">Contact Information</div>
+            <div className={styles.smalltext}>Contact Information</div>
           </div>
         </div>
       </div>

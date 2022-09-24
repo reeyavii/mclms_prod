@@ -11,6 +11,11 @@ import {
 } from "../app/reducer/lesseeSlice";
 import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+
+const statuses = ["Pending", "Approved", "Rejected"];
 
 function LesseesList() {
   const navigate = useNavigate();
@@ -29,6 +34,13 @@ function LesseesList() {
   const [stallType, setStallType] = useState("");
   const [dateAcquired, setDateAcquired] = useState("");
   const [isEdit, setIsEdit] = useState(false);
+  const [appStatus, setAppStatus] = useState("");
+
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
 
   useEffect(() => {
     dispatch(getLessees());
@@ -52,7 +64,8 @@ function LesseesList() {
       setEmail(lessee.email);
       //   setStallNum(lessee.stall.stallNumber);
       //   setStallType(lessee.stall.stallType);
-      setDateAcquired("");
+      setDateAcquired(lessee.approvedDate);
+      setAppStatus(lessee.status);
     }
   }, [isEdit, lessee]);
   console.log(lessee);
@@ -149,6 +162,14 @@ function LesseesList() {
     console.log("Home clicked");
   };
 
+  const handleStatusChange = (status) => {
+    setAnchorEl(null);
+    setAppStatus(status);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <div className="Lessee">
       <div className="Tables"></div>
@@ -199,7 +220,7 @@ function LesseesList() {
                       <button onClick={() => handleEdit(lesseeData.id)}>
                         Edit
                       </button>
-                      <button>Delete</button>
+                      <button>Archive</button>
                     </td>
                   </tr>
                 </tbody>
@@ -247,7 +268,7 @@ function LesseesList() {
           </div>
           <div className="DetailsForm">
             <input
-              placeholder="Status"
+              placeholder="Civil Status"
               value={status}
               onChange={statusChange}
             />
@@ -285,11 +306,41 @@ function LesseesList() {
           )}
 
           <div className="DetailsForm">
-            <input
-              placeholder="Date Acquired"
-              value={dateAcquired}
-              onChange={dateAcquiredChange}
-            />
+            <div className="DetailsForm2">
+              {" "}
+              <input
+                placeholder="Date Acquired"
+                value={dateAcquired}
+                onChange={dateAcquiredChange}
+              />
+            </div>
+
+            <div className="DetailsForm2">
+              <input
+                onClick={handleClick}
+                placeholder="Application Status"
+                value={appStatus.toUpperCase()}
+                readOnly
+              />
+
+              <Menu
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{
+                  "aria-labelledby": "basic-button",
+                }}
+              >
+                {statuses.map((item) => {
+                  return (
+                    <MenuItem onClick={() => handleStatusChange(item)}>
+                      {item}
+                    </MenuItem>
+                  );
+                })}
+              </Menu>
+            </div>
           </div>
         </div>
         <div className="DetailsButton">

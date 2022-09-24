@@ -7,18 +7,18 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 210px;
   height: 100vh;
   position: fixed; /*try lang */
   background-color: #c8daee;
+  margin-top: 80px;
 }
 .sidebarItem {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: flex-start;
-  align-items:flex-start;
-
+  align-items: flex-start;
 }
 .LO {
   display: flex;

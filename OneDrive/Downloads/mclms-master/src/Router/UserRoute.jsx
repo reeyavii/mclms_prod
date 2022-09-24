@@ -27,6 +27,7 @@ import QRPayment from "../components/QRPayment";
 import ReceiptDetails from "../components/ReceiptDetails";
 import HistoryPayment from "../components/HistoryPayment";
 import Receipts from "../components/Receipts";
+import ApplicationStatus from "../components/ApplicationStatus";
 
 
 
@@ -80,10 +81,10 @@ function UserRoute() {
       <Route path="/area-blueprint/:side" element={<Blueprint />} />
       <Route path="/verification" element={<Verification />} />
       <Route path="/qr-code-payment" element={<QRPayment />} />
-      <Route path="/receipt-details" element={<ReceiptDetails />} />
+      <Route path="/receipt-details/:id" element={<ReceiptDetails />} />
       <Route path="/payment-history" element={<HistoryPayment />} />
       <Route path="/receipts" element={<Receipts />} />
- 
+      <Route path="/application-status" element={<ApplicationStatus />} />
     </Routes>
 
   );

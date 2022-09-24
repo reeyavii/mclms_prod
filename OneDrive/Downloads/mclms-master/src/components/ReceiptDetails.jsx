@@ -19,24 +19,35 @@ function ReceiptDetails() {
   const { status, setStatus } = useState("");
 
   const handleDone= (e) => {
-    navigate("/payment-history");
+    navigate("/payments");
     console.log("create clicked");
   };
-
+  const handleGoBack = (e) => {
+    //go to verification
+    navigate(-1);
+    console.log("create clicked");
+  };
 
   return (
     // details of payment
     // date, amount, name, number, ref. no., status(approved, pending),
     <div className={styles.container}>
-      
-
+      <div className={styles.button}>
+<div className={styles.BackA}>
+            <button onClick={handleGoBack}>
+              {" "}
+              <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 0.5 }} />{" "}
+            </button>
+          </div>
+       <div className={styles.done}>
+      <button  onClick={handleDone}>
+        Done
+      </button></div>
+</div>
       <div className={styles.logoGcash}>
             <img src={logoGcash} alt="logoGcash" />
           </div>
-          {/* <div className={styles.done}>
-      <button  onClick={handleDone}>
-        Done
-      </button></div> */}
+         
       <div className={styles.content}>
         <div className={styles.payment}>
           <h5>Payment Details</h5>

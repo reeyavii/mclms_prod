@@ -23,39 +23,50 @@ function Payment() {
           <th>Stall Number</th>
           <th>Occupant</th>
 
-          {lessees.map((lesseeData) => {
+          {stalls.map((stallData, index) => {
             return (
-              <tr key={lesseeData.id}>
-                <td>{lesseeData.stall.stallNumber}</td>
-                <td>{`${lesseeData.firstName} ${lesseeData.lastName}`} </td>
+              <tr key={stallData.id}>
+                <td>{stallData.stallNumber}</td>
+                {/* <td>{`${lesseeData.firstName} ${lesseeData.lastName}`} </td> */}
               </tr>
             );
           })}
         </table>
       </div>
-      </div>
-      {/* <div className={styles.PaymentDetails}>
+    
+      
+      <div className={styles.PaymentDetails}>
         <table>
+
           <th>Date</th>
           <th>O.R No.</th>
           <th>Amount</th>
           <th>Penalty</th>
-          <th>TOTAL</th>
+          <th>TOTAL</th>  
+          </table> 
 
           {stalls.map((stallData, index) => {
             return (
-              <tr key={stallData.id}> */}
-                {/* <td>{index+1}</td> */}
-                {/* <td>{stallData.date}</td>
+<tr key={stallData.id}>
+  
+  <td>{stallData.date}</td>
                 <td>{stallData.OR}</td>
                 <td>{stallData.Amount}</td>
                 <td>{stallData.Penalty}</td>
                 <td>{stallData.Total}</td>
-              </tr>
+</tr>
             );
+
           })}
-        </table>
-      </div> */}
+
+          </div> 
+          </div>
+
+          
+             
+{/* data not recognize */}
+      
+     
     </div>
   );
 }

@@ -116,7 +116,7 @@ function AdminRegister() {
     } else {
     }
 
-    navigate("/admin-home");
+    navigate("/lessees-list");
     console.log("create clicked");
   };
  

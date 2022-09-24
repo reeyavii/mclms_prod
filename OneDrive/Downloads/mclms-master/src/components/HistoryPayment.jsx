@@ -28,7 +28,7 @@ function PaymentHistory() {
     console.log("create clicked");
   };
   const handleSelect = (e) => {
-    navigate("/receipt-details");
+    navigate("/receipt-details/:id");
     console.log("");
   };
 

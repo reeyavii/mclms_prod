@@ -6,10 +6,12 @@ import logo3 from "../assets/User.png";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import EditIcon from '@mui/icons-material/Edit';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { useDispatch } from "react-redux";
+import { logout } from "../app/reducer/authSlice";
 
 function ProfileSetting() {
     const navigate = useNavigate();
-
+const dispatch = useDispatch();
     const [email, setEmail] =  useState("");
     const [phoneNum, setPhoneNum] =  useState("");
     const [password, setPassword] =  useState("");
@@ -56,7 +58,7 @@ function ProfileSetting() {
            };
     const handleLogOut = (e) => {
           //go to verification
-          navigate("/login");
+          dispatch(logout());
           console.log("LogOut clicked");
           };
     const handleProfile = (e) => {

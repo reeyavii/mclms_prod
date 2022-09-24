@@ -8,13 +8,14 @@ import { useEffect } from "react";
 import styles from "./sidebar/SideBar.module.css";
 import { useState } from "react";
 import LogoutIcon from '@mui/icons-material/Logout';
+import { fontWeight } from "@mui/system";
 
 const menu = [
   "Lessee List",
   "Stall Status",
   "Pending Applications",
   "Payments",
-  "Notice of Deliquencies",
+  "Delinquents",
   "Archive",
 ];
 function Sidebar(props) {
@@ -70,10 +71,10 @@ function Sidebar(props) {
               onClick={() => handleNavigate(index)}
               className={styles.sidebarItem}
             >
-              <p>{Item}</p>
+              <p style={selected === index ? {color: "#284f8f", fontWeight:"bold"} : {color:"black"}}>{Item}</p>
               {selected === index && (
                 <NavigateNextIcon
-                  sx={{ fontSize: 14, marginTop: 2, marginLeft: 2 }}
+                  sx={{ fontSize: 14, marginTop: 2, marginLeft: 1 }}
                 />
               )}
             </div>

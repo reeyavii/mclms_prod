@@ -40,10 +40,10 @@ function AdminLogin() {
     console.log(stalls);
 
     if (token !== null) {
-      navigate("/admin-home");
+      navigate("/lessees-list");
     }
     console.log(password);
-    navigate("/admin-home");
+    navigate("/lessees-list");
   };
 
   const handleCreateAccount = () => {

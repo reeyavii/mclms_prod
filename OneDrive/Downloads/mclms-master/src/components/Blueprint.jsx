@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "./auth/Blueprint.module.css";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function Blueprint() {
+  const navigate = useNavigate();
   const {side} = useParams();
 
   return (
@@ -11,7 +12,9 @@ function Blueprint() {
         <>
           <div className={styled.leftSide}>
             <div className={styled.upperLeft}>
-              <div className={styled.store}></div>
+              <div className={styled.store} onClick={()=> navigate("/stall-details/3")}>
+              
+              </div>
               <div className={styled.store}></div>
               <div className={styled.store}></div>
               <div className={styled.store}></div>
