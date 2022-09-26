@@ -6,7 +6,7 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import Button from "@mui/material/Button";
 import logoGcash from "../assets/G-Cash.png";
 import styles from "./auth/QRPayment.module.css";
-import qr from "../assets/qr.png";
+import qr from "../assets/qr.jpg";
 // import bgblue from "./assets/bgblue.jpg";
 
 function QRPayment() {
@@ -23,7 +23,7 @@ function QRPayment() {
   };
 
   const handleVerify = (e) => {
-    navigate("/payment-history");
+    navigate("/receipt-details");
     console.log("");
   };
 

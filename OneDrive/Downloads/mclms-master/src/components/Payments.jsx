@@ -26,7 +26,7 @@ function Payments() {
   };
   const handleReceipts = (e) => {
     //go to verification
-    navigate("/receipt-details");
+    navigate("/payment-history");
     console.log("Edit clicked");
   };
   const handleAddGCash = (e) => {

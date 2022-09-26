@@ -1,35 +1,48 @@
 .container {
   display: flex;
   flex-direction: column;
-   justify-content: center;
+  justify-content: center;
   align-items: center;
   /*text-align: center; */
   /* background-color: #c9def8; */
-  background-image: conic-gradient( from 50deg,#007CFF,rgba(124, 190, 241, 0.811),rgba(124, 190, 241, 0.811),rgba(255, 255, 255, 0.811),rgba(179, 202, 236, 0.811),rgba(124, 190, 241, 0.811),rgba(124, 190, 241, 0.811),#007CFF, #007CFF,#007CFF,#007CFF);
+  background-image: conic-gradient(
+    from 50deg,
+    #007cff,
+    rgba(124, 190, 241, 0.811),
+    rgba(124, 190, 241, 0.811),
+    rgba(255, 255, 255, 0.811),
+    rgba(179, 202, 236, 0.811),
+    rgba(124, 190, 241, 0.811),
+    rgba(124, 190, 241, 0.811),
+    #007cff,
+    #007cff,
+    #007cff,
+    #007cff
+  );
   width: 100vw;
   height: 100vh;
 }
 .container > p {
-  color:rgba(4, 3, 11, 0.594);
+  color: rgba(4, 3, 11, 0.594);
   font-size: 16px;
   font-weight: 600;
 }
-.content{
+.content {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   width: 370px;
   height: 500px;
   background-color: white;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   /* border: 1px black; */
   /* border-top: ; */
-  border-style:dotted ;
+  border-style: dotted;
   border-width: 2px;
   box-sizing: border-box;
   border-radius: 30px;
   margin-bottom: 10px;
 }
-.payment{
+.payment {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +52,7 @@
 .payment > h5 {
   font-size: 20px;
   letter-spacing: 1px;
- 
+  margin-top: 50px;
 }
 .details {
   display: flex;
@@ -51,7 +64,6 @@
   border: none;
   box-sizing: border-box;
   margin: 2px 0px 5px 25px;
-
 }
 .details > input {
   display: flex;
@@ -59,7 +71,7 @@
   border: none;
   background-color: transparent;
   margin-left: 10px;
-  justify-content:right;
+  justify-content: right;
   align-items: center;
   text-align: justify;
   font-size: 16px;
@@ -67,12 +79,12 @@
 }
 .details > p {
   justify-content: center;
- font-weight: 500;
- color: #66707d;
-margin: 5px;
-width:132px;
-letter-spacing: 0.5px;
-font-size: 16px;
+  font-weight: 500;
+  color: #66707d;
+  margin: 5px;
+  width: 132px;
+  letter-spacing: 0.5px;
+  font-size: 16px;
 }
 .details :focus {
   outline: none;
@@ -85,59 +97,70 @@ font-size: 16px;
   height: 110px;
   justify-items: center;
 }
-.done{
-  margin: 10px 0px 50px 280px;
+.done {
+  margin: -40px 0px 50px 280px;
   display: flex;
   justify-content: right;
   align-items: center;
-  text-align: right; 
+  text-align: right;
 }
-.done > button{
+.done > button {
   background-color: transparent;
   border: none;
   font-size: 14px;
   font-weight: 400;
 }
-.BackA{
-  margin-top: -5px;
+.BackA {
+  margin-top: -53px;
   text-align: left;
-  height:40px;
+  height: 40px;
   color: black;
   margin-left: -6px;
-  
 }
-.BackA > button{
+.BackA > button {
   color: black;
   background-color: transparent;
   border: none;
   padding: 10px;
   transition: background-color 0.5s;
-  border-radius: 25px;  
+  border-radius: 25px;
 }
-.button{
+.button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: -10px 0px 0px -15px;
 }
-.submit{
+.submit {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 55px 0px 0px 0px;
-
+  margin: 75px 0px 0px 0px;
 }
-.submit > button{
+.submit > button {
   background-color: #2377d0;
   border: none;
- color: white;
+  color: white;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 80px;
-  height: 26px;
-  font-size: 14px ;
-  font-family: 'Alata', sans-serif;
+  width: 120px;
+  height: 30px;
+  font-size: 14px;
+  font-family: "Alata", sans-serif;
   letter-spacing: 0.5px;
   border-radius: 5px;
+}
+.imageContainer {
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.8);
+  flex-direction: column;
+  justify-content: center;
+}
+.imageContainer > img {
+  object-fit: contain;
+  width: 100vw;
 }

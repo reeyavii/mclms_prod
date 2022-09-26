@@ -264,7 +264,7 @@
     justify-content: center;
     text-align: center;
     width: 100px; 
-    height: 35px;   
+    height: 25px;   
 }
   
 .Submit > button:active {
@@ -318,29 +318,31 @@ h5{
     z-index: 100;
     
 }
-
+.Pbox{
+    margin-bottom: 20px;
+}
 .Pbox > input{
     padding: 8px;
     border-radius: 25px;
     justify-content: center;
     margin: 10px;
     margin-top: 5px;
+ 
     width: 160px;
     border: none;
-    z-index: 100;
+    z-index: 101;
 }
 
 .PopButton{
     display: flex;
     justify-content: center;
-    padding: 10px;
     margin-top: -35px;
-    z-index: 100;
+    /* z-index: 100; */
 }
 
 .Cancel{
     justify-items: center;
-    padding: 10px;
+    padding: 5px;
     margin: 15px 0px 5px 0px;
     z-index: 100;
 }
@@ -356,7 +358,7 @@ h5{
 
 .PopSubmit{
     justify-items: center;
-    padding: 10px;
+    padding: 5px;
     margin: 15px 0px 5px 0px;;
     z-index: 100;
 }

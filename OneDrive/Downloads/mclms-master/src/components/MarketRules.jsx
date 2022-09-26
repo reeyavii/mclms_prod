@@ -1,15 +1,19 @@
 import React from "react";
 import "./auth/Market.styles.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import logo2 from "../assets/logo-alimodian.png";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 // import { useState } from "react";
 // import { useSelector } from 'react-redux';
 import Checkbox from "@mui/material/Checkbox";
+import { useState } from "react";
 
 function MarketRules() {
   const navigate = useNavigate();
+  const {id} = useParams();
+
+  const [check, setCheck] = useState(false);
 
   const handleGoBack = (e) => {
     navigate(-1);
@@ -21,9 +25,10 @@ function MarketRules() {
   };
 
   const handleApplicationForm = () => {
-    navigate("/application-form");
+    navigate(`/application-form/${id}`);
     console.log("AppForm clicked");
   };
+  
 
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -107,13 +112,17 @@ function MarketRules() {
         </div>
 
         <div className="check">
-          <Checkbox {...label} sx={{ marginTop: -0.5, marginLeft: -1.5 }} />
+          <Checkbox checked={check} onChange={(e) => setCheck(e.target.checked)} {...label} sx={{ marginTop: -0.5, marginLeft: -1.5 }} />
 
           <p>I agree to Alimodian Public Market Rules</p>
-
-          <div className="btn1">
+{
+ check ? <div className="btn1">
             <button onClick={handleApplicationForm}> APPLICATION FORM</button>
-          </div>
+          </div> : <div className="btn1">
+            <button  disabled={true} onClick={handleApplicationForm}> APPLICATION FORM</button>
+          </div> 
+}
+          
         </div>
       </div>
     </div>

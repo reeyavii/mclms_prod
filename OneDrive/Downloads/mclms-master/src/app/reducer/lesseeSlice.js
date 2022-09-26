@@ -47,12 +47,12 @@ export const getLessees = createAsyncThunk(
 );
 export const getLessee = createAsyncThunk(
   `${namespace}/getLessee`,
-  async ({ Id }, { rejectWithValue }) => {
+  async ({ userId }, { rejectWithValue }) => {
     try {
       axios.defaults.headers = {
         "Content-Type": "application/json",
       };
-      const response = await axios.get(`${API_URL}api/userinfo/${Id}`);
+      const response = await axios.get(`${API_URL}api/userinfo/${userId}`);
       return response.data;
     } catch (err) {
       if (!err.response) {

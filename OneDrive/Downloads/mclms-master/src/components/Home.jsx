@@ -19,12 +19,12 @@ function Home() {
   };
 
   const handleStalls = (e) => {
-    navigate("/area-blueprint/:side");
+    navigate("/area-blueprint/left");
     console.log("stalls clicked");
   };
 
   const handleApplicationForm = (e) => {
-    navigate("/market-rules");
+    navigate("/application-status");
     console.log("AF clicked");
   };
 

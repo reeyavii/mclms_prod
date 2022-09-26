@@ -28,6 +28,7 @@ import ReceiptDetails from "../components/ReceiptDetails";
 import HistoryPayment from "../components/HistoryPayment";
 import Receipts from "../components/Receipts";
 import ApplicationStatus from "../components/ApplicationStatus";
+import GcashReceiptDetails from "../components/GcashReceiptDetails";
 
 
 
@@ -45,8 +46,8 @@ function UserRoute() {
       <Route path="/verified" element={<Verified />} />
       <Route path="/reset" element={<Reset />} />
       <Route path="/home" element={<Home />} />
-      <Route path="/application-form" element={<ApplicationForm />} />
-      <Route path="/market-rules" element={<MarketRules />} />
+      <Route path="/application-form/:id" element={<ApplicationForm />} />
+      <Route path="/market-rules/:id" element={<MarketRules />} />
       <Route path="/stall-details/:id" element={<StallDetails />} />
       <Route path="/reset-successful" element={<ResetSuccessful />} />
       <Route
@@ -81,10 +82,11 @@ function UserRoute() {
       <Route path="/area-blueprint/:side" element={<Blueprint />} />
       <Route path="/verification" element={<Verification />} />
       <Route path="/qr-code-payment" element={<QRPayment />} />
-      <Route path="/receipt-details/:id" element={<ReceiptDetails />} />
+      <Route path="/receipt-details" element={<ReceiptDetails />} />
       <Route path="/payment-history" element={<HistoryPayment />} />
       <Route path="/receipts" element={<Receipts />} />
       <Route path="/application-status" element={<ApplicationStatus />} />
+      <Route path="/gcash-receipt-details" element={<GcashReceiptDetails/>} />
     </Routes>
 
   );

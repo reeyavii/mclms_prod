@@ -28,7 +28,7 @@ function PaymentHistory() {
     console.log("create clicked");
   };
   const handleSelect = (e) => {
-    navigate("/receipt-details/:id");
+    navigate("/gcash-receipt-details");
     console.log("");
   };
 

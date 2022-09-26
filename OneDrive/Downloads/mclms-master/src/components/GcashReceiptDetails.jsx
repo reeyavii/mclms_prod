@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./auth/ReceiptDetails.module.css";
+import styles from "./auth/GcashReceiptDetails.module.css";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import PhotoCamera from "@mui/icons-material/PhotoCamera";
@@ -7,8 +7,10 @@ import Stack from "@mui/material/Stack";
 import logoGcash from "../assets/G-Cash.png";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { useNavigate } from "react-router";
+import CloseIcon from '@mui/icons-material/Close';
+import index from "../assets/index.png";
 
-function ReceiptDetails() {
+function GcashReceiptDetails() {
   const navigate = useNavigate();
   const { email, setEmail } = useState("");
   const { amount, setAmount } = useState("");
@@ -17,6 +19,7 @@ function ReceiptDetails() {
   const { refNo, setRefno } = useState("");
   const { date, setDate } = useState("");
   const { status, setStatus } = useState("");
+  const [showImage, setShowImage] = useState(false);
 
   const handleDone = (e) => {
     navigate("/payments");
@@ -28,7 +31,7 @@ function ReceiptDetails() {
     console.log("create clicked");
   };
   const handleSubmit = (e) => {
-    navigate("/gcash-receipt-details");
+    setShowImage(true);
     console.log("");
   };
   return (
@@ -39,7 +42,7 @@ function ReceiptDetails() {
         <div className={styles.BackA}>
           <button onClick={handleGoBack}>
             {" "}
-            <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 0.5 }} />{" "}
+            <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 0.2 }} />{" "}
           </button>
         </div>
         <div className={styles.done}>
@@ -51,28 +54,6 @@ function ReceiptDetails() {
       </div>
 
       <div className={styles.content}>
-        <Stack
-          direction="row"
-          alignItems="center"
-          marginLeft={35}
-          marginTop={2}
-          justifyContent="center"
-        >
-          <Button
-            variant="contained"
-            component="label"
-            sx={{
-              fontSize: 10,
-              width: 10,
-              height: 25,
-              backgroundColor: "#7e9ec0",
-            }}
-          >
-            Upload
-            <input hidden accept="image/*" multiple type="file" />
-          </Button>
-        </Stack>
-
         <div className={styles.payment}>
           <h5>Payment Details</h5>
         </div>
@@ -106,12 +87,18 @@ function ReceiptDetails() {
         </div>
 
         <div className={styles.submit}>
-          <button onClick={handleSubmit}>SUBMIT</button>
+          <button onClick={handleSubmit}>Show Receipt</button>
         </div>
       </div>
-      <p>Please upload your payment receipt here.</p>
+
+     {showImage && <div className={styles.imageContainer}>
+        <IconButton onClick={() => setShowImage(false)}>
+           <CloseIcon sx={{color:"white"}}/>
+        </IconButton>
+        <img src={index} alt="index"/>
+      </div>}
     </div>
   );
 }
 
-export default ReceiptDetails;
+export default GcashReceiptDetails;
