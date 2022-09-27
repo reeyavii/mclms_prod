@@ -23,7 +23,7 @@ function AdminRoute(){
             <Route path="/lessees-list-update" element={<LesseesListUpdate/>}/>
             <Route path="/stall-status" element={<StallStatus/>}/>
             <Route path="/pending-application" element={<PendingApp/>}/>
-            <Route path="/pending-application-form" element={<PendingAppForm/>}/>
+            <Route path="/pending-application-form/:id" element={<PendingAppForm/>}/>
             <Route path="/lessees-payment" element={<Payment/>}/>
         </Routes>
 

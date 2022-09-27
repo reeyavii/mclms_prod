@@ -4,6 +4,7 @@ import Login from "../components/Login";
 import Register from "../components/Register";
 import AdminLogin from "../adminComponents/AdminLogin";
 import AdminRegister from "../adminComponents/AdminRegister";
+
 // import ReceiptDetails from "../components/ReceiptDetails";
 // import HistoryPayment from "../components/HistoryPayment";
 
@@ -21,6 +22,7 @@ function Public() {
       {/* <Route path="/area-blueprint" element={<Blueprint />} /> */}
       {/* <Route path="/receipt-details" element={<ReceiptDetails />} />
       <Route path="/payment-history" element={<HistoryPayment/>} /> */}
+      
     </Routes>
 
   );

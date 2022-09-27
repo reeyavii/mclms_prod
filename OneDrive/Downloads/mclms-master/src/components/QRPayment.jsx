@@ -66,7 +66,7 @@ function QRPayment() {
                 <p>Amount</p>
                 <br />
                 <input
-                  placeholder="php 3,000.00"
+                  placeholder="php 2,774.00"
                   value={amount}
                   disabled={true}
                 />

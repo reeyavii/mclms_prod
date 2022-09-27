@@ -78,22 +78,22 @@ function ReceiptDetails() {
         </div>
         <div className={styles.details}>
           <p>Status:</p>
-          <input placeholder="Status" value={status} disabled={true} />
+          <input placeholder="Approved" value={status} disabled={true} />
         </div>
 
         <div className={styles.details}>
           <p>Email:</p>{" "}
-          <input placeholder="Email" value={email} disabled={true} />
+          <input placeholder="user000@gmail.com" value={email} disabled={true} />
         </div>
 
         <div className={styles.details}>
           <p>Amount Paid</p>
-          <input placeholder="php 3,000.00" value={amount} disabled={true} />
+          <input placeholder="php 2,774.00" value={amount} disabled={true} />
         </div>
 
         <div className={styles.details}>
           <p>Mobile Number</p>
-          <input placeholder="+63" value={mobileNum} disabled={true} />
+          <input placeholder="09123456789" value={mobileNum} disabled={true} />
         </div>
 
         <div className={styles.details}>

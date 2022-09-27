@@ -8,6 +8,7 @@ import {
   EditLessee,
   hideAlert,
   addLessees,
+  getLesseeId,
 } from "../app/reducer/lesseeSlice";
 import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
@@ -27,7 +28,7 @@ function LesseesList() {
   const [middleInitial, setMiddleInitial] = useState("");
   const [birthDate, setBirthDate] = useState("");
   const [contNum, setContNum] = useState("");
-  const [status, setStatus] = useState("");
+  // const [status, setStatus] = useState("");
   const [address, setAddress] = useState("");
   const [email, setEmail] = useState("");
   const [stallNum, setStallNum] = useState("");
@@ -35,7 +36,7 @@ function LesseesList() {
   const [dateAcquired, setDateAcquired] = useState("");
   const [isEdit, setIsEdit] = useState(false);
   const [appStatus, setAppStatus] = useState("");
-
+  const [civilStatus, setCivilStatus] = useState("");
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -59,7 +60,7 @@ function LesseesList() {
       setMiddleInitial(lessee.middleInitial);
       setBirthDate(lessee.age);
       setContNum(lessee.contactNumber);
-      setStatus(lessee.status);
+      setCivilStatus(lessee.civilStatus);
       setAddress(lessee.address);
       setEmail(lessee.email);
       //   setStallNum(lessee.stall.stallNumber);
@@ -88,8 +89,11 @@ function LesseesList() {
   const contNumChange = (e) => {
     setContNum(e.target.value);
   };
-  const statusChange = (e) => {
-    setStatus(e.target.value);
+  // const statusChange = (e) => {
+  //   setStatus(e.target.value);
+  // };
+  const civilStatusChange = (e) => {
+    setCivilStatus(e.target.value);
   };
   const addressChange = (e) => {
     setAddress(e.target.value);
@@ -109,7 +113,7 @@ function LesseesList() {
 
   const handleEdit = (Id) => {
     setIsEdit(true);
-    dispatch(getLessee({ Id }));
+    dispatch(getLesseeId({ Id }));
   };
   const handleCancelDetails = (e) => {
     setIsEdit(false);
@@ -118,12 +122,13 @@ function LesseesList() {
     setMiddleInitial("");
     setBirthDate("");
     setContNum("");
-    setStatus("");
+    setCivilStatus("");
     setAddress("");
     setEmail("");
     setStallNum("");
     setStallType("");
     setDateAcquired("");
+    setAppStatus("");
   };
   const handleEditDetails = () => {
     const id = lessee.id;
@@ -135,7 +140,8 @@ function LesseesList() {
       middleInitial: middleInitial,
       age: birthDate,
       contactNumber: contNum,
-      status: status,
+      status: appStatus,
+      civilStatus: civilStatus,
       address: address,
       email: email,
       stallNumber: stallNum,
@@ -151,12 +157,18 @@ function LesseesList() {
       middleInitial: middleInitial,
       age: birthDate,
       contactNumber: contNum,
-      status: status,
+      status: appStatus,
       address: address,
       email: email,
       stallNumber: stallNum,
       stallType: stallType,
       sex: dateAcquired,
+      brgy: "",
+      userId: "",
+      province: "",
+      municipality:"",
+      zipCode:"",
+      civilStatus: civilStatus,
     };
     dispatch(addLessees(data));
     console.log("Home clicked");
@@ -193,7 +205,7 @@ function LesseesList() {
 
           {lessees
             .filter((item) => {
-              if (item.status === "approved" && search !== "") {
+              if (item.status.toLowerCase() === "approved" && search !== "") {
                 if (
                   `${item.firstName.toLowerCase()} ${item.lastName.toLowerCase()}`.includes(
                     search.toLowerCase()
@@ -204,7 +216,7 @@ function LesseesList() {
                 } else {
                   return null;
                 }
-              } else if (item.status === "approved") {
+              } else if (item.status.toLowerCase() === "approved") {
                 return item;
               }
             })
@@ -269,8 +281,8 @@ function LesseesList() {
           <div className="DetailsForm">
             <input
               placeholder="Civil Status"
-              value={status}
-              onChange={statusChange}
+              value={civilStatus}
+              onChange={civilStatusChange}
             />
           </div>
           <div className="DetailsForm">
@@ -319,7 +331,7 @@ function LesseesList() {
               <input
                 onClick={handleClick}
                 placeholder="Application Status"
-                value={appStatus.toUpperCase()}
+                value={appStatus && appStatus.toUpperCase() }
                 readOnly
               />
 

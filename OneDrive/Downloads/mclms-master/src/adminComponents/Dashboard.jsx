@@ -2,14 +2,14 @@ import React from 'react'
 import "./Dashboard.styles.css";
 import { useNavigate } from 'react-router';
 import logoAlim from "../assets/Alim_Logo.png";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 import Sidebar from "./Sidebar.jsx";
 import styles from "./dashboard/DashBoard.module.css";
 
 function Dashboard(props) {
     const navigate = useNavigate(); 
     const {children}= props;
-    const handleProfile = (e) => {
+    const handleNotif = (e) => {
          //go to verification
          navigate("/profile-setting");
          console.log("profile clicked");
@@ -36,7 +36,7 @@ function Dashboard(props) {
 
             </div>
             <div className='LogoRight'>
-                     <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 35, marginTop: 2, marginRight:2, color:'white' }}/>  </button> 
+                     <button onClick={handleNotif}>  <NotificationsIcon sx={{ fontSize: 30, marginTop: 3, marginRight:4, color:'white' }}/>  </button> 
             </div>
            
         </div>

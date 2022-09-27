@@ -36,6 +36,7 @@ function Payment() {
     
       
       <div className={styles.PaymentDetails}>
+        
         <table>
 
           <th>Date</th>

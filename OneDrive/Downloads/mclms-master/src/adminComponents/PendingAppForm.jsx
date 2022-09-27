@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./Lessees.styles.css";
 import { useDispatch, useSelector } from "react-redux";
-import { getStalls } from "../app/reducer/stallSlice";
-import { useNavigate } from "react-router";
+import { getLesseeId } from "../app/reducer/lesseeSlice";
+import { useNavigate, useParams } from "react-router";
 import styles from "./Auth/PendingAppForm.module.css";
+// import {toMoney} from "../app/constants";
 
 function PendingAppForm() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { stalls, stall } = useSelector((state) => state.stall);
+  const { lessee } = useSelector((state) => state.lessee);
+  const { id } = useParams();
   //   const [firstName] = useState("");
   const [lastName] = useState("");
   const [age] = useState("");
@@ -18,9 +20,10 @@ function PendingAppForm() {
   const [phoneNum] = useState("");
 
   useEffect(() => {
-    dispatch(getStalls());
+    const Id = id;
+    dispatch(getLesseeId({ Id }));
   }, []);
-  console.log(stalls);
+  console.log(lessee);
 
   //   const firstNameChange = (e) => {
   //     setFirstName (e.target.value);
@@ -34,7 +37,9 @@ function PendingAppForm() {
   const handleDecline = () => {};
   const handleApprove = () => {};
   return (
-    <div className={styles.pending}>
+<>
+
+   { lessee && <div className={styles.pending}>
       <div className={styles.appForm}>
         <h2>APPLICATION FORM</h2>
       </div>
@@ -47,13 +52,13 @@ function PendingAppForm() {
             <h5>Name:</h5>
           </div>
           <div className={styles.inputContent}>
-            <input placeholder="Last Name, First Name" value={lastName} />
+            <input placeholder="Last Name, First Name" value={`${lessee.lastName}, ${lessee.firstName}` } />
           </div>
           <div className={styles.holderName}>
             <h5>Permanent Address:</h5>
           </div>
           <div className={styles.inputContent}>
-            <input placeholder="Address " value={address} />
+            <input placeholder="Address " value={lessee.address} />
           </div>
         </div>
 
@@ -62,14 +67,14 @@ function PendingAppForm() {
             <h5>Age:</h5>
           </div>
           <div className={styles.inputContent}>
-            <input placeholder="#" value={age} />
+            <input placeholder="#" value={lessee.age} />
           </div>
 
           <div className={styles.holderName}>
             <h5>Phone Number:</h5>
           </div>
           <div className={styles.inputContent}>
-            <input placeholder="+63" value={phoneNum} />{" "}
+            <input placeholder="+63" value={lessee.contactNumber} />{" "}
           </div>
         </div>
 
@@ -78,7 +83,7 @@ function PendingAppForm() {
             <h5>Sex:</h5>
           </div>
           <div className={styles.inputContent}>
-            <input placeholder="#" value={sex} />
+            <input placeholder="#" value={lessee.sex} />
           </div>
         </div>
 
@@ -87,7 +92,7 @@ function PendingAppForm() {
             <h5>Status:</h5>
           </div>
           <div className={styles.inputContent}>
-            <input placeholder="#" value={status} />
+            <input placeholder="#" value={lessee.civilStatus} />
           </div>
         </div>
       </div>
@@ -101,13 +106,13 @@ function PendingAppForm() {
             <h5>Stall Number:</h5>
           </div>
           <div className={styles.inputContent}>
-            <input placeholder="#" value={status} />
+            <input placeholder="#" value={lessee.stall.stallNumber} />
           </div>
           <div className={styles.holderName}>
             <h5>Rate per Sq.m:</h5>
           </div>
           <div className={styles.inputContent}>
-            <input placeholder="#" value={status} />
+            <input placeholder="#" value={"P5.00/sq.m x 30days"} />
           </div>
         </div>
         <div className={styles.input}>
@@ -115,13 +120,13 @@ function PendingAppForm() {
             <h5>Stall Type:</h5>
           </div>
           <div className={styles.inputContent}>
-            <input placeholder="#" value={status} />
+            <input placeholder="#" value={lessee.stall.stallType} />
           </div>
           <div className={styles.holderName}>
             <h5>Monthly Rate:</h5>
           </div>
           <div className={styles.inputContent}>
-            <input placeholder="#" value={status} />
+            <input placeholder="#" value={lessee.stall.monthlyPayment} />
           </div>
         </div>
         <div className={styles.input}>
@@ -129,7 +134,7 @@ function PendingAppForm() {
             <h5>Area Leased:</h5>
           </div>
           <div className={styles.inputContent}>
-            <input placeholder="#" value={status} />
+            <input placeholder="#" value={lessee.stall.dimension} />
           </div>
         </div>
       </div>
@@ -146,7 +151,7 @@ function PendingAppForm() {
           </button>
         </div>
       </div>
-    </div>
+    </div>} </>
   );
 }
 

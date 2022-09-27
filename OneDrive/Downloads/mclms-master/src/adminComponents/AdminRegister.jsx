@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import "./AdminAuth.styles.css";
 import { useNavigate } from "react-router-dom";
-import { authRegister } from "../app/reducer/authSlice";
+import { authRegister, authRegisterAdmin } from "../app/reducer/authSlice";
 import { useDispatch } from "react-redux";
 // import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
@@ -112,11 +112,11 @@ function AdminRegister() {
         employeeId: employeeId,
         address: address,
       };
-      dispatch(authRegister(data));
+      dispatch(authRegisterAdmin(data));
     } else {
     }
 
-    navigate("/lessees-list");
+    navigate("/admin-login");
     console.log("create clicked");
   };
  

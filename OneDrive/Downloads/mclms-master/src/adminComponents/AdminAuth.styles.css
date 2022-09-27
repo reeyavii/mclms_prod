@@ -60,7 +60,7 @@
   font-size: 12px;
   transition: background-color 0.5s;
   border-radius: 25px;
-  margin-top: -5px;
+  margin-top: -1px;
 }
 
 .AdminButtonClick > button:active {

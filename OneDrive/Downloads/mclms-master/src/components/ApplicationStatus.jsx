@@ -276,6 +276,7 @@ let data = {...lessee}
           />
         </div>
         <div className={styles.g}>
+        <h5>Stall Type:</h5>
         <input
           
           placeholder="Stall Type:"
@@ -284,6 +285,7 @@ let data = {...lessee}
           onChange={stallTypeChange}
           readOnly
         />
+        <h5>Area Leasses:</h5>
         <input
           placeholder="Area Leasses:"
           type="areaLeasses"
@@ -293,6 +295,7 @@ let data = {...lessee}
         />
         </div>
         <div className={styles.h}>
+        <h5>Monthly Rate:</h5>
         <input
             placeholder="Monthly Rate:"
             type="monthlyRate"
@@ -300,6 +303,8 @@ let data = {...lessee}
             onChange={monthlyRateChange}
             readOnly
           />
+          <div className={styles.i}>
+          <h5>Rate/sq.m:</h5>
           <input
             placeholder="Rate per sq.m"
             type="rate"
@@ -307,6 +312,7 @@ let data = {...lessee}
             onChange={rateChange}
             readOnly
           />
+        </div>
         </div>
       </div>
 

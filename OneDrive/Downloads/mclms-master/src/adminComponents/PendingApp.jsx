@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getStalls } from "../app/reducer/stallSlice";
+import { getLessees } from "../app/reducer/lesseeSlice";
 import { useNavigate } from "react-router";
 import styles from "./Auth/Pending.module.css";
 
 function PendingApp() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { stalls, stall } = useSelector((state) => state.stall);
+  const { lessee, lessees } = useSelector((state) => state.lessee);
   const [search, setSearch] = useState("");
 
   const searchChange = (e) => {
@@ -15,14 +15,14 @@ function PendingApp() {
   };
 
   useEffect(() => {
-    dispatch(getStalls());
+    dispatch(getLessees());
   }, []);
-  console.log(stalls);
+  console.log(lessees);
 
-  const handleView = () => {
+  const handleView = (id) => {
     // setView(true);
     // dispatch(({}));
-    navigate("/pending-application-form");
+    navigate(`/pending-application-form/${id}`);
     console.log("");
   };
 
@@ -38,22 +38,23 @@ function PendingApp() {
       <div className={styles.tables}></div>
       <div className={styles.contents}>
         <table>
-          <th>Date</th>
+          <th>Name</th>
           <th>Stall #</th>
           <th>Section</th>
-          <th>Stall Status</th>
+          {/* <th>Stall Status</th> */}
           <th> </th>
 
-          {stalls.map((stallData, index) => {
+          {lessees.filter(lessee => (lessee.status.toLowerCase() === "requested")).map((lessee, index) => {
             return (
-              <tr key={stallData.id}>
+              <tr key={lessee.id}>
                 {/* <td>{index+1}</td> */}
-                <td>{stallData.date}</td>
-                <td>{stallData.stallNumber}</td>
-                <td>{stallData.stallType}</td>
-                <td>{stallData.status}</td>
+                <td>{`${lessee.firstName} ${lessee.lastName}`}</td>
+                <td>{lessee.stall.stallNumber}</td>
+                <td>{lessee.stall.stallType}</td>
+                {/* <td>{stallData.status}</td> */}
+                
                 <td>
-                  <button onClick={() => handleView(stallData.id)}>View</button>
+                  <button onClick={() => handleView(lessee.id)}>View</button>
                 </td>
               </tr>
             );

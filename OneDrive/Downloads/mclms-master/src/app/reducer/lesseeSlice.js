@@ -62,6 +62,23 @@ export const getLessee = createAsyncThunk(
     }
   }
 );
+export const getLesseeId = createAsyncThunk(
+  `${namespace}/getLesseeId`,
+  async ({ Id }, { rejectWithValue }) => {
+    try {
+      axios.defaults.headers = {
+        "Content-Type": "application/json",
+      };
+      const response = await axios.get(`${API_URL}api/userinfo/lessee/${Id}`);
+      return response.data;
+    } catch (err) {
+      if (!err.response) {
+        throw err;
+      }
+      return rejectWithValue(err.response.data);
+    }
+  }
+);
 export const EditLessee = createAsyncThunk(
   `${namespace}/EditLessee`,
   async ({ id, data }, { rejectWithValue }) => {
@@ -130,6 +147,21 @@ export const lesseeSlice = createSlice({
       state.loading = false;
     },
     [EditLessee.rejected]: (state, { payload }) => {
+      state.loading = false;
+      state.error = payload;
+      console.log(payload);
+    },
+
+    [getLesseeId.pending]: (state) => {
+      state.loading = true;
+      state.error = null;
+    },
+    [getLesseeId.fulfilled]: (state, { payload }) => {
+      state.lessee = payload;
+      state.error = null;
+      state.loading = false;
+    },
+    [getLesseeId.rejected]: (state, { payload }) => {
       state.loading = false;
       state.error = payload;
       console.log(payload);

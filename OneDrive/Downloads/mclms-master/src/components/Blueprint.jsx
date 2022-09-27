@@ -1,29 +1,41 @@
-import React from "react";
+import React, { useEffect, useMemo } from "react";
 import styled from "./auth/Blueprint.module.css";
 import { useNavigate, useParams } from "react-router-dom";
+import { getStalls } from "../app/reducer/stallSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 function Blueprint() {
   const navigate = useNavigate();
-  const {side} = useParams();
+  const { side } = useParams();
+  const { stalls } = useSelector((state) => state.stall);
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(getStalls());
+  }, []);
+  console.log(stalls);
+
+  const upperLeft = useMemo(() => {
+    const data = stalls.filter(
+      (stall) => stall.stallNumber >= 13 && stall.stallNumber <= 22
+    );
+    return data;
+  }, [stalls]);
+  console.log(upperLeft);
   return (
     <div className={styled.container}>
       {side === "left" && (
         <>
           <div className={styled.leftSide}>
             <div className={styled.upperLeft}>
-              <div className={styled.store} onClick={()=> navigate("/stall-details/3")}>
-              
-              </div>
-              <div className={styled.store}></div>
-              <div className={styled.store}></div>
-              <div className={styled.store}></div>
-              <div className={styled.store}></div>
-              <div className={styled.store}></div>
-              <div className={styled.store}></div>
-              <div className={styled.store}></div>
-              <div className={styled.store}></div>
-              <div className={styled.store}></div>
+              {upperLeft.map((stall) => {
+                return (
+                  <div
+                    className={styled.store}
+                    onClick={() => navigate(`/stall-details/${stall.id}`)}
+                  > {stall.stallNumber}</div>
+                );
+              })}
             </div>
             <div className={styled.lowerLeft}>
               <div className={styled.store}></div>

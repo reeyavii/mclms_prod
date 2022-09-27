@@ -43,6 +43,23 @@ export const getStall = createAsyncThunk(
     }
   }
 );
+export const editStall = createAsyncThunk(
+  `${namespace}/editStall`,
+  async ({ id, data }, { rejectWithValue }) => {
+    try {
+      axios.defaults.headers = {
+        "Content-Type": "application/json",
+      };
+      const response = await axios.put(`${API_URL}api/stalls/${id}`, data);
+      return response.data;
+    } catch (err) {
+      if (!err.response) {
+        throw err;
+      }
+      return rejectWithValue(err.message);
+    }
+  }
+);
 export const stallSlice = createSlice({
   name: namespace,
   initialState: initialState,
@@ -63,17 +80,30 @@ export const stallSlice = createSlice({
       console.log(payload);
     },
     [getStall.pending]: (state) => {
-        state.loading = true;
-        state.error = null;
+      state.loading = true;
+      state.error = null;
     },
-    [getStall.fulfilled]: (state, { payload}) => {
-        state.stall = payload;
-        state.error = null;
-        state.loading = false;
+    [getStall.fulfilled]: (state, { payload }) => {
+      state.stall = payload;
+      state.error = null;
+      state.loading = false;
     },
-    [getStall.rejected]: (state, {payload}) => {
-        state.loading = false;
-        state.error = payload;
+    [getStall.rejected]: (state, { payload }) => {
+      state.loading = false;
+      state.error = payload;
+    },
+
+    [editStall.pending]: (state) => {
+      state.loading = true;
+      state.error = null;
+    },
+    [editStall.fulfilled]: (state, { payload }) => {
+      state.error = null;
+      state.loading = false;
+    },
+    [editStall.rejected]: (state, { payload }) => {
+      state.loading = false;
+      state.error = payload;
     },
   },
 });

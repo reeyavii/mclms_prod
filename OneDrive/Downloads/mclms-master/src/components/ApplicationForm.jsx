@@ -297,15 +297,16 @@ const [successPopUp, setSuccessPopUp] = useState(false);
           />
         </div>
         <div className="g">
-          
+          <h5>Stall Type:</h5>
           <input
-          
+           
             placeholder="Stall Type:"
             type="stallType"
             value={stallType}
             onChange={stallTypeChange}
             readOnly
           />
+           <h5>Area Leasses:</h5>
           <input
             placeholder="Area Leasses:"
             type="areaLeasses"
@@ -315,21 +316,25 @@ const [successPopUp, setSuccessPopUp] = useState(false);
           />
         </div>
         <div className="h">
+        <h5>Monthly Rate:</h5>
           <input
             placeholder="Monthly Rate:"
             type="monthlyRate"
             value={monthlyRate}
             onChange={monthlyRateChange}
             readOnly
-          />
-          <input
+          /> 
+          <div className="i">
+           <h5>Rate/sq.m:</h5>
+          <input 
             placeholder="Rate per sq.m"
             type="rate"
             value={rate}
             onChange={rateChange}
             readOnly
           />
-        </div>
+       </div>
+       </div>
       </div>
 
       <div className="Submit">

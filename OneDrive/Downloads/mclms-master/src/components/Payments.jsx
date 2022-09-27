@@ -16,7 +16,7 @@ function Payments() {
 
   const handleGoBack = (e) => {
     //go to verification
-    navigate(-1);
+    navigate("/home");
     console.log("create clicked");
   };
   const handlePayBills = (e) => {
@@ -72,8 +72,8 @@ function Payments() {
           <h3>Upcoming Payments</h3>
           <p>
             Reminder: Payment of PHP <br />
-            3,000 for stall rent is coming <br />
-            up on August 5, 2022. Make <br />
+            2,774 for stall rent is coming <br />
+            up on September 5, 2022. Make <br />
             sure to pay before on time to <br />
             avoid conflicts.
           </p>

@@ -1,9 +1,9 @@
 import React, { useState, useMemo } from "react";
-import "./auth/Auth.styles.css";
 import { useNavigate } from "react-router-dom";
 import { authLogin, authRegister } from "../app/reducer/authSlice";
 import { useDispatch } from "react-redux";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import styles from "./auth/Register.module.css";
 
 function Register() {
   const dispatch = useDispatch();
@@ -147,26 +147,26 @@ function Register() {
   };
   //mg src={arrow} alt="arrow"
   return (
-    <div className="InnerContainer1">
-      <div className="BackA">
+    <div className={styles.InnerContainer1}>
+      <div className={styles.ButtonB}>
         <button onClick={handleGoBack}>
-          {" "}
-          <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1 }} />{" "}
-        </button>{" "}
+        
+          <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: -5, marginLeft:0.2 }} />
+        </button>
         <p>BACK</p>
       </div>
 
-      <div className="CreateAccount1">Create Account</div>
-      <div className="Input-item">
-        <div className="InputContainer">
-          <div className="Input1">
+      <div className={styles.CreateAccount1}>Create Account</div>
+      <div className={styles.InputItem}>
+        <div className={styles.InputContainer}>
+          <div className={styles.Input1}>
             <input
               placeholder="First Name | Last Name"
               value={fullName}
               onChange={fullNameChange}
             />
           </div>
-          <div className="Input2">
+          <div className={styles.Input2}>
             <input
               placeholder="Suffix"
               value={suffix}
@@ -174,14 +174,14 @@ function Register() {
             />
           </div>
         </div>
-        <div className="InputContainer2">
-          <div className="Input3">
+        <div className={styles.InputContainer2}>
+          <div className={styles.Input3}>
             <input placeholder="Age" value={age} onChange={ageChange} />
           </div>
-          <div className="Input4">
+          <div className={styles.Input4}>
             <input placeholder="Sex" value={sex} onChange={sexChange} />
           </div>
-          <div className="Input5">
+          <div className={styles.Input5}>
             <input
               placeholder="Status"
               value={status}
@@ -190,29 +190,29 @@ function Register() {
           </div>
         </div>
 
-        <div className="InputContainer3">
-          <div className="Input6">
+        <div className={styles.InputContainer3}>
+          <div className={styles.Input6}>
             <input
               placeholder="Address"
               value={address}
               onChange={addressChange}
             />
           </div>
-          <div className="Input6">
+          <div className={styles.Input6}>
             <input
               placeholder="E-mail Address"
               value={emailAdd}
               onChange={emailAddChange}
             />
           </div>
-          <div className="Input6">
+          <div className={styles.Input6}>
             <input
               placeholder="Contact Number"
               value={contactNum}
               onChange={contactNumChange}
             />
           </div>
-          <div className="Input6">
+          <div className={styles.Input6}>
             <input
               placeholder="Set your Password"
               type="Password"
@@ -220,7 +220,7 @@ function Register() {
               onChange={setPasswordChange}
             />
           </div>
-          <div className="Input6">
+          <div className={styles.Input6}>
             <input
               placeholder="Re-type your Password"
               type="Password"
@@ -232,7 +232,7 @@ function Register() {
         </div>
       </div>
 
-      <div className="Button2">
+      <div className={styles.Button2}>
         <button disabled={!enableNext} onClick={handleNext}>
           Next
         </button>

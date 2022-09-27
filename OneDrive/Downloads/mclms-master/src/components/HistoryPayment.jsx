@@ -5,6 +5,24 @@ import styles from "./auth/HistoryPayment.module.css";
 import { getStalls } from "../app/reducer/stallSlice";
 import { useDispatch, useSelector } from "react-redux";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+const receipts = [
+  {
+    paymentDate: "July 5, 2022",
+    status: "Approved",
+    amount: 2775.00,
+
+  }, 
+  {
+    paymentDate: "August 5, 2022",
+    status: "Approved",
+    amount: 2775.00,
+  }, 
+  {
+    paymentDate: "September 5, 2022",
+    status: "Pending",
+    amount: 2775.00,
+  }, 
+]
 
 function PaymentHistory() {
   const navigate = useNavigate("");
@@ -46,20 +64,20 @@ function PaymentHistory() {
         </div>
 
         <div className={styles.content}>
-          {stalls.map((stallData, index) => {
+          {receipts.map((receipt, index) => {
             return (
               <div onClick={handleSelect}>
-                <div key={stallData.id}>
+                <div key={receipt.id}>
                   <div className={styles.date}>
-                    <h3>{stallData.stallType}</h3>
+                    <h3>{receipt.paymentDate}</h3>
                   </div>
                   <div>
                     <div className={styles.status}>
-                      <p> {stallData.status}</p>
+                      <p> {receipt.status}</p>
                     </div>
 
                     <div className={styles.amount}>
-                      <h3> {stallData.stallNumber}</h3>
+                      <h3> {receipt.amount}</h3>
                     </div>
                   </div>
                 </div>

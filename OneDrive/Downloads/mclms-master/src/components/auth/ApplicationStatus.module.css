@@ -182,15 +182,21 @@
   margin-left: 10px;
 }
 
-.f > input {
+.f > input{
   border: none;
-  background: transparent;
+  background: transparent; 
   width: 50px;
   padding: 8px;
-  margin-top: 20px;
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: bold;
+  
 }
 .f > input:focus {
-  outline: none;
+  outline: none ;
+}
+.f > h5{
+  font-size: 14px;
 }
 .g {
   display: flex;
@@ -200,6 +206,7 @@
   font-size: 18px;
   box-sizing: border-box;
   margin-left: 3px;
+  margin-top: -10px;
 }
 
 .g > input {
@@ -207,14 +214,21 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  background: transparent;
-  width: 188px;
+  background: transparent; 
+  width: 60px;
   padding: 8px;
-  margin-top: 20px;
+  margin-top: -5px;
+  margin-right: 15px;
+  margin-left: 10px;
 }
 .g > input:focus {
   outline: none;
 }
+.g > h5 {
+  /* width: 80px; */
+  margin-left: 10px;
+}
+
 .h {
   display: flex;
   align-items: center;
@@ -223,6 +237,7 @@
   font-size: 18px;
   box-sizing: border-box;
   margin-left: 3px;
+  margin-top: -10px;
 }
 
 .h > input {
@@ -230,13 +245,46 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  background: transparent;
-  width: 188px;
+  background: transparent; 
+  width: 50px;
   padding: 8px;
-  margin-top: 20px;
+  margin-top: -5px;
+  margin-right: 15px;
 }
 .h > input:focus {
   outline: none;
+}
+.h > h5 {
+  width: 80px;
+  margin-left: 10px;
+}
+.i{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 18px;
+  box-sizing: border-box;
+  margin-left: 3px;
+}
+ 
+.i > input{
+  border-bottom: 2px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: transparent; 
+  width: 130px;
+  padding: 8px;
+  margin-top: -5px;
+  margin-right: 5px;
+}
+.i > input:focus {
+  outline: none ;
+}
+.i > h5 {
+  width: 80px;
+  margin-left: 2px;
 }
 
 .Status {
