@@ -44,9 +44,9 @@ function Sidebar(props) {
     } else if (index === 3) {
       navigate("/lessees-payment");
     } else if (index === 4) {
-      navigate("/");
+      navigate("/deliquents");
     } else if (index === 5) {
-      navigate("/");
+      navigate("/archive");
     }
     console.log(index);
   };

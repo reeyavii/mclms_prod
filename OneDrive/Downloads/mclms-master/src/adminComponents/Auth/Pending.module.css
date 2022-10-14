@@ -6,16 +6,31 @@
   margin-left: 210px;
   background-color: #f1f4fb;
   margin-top: 50px;
+  /* background-image: linear-gradient( to bottom,#fdfcfb, #e2d1c3); */
+  background-image: linear-gradient( to bottom,#f5f7fa, #c3cfe2);
+
 }
 .tables {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  margin-top: 60px;
+}
+.tables > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Alata", sans-serif;
+  color: #acb4c1eb;
+  letter-spacing: 1px;
 }
 .contents {
   display: flex;
   margin: 25px;
+  background-color: #fdfcfb;
 }
 .search {
   display: flex;

@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -20,7 +21,7 @@ table {
 }
 
 td {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgb(207, 204, 204);
   text-align: center;
   padding: 6px;
   font-size: 12px;
@@ -38,8 +39,9 @@ th {
 }
 
 tr:nth-child(even) {
-  background-color: #c8daee;
+  background-color: #e8eef0;
 }
+
 /* tr :hover{
   background-color: #ddd;
   

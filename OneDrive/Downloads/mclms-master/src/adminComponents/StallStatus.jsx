@@ -33,6 +33,9 @@ function StallStatus() {
   const statusChange = (e) => {
     setStatus(e.target.value);
   };
+  const stallNumberChange = (e) => {
+    setStallNumber(e.target.value);
+  };
   const descriptionChange = (e) => {
     setDescription(e.target.value);
   };
@@ -90,14 +93,17 @@ function StallStatus() {
   return (
     <div className={styles.lessee}>
       <div className={styles.tables}></div>
+      <div className={styles.search}>
+        <input
+          placeholder="Search any keyword"
+          value={search}
+          onChange={searchChange}
+        />
+      </div>
+      <div className={styles.name}>
+        <p>STALL STATUS</p>
+      </div>
       <div className={styles.statusContent}>
-        <div className={styles.search}>
-          <input
-            placeholder="Search any keyword"
-            value={search}
-            onChange={searchChange}
-          />
-        </div>
         <table>
           <th>STATUS</th>
           <th>Stall #</th>
@@ -172,6 +178,16 @@ function StallStatus() {
             variant="standard"
             value={status}
             onChange={statusChange}
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            id="name"
+            label="Stall Number"
+            fullWidth
+            variant="standard"
+            value={stallNumber}
+            onChange={stallNumberChange}
           />
           <TextField
             autoFocus

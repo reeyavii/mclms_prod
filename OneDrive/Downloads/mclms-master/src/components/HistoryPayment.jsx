@@ -5,6 +5,7 @@ import styles from "./auth/HistoryPayment.module.css";
 import { getStalls } from "../app/reducer/stallSlice";
 import { useDispatch, useSelector } from "react-redux";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+
 const receipts = [
   {
     paymentDate: "July 5, 2022",

@@ -15,8 +15,12 @@ import AlertTitle from "@mui/material/AlertTitle";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import InputLabel from "@mui/material/InputLabel";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 
 const statuses = ["Pending", "Approved", "Rejected"];
+// const stallNumbers = ["1", "2", "3", "4", "5","6", "7", "8", "9", "10", "11","12", "13","14","15","16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34","35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47","48","49", "50"]
 
 function LesseesList() {
   const navigate = useNavigate();
@@ -31,8 +35,9 @@ function LesseesList() {
   // const [status, setStatus] = useState("");
   const [address, setAddress] = useState("");
   const [email, setEmail] = useState("");
-  const [stallNum, setStallNum] = useState("");
+  // const [stallNum, setStallNum] = useState("");
   const [stallType, setStallType] = useState("");
+  const [description, setDescription] = useState("");
   const [dateAcquired, setDateAcquired] = useState("");
   const [isEdit, setIsEdit] = useState(false);
   const [appStatus, setAppStatus] = useState("");
@@ -41,6 +46,12 @@ function LesseesList() {
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
+  };
+
+  const [appStallNum, setAppStallNum] = useState("");
+
+  const handleChange = (event) => {
+    setAppStallNum(event.target.value);
   };
 
   useEffect(() => {
@@ -67,6 +78,7 @@ function LesseesList() {
       //   setStallType(lessee.stall.stallType);
       setDateAcquired(lessee.approvedDate);
       setAppStatus(lessee.status);
+      setAppStallNum(lessee.stall.stallNumber);
     }
   }, [isEdit, lessee]);
   console.log(lessee);
@@ -101,11 +113,14 @@ function LesseesList() {
   const emailChange = (e) => {
     setEmail(e.target.value);
   };
-  const stallNumChange = (e) => {
-    setStallNum(e.target.value);
-  };
+  // const appStallNumChange = (e) => {
+  //   setAppStallNum(e.target.value);
+  // };
   const stallTypeChange = (e) => {
     setStallType(e.target.value);
+  };
+  const descriptionChange = (e) => {
+    setDescription(e.target.value);
   };
   const dateAcquiredChange = (e) => {
     setDateAcquired(e.target.value);
@@ -125,10 +140,11 @@ function LesseesList() {
     setCivilStatus("");
     setAddress("");
     setEmail("");
-    setStallNum("");
+    setAppStallNum("");
     setStallType("");
     setDateAcquired("");
     setAppStatus("");
+    setDescription("");
   };
   const handleEditDetails = () => {
     const id = lessee.id;
@@ -144,8 +160,10 @@ function LesseesList() {
       civilStatus: civilStatus,
       address: address,
       email: email,
-      stallNumber: stallNum,
+      // stallNumber: stallNum,
       stallType: stallType,
+      description: description,
+      number: appStallNum,
     };
     dispatch(EditLessee({ id, data }));
     console.log("Home clicked");
@@ -160,15 +178,17 @@ function LesseesList() {
       status: appStatus,
       address: address,
       email: email,
-      stallNumber: stallNum,
+      // stallNumber: stallNum,
       stallType: stallType,
       sex: dateAcquired,
       brgy: "",
       userId: "",
       province: "",
-      municipality:"",
-      zipCode:"",
+      municipality: "",
+      zipCode: "",
       civilStatus: civilStatus,
+      description: description,
+      number: appStallNum,
     };
     dispatch(addLessees(data));
     console.log("Home clicked");
@@ -199,6 +219,7 @@ function LesseesList() {
             <th>#</th>
             <th>STALL #</th>
             <th>STALL TYPE</th>
+            <th>DESCRIPTION</th>
             <th>ACCOUNT NAME</th>
             <th> </th>
           </tr>
@@ -227,12 +248,13 @@ function LesseesList() {
                     <td>{index + 1}</td>
                     <td>{lesseeData.stall.stallNumber}</td>
                     <td>{lesseeData.stall.stallType}</td>
+                    <td>{lesseeData.stall.description}</td>
                     <td>{`${lesseeData.firstName} ${lesseeData.lastName}`} </td>
                     <td>
                       <button onClick={() => handleEdit(lesseeData.id)}>
                         Edit
                       </button>
-                      <button>Archive</button>
+                      <button>Delete</button>
                     </td>
                   </tr>
                 </tbody>
@@ -295,23 +317,107 @@ function LesseesList() {
           <div className="DetailsForm">
             <input placeholder="Email" value={email} onChange={emailChange} />
           </div>
-
+          <div className="DetailsForm">
+            <input
+              placeholder="Description"
+              value={description}
+              onChange={descriptionChange}
+            />
+          </div>
           {isEdit ? null : (
             <>
               <div className="DetailsForm1">
-                <div className="DetailsForm2">
-                  <input
-                    placeholder="Stall Number"
-                    value={stallNum}
-                    onChange={stallNumChange}
-                  />
-                </div>
                 <div className="DetailsForm2">
                   <input
                     placeholder="Stall Type"
                     value={stallType}
                     onChange={stallTypeChange}
                   />
+                </div>
+
+                <div className="DetailsForm2">
+                  <FormControl
+                    variant="standard"
+                    sx={{
+                      marginLeft: 2,
+                      minWidth: 150,
+                      fontSize: -2,
+                      marginTop: -3.1,
+                    }}
+                  >
+                    <InputLabel id="demo-simple-select-standard-label">
+                      Stall Number
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-standard-label"
+                      id="demo-simple-select-standard"
+                      value={appStallNum}
+                      onChange={handleChange}
+                      label="Stall Number"
+                    >
+                      {/* {stallNumbers.map((item) => {
+                  return (
+                    <MenuItem onClick={() => handleChange(item)}>
+                      {item}
+                      
+                    </MenuItem>
+                  );
+                })} */}
+                      <MenuItem value="">
+                        <em>None</em>
+                      </MenuItem>
+                      <MenuItem value={1}>1</MenuItem>
+                      <MenuItem value={2}>2</MenuItem>
+                      <MenuItem value={3}>3</MenuItem>
+                      <MenuItem value={4}>4</MenuItem>
+                      <MenuItem value={5}>5</MenuItem>
+                      <MenuItem value={6}>6</MenuItem>
+                      <MenuItem value={7}>7</MenuItem>
+                      <MenuItem value={8}>8</MenuItem>
+                      <MenuItem value={9}>9</MenuItem>
+                      <MenuItem value={10}>10</MenuItem>
+                      <MenuItem value={11}>11</MenuItem>
+                      <MenuItem value={12}>12</MenuItem>
+                      <MenuItem value={13}>13</MenuItem>
+                      <MenuItem value={14}>14</MenuItem>
+                      <MenuItem value={15}>15</MenuItem>
+                      <MenuItem value={16}>16</MenuItem>
+                      <MenuItem value={17}>17</MenuItem>
+                      <MenuItem value={18}>18</MenuItem>
+                      <MenuItem value={19}>19</MenuItem>
+                      <MenuItem value={20}>20</MenuItem>
+                      <MenuItem value={21}>21</MenuItem>
+                      <MenuItem value={22}>22</MenuItem>
+                      <MenuItem value={23}>23</MenuItem>
+                      <MenuItem value={24}>24</MenuItem>
+                      <MenuItem value={25}>25</MenuItem>
+                      <MenuItem value={26}>26</MenuItem>
+                      <MenuItem value={27}>27</MenuItem>
+                      <MenuItem value={28}>28</MenuItem>
+                      <MenuItem value={29}>29</MenuItem>
+                      <MenuItem value={30}>30</MenuItem>
+                      <MenuItem value={31}>31</MenuItem>
+                      <MenuItem value={32}>32</MenuItem>
+                      <MenuItem value={33}>33</MenuItem>
+                      <MenuItem value={3}>34</MenuItem>
+                      <MenuItem value={35}>35</MenuItem>
+                      <MenuItem value={36}>36</MenuItem>
+                      <MenuItem value={37}>37</MenuItem>
+                      <MenuItem value={38}>38</MenuItem>
+                      <MenuItem value={39}>39</MenuItem>
+                      <MenuItem value={40}>40</MenuItem>
+                      <MenuItem value={41}>41</MenuItem>
+                      <MenuItem value={42}>42</MenuItem>
+                      <MenuItem value={43}>43</MenuItem>
+                      <MenuItem value={44}>44</MenuItem>
+                      <MenuItem value={45}>45</MenuItem>
+                      <MenuItem value={46}>46</MenuItem>
+                      <MenuItem value={47}>47</MenuItem>
+                      <MenuItem value={48}>48</MenuItem>
+                      <MenuItem value={49}>49</MenuItem>
+                      <MenuItem value={50}>50</MenuItem>
+                    </Select>
+                  </FormControl>
                 </div>
               </div>
             </>
@@ -327,11 +433,11 @@ function LesseesList() {
               />
             </div>
 
-            <div className="DetailsForm2">
+            <div className="AppStatus">
               <input
                 onClick={handleClick}
                 placeholder="Application Status"
-                value={appStatus && appStatus.toUpperCase() }
+                value={appStatus && appStatus.toUpperCase()}
                 readOnly
               />
 

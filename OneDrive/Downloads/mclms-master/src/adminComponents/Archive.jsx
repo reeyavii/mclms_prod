@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import styles from "./Auth/Archive.module.css";
+import BorderColorOutlinedIcon from "@mui/icons-material/BorderColorOutlined";
+import { IconButton } from "@mui/material";
 import { getLessees } from "../app/reducer/lesseeSlice";
 import { useNavigate } from "react-router";
-import styles from "./Auth/Pending.module.css";
 
-function PendingApp() {
+function Archive() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { lessee, lessees } = useSelector((state) => state.lessee);
@@ -13,7 +15,6 @@ function PendingApp() {
   const searchChange = (e) => {
     setSearch(e.target.value);
   };
-
   useEffect(() => {
     dispatch(getLessees());
   }, []);
@@ -22,28 +23,28 @@ function PendingApp() {
   const handleView = (id) => {
     // setView(true);
     // dispatch(({}));
-    navigate(`/pending-application-form/${id}`);
+    navigate(`/deliquentLetter/${id}`);
     console.log("");
   };
 
   return (
-    <div className={styles.pending}>
-      {/* <div className={styles.search}>
+    <div className={styles.archive}>
+      {/*<div className={styles.deliquentContent}> */}
+      <div className={styles.search}>
         <input
           placeholder="Search any keyword"
           value={search}
           onChange={searchChange}
         />
-      </div> */}
+      </div>
       <div className={styles.tables}>
-      <p>PENDING APPLICATIONS</p>
+        <p>ARCHIVE</p>
       </div>
       <div className={styles.contents}>
         <table>
-          <th>Name</th>
-          <th>Stall #</th>
-          <th>Section</th>
-          {/* <th>Stall Status</th> */}
+          <th>Lessee</th>
+          <th>Date Started</th>
+          <th>Date Ended</th>
           <th> </th>
 
           {lessees
@@ -52,13 +53,13 @@ function PendingApp() {
               return (
                 <tr key={lessee.id}>
                   {/* <td>{index+1}</td> */}
+                  
                   <td>{`${lessee.firstName} ${lessee.lastName}`}</td>
-                  <td>{lessee.stall.stallNumber}</td>
-                  <td>{lessee.stall.stallType}</td>
-                  {/* <td>{stallData.status}</td> */}
+                  <td></td>
+                  <td></td>
 
                   <td>
-                    <button onClick={() => handleView(lessee.id)}>View</button>
+                    <div onClick={() => handleView(lessee.id)}>Restore Account</div>
                   </td>
                 </tr>
               );
@@ -66,7 +67,9 @@ function PendingApp() {
         </table>
       </div>
     </div>
+
+    // </div>
   );
 }
 
-export default PendingApp;
+export default Archive;

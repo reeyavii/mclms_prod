@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import styles from "./Auth/Deliquents.module.css";
+import BorderColorOutlinedIcon from "@mui/icons-material/BorderColorOutlined";
+import { IconButton } from "@mui/material";
 import { getLessees } from "../app/reducer/lesseeSlice";
 import { useNavigate } from "react-router";
-import styles from "./Auth/Pending.module.css";
 
-function PendingApp() {
+function Deliquents() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { lessee, lessees } = useSelector((state) => state.lessee);
@@ -13,52 +15,63 @@ function PendingApp() {
   const searchChange = (e) => {
     setSearch(e.target.value);
   };
-
   useEffect(() => {
     dispatch(getLessees());
   }, []);
   console.log(lessees);
 
-  const handleView = (id) => {
-    // setView(true);
-    // dispatch(({}));
-    navigate(`/pending-application-form/${id}`);
+  const handleSendNotice = (e) => {
+    navigate("/notice-of-deliquency");
     console.log("");
-  };
+}
 
   return (
-    <div className={styles.pending}>
-      {/* <div className={styles.search}>
+    <div className={styles.deliquent}>
+      {/*<div className={styles.deliquentContent}> */}
+      <div className={styles.search}>
         <input
           placeholder="Search any keyword"
           value={search}
           onChange={searchChange}
         />
-      </div> */}
+      </div>
       <div className={styles.tables}>
-      <p>PENDING APPLICATIONS</p>
+        <p>INCOMING DUE</p>
       </div>
       <div className={styles.contents}>
         <table>
-          <th>Name</th>
+          <th>Date</th>
+          <th>Occupant</th>
           <th>Stall #</th>
-          <th>Section</th>
-          {/* <th>Stall Status</th> */}
           <th> </th>
 
           {lessees
-            .filter((lessee) => lessee.status.toLowerCase() === "requested")
+            .filter((item) => {
+              if (item.status.toLowerCase() === "approved" && search !== "") {
+                if (
+                  `${item.firstName.toLowerCase()} ${item.lastName.toLowerCase()}`.includes(
+                    search.toLowerCase()
+                  ) ||
+                  item.stall.stallNumber === parseInt(search)
+                ) {
+                  return item;
+                } else {
+                  return null;
+                }
+              } else if (item.status.toLowerCase() === "approved") {
+                return item;
+              }
+            })
             .map((lessee, index) => {
               return (
                 <tr key={lessee.id}>
                   {/* <td>{index+1}</td> */}
+                  <td></td>
                   <td>{`${lessee.firstName} ${lessee.lastName}`}</td>
                   <td>{lessee.stall.stallNumber}</td>
-                  <td>{lessee.stall.stallType}</td>
-                  {/* <td>{stallData.status}</td> */}
 
                   <td>
-                    <button onClick={() => handleView(lessee.id)}>View</button>
+                    <div onClick={handleSendNotice}>Send Notice</div>
                   </td>
                 </tr>
               );
@@ -66,7 +79,9 @@ function PendingApp() {
         </table>
       </div>
     </div>
+
+    // </div>
   );
 }
 
-export default PendingApp;
+export default Deliquents;

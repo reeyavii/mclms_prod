@@ -37,121 +37,149 @@ function PendingAppForm() {
   const handleDecline = () => {};
   const handleApprove = () => {};
   return (
-<>
+    <>
+      {lessee && (
+        <div className={styles.pending}>
+          <div className={styles.appForm}>
+            <h2>APPLICATION FORM</h2>
+          </div>
+          <div className={styles.information}>
+            <p>PERSONAL INFORMATION</p>
+          </div>
+          <div className={styles.inside}>
+            <div className={styles.input}>
+              <div className={styles.holdername}>
+                <h5>Name:</h5>
+              </div>
+              <div className={styles.inputContent}>
+                <input
+                  placeholder="Last Name, First Name"
+                  value={`${lessee.lastName}, ${lessee.firstName}, ${lessee.middleInitial}`}
+                />
+              </div>
+              <div className={styles.holderName}>
+                <h5>Permanent Address:</h5>
+              </div>
+              <div className={styles.inputContent}>
+                <input
+                  placeholder="Address "
+                  value={`${lessee.address}, ${lessee.brgy}, ${lessee.municipality}, ${lessee.province}`}
+                />
+              </div>
+            </div>
 
-   { lessee && <div className={styles.pending}>
-      <div className={styles.appForm}>
-        <h2>APPLICATION FORM</h2>
-      </div>
-      <div className={styles.information}>
-        <p>PERSONAL INFORMATION</p>
-      </div>
-      <div className={styles.inside}>
-        <div className={styles.input}>
-          <div className={styles.holdername}>
-            <h5>Name:</h5>
-          </div>
-          <div className={styles.inputContent}>
-            <input placeholder="Last Name, First Name" value={`${lessee.lastName}, ${lessee.firstName}` } />
-          </div>
-          <div className={styles.holderName}>
-            <h5>Permanent Address:</h5>
-          </div>
-          <div className={styles.inputContent}>
-            <input placeholder="Address " value={lessee.address} />
-          </div>
-        </div>
+            <div className={styles.input}>
+              <div className={styles.holdername}>
+                <h5>Age:</h5>
+              </div>
+              <div className={styles.inputContent}>
+                <input placeholder="#" value={lessee.age} />
+              </div>
 
-        <div className={styles.input}>
-          <div className={styles.holdername}>
-            <h5>Age:</h5>
-          </div>
-          <div className={styles.inputContent}>
-            <input placeholder="#" value={lessee.age} />
+              <div className={styles.holderName}>
+                <h5>Phone Number:</h5>
+              </div>
+              <div className={styles.inputContent}>
+                <input placeholder="+63" value={lessee.contactNumber} />{" "}
+              </div>
+            </div>
+
+            <div className={styles.input}>
+              <div className={styles.holdername}>
+                <h5>Sex:</h5>
+              </div>
+              <div className={styles.inputContent}>
+                <input placeholder="#" value={lessee.sex} />
+              </div>
+              <div className={styles.holdername}>
+                <h5>Zip Code:</h5>
+              </div>
+              <div className={styles.inputContent}>
+                <input placeholder="" value={lessee.zipCode} />
+              </div>
+            </div>
+
+            <div className={styles.input}>
+              <div className={styles.holdername}>
+                <h5>Status:</h5>
+              </div>
+              <div className={styles.inputContent}>
+                <input placeholder="#" value={lessee.civilStatus} />
+              </div>
+            </div>
           </div>
 
-          <div className={styles.holderName}>
-            <h5>Phone Number:</h5>
+          <div className={styles.information}>
+            <p>STALL TO ACQUIRE</p>
           </div>
-          <div className={styles.inputContent}>
-            <input placeholder="+63" value={lessee.contactNumber} />{" "}
+          <div className={styles.inside}>
+            <div className={styles.input}>
+              <div className={styles.holdername}>
+                <h5>Stall Number:</h5>
+              </div>
+              <div className={styles.inputContent}>
+                <input placeholder="#" value={lessee.stall.stallNumber} />
+              </div>
+              <div className={styles.holderName}>
+                <h5>Rate per Sq.m:</h5>
+              </div>
+              <div className={styles.inputContent}>
+                <input placeholder="#" value={"P5.00/sq.m x 30days"} />
+              </div>
+            </div>
+            <div className={styles.input}>
+              <div className={styles.holdername}>
+                <h5>Stall Type:</h5>
+              </div>
+              <div className={styles.inputContent}>
+                <input placeholder="#" value={lessee.stall.stallType} />
+              </div>
+              <div className={styles.holderName}>
+                <h5>Monthly Rate:</h5>
+              </div>
+              <div className={styles.inputContent}>
+                <input placeholder="#" value={lessee.stall.monthlyPayment} />
+              </div>
+            </div>
+            <div className={styles.input}>
+              <div className={styles.holdername}>
+                <h5>Area Leased:</h5>
+              </div>
+              <div className={styles.inputContent}>
+                <input placeholder="#" value={lessee.stall.dimension} />
+              </div>
+              <div className={styles.holdername}>
+                <h5>Description:</h5>
+              </div>
+              <div className={styles.inputContent}>
+                <input placeholder="#" value={lessee.stall.description} />
+              </div>
+            </div>
+            <div className={styles.input}>
+              <div className={styles.holdername}>
+                <h5>Location:</h5>
+              </div>
+              <div className={styles.inputContent}>
+                <input placeholder="#" value={lessee.stall.location} />
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div className={styles.input}>
-          <div className={styles.holdername}>
-            <h5>Sex:</h5>
-          </div>
-          <div className={styles.inputContent}>
-            <input placeholder="#" value={lessee.sex} />
-          </div>
-        </div>
-
-        <div className={styles.input}>
-          <div className={styles.holdername}>
-            <h5>Status:</h5>
-          </div>
-          <div className={styles.inputContent}>
-            <input placeholder="#" value={lessee.civilStatus} />
+          <div className={styles.button}>
+            <div className={styles.decline}>
+              <button onClick={handleDecline}>
+                <h4>DECLINE</h4>
+              </button>
+            </div>
+            <div className={styles.approve}>
+              <button onClick={handleApprove}>
+                <h4>APPROVE</h4>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className={styles.information}>
-        <p>STALL TO ACQUIRE</p>
-      </div>
-      <div className={styles.inside}>
-        <div className={styles.input}>
-          <div className={styles.holdername}>
-            <h5>Stall Number:</h5>
-          </div>
-          <div className={styles.inputContent}>
-            <input placeholder="#" value={lessee.stall.stallNumber} />
-          </div>
-          <div className={styles.holderName}>
-            <h5>Rate per Sq.m:</h5>
-          </div>
-          <div className={styles.inputContent}>
-            <input placeholder="#" value={"P5.00/sq.m x 30days"} />
-          </div>
-        </div>
-        <div className={styles.input}>
-          <div className={styles.holdername}>
-            <h5>Stall Type:</h5>
-          </div>
-          <div className={styles.inputContent}>
-            <input placeholder="#" value={lessee.stall.stallType} />
-          </div>
-          <div className={styles.holderName}>
-            <h5>Monthly Rate:</h5>
-          </div>
-          <div className={styles.inputContent}>
-            <input placeholder="#" value={lessee.stall.monthlyPayment} />
-          </div>
-        </div>
-        <div className={styles.input}>
-          <div className={styles.holdername}>
-            <h5>Area Leased:</h5>
-          </div>
-          <div className={styles.inputContent}>
-            <input placeholder="#" value={lessee.stall.dimension} />
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.button}>
-        <div className={styles.decline}>
-          <button onClick={handleDecline}>
-            <h4>DECLINE</h4>
-          </button>
-        </div>
-        <div className={styles.approve}>
-          <button onClick={handleApprove}>
-            <h4>APPROVE</h4>
-          </button>
-        </div>
-      </div>
-    </div>} </>
+      )}{" "}
+    </>
   );
 }
 

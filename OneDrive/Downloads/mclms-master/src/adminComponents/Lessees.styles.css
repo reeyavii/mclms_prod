@@ -4,8 +4,9 @@
   min-height: 100vh;
   width: 100vw;
   box-sizing: border-box;
-  background-color: #f1f4fb;
+  /* background-color: #f5f7fa #c3cfe2; */
   margin-top: 80px;
+  background-image: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
 }
 
 .LesseeBar {
@@ -121,7 +122,7 @@
   margin-right: 50px; */
 }
 .Search {
-  /* width: 200px; */
+  width: 200px;
   align-items: center;
   /* margin: 50px 0px -50px 30px; */
 }
@@ -129,7 +130,7 @@
   border-radius: 15px;
   padding: 5px;
   /* margin-top: 8px; */
-  /* width: 200px; */
+  width: 200px;
   border: none;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -159,10 +160,18 @@
 }
 
 .TableContent > table {
-  width: 550px;
+  width: 580px;
   text-align: center;
   /* margin-left: 10px; */
   margin-top: 20px;
+  /* background-color: #fdfcfb; */
+}
+.TableContent > td:nth-child(even) {
+  width: 580px;
+  text-align: center;
+  /* margin-left: 10px; */
+  margin-top: 20px;
+  background-color: #fdfcfb;
 }
 tr > td > button {
   height: 14px;
@@ -231,7 +240,7 @@ th{
   align-content: center;
   margin-left: 50px;
   margin-top: 30px;
-  background-color: #f1f4fb;
+  background-color: f5f7fa;
   width: 380px;
   height: 500px;
   box-sizing: border-box;
@@ -260,6 +269,7 @@ th{
   border: none;
   border-bottom: 1px solid black;
   width: 350px;
+  font-size: 14px;
 }
 .DetailsForm :focus {
   outline: none;
@@ -272,20 +282,39 @@ th{
   margin: 8px;
   display: flex;
   flex-direction: row;
-  margin-left: -20px;
+  margin-left: -27px;
+  margin-top: 20px;
 }
 .DetailsForm1 > input {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid black;
   width: 350px;
+  font-size: 14px;
+}
+.DetailsForm2 {
+  margin-left: 1px;
+  margin-right: 3px;
 }
 .DetailsForm2 > input {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid black;
   width: 172px;
-  margin-left: 2px;
+  margin-left: 1px;
+  font-size: 14px;
+}
+.AppStatus {
+  margin-left: 10px;
+  margin-right: 8px;
+}
+.AppStatus > input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 150px;
+  margin-left: 6px;
+  font-size: 14px;
 }
 .CancelDetails {
   color: red;
