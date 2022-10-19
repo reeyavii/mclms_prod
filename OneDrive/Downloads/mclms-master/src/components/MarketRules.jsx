@@ -8,6 +8,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 // import { useSelector } from 'react-redux';
 import Checkbox from "@mui/material/Checkbox";
 import { useState } from "react";
+import HomeIcon from '@mui/icons-material/Home';
 
 function MarketRules() {
   const navigate = useNavigate();
@@ -29,7 +30,11 @@ function MarketRules() {
     console.log("AppForm clicked");
   };
   
-
+  const handleHome = () => {
+    navigate("/home");
+    console.log("");
+  }
+  
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 
@@ -49,6 +54,10 @@ function MarketRules() {
           </div>
 
           <div className="Logo1">
+          <button onClick={handleHome}>
+            <HomeIcon
+            sx={{fontSize:30,marginTop:2, color:"white"}}/>
+          </button>
             <button onClick={handleProfile}>
               {" "}
               <AccountCircleIcon

@@ -14,6 +14,7 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Button from "@mui/material/Button";
 import { IconButton } from "@mui/material";
+import { useMemo } from "react";
 
 function Payment() {
   const navigate = useNavigate("");
@@ -71,12 +72,47 @@ function Payment() {
   }, []);
   console.log(stalls);
 
+  console.log(lessees);
+
   useEffect(() => {
     dispatch(getLessees());
   }, []);
-  console.log(lessee);
 
   const [open, setOpen] = React.useState(false);
+  const mergeData = useMemo(() => {
+    // let newLessees = [...lessees];
+    // console.log(newLessees);
+    // newLessees.forEach((element) => {
+    //   // delete element.stall;
+    //   console.log(element);
+    // });
+    let newLessees = lessees.map(({ stall, ...rest }) => ({ ...rest }));
+    console.log(newLessees);
+    // let newStalls = [...stalls];
+    // newStalls.forEach((element) => {
+    //   newLessees.forEach((lessee) => {
+    //     if (element.id === lessee.stallNumber) {
+    //       element.lessee = lessee;
+    //     }
+    //   });
+    // });
+    // let result = stalls.map((stall) => {
+    //   newLessees.forEach((lessee) => {
+    //     if (stall.id === lessee.stallId) {
+    //       stall.lessee = lessee;
+    //     } else {
+    //       return null;
+    //     }
+    //   });
+    // });
+
+    let result = stalls.map((item, i) =>
+      Object.assign({}, item, newLessees[i])
+    );
+
+    return result;
+  }, [lessees, stalls]);
+  console.log(mergeData);
 
   const handleSelect = (
     section,
@@ -131,8 +167,8 @@ function Payment() {
           />
         </div>
         <div className={styles.name}>
-        <p>PAYMENTS</p>
-      </div>
+          <p>PAYMENTS</p>
+        </div>
         <div className={styles.content}>
           <div className={styles.label}>
             <h5> Stall #</h5>
@@ -140,10 +176,13 @@ function Payment() {
             <h4> Occupant</h4>
           </div>
 
-          {stalls
+          {mergeData
             .filter((item) => {
               if (search !== "") {
-                if (item.stallNumber === parseInt(search)) {
+                if (
+                  item.stallType.toLowerCase() === search.toLowerCase() ||
+                  item.stallNumber === parseInt(search)
+                ) {
                   return item;
                 } else {
                   return null;
@@ -152,7 +191,7 @@ function Payment() {
                 return item;
               }
             })
-            .map((stall, lessee, index) => {
+            .map((stall, index) => {
               return (
                 <div onClick={handleSelect}>
                   <div
@@ -162,7 +201,10 @@ function Payment() {
                     <div className={styles.date}>
                       <h3>{stall.stallNumber}</h3>
                       <h5> {stall.stallType}</h5>
-                      <h4>{`${lessee.firstName}, ${lessee.middleInitial}, ${lessee.lastName}`}</h4>
+                      
+                      <h4>{stall.firstName !== undefined ?  `${stall.firstName}, ${stall.middleInitial}, ${stall.lastName}`: ""}
+                      
+                      </h4>
                     </div>
                   </div>
                 </div>
@@ -171,47 +213,64 @@ function Payment() {
         </div>
       </div>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Payment Details</DialogTitle>
-        <DialogContent>
+        <DialogTitle sx={{color:"#284f8f"}}>Payment Details</DialogTitle>
+        <DialogContent >
           {/* <DialogContentText>
             To subscribe to this website, please enter your email address here. We
             will send updates occasionally.
           </DialogContentText> */}
-          <div className="paymentDetails">
-            <div className="number">
-              <input
-               placeholder="Stall Number" value={stallNumber} />
-              <input placeholder="O.R No." value={orNum} />
+          <div className={styles.paymentDetails}>
+            <div className={styles.number}>
+              <input placeholder="Occupant :" 
+              // value={stallNumber}
+               readOnly/>
+              <input placeholder="Stall No. :" value={stallNumber} readOnly/>
             </div>
 
-            <div>
+            <div className={styles.number}>
               <input
-                placeholder="Occupant"
+                placeholder="Section :"
                 // value={stallNumber}
               />
               <input
-                placeholder="Monthly Payment"
+                placeholder="Area Leased :"
+                // value={stallNumber}
+              />
+            </div>
+            <div className={styles.number}>
+              <input
+                placeholder="Date of Occupancy :"
+                // value={stallNumber}
+              />
+              <input
+                placeholder="Rate per Sq. M. :"
                 // value={stallNumber}
               />
             </div>
           </div>
           <table>
             <th>Month</th>
+            <th>Date</th>
+            <th>O.R No.</th>
             <th>Amount</th>
             <th>Penalty</th>
             <th>Total</th>
 
             {stalls.map((stall, index) => {
               return (
-            <tr >
-              <td>January</td>
-              <td>{stall.monthlyPayment}</td>
-              <td> </td>
-              <td>{}</td>
-            </tr>
-            );}
-          )}
-
+                <tr>
+                  <td>
+                    January
+                   
+                    </td>
+                  <td></td>
+                  <td> </td>
+                  <td>{stall.monthlyPayment} </td>
+                  <td> </td>
+                  <td>{stall.monthlyPayment + penalty}</td>
+                </tr>
+              );
+            })}
           </table>
         </DialogContent>
         <DialogActions>

@@ -23,7 +23,7 @@ function Deliquents() {
   const handleSendNotice = (e) => {
     navigate("/notice-of-deliquency");
     console.log("");
-}
+  };
 
   return (
     <div className={styles.deliquent}>

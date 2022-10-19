@@ -9,6 +9,7 @@ import { addLessees } from "../app/reducer/lesseeSlice";
 import { getStall } from "../app/reducer/stallSlice";
 import { useDispatch, useSelector } from "react-redux";
 import SuccessPopUp from "./SuccessPopUp";
+import HomeIcon from '@mui/icons-material/Home';
 
 function ApplicationForm() {
   const navigate = useNavigate();
@@ -35,6 +36,7 @@ function ApplicationForm() {
   const [rate, setRate] = useState("");
 const {email, userId} = useSelector ((state) => state.auth);
 const [successPopUp, setSuccessPopUp] = useState(false);
+
 
   useEffect(() => {
     dispatch(getStall(id));
@@ -165,7 +167,11 @@ const [successPopUp, setSuccessPopUp] = useState(false);
     console.log(data);
   };
 
-
+  const handleHome = () => {
+    navigate("/home");
+    console.log("");
+  }
+  
   return (
     <div className="ContainerA">
       <div className="InnerContainer1">
@@ -182,6 +188,10 @@ const [successPopUp, setSuccessPopUp] = useState(false);
           </div>
 
           <div className="Logo1">
+          <button onClick={handleHome}>
+            <HomeIcon
+            sx={{fontSize:30,marginTop:2, color:"white"}}/>
+          </button>
             <button onClick={handleProfile}>
               {" "}
               <AccountCircleIcon

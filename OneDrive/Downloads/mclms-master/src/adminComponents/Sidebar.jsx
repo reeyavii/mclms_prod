@@ -1,7 +1,7 @@
 import React from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../app/reducer/authSlice";
 import { useEffect } from "react";
@@ -9,6 +9,7 @@ import styles from "./sidebar/SideBar.module.css";
 import { useState } from "react";
 import LogoutIcon from '@mui/icons-material/Logout';
 import { fontWeight } from "@mui/system";
+import LesseesList from "./LesseesList";
 
 const menu = [
   "Lessee List",
@@ -23,12 +24,33 @@ function Sidebar(props) {
   const dispatch = useDispatch();
   const { token } = useSelector((state) => state.auth);
   const [selected, setSelected] = useState(0);
+  const location = useLocation();
 
   useEffect(() => {
     if (token === null) {
       navigate("/admin-login");
     }
-  }, [token]);
+if (location.pathname === "/lessees-list"){
+  setSelected(0);
+}
+ else if(location.pathname === "/stall-status"){
+ setSelected(1);
+}
+else if(location.pathname === "/pending-application"){
+  setSelected(2);
+}else if(location.pathname === "/lessees-payment"){
+  setSelected(3);
+}
+else if(location.pathname === "/deliquents"){
+  setSelected(4);
+}
+else if(location.pathname === "/archive"){
+  setSelected(5);
+}
+
+  }, [token, location.path]);
+  console.log(location.pathname);
+
   const handleGoBack = (e) => {
     navigate(-1);
     console.log("Home clicked");
@@ -50,6 +72,9 @@ function Sidebar(props) {
     }
     console.log(index);
   };
+  
+ 
+
 
   const handleLO = (e) => {
     dispatch(logout());
@@ -67,7 +92,7 @@ function Sidebar(props) {
 
         {menu.map((Item, index) => {
           return (
-            <div
+            <div key = {index}
               onClick={() => handleNavigate(index)}
               className={styles.sidebarItem}
             >

@@ -257,7 +257,7 @@ function LesseesList() {
                       <button>Delete</button>
                     </td>
                   </tr>
-                </tbody>
+                </tbody> 
               );
             })}
         </table>
@@ -288,7 +288,7 @@ function LesseesList() {
           </div>
           <div className="DetailsForm">
             <input
-              placeholder="Birthdate"
+              placeholder="Age"
               value={birthDate}
               onChange={birthDateChange}
             />

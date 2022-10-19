@@ -21,6 +21,8 @@
     height: 100vh;
     max-height: 100vh;
     background-color:#c9def8;
+    background-image: linear-gradient(to bottom, #F0F8FF, #c3cfe2);
+    
 }
 .BackA{
     margin-top: -5px;

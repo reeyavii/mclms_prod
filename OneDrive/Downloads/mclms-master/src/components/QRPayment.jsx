@@ -8,6 +8,8 @@ import logoGcash from "../assets/G-Cash.png";
 import styles from "./auth/QRPayment.module.css";
 import qr from "../assets/qr.jpg";
 // import bgblue from "./assets/bgblue.jpg";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import HomeIcon from '@mui/icons-material/Home';
 
 function QRPayment() {
   const navigate = useNavigate();
@@ -26,6 +28,14 @@ function QRPayment() {
     navigate("/receipt-details");
     console.log("");
   };
+  const handleHome = () => {
+    navigate("/home");
+    console.log("");
+  }
+  const handleProfile = (e) => {
+    navigate("/profile-setting");
+    console.log("Profile clicked");
+  };  
 
   return (
     <div className="ContainerA">
@@ -40,6 +50,23 @@ function QRPayment() {
           <div className="Economic">
             <div className="Nomic">ECONOMIC</div>
             <div className="Department">DEPARTMENT</div>
+          </div>
+          <div className="Logo1">
+          <button onClick={handleHome}>
+            <HomeIcon
+            sx={{fontSize:30,marginTop:2, color:"white"}}/>
+          </button>
+            <button onClick={handleProfile}>
+              {" "}
+              <AccountCircleIcon
+                sx={{
+                  fontSize: 35,
+                  marginTop: 2,
+                  marginRight: 2,
+                  color: "white",
+                }}
+              />{" "}
+            </button>
           </div>
         </div>
 

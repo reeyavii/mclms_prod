@@ -13,6 +13,7 @@ import PendingAppForm from "../adminComponents/PendingAppForm";
 import Deliquents from "../adminComponents/Deliquents";
 import Archive from "../adminComponents/Archive";
 import DeliquentNotice from "../adminComponents/DeliquentNotice";
+import Notification from "../adminComponents/Notification";
 
 function AdminRoute() {
   return (
@@ -32,6 +33,7 @@ function AdminRoute() {
       <Route path="/deliquents" element={<Deliquents />} />
      <Route path ="notice-of-deliquency" element={<DeliquentNotice/>}/>
       <Route path="/archive" element={<Archive />} />
+      <Route path="/notification" element={<Notification />} />
     </Routes>
   );
 }

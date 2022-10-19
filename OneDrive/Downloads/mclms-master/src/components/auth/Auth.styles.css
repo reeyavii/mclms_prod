@@ -507,6 +507,10 @@ span {
   max-width: 100vw;
 
 }
+.Logo1{
+  display: flex;
+  flex-direction: row;
+}
  .Logo1 >  button {
     background-color: transparent;
     border: none;

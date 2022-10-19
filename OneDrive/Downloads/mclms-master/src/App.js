@@ -11,7 +11,7 @@ import Public from "./Router/Public";
 
 
 function App() {
-  const { token, isAuth, isAdmin } = useSelector(state => state.auth);
+  const { token, isAuth, isAdmin, verified } = useSelector(state => state.auth);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -23,7 +23,7 @@ function App() {
     <Router>
      <div className= "App">
        {isAdmin && isAuth? <Dashboard><AdminRoute/></Dashboard>:null} 
-       {!isAdmin && isAuth? <UserRoute/>:null}
+       {!isAdmin && isAuth? <UserRoute verified={verified}/>:null}
        {!isAuth && !isAdmin?<Public/>:null}
         
      </div>

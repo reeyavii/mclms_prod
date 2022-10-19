@@ -59,16 +59,15 @@
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   margin-left: 200px;
   background-color:#f5f7fa;
-  /* background-image: linear-gradient( to bottom,#f5f7fa, #c3cfe2); */
-
-  
+  background-image: linear-gradient( to bottom,#f5f7fa, #c3cfe2);
 }
+
 .historyPayment {
-  background-color:#f5f7fa;
-  height: 80px;
+  /* background-color:#f5f7fa; */
+  min-height: 80px;
   /* background-color: transparent; */
 
 }
@@ -105,7 +104,7 @@
   scroll-behavior: smooth;
   /* background-image: linear-gradient( to bottom,rgba(124, 190, 241, 0.811),rgba(124, 190, 241, 0.811),rgba(124, 190, 241, 0.811),rgba(124, 190, 241, 0.811),rgba(255, 255, 255, 0.811),rgba(255, 255, 255, 0.811)); */
  /* background-image: linear-gradient( to bottom,#fdfcfb, #e2d1c3); */
- background-image: linear-gradient( to bottom,#f5f7fa, #c3cfe2);
+ /* background-image: linear-gradient( to bottom,#f5f7fa, #c3cfe2); */
 }
 
 .date {
@@ -199,21 +198,46 @@
   font-size: 12px;
 }
 .number{
-  margin: 10px 20px 0px 20px; 
-  justify-content: space-between;
-  width: 20px;
+  margin: 10px 50px 20px 0px; 
   border:none;
-
+  outline: transparent;
+  display: flex;
+  font-size: 12px;
+ 
+}
+.number > input:focus{
+  outline: none ;
+  outline-style: none ;
+  box-shadow: none ;
+  border-color: transparent ;
 }
 .number > input{
-  margin: 10px; 
+  margin: 0px 50px 0px 0px; 
   justify-content: space-between;
-  width: 20px;
+  align-items: center;
+  text-align: left;
+  width: 200px;
+  border: none;
+  outline: none ;
+  outline-style: none ;
+  box-shadow: none ;
+  border-color: transparent ;
+ 
 }
-.paymentDetails{
+.label{
+width: 50%;
+
+}
+.paymentDetails > .number{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin: 0px 0px 10px 15px;
+  border: transparent;
+  height: 20px;
+}
+.paymentDetails{
+  margin: 20px 0px 20px 0px;
+  
 }
 .table{
   margin-top: 10px;

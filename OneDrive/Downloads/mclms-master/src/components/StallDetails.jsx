@@ -11,7 +11,7 @@ import stallPicture from "../assets/stallPicture.jpg";
 import SuccessPopUp from "./SuccessPopUp";
 import { useDispatch, useSelector } from "react-redux";
 import { getStall } from "../app/reducer/stallSlice";
-// import HomeIcon from '@mui/icons-material/Home';
+import HomeIcon from '@mui/icons-material/Home';
 
 function StallDetails() {
   const navigate = useNavigate();
@@ -64,7 +64,10 @@ function StallDetails() {
     navigate("/profile-setting");
     console.log("Profile clicked");
   };
-
+const handleHome = () => {
+  navigate("/home");
+  console.log("");
+}
   useEffect(() => {
     dispatch(getStall(id));
   }, []);
@@ -97,6 +100,10 @@ function StallDetails() {
 
           <div className="Logo1">
             {/* < HomeIcon/> */}
+            <button onClick={handleHome}>
+            <HomeIcon
+            sx={{fontSize:30,marginTop:2, color:"white"}}/>
+          </button>
             <button onClick={handleProfile}>
               <AccountCircleIcon
                 sx={{

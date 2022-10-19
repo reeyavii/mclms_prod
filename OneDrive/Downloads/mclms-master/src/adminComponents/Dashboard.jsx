@@ -11,7 +11,7 @@ function Dashboard(props) {
     const {children}= props;
     const handleNotif = (e) => {
          //go to verification
-         navigate("/profile-setting");
+         navigate("/notification");
          console.log("profile clicked");
          };
 

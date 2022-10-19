@@ -1,12 +1,12 @@
 .deliquentNotice {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   margin-left: 210px;
   box-sizing: border-box;
   background-color: #f5f7fa;
-  /* background-image: linear-gradient(to bottom, #f5f7fa, #c3cfe2); */
+  background-image: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
 
 }
 .name {
@@ -33,7 +33,7 @@
     justify-content: center;
     align-items: center;
     scroll-behavior: smooth;
-    background-image: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+    /* background-image: linear-gradient(to bottom, #f5f7fa, #c3cfe2); */
 }
 
 .label{

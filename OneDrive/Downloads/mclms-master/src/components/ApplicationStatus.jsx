@@ -9,6 +9,7 @@ import styles from "./auth/ApplicationStatus.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getLessee } from "../app/reducer/lesseeSlice";
 import { useEffect } from "react";
+import HomeIcon from '@mui/icons-material/Home';
 
 function ApplicationStatus() {
   const navigate = useNavigate();
@@ -144,6 +145,11 @@ let data = {...lessee}
     console.log("Profile clicked");
   };
 
+  const handleHome = () => {
+    navigate("/home");
+    console.log("");
+  }
+  
   return (
     <div className={styles.ContainerA}>
       <div className={styles.InnerContainer1}>
@@ -160,6 +166,10 @@ let data = {...lessee}
           </div>
 
           <div className="Logo1">
+          <button onClick={handleHome}>
+            <HomeIcon
+            sx={{fontSize:30,marginTop:2, color:"white"}}/>
+          </button>
             <button onClick={handleProfile}>
               {" "}
               <AccountCircleIcon

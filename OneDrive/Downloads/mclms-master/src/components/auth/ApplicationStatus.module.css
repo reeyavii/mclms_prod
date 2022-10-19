@@ -5,10 +5,11 @@
   width: 100vw;
   height: 100vh;
   max-height: 100vh;
-  background-color: #c9def8;
+  background-color: #c3cfe2;
   font-family: "Alata", sans-serif;
   position: relative;
   box-sizing: border-box;
+
 }
 .InnerContainer1 {
   display: flex;
@@ -18,6 +19,7 @@
   height: 100vh;
   max-height: 100vh;
   background-color: #c9def8;
+  background-image: linear-gradient(to bottom, #F0F8FF, #c3cfe2);
 }
 .BackA {
   margin-top: -5px;

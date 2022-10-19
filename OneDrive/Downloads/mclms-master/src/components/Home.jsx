@@ -9,6 +9,7 @@ import logoD from "../assets/About Us.png";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import stallPicture from "../assets/stallPicture.jpg";
 import styles from "./auth/Home.module.css";
+import HomeIcon from '@mui/icons-material/Home';
 
 function Home() {
   const navigate = useNavigate();
@@ -36,6 +37,10 @@ function Home() {
     navigate("/about-us");
     console.log("about clicked");
   };
+  const handleHome = (e) => {
+    navigate("/home");
+    console.log("");
+  }
 
   return (
     <div className="InnerContainer1">
@@ -52,6 +57,10 @@ function Home() {
         </div>
 
         <div className="Logo1">
+          <button onClick={handleHome}>
+            <HomeIcon
+            sx={{fontSize:30,marginTop:2, color:"white"}}/>
+          </button>
           <button onClick={handleProfile}>
             {" "}
             <AccountCircleIcon

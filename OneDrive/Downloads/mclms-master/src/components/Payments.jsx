@@ -10,6 +10,8 @@ import logoGcash from "../assets/gcash.png";
 import ReceiptRoundedIcon from "@mui/icons-material/ReceiptRounded";
 import { yellow } from "@mui/material/colors";
 //import Stack from '@mui/material/Stack';
+import HomeIcon from '@mui/icons-material/Home';
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 function Payments() {
   const navigate = useNavigate();
@@ -34,6 +36,14 @@ function Payments() {
     navigate("/gcash");
     console.log("Edit clicked");
   };
+  const handleHome = () => {
+    navigate("/home");
+    console.log("");
+  }  
+  const handleProfile = (e) => {
+    navigate("/profile-setting");
+    console.log("Profile clicked");
+  };
 
   return (
     <div className="ContainerA">
@@ -48,6 +58,23 @@ function Payments() {
           <div className="Economic">
             <div className="Nomic">ECONOMIC</div>
             <div className="Department">DEPARTMENT</div>
+          </div>
+          <div className="Logo1">
+          <button onClick={handleHome}>
+            <HomeIcon
+            sx={{fontSize:30,marginTop:2, color:"white"}}/>
+          </button>
+          <button onClick={handleProfile}>
+              {" "}
+              <AccountCircleIcon
+                sx={{
+                  fontSize: 35,
+                  marginTop: 2,
+                  marginRight: 2,
+                  color: "white",
+                }}
+              />{" "}
+            </button>
           </div>
         </div>
 

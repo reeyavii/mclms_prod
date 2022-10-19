@@ -98,7 +98,7 @@ function Gcash() {
 
                 <div className="GcashVerify">
                         
-                    <Button onClick={handleVerify}> Verify</Button> 
+                    <Button onClick={handleVerify}> Save</Button> 
                     
                 </div>
 
