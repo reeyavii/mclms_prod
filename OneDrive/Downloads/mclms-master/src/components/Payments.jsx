@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./auth/Payments.styles.css";
 import { useNavigate } from "react-router-dom";
 import logo2 from "../assets/logo-alimodian.png";
@@ -12,9 +12,56 @@ import { yellow } from "@mui/material/colors";
 //import Stack from '@mui/material/Stack';
 import HomeIcon from '@mui/icons-material/Home';
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { getPayment } from "../app/reducer/paymentSlice";
+import { useSelector, useDispatch } from "react-redux";
+
+const Reminder = ({reminder, amount, date}) => {
+  return(
+  <div className="Reminder">
+  <NotificationsActiveIcon
+    sx={{
+      fontSize: 55,
+      marginTop: 2,
+      marginLeft: -23,
+      marginRight: 2,
+      color: yellow[500],
+    }}
+  />
+  
+   { reminder ? 
+   <>
+    <h3>Upcoming Payments</h3>
+  <p>
+    Reminder: Payment of  <br />
+    {amount}for stall rent is coming <br />
+    up on {date}. Make <br />
+    sure to pay before on time to <br />
+    avoid conflicts.
+  </p>
+  </> : <>
+  <h3>Add Gcash account</h3>
+  <p>
+  Before submitting a payment, add your Gcash account.
+  </p>
+  </>
+  }
+  
+  
+ 
+</div> 
+)
+}
 
 function Payments() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { payment } = useSelector(state => state.payment);
+  const { userId} = useSelector(state => state.auth);
+
+  useEffect(() => {
+    dispatch(getPayment(userId));
+  }, [])
+  console.log(payment)
 
   const handleGoBack = (e) => {
     //go to verification
@@ -86,25 +133,8 @@ function Payments() {
           <p>BACK</p>
         </div>
 
-        <div className="Reminder">
-          <NotificationsActiveIcon
-            sx={{
-              fontSize: 55,
-              marginTop: 2,
-              marginLeft: -23,
-              marginRight: 2,
-              color: yellow[500],
-            }}
-          />
-          <h3>Upcoming Payments</h3>
-          <p>
-            Reminder: Payment of PHP <br />
-            2,774 for stall rent is coming <br />
-            up on September 5, 2022. Make <br />
-            sure to pay before on time to <br />
-            avoid conflicts.
-          </p>
-        </div>
+
+        <Reminder reminder={true} amount={"PHP 3,000"} date={"October 10, 2022"}/>
 
         <div className="Payment">
           <div className="Pay">

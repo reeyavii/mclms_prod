@@ -221,6 +221,20 @@ export const authSlice = createSlice({
     [authVerify.fulfilled]: (state) => {
       state.loading = false;
       state.verified = true;
+
+      const payload = {
+        token: state.token,
+        id: state.userId,
+        username: state.username,
+        firstName: state.firstName,
+        lastName: state.lastName,
+        email: state.email,
+        phoneNumber: state.phoneNumber,
+        isAdmin: state.isAdmin,
+        expiration: state.expiration,
+        verified: state.verified,
+      };
+      saveLocal(payload);
     },
     [authVerify.rejected]: (state, { payload }) => {
       state.loading = false;

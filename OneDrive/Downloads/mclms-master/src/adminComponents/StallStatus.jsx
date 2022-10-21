@@ -117,7 +117,9 @@ function StallStatus() {
           {stalls
             .filter((item) => {
               if (search !== "") {
-                if (item.stallType.toLowerCase() === search.toLowerCase() || item.stallNumber === parseInt(search)
+                if (
+                  item.stallType.toLowerCase() === search.toLowerCase() ||
+                  item.stallNumber === parseInt(search)
                 ) {
                   return item;
                 } else {

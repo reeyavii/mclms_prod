@@ -139,7 +139,7 @@ function Register() {
             password: setPassword,
           })
         );
-        navigate("/verification");
+        navigate("/");
         console.log("create clicked");
       }, 800);
     } else {
@@ -150,8 +150,9 @@ function Register() {
     <div className={styles.InnerContainer1}>
       <div className={styles.ButtonB}>
         <button onClick={handleGoBack}>
-        
-          <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: -5, marginLeft:0.2 }} />
+          <ArrowBackIosNewIcon
+            sx={{ fontSize: 18, marginTop: -5, marginLeft: 0.2 }}
+          />
         </button>
         <p>BACK</p>
       </div>

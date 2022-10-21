@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getStalls } from "../app/reducer/stallSlice";
 import { authLogin } from "../app/reducer/authSlice";
+import styles from "./Auth/Login.module.css";
 
 function AdminLogin() {
   const { stalls } = useSelector((state) => state.stall);
@@ -87,16 +88,14 @@ function AdminLogin() {
             <button onClick={handleLogin}>LOG IN</button>
           )}
         </div>
-        <div className="AdminButtonClick">
-          <div className="AdminButtonClick">
+      
+          <div className="AdminButtonCreate">
             <button onClick={handleCreateAccount}>Create account</button>
+            <button onClick={handleForgotPassword}>Forgot Password</button>
           </div>
         </div>
-        <div className="AdminButtonClick">
-          <button onClick={handleForgotPassword}>Forgot Password</button>
-        </div>
+    
       </div>
-    </div>
   );
 }
 

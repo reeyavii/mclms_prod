@@ -26,6 +26,63 @@ export const getPayments = createAsyncThunk(
     }
   }
 );
+
+export const getPayment = createAsyncThunk(
+  `${namespace}/getPayment`,
+  async (payload, { rejectWithValue }) => {
+    try {
+      axios.defaults.headers = {
+        "Content-Type": "application/json",
+      };
+      const response = await axios.get(`${API_URL}api/payments/${payload}`);
+      console.log(payload);
+      return response.data;
+    } catch (err) {
+      if (!err.response) {
+        throw err;
+      }
+      return rejectWithValue(err.response.data);
+    }
+  }
+);
+export const addPayment = createAsyncThunk(
+  `${namespace}/addPayment`,
+  async (payload, { rejectWithValue }) => {
+    try {
+      axios.defaults.headers = {
+        "Content-Type": "application/json",
+      };
+      const response = await axios.post(`${API_URL}api/payments/`, payload);
+      return response.data;
+    } catch (err) {
+      if (!err.response) {
+        throw err;
+      }
+      return rejectWithValue(err.response.data);
+    }
+  }
+);
+export const editPayment = createAsyncThunk(
+  `${namespace}/editPayment`,
+  async (payload, { rejectWithValue }) => {
+    try {
+      axios.defaults.headers = {
+        "Content-Type": "application/json",
+      };
+      const response = await axios.put(
+        `${API_URL}api/payments/${payload.id}`,
+        payload
+      );
+      return response.data;
+    } catch (err) {
+      if (!err.response) {
+        throw err;
+      }
+      return rejectWithValue(err.response.data);
+    }
+  }
+);
+
 export const paymentSlice = createSlice({
   name: namespace,
   initialState: initialState,
@@ -41,6 +98,47 @@ export const paymentSlice = createSlice({
       state.loading = false;
     },
     [getPayments.rejected]: (state, { payload }) => {
+      state.loading = false;
+      state.error = payload;
+      console.log(payload);
+    },
+    [getPayment.pending]: (state) => {
+      state.loading = true;
+      state.error = null;
+    },
+    [getPayment.fulfilled]: (state, { payload }) => {
+      console.log(payload);
+      state.payment = payload;
+      state.error = null;
+      state.loading = false;
+    },
+    [getPayment.rejected]: (state, { payload }) => {
+      state.loading = false;
+      state.error = payload;
+      console.log(payload);
+    },
+    [addPayment.pending]: (state) => {
+      state.loading = true;
+      state.error = null;
+    },
+    [addPayment.fulfilled]: (state) => {
+      state.error = null;
+      state.loading = false;
+    },
+    [addPayment.rejected]: (state, { payload }) => {
+      state.loading = false;
+      state.error = payload;
+      console.log(payload);
+    },
+    [editPayment.pending]: (state) => {
+      state.loading = true;
+      state.error = null;
+    },
+    [editPayment.fulfilled]: (state) => {
+      state.error = null;
+      state.loading = false;
+    },
+    [editPayment.rejected]: (state, { payload }) => {
       state.loading = false;
       state.error = payload;
       console.log(payload);

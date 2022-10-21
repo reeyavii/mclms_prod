@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./auth/Payments.styles.css";
 import { useNavigate } from "react-router-dom";
 import logo2 from "../assets/logo-alimodian.png";
@@ -9,11 +9,13 @@ import styles from "./auth/QRPayment.module.css";
 import qr from "../assets/qr.jpg";
 // import bgblue from "./assets/bgblue.jpg";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import HomeIcon from '@mui/icons-material/Home';
+import HomeIcon from "@mui/icons-material/Home";
+import { useDispatch, useSelector } from "react-redux";
 
 function QRPayment() {
   const navigate = useNavigate();
   const [amount, setAmount] = useState("");
+  const dispatch = useDispatch();
 
   const amountChange = (e) => {
     setAmount(e.target.value);
@@ -31,11 +33,11 @@ function QRPayment() {
   const handleHome = () => {
     navigate("/home");
     console.log("");
-  }
+  };
   const handleProfile = (e) => {
     navigate("/profile-setting");
     console.log("Profile clicked");
-  };  
+  };
 
   return (
     <div className="ContainerA">
@@ -52,10 +54,9 @@ function QRPayment() {
             <div className="Department">DEPARTMENT</div>
           </div>
           <div className="Logo1">
-          <button onClick={handleHome}>
-            <HomeIcon
-            sx={{fontSize:30,marginTop:2, color:"white"}}/>
-          </button>
+            <button onClick={handleHome}>
+              <HomeIcon sx={{ fontSize: 30, marginTop: 2, color: "white" }} />
+            </button>
             <button onClick={handleProfile}>
               {" "}
               <AccountCircleIcon

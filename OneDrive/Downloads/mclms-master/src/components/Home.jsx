@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./auth/Auth.styles.css";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import logo2 from "../assets/logo-alimodian.png";
 import logoA from "../assets/Stalls.png";
 import logoB from "../assets/Form.png";
@@ -10,10 +11,17 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import stallPicture from "../assets/stallPicture.jpg";
 import styles from "./auth/Home.module.css";
 import HomeIcon from '@mui/icons-material/Home';
+import { getLessees } from "../app/reducer/lesseeSlice";
 
 function Home() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const {lessees} = useSelector(state => (state.lessee));
+  useEffect(() => {
+    dispatch(getLessees());
+  },[])  
 
+  const {userId} = useSelector(state => (state.auth));
   const handleProfile = (e) => {
     navigate("/profile-setting");
     console.log("profile clicked");
@@ -24,9 +32,14 @@ function Home() {
     console.log("stalls clicked");
   };
 
+  
   const handleApplicationForm = (e) => {
-    navigate("/application-status");
-    console.log("AF clicked");
+const result = lessees.filter(lessee => (lessee.userId === userId));
+if (result.length > 0) {
+  navigate("/application-status");
+}
+else {navigate("/application-form");};
+    console.log("AF click");
   };
 
   const handlePayments = (e) => {

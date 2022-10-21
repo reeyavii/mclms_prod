@@ -201,9 +201,11 @@ function Payment() {
                     <div className={styles.date}>
                       <h3>{stall.stallNumber}</h3>
                       <h5> {stall.stallType}</h5>
-                      
-                      <h4>{stall.firstName !== undefined ?  `${stall.firstName}, ${stall.middleInitial}, ${stall.lastName}`: ""}
-                      
+
+                      <h4>
+                        {stall.firstName !== undefined
+                          ? `${stall.firstName}, ${stall.middleInitial}, ${stall.lastName}`
+                          : ""}
                       </h4>
                     </div>
                   </div>
@@ -213,18 +215,20 @@ function Payment() {
         </div>
       </div>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle sx={{color:"#284f8f"}}>Payment Details</DialogTitle>
-        <DialogContent >
+        <DialogTitle sx={{ color: "#284f8f" }}>Payment Details</DialogTitle>
+        <DialogContent>
           {/* <DialogContentText>
             To subscribe to this website, please enter your email address here. We
             will send updates occasionally.
           </DialogContentText> */}
           <div className={styles.paymentDetails}>
             <div className={styles.number}>
-              <input placeholder="Occupant :" 
-              // value={stallNumber}
-               readOnly/>
-              <input placeholder="Stall No. :" value={stallNumber} readOnly/>
+              <input
+                placeholder="Occupant :"
+                // value={stallNumber}
+                readOnly
+              />
+              <input placeholder="Stall No. :" value={stallNumber} readOnly />
             </div>
 
             <div className={styles.number}>
@@ -259,10 +263,7 @@ function Payment() {
             {stalls.map((stall, index) => {
               return (
                 <tr>
-                  <td>
-                    January
-                   
-                    </td>
+                  <td>January</td>
                   <td></td>
                   <td> </td>
                   <td>{stall.monthlyPayment} </td>
