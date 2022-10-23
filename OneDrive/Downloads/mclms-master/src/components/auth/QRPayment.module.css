@@ -1,16 +1,28 @@
 @import url(https://fonts.googleapis.com/css2?family=Alata&display=swap);
 
-
 .Container3 {
   background-color: #007cff;
-  background-image: conic-gradient( from 50deg,#007CFF,rgba(124, 190, 241, 0.811),rgba(124, 190, 241, 0.811),rgba(255, 255, 255, 0.811),rgba(179, 202, 236, 0.811),rgba(124, 190, 241, 0.811),rgba(124, 190, 241, 0.811),#007CFF, #007CFF,#007CFF,#007CFF);
+  background-image: conic-gradient(
+    from 50deg,
+    #007cff,
+    rgba(124, 190, 241, 0.811),
+    rgba(124, 190, 241, 0.811),
+    rgba(255, 255, 255, 0.811),
+    rgba(179, 202, 236, 0.811),
+    rgba(124, 190, 241, 0.811),
+    rgba(124, 190, 241, 0.811),
+    #007cff,
+    #007cff,
+    #007cff,
+    #007cff
+  );
   /* margin-top: 10px; */
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
 }
-.gcashContainer{
+.gcashContainer {
   display: flex;
   position: relative;
   background-color: white;
@@ -18,19 +30,28 @@
   height: 470px;
   justify-content: center;
   flex-direction: column;
-align-items: center;
-text-align: center;
-margin: 40px 0px 0px 30px;
-border-radius: 20px;
-
+  align-items: center;
+  text-align: center;
+  margin: 40px 0px 0px 30px;
+  border-radius: 20px;
 }
+/* .gcashContainer > div{
+  position: flex;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+
+} */
 .GcashVerify {
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
   padding: 2px;
-  
 }
 .GcashVerify > button {
   color: black;
@@ -39,11 +60,10 @@ border-radius: 20px;
   border-radius: 10px;
   width: 90px;
   height: 28px;
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
   font-size: 12px;
   font-weight: 600;
- letter-spacing:1px;
- 
+  letter-spacing: 1px;
 }
 .GcashAccnt {
   width: 300px;
@@ -66,7 +86,6 @@ border-radius: 20px;
 }
 .GcashAccnt > input:focus {
   outline: none;
-  
 }
 .GcashAccnt > p {
   margin-bottom: -15px;
@@ -74,7 +93,7 @@ border-radius: 20px;
   font-size: 18px;
   text-align: center;
   font-weight: bold;
-  color:#007cff;
+  color: #007cff;
 }
 .Gcash {
   height: 300px;
@@ -82,6 +101,7 @@ border-radius: 20px;
   align-items: center;
   margin-top: 10px;
 }
+
 .logoGcash {
   margin-top: 90px;
   margin: 30px 0px 0px 125px;

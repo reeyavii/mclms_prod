@@ -53,13 +53,24 @@
    text-align: center;
   }
   
-  .line > p {
+  /* .line > p {
     margin-top: 160px;
     word-spacing: 30px;
     text-align: center;
     justify-content: center;
   }
-  
+   */
+  .line{
+    display: flex;
+    margin-top: 10px;
+    width: 20px;
+    height: 10px;
+  }
+  .line > p {
+    font-size: 14px;
+    width: 20px;
+    margin-left:2px;
+  }
   .ConfirmButton {
     color: white;
     position:fixed;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./auth/ReceiptDetails.module.css";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
@@ -7,16 +7,26 @@ import Stack from "@mui/material/Stack";
 import logoGcash from "../assets/G-Cash.png";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { useNavigate } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
+import { getPayment, addReceipt } from "../app/reducer/paymentSlice";
 
 function ReceiptDetails() {
   const navigate = useNavigate();
-  const { email, setEmail } = useState("");
-  const { amount, setAmount } = useState("");
-  const { mobileNum, setmobileNum } = useState("");
-  const { accountNum, setAccountNum } = useState("");
-  const { refNo, setRefno } = useState("");
-  const { date, setDate } = useState("");
-  const { status, setStatus } = useState("");
+  const dispatch = useDispatch();
+  const [email, setEmail] = useState("");
+  const [amount, setAmount] = useState("");
+  const [mobileNum, setmobileNum] = useState("");
+  const [accountNum, setAccountNum] = useState("");
+  const [refNo, setRefNo] = useState("");
+  const [date, setDate] = useState("");
+  const [image, setImage] = useState(null);
+  const authEmail = useSelector((state) => state.auth.email);
+  const { userId, phoneNumber } = useSelector((state) => state.auth);
+  const { payment } = useSelector((state) => state.payment);
+
+  useEffect(() => {
+    dispatch(getPayment(userId));
+  }, []);
 
   const handleDone = (e) => {
     navigate("/payments");
@@ -27,9 +37,37 @@ function ReceiptDetails() {
     navigate(-1);
     console.log("create clicked");
   };
-  const handleSubmit = (e) => {
+
+  const handleSubmit = () => {
+    const formData = new FormData();
+    formData.append("image", image);
+    formData.append("email", email);
+    formData.append("amount", amount);
+    formData.append("gcashNumber", mobileNum);
+    formData.append("gcashNumber", accountNum);
+    formData.append("refNo", refNo);
+    formData.append("receiptDate", date);
+    formData.append("paymentId", payment.id);
     navigate("/gcash-receipt-details");
+    dispatch(addReceipt(formData));
     console.log("");
+  };
+
+  const handleImage = (e) => {
+    setImage(e.target.files[0]);
+    console.log(e.target.files[0]);
+  };
+
+  const handleDateChange = (e) => {
+    setDate(e.target.value);
+  };
+
+  const handleRefNoChange = (e) => {
+    setRefNo(e.target.value);
+  };
+
+  const handleAmountChange = (e) => {
+    setAmount(e.target.value);
   };
   return (
     // details of payment
@@ -69,40 +107,55 @@ function ReceiptDetails() {
             }}
           >
             Upload
-            <input hidden accept="image/*" multiple type="file" />
+            <input
+              hidden
+              accept="image/*"
+              multiple
+              type="file"
+              onChange={(e) => handleImage(e)}
+            />
           </Button>
         </Stack>
 
         <div className={styles.payment}>
-          <h5>Payment Details</h5>
-        </div>
-        <div className={styles.details}>
-          <p>Status:</p>
-          <input placeholder="Approved" value={status} disabled={true} />
+          <h5>Receipt Details</h5>
         </div>
 
         <div className={styles.details}>
-          <p>Email:</p>{" "}
-          <input placeholder="user000@gmail.com" value={email} disabled={true} />
+          <p>Email:</p>
+          <input placeholder={authEmail} value={email} disabled={true} />
         </div>
 
         <div className={styles.details}>
           <p>Amount Paid</p>
-          <input placeholder="php 2,774.00" value={amount} disabled={true} />
+          <input
+            placeholder="Amount"
+            value={amount}
+            onChange={handleAmountChange}
+          />
         </div>
 
         <div className={styles.details}>
           <p>Mobile Number</p>
-          <input placeholder="09123456789" value={mobileNum} disabled={true} />
+          <input placeholder={phoneNumber} value={mobileNum} disabled={true} />
         </div>
 
         <div className={styles.details}>
           <p>Ref. No.</p>
-          <input placeholder="##########" value={refNo} />
+          <input
+            placeholder="Type Gcash Ref.no"
+            value={refNo}
+            onChange={handleRefNoChange}
+          />
         </div>
         <div className={styles.details}>
           <p>Date</p>
-          <input placeholder="mm/dd/yy" value={date} />
+          <input
+            type="date"
+            placeholder="mm/dd/yy"
+            value={date}
+            onChange={handleDateChange}
+          />
         </div>
 
         <div className={styles.submit}>

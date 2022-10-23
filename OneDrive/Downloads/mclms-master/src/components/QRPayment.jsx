@@ -7,19 +7,24 @@ import Button from "@mui/material/Button";
 import logoGcash from "../assets/G-Cash.png";
 import styles from "./auth/QRPayment.module.css";
 import qr from "../assets/qr.jpg";
-// import bgblue from "./assets/bgblue.jpg";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import HomeIcon from "@mui/icons-material/Home";
 import { useDispatch, useSelector } from "react-redux";
+import { getPayment } from "../app/reducer/paymentSlice";
 
 function QRPayment() {
   const navigate = useNavigate();
   const [amount, setAmount] = useState("");
   const dispatch = useDispatch();
-
+  const { userId } = useSelector((state) => state.auth);
+  const { payment } = useSelector((state) => state.payment);
   const amountChange = (e) => {
     setAmount(e.target.value);
   };
+
+  useEffect(() => {
+    dispatch(getPayment(userId));
+  }, []);
 
   const handleGoBack = (e) => {
     navigate(-1);
@@ -94,7 +99,7 @@ function QRPayment() {
                 <p>Amount</p>
                 <br />
                 <input
-                  placeholder="php 2,774.00"
+                  placeholder={`PHP ${payment && payment.amount}`}
                   value={amount}
                   disabled={true}
                 />

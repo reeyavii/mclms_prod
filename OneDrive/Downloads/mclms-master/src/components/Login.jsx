@@ -9,7 +9,7 @@ import { authLogin } from "../app/reducer/authSlice";
 
 function Login() {
   const {stalls} = useSelector(state=>state.stall);
-  const {token} = useSelector(state=>state.auth);
+  const {token, error} = useSelector(state=>state.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -39,8 +39,10 @@ function Login() {
     if (token !== null ){
       navigate("/Home");
     }
+    else {
+
+    }
     console.log(password);
-    navigate("/Home");
   };
 
   const handleCreateAccount = () => {
@@ -60,6 +62,7 @@ function Login() {
         <div className="Logo">
           <img src={logo} alt="logo" />
         </div>
+        <p className="error">{error}</p>
         <div className="Input">
           <input
             placeholder="E-mail or Phone Number"
@@ -78,7 +81,7 @@ function Login() {
         <div className="Button">
           {
             email=== ""|| password === "" ? <button disabled={true} onClick={handleLogin}>LOG IN</button> : <button onClick={handleLogin}>LOG IN</button>
-          }
+          }  
         </div>
         <div className="Button">
         <div className="Button">

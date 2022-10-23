@@ -10,7 +10,6 @@
   height: 100vh;
   max-height: 100vh;
   background-color: #1c2257bb;
- 
 }
 .OuterContainer {
   background-image: url("../../assets/bg.jpg");
@@ -71,7 +70,14 @@
   margin-top: 25px;
   color: white;
 }
-
+.error {
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  font-family: "Bigshot One", display;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
 
 /*Register*/
 
@@ -82,13 +88,13 @@
   width: 100vw;
   height: 100vh;
   max-height: 100vh;
-  background-color:#c9def8;
+  background-color: #c9def8;
 }
 
 .Button1 {
   margin-top: 30px;
   text-align: left;
-  height:40px;
+  height: 40px;
   color: black;
   margin-left: 2px;
 }
@@ -111,8 +117,7 @@
   padding: 10px;
   color: black;
   transition: background-color 0.5s;
-  border-radius: 25px;  
-
+  border-radius: 25px;
 }
 
 .Button1 > button:active {
@@ -127,25 +132,25 @@
   text-align: left;
   font-size: 35px;
   margin-left: 55px;
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
 }
 
-.Input-item{
- margin-top: 82px;
- justify-content: center;
- position: relative;
- box-sizing: border-box;
- align-items: center;
+.Input-item {
+  margin-top: 82px;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  align-items: center;
 }
 
-.InputContainer{
+.InputContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
 
-.Input1{
+.Input1 {
   width: 60%;
 }
 
@@ -156,7 +161,7 @@
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
   text-align: center;
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
   font-size: 16px;
 }
 
@@ -164,8 +169,8 @@
   outline: none;
 }
 
-.Input2{
-  width: 30%;  
+.Input2 {
+  width: 30%;
 }
 
 .Input2 > input {
@@ -175,7 +180,7 @@
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
   text-align: center;
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
   font-size: 16px;
 }
 
@@ -183,14 +188,14 @@
   outline: none;
 }
 
-.InputContainer2{
+.InputContainer2 {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
 
-.Input3{
+.Input3 {
   width: 30%;
 }
 
@@ -203,7 +208,7 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
   text-align: center;
   justify-content: center;
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
   font-size: 16px;
 }
 
@@ -211,7 +216,7 @@
   outline: none;
 }
 
-.Input4{
+.Input4 {
   width: 30%;
 }
 
@@ -223,7 +228,7 @@
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
   text-align: center;
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
   font-size: 16px;
 }
 
@@ -231,7 +236,7 @@
   outline: none;
 }
 
-.Input5{
+.Input5 {
   width: 30%;
 }
 
@@ -243,7 +248,7 @@
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
   text-align: center;
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
   font-size: 16px;
 }
 
@@ -251,16 +256,15 @@
   outline: none;
 }
 
-.InputContainer3{
+.InputContainer3 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
   display: flex;
-  
 }
-  
-.Input6{
-  width:90%;
+
+.Input6 {
+  width: 90%;
 }
 
 .Input6 > input {
@@ -271,7 +275,7 @@
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
   text-align: center;
-  font-family: 'Alata', sans-serif;
+  font-family: "Alata", sans-serif;
   font-size: 16px;
 }
 
@@ -297,14 +301,13 @@
   transition: background-color 0.5s;
   border-radius: 25px;
   justify-content: right;
-  
 }
 
 .Button2 > button:active {
   background-color: rgb(0, 157, 255);
   padding: 10px;
- }
- .Button2 :disabled {
+}
+.Button2 :disabled {
   opacity: 50%;
 }
 
@@ -316,7 +319,7 @@
   background-color: transparent;
 }
 
-.Next{
+.Next {
   color: black;
 }
 
@@ -335,7 +338,6 @@ span {
   max-height: 100vh;
   background-color: #c9def8;
   align-items: center;
- 
 }
 
 .ButtonB {
@@ -357,7 +359,6 @@ span {
   font-family: "Alata", sans-serif;
 }
 
-
 .ButtonB > button {
   background-color: transparent;
   border: none;
@@ -368,17 +369,17 @@ span {
   margin-top: 35px;
 }
 
-.ButtonB> button:active {
+.ButtonB > button:active {
   background-color: rgb(0, 157, 255);
   padding: 10px;
   border-radius: 25px;
 }
 
-.Code{
- margin-top: 120px;
- justify-content: center;
- align-items: center;
- text-align: center;
+.Code {
+  margin-top: 120px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .line > p {
@@ -390,32 +391,29 @@ span {
 
 .ConfirmButton {
   color: white;
-  position:fixed;
+  position: fixed;
   text-align: center;
   width: 187px;
   height: 29px;
   margin-top: 540px;
- 
- }
+}
 
 .ConfirmButton > button {
   border-radius: 25px;
   width: 148px;
   height: 35px;
-  background-color: #77A3F3;
+  background-color: #77a3f3;
   border: none;
   color: black;
   font-family: "Alata", sans-serif;
   font-size: 16px;
   transition: background-color 0.5s;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
- 
 }
 
 .ConfirmButton > button:active {
   background-color: rgb(0, 157, 255);
   padding: 8px;
- 
 }
 
 .RequestButton {
@@ -431,7 +429,7 @@ span {
   padding: 10px;
   color: black;
   transition: background-color 0.5s;
-  font-family: 'Alata';
+  font-family: "Alata";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -445,7 +443,6 @@ span {
   border-radius: 25px;
 }
 
-
 /*Verified*/
 
 .VerifiedEmail {
@@ -455,17 +452,16 @@ span {
   width: 255px;
   height: 44px;
   margin-top: 240px;
-  font-family: 'Alata';
+  font-family: "Alata";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  
 }
 
 .ProceedButton {
   color: white;
-  position:fixed;
+  position: fixed;
   text-align: center;
   margin-top: 615px;
   padding: 10px;
@@ -475,7 +471,7 @@ span {
   border-radius: 25px;
   width: 200px;
   height: 40px;
-  background-color: #77A3F3;
+  background-color: #77a3f3;
   border: none;
   color: black;
   font-size: 16px;
@@ -494,235 +490,224 @@ span {
   padding-bottom: 50px;
 }
 
-
-
 /*Home*/
- .bar{
+.bar {
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 70px;
-  background-color: #3B4E70;
+  background-color: #3b4e70;
   box-sizing: border-box;
   max-width: 100vw;
-
 }
-.Logo1{
+.Logo1 {
   display: flex;
   flex-direction: row;
 }
- .Logo1 >  button {
-    background-color: transparent;
-    border: none;
-    justify-content: center;
-  }
-  .Logo2 {
-    display: flex;
-    flex-direction: row;
-    width: 55px;
-    margin-top: 10px;
-  }
-  .Logo2Alim > img{
-    width: 40px;
-    height: 40px ;
-    margin-left:15px;
-  }
-
-.Economic{
-    display: flex;
-    flex-direction: column;
-    width:300px;
-    margin-top: 8px;
-  }
-.Nomic{
-    font-size: 10px;
-    font-weight: 400;
-    margin-left: 14px;
-    color: white;
-
+.Logo1 > button {
+  background-color: transparent;
+  border: none;
+  justify-content: center;
 }
-.Department{
-    font-size: 10px;
-    font-weight: 400;
-    margin-left: 10px;
-    color: white;
+.Logo2 {
+  display: flex;
+  flex-direction: row;
+  width: 55px;
+  margin-top: 10px;
 }
- 
-.box1{
-   display: flex;
+.Logo2Alim > img {
+  width: 40px;
+  height: 40px;
+  margin-left: 15px;
+}
+
+.Economic {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-top: 8px;
+}
+.Nomic {
+  font-size: 10px;
+  font-weight: 400;
+  margin-left: 14px;
+  color: white;
+}
+.Department {
+  font-size: 10px;
+  font-weight: 400;
+  margin-left: 10px;
+  color: white;
+}
+
+.box1 {
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-top: 100px;
 }
-.box2{
+.box2 {
   display: flex;
- flex-direction: row;
- justify-content: center;
- align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.Stalls{
-   justify-content: center ;
+.Stalls {
+  justify-content: center;
   flex-direction: column;
   display: flex;
   align-items: center;
   width: 160px;
   height: 160px;
-  background-color: #ACC2ED;
+  background-color: #acc2ed;
   border-radius: 25px;
   margin: 15px;
 }
-.Stalls :active{
+.Stalls :active {
   background-color: rgb(0, 157, 255);
-  
 }
 
-
-.Stalls > img{
+.Stalls > img {
   width: 50px;
   object-fit: contain;
 }
-.smalltext{
+.smalltext {
   font-size: 12px;
-  
 }
 
-
-/* Reset */ 
-.InnerContainerE{
+/* Reset */
+.InnerContainerE {
   display: flex;
   flex-direction: column;
   max-width: 100vw;
   width: 100vw;
   height: 100vh;
   max-height: 100vh;
-  background-color:#c9def8;
+  background-color: #c9def8;
 }
 
-  .InputContainerE{
-    flex-direction: column;
-    display: flex;
-    margin-top: 70px;
-    align-items: center;
-  }
+.InputContainerE {
+  flex-direction: column;
+  display: flex;
+  margin-top: 70px;
+  align-items: center;
+}
 
-  .ResetPasswordE {
-    margin-top: 185px;
-    color: black;
-    text-align: left;
-    font-size: 35px;
-    margin-left: 20px;
-    font-family: 'Alata', sans-serif;
-  }
- 
-  .InputE{
-    width: 80%;
-    align-items: center;
-  }
-  
-  .InputE > input {
-    border-radius: 25px;
-    padding: 15px;
-    margin-top: 25px;
-    width: 90%;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
-    text-align: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 12px;
-  }
-  
-  .InputE > input:focus {
-    outline: none;
-  }
-  
-  .ButtonE {
-    margin-top: 100px;
-    color: white;
-    text-align: center;
-  }
-  
-  .ButtonE > button {
-    background-color: #77A3F3;
-    border: none;
-    color: black;
-    font-size: 16px;
-    font-family: "Alata", sans-serif;
-    transition: background-color 0.5s;
-    border-radius: 25px;
-    justify-content: center;
-    text-align: center;
-    width: 150px; 
-    height: 35px;
-    
-  }
-  
-  .ButtonE > button:active {
-    background-color: rgb(0, 157, 255);
-    padding: 8px;
-   }
-  
-  .Confirm{
-    color: black;
-  }
+.ResetPasswordE {
+  margin-top: 185px;
+  color: black;
+  text-align: left;
+  font-size: 35px;
+  margin-left: 20px;
+  font-family: "Alata", sans-serif;
+}
 
-/* Reset Password Sucessful */ 
-.InnerContainerE{
+.InputE {
+  width: 80%;
+  align-items: center;
+}
+
+.InputE > input {
+  border-radius: 25px;
+  padding: 15px;
+  margin-top: 25px;
+  width: 90%;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+}
+
+.InputE > input:focus {
+  outline: none;
+}
+
+.ButtonE {
+  margin-top: 100px;
+  color: white;
+  text-align: center;
+}
+
+.ButtonE > button {
+  background-color: #77a3f3;
+  border: none;
+  color: black;
+  font-size: 16px;
+  font-family: "Alata", sans-serif;
+  transition: background-color 0.5s;
+  border-radius: 25px;
+  justify-content: center;
+  text-align: center;
+  width: 150px;
+  height: 35px;
+}
+
+.ButtonE > button:active {
+  background-color: rgb(0, 157, 255);
+  padding: 8px;
+}
+
+.Confirm {
+  color: black;
+}
+
+/* Reset Password Sucessful */
+.InnerContainerE {
   display: flex;
   flex-direction: column;
   max-width: 100vw;
   width: 100vw;
   height: 100vh;
   max-height: 100vh;
-  background-color:#c9def8;
+  background-color: #c9def8;
 }
 
-.InputContainerE{
-    flex-direction: column;
-    display: flex;
-    margin-top: 70px;
-    align-items: center;
- }
+.InputContainerE {
+  flex-direction: column;
+  display: flex;
+  margin-top: 70px;
+  align-items: center;
+}
 
 .ResetPasswordF {
-    
-    color: black;
-    text-align: center;
-    font-size: 15px;
-    font-family: 'Alata', sans-serif;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Alata", sans-serif;
 }
- 
+
 .ButtonF {
-    margin-top: 200px;
-    color: white;
-    text-align: center;
+  margin-top: 200px;
+  color: white;
+  text-align: center;
 }
-  
+
 .ButtonF > button {
-    background-color: #77A3F3;
-    border: none;
-    color: black;
-    font-size: 16px;
-    font-family: "Alata", sans-serif;
-    transition: background-color 0.5s;
-    border-radius: 15px;
-    justify-content: center;
-    text-align: center;
-    width: 150px; 
-    height: 35px;
-    
+  background-color: #77a3f3;
+  border: none;
+  color: black;
+  font-size: 16px;
+  font-family: "Alata", sans-serif;
+  transition: background-color 0.5s;
+  border-radius: 15px;
+  justify-content: center;
+  text-align: center;
+  width: 150px;
+  height: 35px;
 }
-  
+
 .ButtonF > button:active {
-    background-color: rgb(0, 157, 255);
-    padding: 8px;
+  background-color: rgb(0, 157, 255);
+  padding: 8px;
 }
-  
-.Loginagain{
-    color: black;
+
+.Loginagain {
+  color: black;
 }
-.LogoCheck{
+.LogoCheck {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -735,10 +720,8 @@ span {
   margin-top: 180px;
 }
 
-
 /*MarketRules*/
-.h1{
+.h1 {
   text-align: center;
   justify-content: center;
-
 }

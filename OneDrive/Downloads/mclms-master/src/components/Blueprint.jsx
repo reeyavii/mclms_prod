@@ -32,8 +32,16 @@ function Blueprint() {
                 return (
                   <div
                     className={styled.store}
+                    style={{
+                      backgroundColor: `${
+                        stall.status === "vacant" ? "green" : "red"
+                      }`,
+                    }}
                     onClick={() => navigate(`/stall-details/${stall.id}`)}
-                  > {stall.stallNumber}</div>
+                  >
+                    {" "}
+                    {stall.stallNumber}
+                  </div>
                 );
               })}
             </div>

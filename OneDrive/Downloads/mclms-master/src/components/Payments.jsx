@@ -13,7 +13,7 @@ import { yellow } from "@mui/material/colors";
 import HomeIcon from '@mui/icons-material/Home';
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { getPayment } from "../app/reducer/paymentSlice";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux"; 
 
 const Reminder = ({reminder, amount, date}) => {
   return(

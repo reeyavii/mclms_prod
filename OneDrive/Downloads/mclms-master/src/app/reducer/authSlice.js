@@ -183,7 +183,7 @@ export const authSlice = createSlice({
     },
     [authLogin.rejected]: (state, { payload }) => {
       state.loading = false;
-      state.error = payload;
+      state.error = "Login Failed!";
     },
     [authRegister.pending]: (state) => {
       state.loading = true;

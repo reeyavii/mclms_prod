@@ -62,6 +62,41 @@ export const addPayment = createAsyncThunk(
     }
   }
 );
+export const addReceipt = createAsyncThunk(
+  `${namespace}/addReceipt`,
+  async (payload, { rejectWithValue }) => {
+    try {
+      axios.defaults.headers = {
+        "Content-Type": "application/json",
+      };
+      const response = await axios.post(`${API_URL}api/receipts/`, payload);
+      return response.data;
+    } catch (err) {
+      if (!err.response) {
+        throw err;
+      }
+      return rejectWithValue(err.response.data);
+    }
+  }
+);
+export const getReceipt = createAsyncThunk(
+  `${namespace}/getReceipt`,
+  async (payload, { rejectWithValue }) => {
+    try {
+      axios.defaults.headers = {
+        "Content-Type": "application/json",
+      };
+      const response = await axios.get(`${API_URL}api/receipts/`, payload);
+      return response.data;
+    } catch (err) {
+      if (!err.response) {
+        throw err;
+      }
+      return rejectWithValue(err.response.data);
+    }
+  }
+);
+
 export const editPayment = createAsyncThunk(
   `${namespace}/editPayment`,
   async (payload, { rejectWithValue }) => {
@@ -139,6 +174,33 @@ export const paymentSlice = createSlice({
       state.loading = false;
     },
     [editPayment.rejected]: (state, { payload }) => {
+      state.loading = false;
+      state.error = payload;
+      console.log(payload);
+    },
+    [addReceipt.pending]: (state) => {
+      state.loading = true;
+      state.error = null;
+    },
+    [addReceipt.fulfilled]: (state) => {
+      state.error = null;
+      state.loading = false;
+    },
+    [addReceipt.rejected]: (state, { payload }) => {
+      state.loading = false;
+      state.error = payload;
+      console.log(payload);
+    },
+    [getReceipt.pending]: (state) => {
+      state.loading = true;
+      state.error = null;
+    },
+    [getReceipt.fulfilled]: (state, { payload }) => {
+      state.error = null;
+      state.loading = false;
+      state.receipt = payload;
+    },
+    [getReceipt.rejected]: (state, { payload }) => {
       state.loading = false;
       state.error = payload;
       console.log(payload);
