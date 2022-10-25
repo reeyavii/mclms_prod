@@ -31,12 +31,11 @@ function Gcash() {
   }, []);
 
   useEffect(() => {
-    if (payment){
-      setGcashNumber(payment.gcashNumber);
+    if (payment) {
       setGcashName(payment.gcashName);
-      
+      setGcashNumber(payment.gcashNumber);
     }
-  }, [payment])
+  }, [payment]);
 
   const gcashNameChange = (e) => {
     setGcashName(e.target.value);
@@ -57,20 +56,19 @@ function Gcash() {
   const handleVerify = (e) => {
     if (payment) {
       let receipts = [];
-      if (payment.receipts === null){
+      if (payment.receipts === null) {
         receipts = [];
-      }
-      else {
+      } else {
         receipts = payment.receipts;
       }
       const payload = {
-      id: payment.id,
-      userId: payment.userId,
-      acquiredDate: payment.acquiredDate,
-      amount: payment.amount,
-      receipts: receipts,
-      gcashNumber: gcashNumber,
-      gcashName: gcashName,
+        id: payment.id,
+        userId: payment.userId,
+        acquiredDate: payment.acquiredDate,
+        amount: payment.amount,
+        receipts: receipts,
+        gcashNumber: gcashNumber,
+        gcashName: gcashName,
       };
       dispatch(editPayment(payload));
       setTimeout(() => {
@@ -79,19 +77,18 @@ function Gcash() {
     } else {
       const currentDate = new Date();
       const payload = {
-      userId: userId,
-      acquiredDate: currentDate.toString(),
-      amount: lessee.stall.monthlyPayment,
-      receipts: [],
-      gcashNumber: gcashNumber,
-      gcashName: gcashName,
+        userId: userId,
+        acquiredDate: currentDate.toString(),
+        amount: lessee.stall.monthlyPayment,
+        receipts: [],
+        gcashNumber: gcashNumber,
+        gcashName: gcashName,
       };
       dispatch(addPayment(payload));
       setTimeout(() => {
         navigate("/payments");
       }, 500);
     }
-    
   };
   const handleEdit = (e) => {
     setIsEdit(true);
@@ -124,7 +121,7 @@ function Gcash() {
           <div className="GcashAddAccount">
             <img src={logoGcash} alt="logoGcash" />
             <div className="Gcash">
-            <div className="GcashAccnt">
+              <div className="GcashAccnt">
                 <p>G-Cash Name</p> <br />
                 <input
                   placeholder=""
@@ -133,7 +130,7 @@ function Gcash() {
                   readOnly={isEdit ? false : true}
                 />
               </div>
-              
+
               <div className="GcashAccnt">
                 <p>G-Cash Number</p> <br />
                 <input
@@ -143,8 +140,6 @@ function Gcash() {
                   readOnly={isEdit ? false : true}
                 />
               </div>
-
-             
 
               {/* <div className="GcashAccnt">
                       <p>Enter Amount</p><br/>

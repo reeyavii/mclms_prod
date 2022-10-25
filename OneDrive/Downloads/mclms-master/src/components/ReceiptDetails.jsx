@@ -9,6 +9,7 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { getPayment, addReceipt } from "../app/reducer/paymentSlice";
+import {FormatDate} from "../app/constants";
 
 function ReceiptDetails() {
   const navigate = useNavigate();
@@ -143,7 +144,7 @@ function ReceiptDetails() {
         <div className={styles.details}>
           <p>Ref. No.</p>
           <input
-            placeholder="Type Gcash Ref.no"
+            placeholder="Type Gcash Ref.No"
             value={refNo}
             onChange={handleRefNoChange}
           />
@@ -159,7 +160,7 @@ function ReceiptDetails() {
         </div>
 
         <div className={styles.submit}>
-          <button onClick={handleSubmit}>SUBMIT</button>
+          <button onClick={handleSubmit} disabled={image === null ? true : false}>SUBMIT</button>
         </div>
       </div>
       <p>Please upload your payment receipt here.</p>

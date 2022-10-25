@@ -1,53 +1,47 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./auth/HistoryPayment.module.css";
-// import {getPayments} from "../app/reducer/paymentSlice";
-import { getStalls } from "../app/reducer/stallSlice";
+import { getPayments } from "../app/reducer/paymentSlice";
+import { getPayment, getReceipts } from "../app/reducer/paymentSlice";
 import { useDispatch, useSelector } from "react-redux";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import {FormatDate} from "../app/constants";
 
-const receipts = [
-  {
-    paymentDate: "July 5, 2022",
-    status: "Approved",
-    amount: 2775.00,
-
-  }, 
-  {
-    paymentDate: "August 5, 2022",
-    status: "Approved",
-    amount: 2775.00,
-  }, 
-  {
-    paymentDate: "September 5, 2022",
-    status: "Pending",
-    amount: 2775.00,
-  }, 
-]
+// const FormatDate = (date) => {
+//   let datetime = new Date(date);
+//   var newDate = new Date(datetime).toLocaleDateString("en-us", {
+//     year: "numeric",
+//     month: "short",
+//     day: "numeric",
+//   });
+//   return newDate;
+// };
 
 function PaymentHistory() {
-  const navigate = useNavigate("");
+  const navigate = useNavigate();
   const dispatch = useDispatch();
-  // const {payments, payment} = useSelector((state) => state.payment);
-  const { stalls, stall } = useSelector((state) => state.stall);
-
-  // useEffect(()  => {
-  //     dispatch(getPayments());
-  // }, []);
-  // console.log(payments);
+  const { userId } = useSelector((state) => state.auth);
+  const { receipts, receipt, payment } = useSelector((state) => state.payment);
 
   useEffect(() => {
-    dispatch(getStalls());
+    dispatch(getPayment(userId));
   }, []);
-  console.log(stalls);
+  console.log(payment);
+
+  useEffect(() => {
+    if (payment !== null) {
+      dispatch(getReceipts(payment.id));
+    }
+  }, [payment]);
+  console.log(receipts);
 
   const handleGoBack = (e) => {
     //go to verification
     navigate(-1);
     console.log("create clicked");
   };
-  const handleSelect = (e) => {
-    navigate("/gcash-receipt-details");
+  const handleSelect = (e, id) => {
+    navigate(`/gcash-receipt-details/${id}`);
     console.log("");
   };
 
@@ -65,26 +59,23 @@ function PaymentHistory() {
         </div>
 
         <div className={styles.content}>
-          {receipts.map((receipt, index) => {
-            return (
-              <div onClick={handleSelect}>
-                <div key={receipt.id}>
-                  <div className={styles.date}>
-                    <h3>{receipt.paymentDate}</h3>
-                  </div>
-                  <div>
-                    <div className={styles.status}>
-                      <p> {receipt.status}</p>
+          {receipts &&
+            receipts.map((receipt, index) => {
+              return (
+                <div onClick={(e) => handleSelect(e, receipt.id)}>
+                  <div key={receipt.id}>
+                    <div className={styles.date}>
+                      <h3>{FormatDate(receipt.receiptDate)}</h3>
                     </div>
-
-                    <div className={styles.amount}>
-                      <h3> {receipt.amount}</h3>
+                    <div>
+                      <div className={styles.amount}>
+                        <h3> {`PHP ${receipt.amount}`}</h3>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
         </div>
       </div>
     </div>

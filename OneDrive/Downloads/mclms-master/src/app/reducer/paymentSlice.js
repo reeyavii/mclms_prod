@@ -6,6 +6,8 @@ const namespace = "payment";
 const initialState = {
   payments: [],
   payment: null,
+  receipts: [],
+  receipt: null,
   loading: false,
   error: null,
 };
@@ -86,7 +88,24 @@ export const getReceipt = createAsyncThunk(
       axios.defaults.headers = {
         "Content-Type": "application/json",
       };
-      const response = await axios.get(`${API_URL}api/receipts/`, payload);
+      const response = await axios.get(`${API_URL}api/receipts/${payload}`, );
+      return response.data;
+    } catch (err) {
+      if (!err.response) {
+        throw err;
+      }
+      return rejectWithValue(err.response.data);
+    }
+  }
+);
+export const getReceipts = createAsyncThunk(
+  `${namespace}/getReceipts`,
+  async (id, { rejectWithValue }) => {
+    try {
+      axios.defaults.headers = {
+        "Content-Type": "application/json",
+      };
+      const response = await axios.get(`${API_URL}api/receipts/list/${id}`);
       return response.data;
     } catch (err) {
       if (!err.response) {
@@ -201,6 +220,20 @@ export const paymentSlice = createSlice({
       state.receipt = payload;
     },
     [getReceipt.rejected]: (state, { payload }) => {
+      state.loading = false;
+      state.error = payload;
+      console.log(payload);
+    },
+    [getReceipts.pending]: (state) => {
+      state.loading = true;
+      state.error = null;
+    },
+    [getReceipts.fulfilled]: (state, { payload }) => {
+      state.error = null;
+      state.loading = false;
+      state.receipts = payload;
+    },
+    [getReceipts.rejected]: (state, { payload }) => {
       state.loading = false;
       state.error = payload;
       console.log(payload);

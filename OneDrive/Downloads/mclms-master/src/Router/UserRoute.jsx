@@ -75,7 +75,7 @@ function UserRoute({ verified }) {
           <Route path="/receipts" element={<Receipts />} />
           <Route path="/application-status" element={<ApplicationStatus />} />
           <Route
-            path="/gcash-receipt-details"
+            path="/gcash-receipt-details/:id"
             element={<GcashReceiptDetails />}
           />
           <Route path="*" element={<NotFound />} />
