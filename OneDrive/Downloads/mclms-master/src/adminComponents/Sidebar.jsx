@@ -7,17 +7,20 @@ import { logout } from "../app/reducer/authSlice";
 import { useEffect } from "react";
 import styles from "./sidebar/SideBar.module.css";
 import { useState } from "react";
-import LogoutIcon from '@mui/icons-material/Logout';
+import LogoutIcon from "@mui/icons-material/Logout";
 import { fontWeight } from "@mui/system";
 import LesseesList from "./LesseesList";
+import { Button } from "@mui/material";
 
 const menu = [
   "Lessee List",
+  "Lessee Data",
   "Stall Status",
   "Pending Applications",
   "Payments",
   "Delinquents",
   "Archive",
+  "Notification",
 ];
 function Sidebar(props) {
   const navigate = useNavigate();
@@ -30,24 +33,23 @@ function Sidebar(props) {
     if (token === null) {
       navigate("/admin-login");
     }
-if (location.pathname === "/lessees-list"){
-  setSelected(0);
-}
- else if(location.pathname === "/stall-status"){
- setSelected(1);
-}
-else if(location.pathname === "/pending-application"){
-  setSelected(2);
-}else if(location.pathname === "/lessees-payment"){
-  setSelected(3);
-}
-else if(location.pathname === "/deliquents"){
-  setSelected(4);
-}
-else if(location.pathname === "/archive"){
-  setSelected(5);
-}
-
+    if (location.pathname === "/lessees-list") {
+      setSelected(0);
+    } else if (location.pathname === "/lessees-data") {
+      setSelected(1);
+    } else if (location.pathname === "/stall-status") {
+      setSelected(2);
+    } else if (location.pathname === "/pending-application") {
+      setSelected(3);
+    } else if (location.pathname === "/lessees-payment") {
+      setSelected(4);
+    } else if (location.pathname === "/deliquents") {
+      setSelected(5);
+    } else if (location.pathname === "/archive") {
+      setSelected(6);
+    } else if (location.pathname === "/notification") {
+      setSelected(7);
+    }
   }, [token, location.path]);
   console.log(location.pathname);
 
@@ -60,21 +62,23 @@ else if(location.pathname === "/archive"){
     if (index === 0) {
       navigate("/lessees-list");
     } else if (index === 1) {
-      navigate("/stall-status");
+      navigate("/lessee-data");
     } else if (index === 2) {
-      navigate("/pending-application");
+      navigate("/stall-status");
     } else if (index === 3) {
-      navigate("/lessees-payment");
+      navigate("/pending-application");
     } else if (index === 4) {
-      navigate("/deliquents");
+      navigate("/lessees-payment");
     } else if (index === 5) {
+      navigate("/deliquents");
+    } else if (index === 6) {
       navigate("/archive");
+    } else if (index === 7) {
+      navigate("/notification");
     }
+
     console.log(index);
   };
-  
- 
-
 
   const handleLO = (e) => {
     dispatch(logout());
@@ -83,20 +87,48 @@ else if(location.pathname === "/archive"){
   return (
     <div className={styles.container}>
       <div className={styles.sidebar}>
-        <div onClick={handleGoBack} className={styles.sidebarItem}>
+        <div className={styles.back}>
           {" "}
-          <ArrowBackIosNewIcon
-            sx={{ fontSize: 12, marginTop: 2, marginBottom:8, marginLeft: 1 }}
-          />
+          <Button
+            onClick={handleGoBack}
+            sx={{
+              fontSize: 10,
+              color: "white",
+              marginTop: 1,
+              marginBottom: 0.5,
+            }}
+          >
+            <ArrowBackIosNewIcon
+              sx={{
+                fontSize: 10,
+                // marginTop: 2,
+                // marginBottom: 5,
+                // marginLeft: 1,
+                color: "white",
+              }}
+            />
+            Back
+          </Button>
         </div>
-
+        <div className={styles.name}>
+          <h2>MCLMS</h2>
+        </div>
         {menu.map((Item, index) => {
           return (
-            <div key = {index}
+            <div
+              key={index}
               onClick={() => handleNavigate(index)}
               className={styles.sidebarItem}
             >
-              <p style={selected === index ? {color: "#284f8f", fontWeight:"bold"} : {color:"black"}}>{Item}</p>
+              <p
+                style={
+                  selected === index
+                    ? { color: "#284f8f", fontWeight: "bold" }
+                    : { color: "black" }
+                }
+              >
+                {Item}
+              </p>
               {selected === index && (
                 <NavigateNextIcon
                   sx={{ fontSize: 14, marginTop: 2, marginLeft: 1 }}
@@ -106,8 +138,9 @@ else if(location.pathname === "/archive"){
           );
         })}
 
-        <div onClick={handleLO} className={styles.LO}><p>Logout</p>
-          <LogoutIcon sx={{fontSize:16,marginTop:16, marginRight:9}}/>
+        <div onClick={handleLO} className={styles.LO}>
+          <p>Logout</p>
+          <LogoutIcon sx={{ fontSize: 16, marginTop: 16, marginRight: 9 }} />
         </div>
       </div>
 

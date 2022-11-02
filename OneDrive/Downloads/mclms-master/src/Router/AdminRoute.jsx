@@ -14,6 +14,7 @@ import Deliquents from "../adminComponents/Deliquents";
 import Archive from "../adminComponents/Archive";
 import DeliquentNotice from "../adminComponents/DeliquentNotice";
 import Notification from "../adminComponents/Notification";
+import LesseeData from "../adminComponents/LesseeData";
 
 function AdminRoute() {
   return (
@@ -34,6 +35,8 @@ function AdminRoute() {
      <Route path ="notice-of-deliquency" element={<DeliquentNotice/>}/>
       <Route path="/archive" element={<Archive />} />
       <Route path="/notification" element={<Notification />} />
+      <Route path="/lessee-data" element={<LesseeData/>} />
+      <Route path="/lessee-data/:id" element={<LesseeData/>} />
     </Routes>
   );
 }

@@ -8,6 +8,7 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { updatePassword } from "../app/reducer/authSlice";
 import { useDispatch, useSelector } from "react-redux";
+import Header from "./Header";
 
 function PSChangedPassword() {
   const navigate = useNavigate();
@@ -63,32 +64,8 @@ function PSChangedPassword() {
   return (
     <div className="ContainerA">
       <div className="InnerContainer1">
-        <div className="bar">
-          <div className="Logo2">
-            <div className="Logo2Alim">
-              <img src={logo2} alt="logo1" />
-            </div>
-          </div>
-
-          <div className="Economic">
-            <div className="Nomic">ECONOMIC</div>
-            <div className="Department">DEPARTMENT</div>
-          </div>
-
-          <div className="Logo1">
-            <button onClick={handleProfile}>
-              {" "}
-              <AccountCircleIcon
-                sx={{
-                  fontSize: 35,
-                  marginTop: 2,
-                  marginRight: 2,
-                  color: "white",
-                }}
-              />{" "}
-            </button>
-          </div>
-        </div>
+       <Header/>
+        
         <div className="BackA">
           <button onClick={handleGoBack}>
             {" "}
@@ -97,13 +74,10 @@ function PSChangedPassword() {
           <p>BACK</p>
         </div>
 
-        <div className="Logo3">
-          <img src={logo3} alt="logo3" />
-        </div>
 
         <div className="Name">
-          <p>NAME</p>
-        </div>
+             <h1>Update Password</h1>
+           </div>
 
         <div className="InputContainerE">
           <div className="InputE">

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import "./auth/Auth.styles.css";
+import "./auth/Profile.styles.css";
 import {useNavigate} from "react-router-dom";
 import logo2 from "../assets/logo-alimodian.png";
 import logo3 from "../assets/User.png";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Header from "./Header";
 
 
 function PSChangedPhoneNumber() {
@@ -54,37 +55,18 @@ function PSChangedPhoneNumber() {
     
         <div className="ContainerA">
           <div className="InnerContainer1">
-          <div className="bar">
-            <div className="Logo2">
-                <div className="Logo2Alim">
-             <img src={logo2} alt="logo1" />
-            </div>  
-            </div>
-         
-          <div className="Economic">
-                <div className='Nomic'>
-                    ECONOMIC
-                </div>
-                <div className='Department'>
-                    DEPARTMENT
-                </div>
-          </div>
-           
-            <div className="Logo1">
-              <button onClick={handleProfile}>  <AccountCircleIcon sx={{ fontSize: 35, marginTop: 2, marginRight:2, color:'white' }}/>  </button> 
-            </div>
-          </div>
+<Header/>
   
            <div className="BackA">
            <button onClick={handleGoBack}>  <ArrowBackIosNewIcon sx={{ fontSize: 18, marginTop: 1}}/>  </button> <p>BACK</p>
            </div>        
          
-           <div className="Logo3">
+           {/* <div className="Logo3">
              <img src={logo3} alt="logo3"/>   
-           </div>
+           </div> */}
    
            <div className="Name">
-             <p>NAME</p>
+             <h1>Update Phone Number</h1>
            </div>
 
 

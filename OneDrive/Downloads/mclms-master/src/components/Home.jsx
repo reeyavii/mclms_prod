@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { API_URL } from "../app/constants";
 import "./auth/Auth.styles.css";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -8,20 +9,28 @@ import logoB from "../assets/Form.png";
 import logoC from "../assets/Payment.png";
 import logoD from "../assets/About Us.png";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import stallPicture from "../assets/stallPicture.jpg";
+import MarketFront from "../assets/MarketFront.jpg";
 import styles from "./auth/Home.module.css";
 import HomeIcon from '@mui/icons-material/Home';
 import { getLessees } from "../app/reducer/lesseeSlice";
+import { getProfile } from "../app/reducer/authSlice";
+import Header from "./Header";
 
 function Home() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const {lessees} = useSelector(state => (state.lessee));
+  const { imageUrl, userId, firstName } = useSelector((state) => state.auth);
+
   useEffect(() => {
     dispatch(getLessees());
   },[])  
 
-  const {userId} = useSelector(state => (state.auth));
+  useEffect(() => {
+dispatch(getProfile(userId));
+  }, []);
+
+
   const handleProfile = (e) => {
     navigate("/profile-setting");
     console.log("profile clicked");
@@ -57,7 +66,7 @@ else {navigate("/application-form");};
 
   return (
     <div className="InnerContainer1">
-      <div className="bar">
+      {/* <div className="bar">
         <div className="Logo2">
           <div className="Logo2Alim">
             <img src={logo2} alt="logo1" />
@@ -69,27 +78,20 @@ else {navigate("/application-form");};
           <div className="Department">DEPARTMENT</div>
         </div>
 
-        <div className="Logo1">
+        <div className={styles.Logo1}>
           <button onClick={handleHome}>
             <HomeIcon
             sx={{fontSize:30,marginTop:2, color:"white"}}/>
           </button>
+          <div className={styles.profile}>
           <button onClick={handleProfile}>
-            {" "}
-            <AccountCircleIcon
-              sx={{
-                fontSize: 35,
-                marginTop: 2,
-                marginRight: 2,
-                color: "white",
-              }}
-            />{" "}
-          </button>
-        </div>
-      </div>
-
+            { imageUrl && <img src={`${API_URL}api/profile/image/${imageUrl}`} />}
+          </button></div>
+        </div></div> */}
+      
+<Header/>
       <div className={styles.picture}>
-        <img src={stallPicture} alt="stallPicture " />
+        <img src={MarketFront} alt="MarketFront " />
       </div>
 
       <div className={styles.InputItem}>

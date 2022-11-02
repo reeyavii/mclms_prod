@@ -13,6 +13,8 @@
    margin: 10px;  
    margin-left: 50px;
    margin-top: 35px;
+   padding: 5px;
+   
    
  }
  
@@ -21,6 +23,7 @@
     font-family: 'Alata', sans-serif;
     color: gray;
     margin-top: 6px;
+    text-align: center;
  }
  .Reminder > h3{
     margin-top: -35px;

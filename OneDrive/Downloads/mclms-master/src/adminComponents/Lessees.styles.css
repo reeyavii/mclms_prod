@@ -5,7 +5,7 @@
   width: 100vw;
   box-sizing: border-box;
   /* background-color: #f5f7fa #c3cfe2; */
-  margin-top: 80px;
+  margin-top: 43px;
   background-image: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
 }
 
@@ -174,16 +174,33 @@
   background-color: #fdfcfb;
 }
 tr > td > button {
+  display: flex;
+  flex-direction: row;
   height: 14px;
-  width: 32px;
+  width: 15px;
+  font-size: 8px;
+  font-weight: bold;
+  padding: 1px;
+  margin: 1px;
+  border: none;
+  text-align: center;
+  /* border-radius: 2px;
+
+  background-color: rgb(155, 177, 211); */
+}
+.view {
+  height: 14px;
+  width: 15px;
   font-size: 8px;
   font-weight: bold;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   padding: 1px;
   margin: 1px;
-  border-radius: 2px;
+  /* border-radius: 2px; */
   border: none;
-  background-color: rgb(155, 177, 211);
+  /* background-color: rgb(86, 140, 222); */
 }
 /* tr :hover {
   background-color: #ddd;
@@ -239,7 +256,7 @@ th{
   flex-direction: column;
   align-content: center;
   margin-left: 50px;
-  margin-top: 30px;
+  margin-top: 70px;
   background-color: f5f7fa;
   width: 380px;
   height: 500px;

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getStalls } from "../app/reducer/stallSlice";
 import { authLogin } from "../app/reducer/authSlice";
-import styles from "./Auth/Login.module.css";
+// import styles from "./Auth/Login.module.css";
 
 function AdminLogin() {
   const { stalls } = useSelector((state) => state.stall);

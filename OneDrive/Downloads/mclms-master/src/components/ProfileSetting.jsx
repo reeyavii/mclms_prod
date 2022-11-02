@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { API_URL } from "../app/constants";
 import "./auth/Profile.styles.css";
 import { useNavigate } from "react-router-dom";
 import logo2 from "../assets/logo-alimodian.png";
@@ -8,6 +9,18 @@ import EditIcon from "@mui/icons-material/Edit";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../app/reducer/authSlice";
+import { getProfile, updateProfile } from "../app/reducer/authSlice";
+// import HomeIcon from "@mui/icons-material/Home";
+import Header from "./Header";
+// import Header from "./auth/Header.module.css";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import PhotoCamera from "@mui/icons-material/PhotoCamera";
 
 function ProfileSetting() {
   const navigate = useNavigate();
@@ -16,7 +29,15 @@ function ProfileSetting() {
   const [email, setEmail] = useState("");
   const [phoneNum, setPhoneNum] = useState("");
   const [password, setPassword] = useState("");
+  const [image, setImage] = useState(null);
   const [permanentAddress, setPermanentAddress] = useState("");
+  const { imageUrl, userId, firstName, profile } = useSelector(
+    (state) => state.auth
+  );
+
+  useEffect(() => {
+    dispatch(getProfile(userId));
+  }, []);
 
   const emailChange = (e) => {
     setEmail(e.target.value);
@@ -69,35 +90,33 @@ function ProfileSetting() {
     console.log("Profile clicked");
   };
 
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleSave = () => {
+    const id = profile.id;
+    const formData = new FormData();
+    formData.append("image", image);
+    formData.append("email", profile.email);
+    formData.append("address", profile.address);
+    formData.append("id", profile.id);
+    formData.append("userId", userId);
+    formData.append("imageUrl", profile.imageUrl);
+    dispatch(updateProfile({ id, formData }));
+    setOpen(false);
+  };
   return (
     <div className="ContainerA">
       <div className="InnerContainer1">
-        <div className="bar">
-          <div className="Logo2">
-            <div className="Logo2Alim">
-              <img src={logo2} alt="logo1" />
-            </div>
-          </div>
+        <Header />
 
-          <div className="Economic">
-            <div className="Nomic">ECONOMIC</div>
-            <div className="Department">DEPARTMENT</div>
-          </div>
-
-          <div className="Logo1">
-            <button onClick={handleProfile}>
-              {" "}
-              <AccountCircleIcon
-                sx={{
-                  fontSize: 35,
-                  marginTop: 2,
-                  marginRight: 2,
-                  color: "white",
-                }}
-              />{" "}
-            </button>
-          </div>
-        </div>
         <div className="BackA">
           <button onClick={handleGoBack}>
             {" "}
@@ -106,12 +125,30 @@ function ProfileSetting() {
           <p>BACK</p>
         </div>
 
-        <div className="Logo3">
-          <img src={logo3} alt="logo3" />
+        <div className="Logo3" onClick={handleClickOpen}>
+          {imageUrl && <img src={`${API_URL}api/profile/image/${imageUrl}`} />}
         </div>
+        <Dialog open={open} onClose={handleClose}>
+          <DialogTitle>Update Profile</DialogTitle>
+          <DialogContent sx={{ display: "flex", justifyContent: "center" }}>
+            <IconButton
+              color="primary"
+              aria-label="upload picture"
+              component="label"
+              onChange={(e) => setImage(e.target.files[0])}
+            >
+              <input hidden accept="image/*" type="file" />
+              <PhotoCamera sx={{ height: 40, width: 40 }} />
+            </IconButton>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose}>Cancel</Button>
+            <Button onClick={handleSave}>Save</Button>
+          </DialogActions>
+        </Dialog>
 
         <div className="Name">
-          <p>NAME</p>
+          <p>{firstName}</p>
         </div>
 
         <div className="Profile">
@@ -121,14 +158,14 @@ function ProfileSetting() {
               disabled={true}
               placeholder={authEmail}
               value={email}
-              onChange={emailChange}
+              // onChange={emailChange}
             />
-            <div className="edit">
+            {/* <div className="edit">
               <button onClick={handleEdit}>
                 {" "}
                 <EditIcon sx={{ fontSize: 23 }} />{" "}
               </button>
-            </div>
+            </div> */}
           </div>
 
           <div className="Phone">

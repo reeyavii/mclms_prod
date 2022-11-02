@@ -17,11 +17,14 @@ const initialState = {
   error: null,
   status: null,
   verified: false,
+  imageUrl: null,
+  profile: null,
+  updatePasswordError: null,
+  result: "",
 };
 
 export const authLogin = createAsyncThunk(
   `${namespace}/authLogin`,
-
   async (payload, { rejectWithValue }) => {
     try {
       const response = await axios.post(`${API_URL}auth/login`, payload);
@@ -94,18 +97,26 @@ export const authRegisterAdmin = createAsyncThunk(
     return data;
   }
 );
+
 export const updatePassword = createAsyncThunk(
   `${namespace}/updatePassword`,
-  async ({ oldPassword, newPassword, token }) => {
-    axios.defaults.headers = {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-    };
-    const { data } = await axios.post(`${API_URL}auth/update-password/`, {
-      oldPassword: oldPassword,
-      newPassword: newPassword,
-    });
-    return data;
+  async ({ oldPassword, newPassword, token }, { rejectWithValue }) => {
+    try {
+      axios.defaults.headers = {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      };
+      const response = await axios.post(`${API_URL}auth/update-password/`, {
+        oldPassword: oldPassword,
+        newPassword: newPassword,
+      });
+      return response.data;
+    } catch (err) {
+      if (!err.response) {
+        throw err;
+      }
+      return rejectWithValue(err.response.data);
+    }
   }
 );
 
@@ -115,6 +126,41 @@ export const authVerify = createAsyncThunk(
   async (payload, { rejectWithValue }) => {
     try {
       const response = await axios.post(`${API_URL}auth/verify`, payload);
+      return response.data;
+    } catch (err) {
+      if (!err.response) {
+        throw err;
+      }
+      return rejectWithValue(err.response.data);
+    }
+  }
+);
+
+export const updateProfile = createAsyncThunk(
+  `${namespace}/updateProfile`,
+
+  async ({ id, formData }, { rejectWithValue }) => {
+    try {
+      const response = await axios.put(
+        `${API_URL}api/profile/${id}/`,
+        formData
+      );
+      return response.data;
+    } catch (err) {
+      if (!err.response) {
+        throw err;
+      }
+      return rejectWithValue(err.response.data);
+    }
+  }
+);
+
+export const getProfile = createAsyncThunk(
+  `${namespace}/getProfile`,
+
+  async (userId, { rejectWithValue }) => {
+    try {
+      const response = await axios.get(`${API_URL}api/profile/${userId}`);
       return response.data;
     } catch (err) {
       if (!err.response) {
@@ -208,12 +254,14 @@ export const authSlice = createSlice({
     [updatePassword.pending]: (state) => {
       state.loading = true;
     },
-    [updatePassword.fulfilled]: (state) => {
+    [updatePassword.fulfilled]: (state, { payload }) => {
       state.loading = false;
+      state.result = payload;
     },
     [updatePassword.rejected]: (state, { payload }) => {
       state.loading = false;
       state.error = payload;
+      state.result = payload;
     },
     [authVerify.pending]: (state) => {
       state.loading = true;
@@ -237,6 +285,31 @@ export const authSlice = createSlice({
       saveLocal(payload);
     },
     [authVerify.rejected]: (state, { payload }) => {
+      state.loading = false;
+      state.error = payload;
+    },
+
+    [getProfile.pending]: (state) => {
+      state.loading = true;
+    },
+    [getProfile.fulfilled]: (state, { payload }) => {
+      console.log(payload);
+      state.imageUrl = payload.imageUrl;
+      state.profile = payload;
+      state.loading = false;
+    },
+    [getProfile.rejected]: (state, { payload }) => {
+      state.loading = false;
+      state.error = payload;
+    },
+    [updateProfile.pending]: (state) => {
+      state.loading = true;
+    },
+    [updateProfile.fulfilled]: (state) => {
+      state.error = null;
+      state.loading = false;
+    },
+    [updateProfile.rejected]: (state, { payload }) => {
       state.loading = false;
       state.error = payload;
     },

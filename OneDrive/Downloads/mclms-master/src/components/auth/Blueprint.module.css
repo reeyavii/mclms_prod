@@ -15,7 +15,9 @@
   justify-content: center;
   align-items: center;
 }
-
+.store:active{
+  background-color: aqua;
+}
 .leftSide {
   flex: 0.1;
   display: flex;

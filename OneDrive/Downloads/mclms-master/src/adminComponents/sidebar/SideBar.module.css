@@ -20,6 +20,12 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
+.back{
+  background-color: #284F8F;
+  
+  font-size: 10px;
+  color: whitesmoke;
+}
 .LO {
   display: flex;
   justify-content: right;
@@ -34,4 +40,13 @@
   font-weight: 600;
   margin-top: 140px;
   margin-right: 10px;
+}
+.name > h2{
+  font-family: 'Orbitron', sans-serif;
+  color:whitesmoke;
+  text-align: center;
+font-size: 45px;
+background-color: #284F8F;
+margin-top: .1px;
+padding: 5px;
 }

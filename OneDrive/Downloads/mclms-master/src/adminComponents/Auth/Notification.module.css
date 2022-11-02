@@ -29,23 +29,24 @@
 
 .content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   /* margin: 5px 0px 10px 0px; */
   /* justify-content: center;
   align-items: center; */
+  margin-top: 10px;
 }
 .table {
   display: flex;
-  width: 200px;
-  justify-content: right;
-  text-align: right;
+  flex-direction: column;
+  width: 300px;
+height: 5px;
+margin: 5px;
 }
 .table > p {
   color: rgba(57, 106, 231, 0.863);
-  font-size: 12px;
+  font-size: 10px;
   font-family: "Alata", sans-serif;
   text-align: right;
-  height: fit-content;
 }
 /* .table > tr{
     margin-top: 50px;
@@ -61,16 +62,15 @@
   width: 900px;
   background-color: #c3cfe230;
 }
-.message {
+.messages {
   display: flex;
   justify-content: left;
   text-align: left;
-  margin-top: 70px;
-  align-items: center;
+  margin-top: 50px;
 }
-.message > td {
+.messages > table {
   display: flex;
   justify-content: left;
   text-align: left;
-  margin-top: 70px;
+  /* margin-top: 20px; */
 }

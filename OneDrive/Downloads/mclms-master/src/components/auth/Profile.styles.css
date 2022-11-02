@@ -49,6 +49,8 @@
     margin-top: 20px;
     height: 80px;
     width: 80px;
+    border-radius: 100%;
+    /* object-fit:contain; */
 }
 
 .Name > p {
@@ -58,6 +60,15 @@
     margin-top: 10px;
     font-weight: bold;
     font-size: large;
+    font-size:20px ;
+}
+.Name > h1 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size:30px ;
+    color: #98a1ad;
 }
 
 
@@ -67,6 +78,7 @@ h2{
 
 .Profile{
     margin-top: 70px;
+  
 }
 .Email{
     display: flex;

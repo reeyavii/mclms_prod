@@ -5,10 +5,9 @@ import Register from "../components/Register";
 import AdminLogin from "../adminComponents/AdminLogin";
 import AdminRegister from "../adminComponents/AdminRegister";
 import Payment from "../adminComponents/Payment";
-
+import NotFound from "../components/NotFound";
 // import ReceiptDetails from "../components/ReceiptDetails";
 // import HistoryPayment from "../components/HistoryPayment";
-
 // import Blueprint from "../components/Blueprint";
 
 function Public() {
@@ -24,7 +23,8 @@ function Public() {
       {/* <Route path="/receipt-details" element={<ReceiptDetails /> 
       } /> */}
       <Route path="/lessees-payment" element={<Payment/>}/>
-      
+      <Route path="*" element={<NotFound/>} />
+  
     </Routes>
 
   );

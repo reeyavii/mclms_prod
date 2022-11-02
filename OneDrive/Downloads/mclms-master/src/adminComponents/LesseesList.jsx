@@ -18,6 +18,11 @@ import MenuItem from "@mui/material/MenuItem";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
+import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
+import Tooltip from "@mui/material/Tooltip";
+import IconButton from "@mui/material/IconButton";
 
 const statuses = ["Pending", "Approved", "Rejected"];
 // const stallNumbers = ["1", "2", "3", "4", "5","6", "7", "8", "9", "10", "11","12", "13","14","15","16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34","35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47","48","49", "50"]
@@ -130,6 +135,9 @@ function LesseesList() {
     setIsEdit(true);
     dispatch(getLesseeId({ Id }));
   };
+  const handleView = (Id) => {
+    navigate("/lessee-data/" + Id);
+  };
   const handleCancelDetails = (e) => {
     setIsEdit(false);
     setFName("");
@@ -188,7 +196,7 @@ function LesseesList() {
       zipCode: "",
       civilStatus: civilStatus,
       description: description,
-      number: appStallNum,
+      stallNumber: appStallNum,
     };
     dispatch(addLessees(data));
     console.log("Home clicked");
@@ -222,6 +230,8 @@ function LesseesList() {
             <th>DESCRIPTION</th>
             <th>ACCOUNT NAME</th>
             <th> </th>
+            <th> </th>
+            <th> </th>
           </tr>
 
           {lessees
@@ -251,13 +261,39 @@ function LesseesList() {
                     <td>{lesseeData.stall.description}</td>
                     <td>{`${lesseeData.firstName} ${lesseeData.lastName}`} </td>
                     <td>
-                      <button onClick={() => handleEdit(lesseeData.id)}>
-                        Edit
-                      </button>
-                      <button>Delete</button>
+                      <Tooltip title="View">
+                        <IconButton onClick={() => handleView(lesseeData.id)}>
+                          <VisibilityOutlinedIcon
+                            sx={{
+                              width: 18,
+                              height: 20,
+                              color: "black",
+                              marginTop: 0.5,
+                            }}
+                          />
+                        </IconButton>
+                      </Tooltip>
+                    </td>
+                    <td>
+                      <Tooltip title="Edit">
+                        <IconButton onClick={() => handleEdit(lesseeData.id)}>
+                          <EditIcon
+                            sx={{ width: 15, height: 15, color: "blue" }}
+                          />
+                        </IconButton>
+                      </Tooltip>
+                    </td>
+                    <td>
+                      <Tooltip title="Delete">
+                        <IconButton>
+                          <DeleteIcon
+                            sx={{ width: 15, height: 15, color: "red" }}
+                          />
+                        </IconButton>
+                      </Tooltip>
                     </td>
                   </tr>
-                </tbody> 
+                </tbody>
               );
             })}
         </table>
@@ -317,13 +353,7 @@ function LesseesList() {
           <div className="DetailsForm">
             <input placeholder="Email" value={email} onChange={emailChange} />
           </div>
-          <div className="DetailsForm">
-            <input
-              placeholder="Description"
-              value={description}
-              onChange={descriptionChange}
-            />
-          </div>
+
           {isEdit ? null : (
             <>
               <div className="DetailsForm1">

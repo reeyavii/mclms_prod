@@ -11,6 +11,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import HomeIcon from "@mui/icons-material/Home";
 import { useDispatch, useSelector } from "react-redux";
 import { getPayment } from "../app/reducer/paymentSlice";
+import Header from "./Header";
 
 function QRPayment() {
   const navigate = useNavigate();
@@ -47,34 +48,8 @@ function QRPayment() {
   return (
     <div className="ContainerA">
       <div className="InnerContainer1">
-        <div className="bar">
-          <div className="Logo2">
-            <div className="Logo2Alim">
-              <img src={logo2} alt="logo1" />
-            </div>
-          </div>
+      <Header />
 
-          <div className="Economic">
-            <div className="Nomic">ECONOMIC</div>
-            <div className="Department">DEPARTMENT</div>
-          </div>
-          <div className="Logo1">
-            <button onClick={handleHome}>
-              <HomeIcon sx={{ fontSize: 30, marginTop: 2, color: "white" }} />
-            </button>
-            <button onClick={handleProfile}>
-              {" "}
-              <AccountCircleIcon
-                sx={{
-                  fontSize: 35,
-                  marginTop: 2,
-                  marginRight: 2,
-                  color: "white",
-                }}
-              />{" "}
-            </button>
-          </div>
-        </div>
 
         <div className={styles.Container3}>
           <div className="BackA">

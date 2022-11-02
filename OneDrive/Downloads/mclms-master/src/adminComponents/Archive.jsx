@@ -48,7 +48,7 @@ function Archive() {
           <th> </th>
 
           {lessees
-            .filter((lessee) => lessee.status.toLowerCase() === "requested")
+            .filter((lessee) => lessee.status.toLowerCase() === "archive")
             .map((lessee, index) => {
               return (
                 <tr key={lessee.id}>

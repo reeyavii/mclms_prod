@@ -9,6 +9,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addPayment } from "../app/reducer/paymentSlice";
 import { getLessee } from "../app/reducer/lesseeSlice";
 import { getPayment, editPayment } from "../app/reducer/paymentSlice";
+import Header from "./Header";
 
 function Gcash() {
   const navigate = useNavigate();
@@ -96,18 +97,7 @@ function Gcash() {
   return (
     <div className="ContainerA">
       <div className="InnerContainer1">
-        <div className="bar">
-          <div className="Logo2">
-            <div className="Logo2Alim">
-              <img src={logo2} alt="logo1" />
-            </div>
-          </div>
-
-          <div className="Economic">
-            <div className="Nomic">ECONOMIC</div>
-            <div className="Department">DEPARTMENT</div>
-          </div>
-        </div>
+      <Header />
 
         <div className="Container3">
           <div className="BackA">

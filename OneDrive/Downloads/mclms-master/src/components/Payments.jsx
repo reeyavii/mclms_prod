@@ -14,6 +14,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { getPayment } from "../app/reducer/paymentSlice";
 import { useSelector, useDispatch } from "react-redux"; 
+import Header from "./Header";
 
 const Reminder = ({reminder, amount, date}) => {
   return(
@@ -32,8 +33,8 @@ const Reminder = ({reminder, amount, date}) => {
    <>
     <h3>Upcoming Payments</h3>
   <p>
-    Reminder: Payment of  <br />
-    {amount}for stall rent is coming <br />
+     Reminder: Payment of  <br />
+    {amount} for stall rent is coming <br />
     up on {date}. Make <br />
     sure to pay before on time to <br />
     avoid conflicts.
@@ -95,35 +96,8 @@ function Payments() {
   return (
     <div className="ContainerA">
       <div className="InnerContainer1">
-        <div className="bar">
-          <div className="Logo2">
-            <div className="Logo2Alim">
-              <img src={logo2} alt="logo1" />
-            </div>
-          </div>
+      <Header />
 
-          <div className="Economic">
-            <div className="Nomic">ECONOMIC</div>
-            <div className="Department">DEPARTMENT</div>
-          </div>
-          <div className="Logo1">
-          <button onClick={handleHome}>
-            <HomeIcon
-            sx={{fontSize:30,marginTop:2, color:"white"}}/>
-          </button>
-          <button onClick={handleProfile}>
-              {" "}
-              <AccountCircleIcon
-                sx={{
-                  fontSize: 35,
-                  marginTop: 2,
-                  marginRight: 2,
-                  color: "white",
-                }}
-              />{" "}
-            </button>
-          </div>
-        </div>
 
         <div className="BackA">
           <button onClick={handleGoBack}>

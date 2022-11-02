@@ -1,14 +1,10 @@
 import React from "react";
 import "./auth/Market.styles.css";
 import { useNavigate, useParams } from "react-router-dom";
-import logo2 from "../assets/logo-alimodian.png";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-// import { useState } from "react";
-// import { useSelector } from 'react-redux';
 import Checkbox from "@mui/material/Checkbox";
 import { useState } from "react";
-import HomeIcon from '@mui/icons-material/Home';
+import Header from "./Header";
 
 function MarketRules() {
   const navigate = useNavigate();
@@ -41,37 +37,7 @@ function MarketRules() {
   return (
     <div className="Container">
       <div className="InnerContainer1">
-        <div className="bar">
-          <div className="Logo2">
-            <div className="Logo2Alim">
-              <img src={logo2} alt="logo1" />
-            </div>
-          </div>
-
-          <div className="Economic">
-            <div className="Nomic">ECONOMIC</div>
-            <div className="Department">DEPARTMENT</div>
-          </div>
-
-          <div className="Logo1">
-          <button onClick={handleHome}>
-            <HomeIcon
-            sx={{fontSize:30,marginTop:2, color:"white"}}/>
-          </button>
-            <button onClick={handleProfile}>
-              {" "}
-              <AccountCircleIcon
-                sx={{
-                  fontSize: 35,
-                  marginTop: 2,
-                  marginRight: 2,
-                  color: "white",
-                }}
-              />{" "}
-            </button>
-          </div>
-        </div>
-        
+      <Header />        
         <div className="BackA">
           <button onClick={handleGoBack}>
             {" "}

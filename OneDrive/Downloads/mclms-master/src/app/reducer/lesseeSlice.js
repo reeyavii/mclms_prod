@@ -20,7 +20,7 @@ export const addLessees = createAsyncThunk(
       };
       const response = await axios.post(`${API_URL}api/userinfo/`, data);
       return response.data;
-    } catch (err) {
+      } catch (err) {
       if (!err.response) {
         throw err;
       }

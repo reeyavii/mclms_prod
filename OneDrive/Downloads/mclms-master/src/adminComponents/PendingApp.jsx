@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { getLessees } from "../app/reducer/lesseeSlice";
 import { useNavigate } from "react-router";
 import styles from "./Auth/Pending.module.css";
+import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
+import Tooltip from "@mui/material/Tooltip";
+import IconButton from "@mui/material/IconButton";
 
 function PendingApp() {
   const navigate = useNavigate();
@@ -58,7 +61,19 @@ function PendingApp() {
                   {/* <td>{stallData.status}</td> */}
 
                   <td>
-                    <button onClick={() => handleView(lessee.id)}>View</button>
+                    <Tooltip title="View">
+                        <IconButton onClick={() => handleView(lessee.id)}>
+                          <VisibilityOutlinedIcon
+                            sx={{
+                              width: 18,
+                              height: 20,
+                              color: "black",
+                              marginTop: 0.5,
+                            }}
+                          />
+                        </IconButton>
+                      </Tooltip>
+                   
                   </td>
                 </tr>
               );

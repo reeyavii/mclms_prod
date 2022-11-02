@@ -12,6 +12,7 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Button from "@mui/material/Button";
 import { IconButton } from "@mui/material";
+import Tooltip from "@mui/material/Tooltip";
 
 function StallStatus() {
   const dispatch = useDispatch();
@@ -107,10 +108,10 @@ function StallStatus() {
         <table>
           <th>STATUS</th>
           <th>Stall #</th>
+          <th>Floor</th>
           <th>Section</th>
           <th>Description</th>
           <th>Area Leased</th>
-          <th>Rate per Sq.M</th>
           <th>Monthly Payment</th>
           <th></th>
 
@@ -136,29 +137,31 @@ function StallStatus() {
                   {/* <td>{index+1}</td> */}
                   <td>{stallData.status}</td>
                   <td>{stallData.stallNumber}</td>
+                  <td>{stallData.floor}</td>
                   <td>{stallData.stallType}</td>
                   <td>{stallData.description}</td>
                   <td>{stallData.dimension}</td>
-                  <td>x (5.00 x 30days) = </td>
                   <td>{stallData.monthlyPayment}</td>
                   <td>
-                    <IconButton
-                      onClick={() =>
-                        handleClickOpen(
-                          stallData.stallType,
-                          stallData.status,
-                          stallData.description,
-                          stallData.id,
-                          stallData.stallNumber,
-                          stallData.dimension,
-                          stallData.monthlyPayment
-                        )
-                      }
-                    >
-                      <BorderColorOutlinedIcon
-                        sx={{ fontSize: 12, padding: 0.1 }}
-                      />
-                    </IconButton>
+                    <Tooltip title="Edit">
+                      <IconButton
+                        onClick={() =>
+                          handleClickOpen(
+                            stallData.stallType,
+                            stallData.status,
+                            stallData.description,
+                            stallData.id,
+                            stallData.stallNumber,
+                            stallData.dimension,
+                            stallData.monthlyPayment
+                          )
+                        }
+                      >
+                        <BorderColorOutlinedIcon
+                          sx={{ fontSize: 12, padding: 0.1 }}
+                        />
+                      </IconButton>
+                    </Tooltip>
                   </td>
                 </tr>
               );

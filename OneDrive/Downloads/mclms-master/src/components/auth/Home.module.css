@@ -1,7 +1,8 @@
 .picture > img {
   width: 350px;
   height: 220px;
-  border-radius: 25px;
+  border-radius: 20px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 .picture {
   display: flex;
@@ -69,7 +70,30 @@
   margin-left: 10px;
   color: white;
 } */
-
+.Logo1 {
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+}
+.Logo1 > button{
+  background-color: transparent;
+  border: none;
+  border-color: none;
+}
+.profile > button{
+  background-color: transparent;
+  border: none;
+  border-color: none;
+}
+.profile > button > img{
+  margin-top: 15px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background-color: transparent;
+    border: none;
+    border-color: none;
+}
 .box1 {
   display: flex;
   flex-direction: row;
