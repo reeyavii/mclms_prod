@@ -1,0 +1,199 @@
+/* .InnerContainer1 {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: #dfe9f5;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(181, 212, 251, 0.811),
+    #6f90d2,
+    #1323b3ed,
+    #020841f1
+  );
+
+}
+.OuterContainer {
+  position: relative;
+  height: 330px;
+  width: 414px;
+  background-image: linear-gradient(
+    #c9def8,
+    #c9def8,
+    #c9def8,
+    #acc2ed,
+    #acc2ed
+  );
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+.OuterContainer::after {
+  border-bottom-left-radius: 30px;
+}
+
+.picture > img {
+  width: 380px;
+  height: 250px;
+  border-radius: 20px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.InputItem {
+  margin-top: 85px;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.InputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.Logo1 {
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+}
+.Logo1 > button {
+  background-color: transparent;
+  border: none;
+  border-color: none;
+}
+.profile > button {
+  background-color: transparent;
+  border: none;
+  border-color: none;
+}
+.profile > button > img {
+  margin-top: 15px;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background-color: transparent;
+  border: none;
+  border-color: none;
+}
+.box1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.box2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Stalls {
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  background-color: #acc2ed;
+  border-radius: 25px;
+  margin: 15px;
+}
+.Stalls :active {
+  background-color: rgb(0, 157, 255);
+}
+
+.Stalls > img {
+  width: 50px;
+  object-fit: contain;
+}*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 60px;
+}
+.content {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(181, 212, 251, 0.811),
+    #6f90d2,
+    #1323b3ed,
+    #020841f1
+  );
+}
+
+.banner {
+  object-fit: contain;
+  flex: 0.2;
+  width: 100vw;
+  /* background-color: #acc2ed;
+  border-radius: 0 0 25px 25px; */
+}
+.banner > img {
+  width: calc(100vw - 20px);
+  object-fit: contain;
+  margin: 10px 10px 20px 10px;
+  border-radius: 25px;
+}
+.navigations {
+  flex: 0.75;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  box-sizing: border-box;
+  margin: 0px 20px;
+}
+.box {
+  background-color: #acc2ed;
+  /* margin: 10px; */
+  border-radius: 25px;
+  transition: transform 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box > p {
+  margin: 10px 0px 10px 0px;
+}
+/* .box > div {
+  height: 100%;
+} */
+.boxIcon {
+  /* flex: 0.4; */
+  margin-top: 10px;
+}
+.boxIcon > img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+.smalltext {
+  font-size: 12px;
+}
+
+/* .box:hover {
+  transform: scale(1.1, 1.1);
+} */

@@ -1,0 +1,419 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 60px;
+}
+.innerContainer {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  /* background-image: linear-gradient(
+    to bottom,
+    rgba(181, 212, 251, 0.811),
+    #6f90d2,
+    #1323b3ed,
+    #020841f1
+  ); */
+}
+.shapeContainer1 {
+  background-image: linear-gradient(#0208419a, #020841b1);
+  object-fit: contain;
+  width: 200px;
+  margin-top: 3px;
+  border-bottom-right-radius: 180px;
+  border-top-right-radius: 180px;
+  border-bottom-left-radius: 10px;
+}
+.shapeContainer2 {
+  background-image: linear-gradient(#020841, #1323b3a3);
+  object-fit: contain;
+
+  width: 260px;
+  margin-top: 3px;
+  border-bottom-right-radius: 150px;
+  border-top-right-radius: 180px;
+  border-bottom-left-radius: 10px;
+}
+
+.shapeContainer {
+  background-image: linear-gradient(
+    #c9def8,
+    #c9def8,
+    #c9def8,
+    #acc2ed,
+    #acc2ed
+  );
+
+  flex: 0.2;
+  width: 100vw;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.BackA {
+  margin-top: -5px;
+  text-align: left;
+  height: 50px;
+  color: white;
+  margin-left: 5px;
+}
+
+.BackA > button {
+  color: black;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: black;
+  font-family: "Alata", sans-serif;
+  transition: background-color 0.5s;
+  border-radius: 25px;
+}
+.Logo3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Logo3 > img {
+  height: 90px;
+  width: 90px;
+  border-radius: 100%;
+  /* object-fit:contain; */
+  z-index: 100;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px,
+    rgb(235, 236, 237) 0px 4px 6px -1px, rgb(255, 255, 255) 0px 1px 0px inset;
+  margin-left: 150px;
+}
+.Name {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex: 0.5;
+  margin-left: 150px;
+}
+.Name > p {
+  display: flex;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 2px;
+  backdrop-filter: blur(40px);
+  border-radius: 10px;
+}
+.Name > h1 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  font-size: 30px;
+  color: #98a1ad;
+}
+
+h2 {
+  margin-top: -15px;
+}
+
+.Profile {
+  margin-top: 80px;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  display: grid;
+}
+.Email {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  box-sizing: border-box;
+  /* margin-left: 8px; */
+  background: transparent;
+  border-bottom: 1.5px solid black;
+  width: 320px;
+  height: 40px;
+  background-color: #d5e0f736;
+  border-radius: 10px;
+  box-shadow: none;
+}
+.Email > input {
+  border-bottom: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+  width: 160px;
+  padding: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  z-index: 100;
+  text-align: left;
+  display: flex;
+  color: black;
+}
+.Email > input:focus {
+  outline: none;
+}
+.Email > input::placeholder {
+  margin-left: 75px;
+  font-size: 15px;
+}
+
+.edit > button {
+  width: 25px;
+  height: 25px;
+  border-bottom: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 6px;
+  margin-right: 5px;
+  background-color: transparent;
+}
+
+.Phone {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  box-sizing: border-box;
+  /* margin-left: 8px; */
+  background: transparent;
+  border-bottom: 1.5px solid black;
+  width: 320px;
+  height: 40px;
+  background-color: #d5e0f700;
+  border-radius: 10px;
+  margin-top: 35px;
+}
+
+.Phone > input {
+  border-bottom: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+  width: 130px;
+  padding: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  z-index: 100;
+  text-align: left;
+  margin-left: 10px;
+  display: flex;
+  color: black;
+}
+.Phone > input:focus {
+  outline: none;
+}
+.Phone > input::placeholder {
+  margin-left: 20px;
+  font-size: 15px;
+}
+.edit1 > button {
+  width: 25px;
+  height: 25px;
+  border: none;
+  padding: 6px;
+  margin-left: -65px;
+  /* margin-top: 20px; */
+  background-color: transparent;
+}
+
+.Pass {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 18px;
+  box-sizing: border-box;
+  /* margin-left: 8px; */
+  border-bottom: 1.5px solid black;
+  width: 320px;
+  height: 40px;
+  background-color: #c8d7f400;
+  border-radius: 10px;
+  margin-top: 35px;
+}
+
+.Pass > input {
+  font-size: 16px;
+  border-bottom: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+  width: 130px;
+  padding: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  z-index: 100;
+  text-align: left;
+  margin-left: 10px;
+  display: flex;
+  color: black;
+}
+.Pass > input:focus {
+  outline: none;
+}
+.Pass > input::placeholder {
+  margin-left: 48px;
+  font-size: 15px;
+}
+.edit2 > button {
+  width: 25px;
+  height: 25px;
+  border: none;
+  padding: 6px;
+  margin-left: -65px;
+  /* margin-top: 25px; */
+  background-color: transparent;
+}
+
+.Add {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 18px;
+  box-sizing: border-box;
+  margin-left: 3px;
+  border-bottom: 2px solid black;
+}
+
+.Add > input {
+  border: none;
+  background: transparent;
+  width: 188px;
+  padding: 8px;
+  margin-top: 30px;
+}
+.edit3 > button {
+  width: 25px;
+  height: 25px;
+  border: none;
+  padding: 6px;
+  margin-right: 5px;
+  margin-top: 25px;
+  background-color: transparent;
+}
+.Add > input:focus {
+  outline: none;
+}
+
+.Address {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 18px;
+  box-sizing: border-box;
+  margin-left: 3px;
+  width: 410px;
+  border-bottom: 2px solid black;
+}
+
+.Address > input {
+  border: none;
+  background: transparent;
+  width: 120px;
+  padding: 8px;
+  margin-top: 40px;
+}
+.Add1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 18px;
+  box-sizing: border-box;
+  margin-left: 3px;
+}
+
+.Add1 > input {
+  border-bottom: 2px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+  width: 120px;
+  padding: 8px;
+  margin-top: 40px;
+}
+.Address > input:focus {
+  outline: none;
+}
+.LogOut {
+  color: black;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.LogOut > button {
+  background-color: transparent;
+  background-image: linear-gradient(#020841e7, #1323b3e6);
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "Alata", sans-serif;
+  transition: background-color 0.5s;
+  border-radius: 25px;
+  justify-content: center;
+  text-align: center;
+  width: 120px;
+  height: 35px;
+}
+
+.LogOut > button:active {
+  background-color: rgb(0, 157, 255);
+  padding: 8px;
+}
+
+h6 {
+  text-align: center;
+  font-style: italic;
+  margin-top: -5px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+.Confirm1 {
+  color: black;
+  text-align: center;
+  margin-top: 180px;
+}
+
+.Confirm1 > button {
+  /* background-color: #77a3f3; */
+  background-image: linear-gradient(#020841e7, #1323b3e6);
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Alata", sans-serif;
+  transition: background-color 0.5s;
+  border-radius: 25px;
+  justify-content: center;
+  text-align: center;
+  width: 200px;
+  height: 45px;
+}
+
+.Confirm1 > button:active {
+  background-color: rgb(0, 157, 255);
+  padding: 8px;
+}

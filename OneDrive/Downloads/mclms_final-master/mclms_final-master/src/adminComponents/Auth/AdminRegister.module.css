@@ -1,0 +1,307 @@
+.BgInnerContainer1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    background-color:#c9def8;
+  }
+  
+  .AdminAccount {
+    margin-top: 5px;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    align-items: center;
+    font-family: 'Alata', sans-serif;
+  }
+  .InputAdminItem{
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    align-items: center;
+   }
+   .Input1Admin > p{
+    font-size: 12px;
+    margin-bottom: 5px;
+   }
+  
+   .RegisterContainer{
+    display: flex;
+    flex-direction: row;
+  }
+  .Input1Admin{
+    width: 350px;
+  }
+  .Input1Admin > input {
+    border-radius: 10px;
+    padding: 8px;
+    width: 300px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 12px;
+  }
+  
+  .Input1Admin > input:focus {
+    outline: none;
+  }
+  .Input2Admin > p{
+    font-size: 12px;
+    margin-bottom: 5px;
+   }
+  .Input2Admin > input {
+    border-radius: 10px;
+    padding: 8px;
+    width: 300px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 12px;
+  }
+  .Input2Admin > input:focus {
+    outline: none;
+  }
+  
+  .RegisterContainer2{
+    display: flex;
+    flex-direction: row;
+  }
+  .Input3Admin > p{
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-top: 35px;
+    
+   }
+  .Input3Admin{
+    width: 350px;
+  }
+  
+  .Input3Admin > input {
+    border-radius: 10px;
+    padding: 8px;
+    width: 300px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 12px;
+  }
+  .Input3Admin > input:focus {
+    outline: none;
+  }
+  
+  .Input4Admin > p{
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-top: 35px;
+   }
+  .Input4Admin > input {
+    border-radius: 10px;
+    padding: 8px;
+    width: 300px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 12px;
+  }
+  
+  .Input4Admin > input:focus {
+    outline: none;
+  }
+  
+  .RegisterContainer3{
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+  }
+  .Input5Admin > p{
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-top: 35px;
+   }
+  .Input5Admin{
+    width: 350px;
+  }
+  
+  .Input5Admin > input {
+    border-radius: 10px;
+    padding: 8px;
+    width: 300px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 12px;
+  }
+  
+  .Input5Admin > input:focus {
+    outline: none;
+  }
+  .Input6Admin > p{
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-top: 35px;
+   }
+  .Input6Admin > input {
+    border-radius: 10px;
+    padding: 8px;
+    width: 300px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 12px;
+  }
+  
+  .Input6Admin > input:focus {
+    outline: none;
+  }
+  
+  .RegisterContainer4{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .Input7Admin > p{
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-top: 35px;
+   }
+   .Input7Admin{
+    width: 350px;
+  }
+  .Input7Admin > input {
+    border-radius: 10px;
+    padding: 8px;
+    width: 300px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 12px;
+  }
+  
+  .Input7Admin > input:focus {
+    outline: none;
+  }
+ 
+  
+  .Input8Admin > p{
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-top: 35px;
+   }
+  
+  .Input8Admin > input {
+    border-radius: 10px;
+    padding: 8px;
+    width: 300px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 12px;
+  }
+  
+  .Input8Admin > input:focus {
+    outline: none;
+  }
+  
+  .ButtonAdmin {
+    margin-top: 75px;
+    color: white;
+    text-align: center;
+  
+  }
+  
+  .ButtonAdmin > button {
+    background-color:transparent;
+    background-image: linear-gradient(#020841e7, #1323b3e6);
+    border: none;
+    border-color: none;
+    padding: 6px;
+    color: white;
+    font-size: 12px;
+    font-family: "Alata", sans-serif;
+    transition: background-color 0.5s;
+    border-radius: 10px;
+    justify-content: right;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .ButtonAdmin > button:active {
+    background-color: rgb(31, 131, 231);
+    
+    padding: 6px;
+    border-radius: 10px;
+    width: 150px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+   }
+   .ButtonAdmin :disabled {
+    opacity: 50%;
+  }
+  
+  .ButtonAdmin :disabled :active {
+    opacity: 50%;
+  }
+  
+  .ButtonAdmin > button:disabled:active {
+    background-color: transparent;
+  }
+  
+  .Next{
+    color: black;
+  }
+ .InputAdminItem > div ::placeholder{
+    color: rgba(0, 0, 0, 0.461);
+   font-size: 14px;
+  }
+  .error {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    font-family: "Bigshot One", display;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: -200px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+  }  
+  .Span{
+  margin: 10px -100px 0px 90px;
+  }
+  div > p  {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .back {
+    background-color:transparent;
+    font-size: 10px;
+    color: whitesmoke;
+  }

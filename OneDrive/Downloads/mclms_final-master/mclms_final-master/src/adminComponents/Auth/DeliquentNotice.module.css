@@ -1,0 +1,134 @@
+.noticeContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #21478da4;
+}
+.deliquentNotice {
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-image: url("../../assets/MarketName.jpg");
+    opacity: 1;
+    /* margin-left: 90px ; */
+    position: absolute;
+    z-index: 1;
+  }
+
+.name {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  margin-left: 210px;
+}
+.name > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Alata", sans-serif;
+    color: white;
+    letter-spacing: 1px;
+}
+.contents {
+    display: flex;
+    flex-direction: column;
+    margin: 1px 0px 10px 0px;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+    /* background-image: linear-gradient(to bottom, #f5f7fa, #c3cfe2); */
+}
+
+.innerContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #e8eef0;
+    width: 700px;
+    height: 440px;
+    border-radius: 5px;
+    margin-left: 210px;
+}
+.label{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #e8eef0;
+    width: 700px;
+    height: 500px;
+    border-radius: 5px;
+
+}
+.label > h4{
+    color: #7b8086;
+    text-align: center;
+    margin-top: -5px;
+}
+.lesseeInfo {
+    margin: 5px 0px 0px 25px;
+    justify-content: left;
+    text-align: left;
+
+}
+.block{
+    display: flex;
+    flex-direction: row;
+    margin: -15px;
+    
+}
+.block > input {
+    height: 20px;
+    margin-top: 5px;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 600;
+}
+.block > input:focus{
+outline: none;
+}
+.block > p{
+    width: 100px;
+    height: 20px;
+    margin-left: 25px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+.letter{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+    margin: 0px 20px 0px 20px;
+    text-indent: 20px;
+    
+}
+.letter > p{
+    font-size: 14px;
+}
+.send{
+    display: flex;
+    margin: 0px 0px 0px 210px;
+    justify-content: right;
+    text-align: right;
+    
+}
+.send > p{
+  margin-left: 560px;
+font-weight: bold;
+font-size: 16px;
+color: white;
+}
+.send :hover{
+    cursor: pointer;
+    color: #df1212eb;
+}

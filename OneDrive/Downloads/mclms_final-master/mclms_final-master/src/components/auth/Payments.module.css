@@ -1,0 +1,273 @@
+@import url(https://fonts.googleapis.com/css2?family=Alata&display=swap);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  font-family: "Alata", sans-serif;
+  position: relative;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(181, 212, 251, 0.811),
+    #6f90d2,
+    #1323b3e6,
+    #020841ea
+  );
+}
+.header {
+  height: 60px;
+}
+.Reminder {
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  width: 250px;
+  height: 150px;
+  background-color: white;
+  border-radius: 25px;
+  margin: 10px;
+  margin-left: 50px;
+  margin-top: 10px;
+  padding: 5px;
+}
+/* .InnerContainer1 {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+} */
+.BackA > button {
+  background-color: transparent;
+  border: none;
+}
+
+.Reminder > p {
+  font-size: 14px;
+  font-family: "Alata", sans-serif;
+  color: gray;
+  margin-top: 6px;
+  text-align: center;
+}
+.Reminder > h3 {
+  margin: -30px 0px 0px 10px;
+  /* padding-left: 35px; */
+}
+
+/* .Payment {
+  margin-top: 15px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+} */
+.Payment {
+  flex: 0.75;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  box-sizing: border-box;
+  margin: 0px 40px;
+  margin-top: 60px;
+}
+.Pay {
+  padding: 5px;
+  width: 280px;
+  height: 65px;
+  background-color: aliceblue;
+  box-sizing: border-box;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0em 0em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+  margin-top: 20px;
+  align-items: center;
+  /* margin-right: 20px; */
+}
+
+.Pay > button > img {
+  width: 70px;
+  height: 40px;
+  margin-right: 15px;
+  margin-left: 1px;
+  margin-top: 0.5px;
+}
+.Pay > button {
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 3px;
+}
+/*G cash*/
+.Container3 {
+  background-color: #e4eff9;
+  margin-top: -1px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.GcashAddAccount {
+  background-color: rgba(15, 131, 233, 0);
+  /* background-image: linear-gradient(#0208413f, #1323b32d); */
+  background-image: linear-gradient(
+    to bottom right,
+    #acc2ed,
+    #acc2ed28,
+    #acc2ed00,
+    #acc2ed01
+  );
+
+  box-sizing: border-box;
+  height: 680px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 14px;
+  width: 413px;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
+  margin-top: 110px;
+  z-index: 100;
+}
+.GcashAddAccount > img {
+  width: 250px;
+  height: 150px;
+  margin: 30px 20px 30px 20px;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+.GcashAccnt {
+  width: 300px;
+  justify-content: center;
+}
+.GcashAccnt > input {
+  height: 40px;
+  width: 300px;
+  border: none;
+  background-color: rgba(236, 240, 243, 0.932);
+  border-radius: 10px;
+  padding: 2px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+.GcashAccnt > input:focus {
+  outline: none;
+}
+.GcashAccnt > p {
+  margin-bottom: -5px;
+  font-family: "Alata", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+  backdrop-filter: blur(55px);
+}
+.GcashVerify {
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.ButtonE {
+  margin-top: 100px;
+  color: white;
+  text-align: center;
+}
+
+.GcashVerify > button {
+  /* background-color: #77A3F3; */
+  background-image: linear-gradient(#020841e7, #1323b3e6);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Alata", sans-serif;
+  transition: background-color 0.5s;
+  border-radius: 25px;
+  justify-content: center;
+  text-align: center;
+  width: 140px;
+  height: 40px;
+}
+.Gcash {
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.GcashVerify > button:active {
+  background-color: rgb(0, 157, 255);
+  padding: 2px;
+}
+.shape {
+  position: absolute;
+  width: 500px;
+  height: 900px;
+  background-color: #5893d4;
+  /* background-image: linear-gradient(
+      #c9def8,
+      #c9def8,
+      #c9def8da,
+      #acc2ed,
+      #acc2ed
+    ); */
+  background-image: linear-gradient(#020841, #1323b3a3);
+  rotate: 50deg;
+  margin-top: 200px;
+  margin-left: 80px;
+}
+
+/*Add G Cash*/
+/* .AccntDefault {
+  flex-direction: row;
+  display: flex;
+  word-spacing: 2px;
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-top: -20px;
+  padding-left: 8px;
+  border-spacing: 20px;
+}
+.AccntDefault > input {
+  background-color: transparent;
+  border: none;
+  width: 130px;
+  height: 50px;
+  margin-top: 30px;
+  font-size: 18px;
+  font-family: "Alata", sans-serif;
+  font-weight: bold;
+}
+.Pay1 {
+  padding: 5px;
+  width: 340px;
+  height: 150px;
+  background-color: aliceblue;
+  box-sizing: border-box;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0em 0em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px inset;
+  margin-top: -40px;
+  margin-bottom: 50px;
+} */

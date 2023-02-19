@@ -1,0 +1,395 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.header {
+  height: 60px;
+}
+.content {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(181, 212, 251, 0.811),
+    #6f90d2,
+    #1323b3ed,
+    #020841f1
+  );
+  object-fit: contain;
+}
+.BackA {
+  margin-top: -5px;
+  text-align: left;
+  height: 40px;
+  color: black;
+  margin-left: -6px;
+}
+.BackA > p {
+  margin-top: -31px;
+  text-align: left;
+  height: 50px;
+  color: black;
+  margin-left: 25px;
+  font-size: 12px;
+  padding-left: 5px;
+  font-family: "Alata", sans-serif;
+}
+
+.BackA > button {
+  color: black;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  transition: background-color 0.5s;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.ApplicationForm > h2 {
+  margin-top: 1px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+.ApplicationForm > h6 {
+  text-align: center;
+  font-style: italic;
+  margin-top: -5px;
+  color: #020841e3;
+  font-size: 9px;
+}
+.ApplicationForm > p {
+  display: flex;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 16px;
+  margin: 3px 0px 0px 5px;
+}
+/* .InputContainer > input{
+    background-color: white;
+} */
+.InputContainer {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 0px 0px 0px 5px;
+}
+.label {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex: 0.5;
+}
+.label > p {
+  margin: 6px 0px -18px 0px;
+  font-size: 11px;
+  flex-direction: row;
+  color: black;
+  display: flex;
+  /* grid-gap: 2px;
+    grid-template-columns: 1fr; */
+  flex: 0.5;
+  box-sizing: border-box;
+}
+.a {
+  /* display: flex; */
+  /* align-items: center;
+    justify-content: flex-start;
+    text-align: left; */
+  font-size: 12px;
+  box-sizing: border-box;
+  flex: 0.5;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.a > input {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.425);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+  width: 108px;
+  margin-top: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  /* margin-right: 2px; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.a > input:focus {
+  outline: none;
+}
+.StallTA {
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 15px;
+  color: white;
+  font-size: 16px;
+}
+.f {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+
+.f > input {
+  border: none;
+  background: transparent;
+  width: 50px;
+  padding: 8px;
+  margin-top: 2px;
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.f > input:focus {
+  outline: none;
+}
+.f > h5 {
+  font-size: 14px;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.g {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 15px;
+  box-sizing: border-box;
+  margin-left: 1px;
+  margin-top: -15px;
+  color: white;
+}
+
+.g > input {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.425);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+  width: 70px;
+  padding: 4px;
+  margin-top: -2px;
+  margin-right: 8px;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  width: 85px;
+  text-align: center;
+}
+.g > input:focus {
+  outline: none;
+}
+.g > h5 {
+  margin-left: 8px;
+  color: white;
+  font-size: 12px;
+}
+
+.h {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 15px;
+  box-sizing: border-box;
+  margin-left: 3px;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin-top: -25px;
+}
+
+.h > input {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.425);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+  padding: 2px;
+  margin-top: -2px;
+  margin-right: 12px;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  width: 55px;
+  text-align: center;
+}
+.h > input:focus {
+  outline: none;
+}
+.h > h5 {
+  margin-left: 5px;
+  color: white;
+  font-size: 12px;
+}
+
+.i {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 18px;
+  box-sizing: border-box;
+  margin-left: 3px;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.i > input {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.425);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+  width: 130px;
+  padding: 8px;
+  margin-top: -2px;
+  margin-right: 5px;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  width: 80px;
+}
+.i > input:focus {
+  outline: none;
+}
+.i > h5 {
+  width: 80px;
+  margin-left: 2px;
+}
+
+.Submit {
+  color: black;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.Submit > button {
+  background-color: #77a3f3;
+  background-image: linear-gradient(#020841d6, #1323b3e6);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-family: "Alata", sans-serif;
+  transition: background-color 0.5s;
+  border-radius: 25px;
+  justify-content: center;
+  text-align: center;
+  width: 120px;
+  height: 35px;
+  z-index: 101px;
+}
+
+.Submit > button:hover {
+  background-color: rgb(255, 255, 255);
+  padding: 8px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+/* Password Pop Up */
+
+.PopBox {
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 140px;
+  background-color: #acc2ed;
+  border-radius: 25px;
+  margin: 10px;
+  margin-top: 400px;
+  z-index: 100;
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.PopUp {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 100;
+}
+.PopUp > p {
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  margin-top: 5px;
+  padding-top: 25px;
+  z-index: 100;
+}
+.Pbox {
+  margin-bottom: 20px;
+}
+.Pbox > input {
+  padding: 8px;
+  border-radius: 25px;
+  justify-content: center;
+  margin: 10px;
+  margin-top: 5px;
+
+  width: 160px;
+  border: none;
+  z-index: 101;
+}
+
+.PopButton {
+  display: flex;
+  justify-content: center;
+  margin-top: -35px;
+  /* z-index: 100; */
+}
+
+.Cancel {
+  justify-items: center;
+  padding: 5px;
+  margin: 15px 0px 5px 0px;
+  z-index: 100;
+}
+.Cancel > button {
+  background-color: transparent;
+  border: none;
+  z-index: 100;
+}
+
+.Cancel :active {
+  background-color: rgb(0, 157, 255);
+}
+
+.PopSubmit {
+  justify-items: center;
+  padding: 5px;
+  margin: 15px 0px 5px 0px;
+  z-index: 100;
+}
+
+.PopSubmit > button {
+  background-color: transparent;
+  border: none;
+  z-index: 100;
+}
+.PopSubmit :active {
+  background-color: rgb(0, 157, 255);
+}

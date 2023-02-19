@@ -1,0 +1,102 @@
+/* Success Pop Up */
+
+/* .SuccessPop{
+  background-color: #839ed4;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  
+  z-index: 100;flex-direction: column;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+  
+} */
+.SuccessPop{
+  flex-direction: column;
+  height: 100vh;
+  /* min-width: 375px; */
+  box-sizing: border-box;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: #839ed4;
+ flex: 0.75;
+ grid-template-columns: 1fr ;
+ grid-template-rows: 1fr;
+ margin: 0px 0px;
+ width: 100vw;
+ 
+  }
+
+.PopU > img {
+  width: 80px;
+  height: 80px;
+}
+
+.PopU {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ object-fit: fill;
+}
+.PopU > p {
+  font-size: 16px;
+  text-align: center;
+  justify-content: center;
+}
+
+.ButtonPopSuccess {
+  /* margin: 20px; */
+  margin-top: 180px;
+  transition: background-color 0.5s;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+/* .ButtonPopSuccess > button {
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+  } */
+.PopSub{
+  justify-content: center;
+  background-image: linear-gradient(#020841d6, #1323b3e6);
+  padding: 4px;
+  border-radius: 15px;
+  width: 100px;
+  height: 30px;
+  transition: background-color 0.5s;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+}
+.PopSub > button {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: white;
+}
+.PopSub > button > p {
+  justify-content: center;
+  text-align: center;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.Code > p {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-family: "Alata", sans-serif;
+}

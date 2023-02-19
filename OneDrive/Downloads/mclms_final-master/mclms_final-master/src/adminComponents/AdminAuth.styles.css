@@ -1,0 +1,451 @@
+/* Login*/
+/* .BgInnerContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: #1c2257bb;
+}
+.BgContainer {
+  background-image: url("../assets/bg.jpg");
+  background-size: cover;
+  background-position: 0px;
+}
+
+.LoginLogo > img {
+  margin-top: -10px;
+  margin-bottom: 100px;
+  height: 110px;
+  width: 110px;
+}
+
+.InputChange {
+  display: flex;
+  width: 40%;
+  height: 55px;
+  margin: 2px;
+  justify-content: center;
+  text-align: left;
+}
+
+.InputChange > input {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  width: 55%;
+  font-size: 14px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  text-align: left;
+  font-size:18px ;
+    font-weight: 600;
+    color: black;
+    background-color: rgba(205, 205, 205, 0.676);
+}
+.InputChange > input::placeholder{
+  color: rgba(53, 52, 52, 0.886);
+  font-size:16px ;
+  text-align: left;
+}
+.InputChange > input:focus {
+  outline: none;
+}
+
+.AdminButtonClick {
+  margin-top: 45px;
+  margin-bottom: 25px;
+  height: 20px;
+  color: white;
+}
+
+.AdminButtonClick > button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: white;
+  font-family: "Alata", sans-serif;
+  font-size: 14px;
+  transition: background-color 0.5s;
+  border-radius: 10px;
+  margin-top: -1px;
+}
+.AdminButtonCreate{
+  margin-top: 15px;
+  padding: 10px;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+}
+.AdminButtonCreate > button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 20px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: white;
+  font-family: "Alata", sans-serif;
+  font-size: 14px;
+  transition: background-color 0.5s;
+  border-radius: 25px;
+}
+
+
+.AdminButtonClick > button:active {
+  background-color: rgb(245, 246, 247);
+  background-image: linear-gradient(#020841e7, #1323b3e6);
+  padding: 10px;
+  border-radius: 10px;
+  width: 150px;
+}
+
+
+.p{
+    color: black;
+}
+
+.InnerContainer1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    background-color:#1c2257bb;
+  } */
+
+/*Home*/
+ /* .Adminboxes{
+    display: flex;
+    flex-direction: column;
+    margin-top: 85px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .Adminbox1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Adminbox1 :hover{
+    background-color:rgb(125, 164, 227);
+    cursor: pointer;
+    transition: background-color 1s;
+  }
+
+  .AStalls{
+    justify-content: center ;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 140px;
+    background-color: #BAC6DD;
+    border-radius: 15px;
+    margin: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  }
+  .AStalls :active{
+    background-color: rgb(166, 197, 216);
+  }
+
+  .AStalls > P{
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .AStalls > img{
+    width: 40px;
+    object-fit: contain;
+  } */
+
+
+
+
+  /*Admin Register*/
+ /* .BgInnerContainer1 {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background-color:#c9def8;
+}
+
+.AdminAccount {
+  margin-top: 50px;
+  color: black;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  align-items: center;
+  font-family: 'Alata', sans-serif;
+}
+.Input-AdminItem{
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  align-items: center;
+ }
+ .Input1Admin > p{
+  font-size: 12px;
+  margin-bottom: 5px;
+ }
+
+ .RegisterContainer{
+  display: flex;
+  flex-direction: row;
+}
+.Input1Admin{
+  width: 350px;
+}
+.Input1Admin > input {
+  border-radius: 10px;
+  padding: 8px;
+  width: 300px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+  text-align: center;
+  font-family: 'Alata', sans-serif;
+  font-size: 12px;
+}
+
+.Input1Admin > input:focus {
+  outline: none;
+}
+.Input2Admin > p{
+  font-size: 12px;
+  margin-bottom: 5px;
+ }
+.Input2Admin > input {
+  border-radius: 10px;
+  padding: 8px;
+  width: 300px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+  text-align: center;
+  font-family: 'Alata', sans-serif;
+  font-size: 12px;
+}
+.Input2Admin > input:focus {
+  outline: none;
+}
+
+.RegisterContainer2{
+  display: flex;
+  flex-direction: row;
+}
+.Input3Admin > p{
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-top: 35px;
+  
+ }
+.Input3Admin{
+  width: 350px;
+}
+
+.Input3Admin > input {
+  border-radius: 10px;
+  padding: 8px;
+  width: 300px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Alata', sans-serif;
+  font-size: 12px;
+}
+.Input3Admin > input:focus {
+  outline: none;
+}
+
+.Input4Admin > p{
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-top: 35px;
+ }
+.Input4Admin > input {
+  border-radius: 10px;
+  padding: 8px;
+  width: 300px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Alata', sans-serif;
+  font-size: 12px;
+}
+
+.Input4Admin > input:focus {
+  outline: none;
+}
+
+.RegisterContainer3{
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  display: flex;
+}
+.Input5Admin > p{
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-top: 35px;
+ }
+.Input5Admin{
+  width: 350px;
+}
+
+.Input5Admin > input {
+  border-radius: 10px;
+  padding: 8px;
+  width: 300px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Alata', sans-serif;
+  font-size: 12px;
+}
+
+.Input5Admin > input:focus {
+  outline: none;
+}
+.Input6Admin > p{
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-top: 35px;
+ }
+.Input6Admin > input {
+  border-radius: 10px;
+  padding: 8px;
+  width: 300px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Alata', sans-serif;
+  font-size: 12px;
+}
+
+.Input6Admin > input:focus {
+  outline: none;
+}
+
+.RegisterContainer4{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.Input7Admin > p{
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-top: 35px;
+ }
+ .Input7Admin{
+  width: 350px;
+}
+.Input7Admin > input {
+  border-radius: 10px;
+  padding: 8px;
+  width: 300px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Alata', sans-serif;
+  font-size: 12px;
+}
+
+.Input7Admin > input:focus {
+  outline: none;
+}
+
+.Input8Admin > p{
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-top: 35px;
+ }
+
+.Input8Admin > input {
+  border-radius: 10px;
+  padding: 8px;
+  width: 300px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Alata', sans-serif;
+  font-size: 12px;
+}
+
+.Input8Admin > input:focus {
+  outline: none;
+}
+
+.ButtonAdmin {
+  margin-top: 75px;
+  color: white;
+  text-align: center;
+
+}
+
+.ButtonAdmin > button {
+  background-color:#a1bdf2;
+  border: none;
+  padding: 6px;
+  color: black;
+  font-size: 12px;
+  font-family: "Alata", sans-serif;
+  transition: background-color 0.5s;
+  border-radius: 25px;
+  justify-content: right;
+  width: 90px;
+  height: 30px;
+}
+.ButtonAdmin > button:active {
+  background-color: rgb(0, 157, 255);
+  padding: 6px;
+ }
+ .ButtonAdmin :disabled {
+  opacity: 50%;
+}
+
+.ButtonAdmin :disabled :active {
+  opacity: 50%;
+}
+
+.ButtonAdmin > button:disabled:active {
+  background-color: transparent;
+}
+
+.Next{
+  color: black;
+}
+
+.error {
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  font-family: "Bigshot One", display;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: -200px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+}   */

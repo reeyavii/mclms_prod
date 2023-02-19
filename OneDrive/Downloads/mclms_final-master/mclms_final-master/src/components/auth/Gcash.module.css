@@ -1,0 +1,154 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.InnerContainer1 {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(181, 212, 251, 0.811),
+    #6f90d2,
+    #1323b3e6,
+    #020841ea
+  );
+  height: 100vh;
+}
+.header {
+  height: 60px;
+}
+
+.Container3 {
+  margin-top: -1px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .shape {
+    position: absolute;
+    width: 500px;
+    height: 830px;
+    background-color: #5893d4;
+    background-image: linear-gradient(#020841, #1323b3a3);
+    rotate: 50deg;
+    margin-top: 260px;
+    margin-left: 10px;
+
+  } */
+.BackA > button {
+  background-color: transparent;
+  border: none;
+}
+.shape {
+  top: 385px;
+  width: 10px;
+  left: 28px;
+  border-bottom: 100px solid #02084198;
+  border-left: 100px solid transparent;
+  border-top-right-radius: 920px;
+  border-width: 680px;
+  rotate: 135deg;
+  display: flex;
+}
+
+.GcashAddAccount {
+  background-color: #02084121;
+  background-image: radial-gradient(
+    to bottom,
+    rgba(181, 212, 251, 0.811),
+    #6f90d2,
+    #02084121,
+    #02084198
+  );
+  box-sizing: border-box;
+  justify-content: center;
+  display: grid;
+  align-items: center;
+  flex-direction: column;
+  font-size: 14px;
+  flex: 0.75;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
+  margin-top: 100px;
+  z-index: 100;
+}
+.GcashAddAccount > img {
+  width: 120px;
+  height: 100px;
+  margin: 30px 0px 30px 80px;
+  justify-items: center;
+  align-items: center;
+  display: flex;
+}
+.Gcash {
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+}
+.GcashAccnt {
+  width: 300px;
+  justify-content: center;
+}
+.GcashAccnt > input {
+  height: 30px;
+  width: 280px;
+  border: none;
+  background-color: rgba(236, 240, 243, 0.932);
+  border-radius: 10px;
+  padding: 2px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+.GcashAccnt > input:focus {
+  outline: none;
+}
+.GcashAccnt > p {
+  margin-bottom: -5px;
+  font-family: "Alata", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+  backdrop-filter: blur(55px);
+}
+.edit {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+
+}
+.edit > p{
+  color: white;
+  font-style: italic;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.GcashVerify {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0px 0px 0px;
+  background-image: linear-gradient(#020841d6, #1323b3e6);
+  border: none;
+  color: white;
+  width: 100px;
+  height: 30px;
+  border-radius: 25px;
+}
+ 
+.GcashVerify > button {
+  color: white;
+  font-size: 14px;
+  font-family: "Alata", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  justify-content: center;
+}

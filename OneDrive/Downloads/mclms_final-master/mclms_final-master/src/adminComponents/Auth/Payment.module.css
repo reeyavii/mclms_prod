@@ -1,0 +1,224 @@
+.container {
+  background-size: cover;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  background-image: url("../../assets/MarketName.jpg");
+  opacity: 1;
+  /* margin-left: 90px ; */
+  position: absolute;
+  z-index: 1;
+  cursor: default;
+}
+
+.historyPayment {
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #21478da4;
+}
+.paymentContainer {
+  background-color: rgba(245, 245, 245, 0.598);
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  margin-left: 240px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  margin-top: 1px;
+}
+.tables {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: transparent; */
+  /* background-color: #f1f4fb; */
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  margin: 95px 0px 25px 210px;
+}
+
+.search > input {
+  border-radius: 15px;
+  padding: 5px;
+  /* margin-top: 8px; */
+  width: 250px;
+  border: none;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  text-align: center;
+  font-family: "Alata", sans-serif;
+  font-size: 12px;
+  background-color: white;
+}
+.search > input:focus {
+  outline: none;
+}
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  margin-top: -25px;
+}
+.name > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Alata", sans-serif;
+  color: #0c0c0ceb;
+  letter-spacing: 1px;
+
+}
+.contents {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  background-color: transparent;
+  height: 360px;
+  width: calc(100vw - 330px);
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0px 20px 0px;
+  width: 800px;
+}
+.date > h3 {
+  margin: -7px 30px 0px 50px;
+  font-size: 14px;
+}
+.date > h5 {
+  margin: -7px 20px 0px 50px;
+  width: 150px;
+  font-size: 12px;
+}
+.date > h4 {
+  margin: -7px 30px 0px 30px;
+  width: 200px;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* .content > table > th {
+  display: flex;
+  position:fixed;
+  flex-direction: row;
+  justify-content: center;
+  margin: 21px 0px 10px 0px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 5px;
+  height: 50px;
+  width: 800px;
+  background-color: #284f8f;
+}
+
+.label > th {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 90px 0px 90px;
+  height: 33px;
+  border-color: transparent;
+} */
+.amount {
+  display: flex;
+  justify-content: left;
+  margin: -40px 0px -10px 300px;
+  width: 100px;
+}
+/* .historyPayment > .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  align-items: center;
+  margin: 125px 0px 25px 10px;
+  background-color: transparent;
+  border: none;
+
+} */
+
+.number {
+  margin: 10px 50px 20px 0px;
+  border: none;
+  outline: transparent;
+  display: flex;
+  font-size: 12px;
+  cursor: default;
+  
+}
+.number > input:focus {
+  outline: none;
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+.number > input {
+  margin: 0px 50px 0px 0px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  width: 200px;
+  border: none;
+  outline: none;
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+.number > input::placeholder{
+  text-align: left      ;
+}
+
+.paymentDetails > .number {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 10px 15px;
+  border: transparent;
+  height: 20px;
+}
+.paymentDetails {
+  margin: 20px 0px 20px 0px;
+  cursor: default;
+}
+.table {
+  margin-top: 10px;
+  cursor: pointer;
+
+} 
+.number > img{
+  display: flex;
+  width: 30vw;
+  height:200px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.Or::placeholder{
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.874)
+}
+.contents > table :hover{
+  background-color: #ddd;
+}
+.paymentDetails > table:hover{
+  background-color: #ddd;
+}

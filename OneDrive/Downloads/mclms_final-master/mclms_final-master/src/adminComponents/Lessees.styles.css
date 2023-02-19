@@ -1,0 +1,402 @@
+.Lessee {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    /* background-color: #f5f7fa #c3cfe2; */
+    margin-top: 43px;
+    background-image: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+    cursor: default;
+  }
+  
+  .LesseeBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    height: 100vh;
+    width: 250px;
+    background-color: #d8e2f4;
+    box-sizing: border-box;
+    position: fixed;
+  }
+  .List {
+    display: flex;
+  }
+  .LesseesList {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-top: 8px;
+  }
+  .LesseesList > p {
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: 1px;
+    text-align: right;
+    margin-right: 60px;
+    color: rgb(126, 136, 172);
+  }
+  
+  .Return {
+    margin-top: -5px;
+    margin-bottom: 10px;
+    text-align: left;
+    height: 40px;
+    color: black;
+    margin-left: 5px;
+  }
+  .Return > p {
+    margin-top: -26px;
+    text-align: left;
+    height: 50px;
+    color: black;
+    margin-left: 55px;
+    font-size: 8px;
+    padding-left: -5px;
+    font-family: "Alata", sans-serif;
+  }
+  
+  .Return > button {
+    color: black;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    transition: background-color 0.5s;
+    border-radius: 25px;
+  }
+  
+  .ListItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    margin-left: -5px;
+    margin-top: 50px;
+  }
+  
+  /* .Inside > p {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    opacity: 1;
+  }
+  .Inside {
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    opacity: 1;
+  }
+  .Inside :hover {
+    color: rgb(128, 142, 171);
+  }
+  .Inside :visited {
+    color: rgb(19, 97, 193);
+    background-color: bisque;
+    transition-duration: 100s;
+  } */
+  
+  .ListItem > button {
+    background-color: transparent;
+    border: none;
+    padding: 2px;
+    width: 200px;
+    margin-left: -25px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .LO {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-direction: row;
+    width: 250px;
+  }
+  .LO > p {
+    text-align: right;
+    font-size: 14px;
+    font-weight: 600;
+    /* margin-top: 160px;
+    margin-right: 50px; */
+  }
+  .Search {
+    width: 200px;
+    align-items: center;
+    /* margin: 50px 0px -50px 30px; */
+  }
+  .Search > input {
+    border-radius: 15px;
+    padding: 5px;
+    /* margin-top: 8px; */
+    width: 200px;
+    border: none;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    text-align: center;
+    font-family: "Alata", sans-serif;
+    font-size: 12px;
+  }
+  .Search > input:focus{
+    outline: none;
+  }
+  .See > p{
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: -15px;
+    margin-left: 500px ;
+    cursor: pointer;
+    
+  }
+  .Tables {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-right: 200px;
+    /* flex-grow: 0.4; */
+    display: flex;
+  }
+  .TableContent {
+    /* background-color: antiquewhite; */
+    justify-content: right;
+    align-items: center;
+    box-sizing: border-box;
+    /* min-width: 200px;
+    height: 100vh; */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+  
+  .TableContent > table {
+    width: 580px;
+    text-align: center;
+    /* margin-left: 10px; */
+    margin-top: 20px;
+    /* background-color: #fdfcfb; */
+  }
+  .TableContent > td:nth-child(even) {
+    width: 580px;
+    text-align: center;
+    /* margin-left: 10px; */
+    margin-top: 20px;
+    background-color: #fdfcfb;
+  }
+  tr > td > button {
+    display: flex;
+    flex-direction: row;
+    height: 14px;
+    width: 15px;
+    font-size: 8px;
+    font-weight: bold;
+    padding: 1px;
+    margin: 1px;
+    border: none;
+    text-align: center;
+    /* border-radius: 2px;
+    background-color: rgb(155, 177, 211); */
+  }
+  .view {
+    height: 14px;
+    width: 15px;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+    margin: 1px;
+    /* border-radius: 2px; */
+    border: none;
+    /* background-color: rgb(86, 140, 222); */
+  }
+  /* tr :hover {
+    background-color: #ddd;
+  } */
+  /* table{
+      border-collapse:collapse; 
+  }
+  table, tr, td{
+      border: 1px solid; 
+      
+  }
+  th{
+      height: 30px;
+  } */
+  .label1 {
+    font-size: 14px;
+    border: 1px solid;
+    width: 250px;
+  }
+  .label2 {
+    font-size: 14px;
+    border: 1px solid;
+  }
+  .label3 {
+    font-size: 14px;
+    border: 1px solid;
+    width: 150px;
+  }
+  .tdName {
+    text-align: left;
+  }
+  
+  /* .StatusContent {
+    background-color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: 200px;
+    height: 100vh;
+    margin-top: 90px;
+  } */
+  
+  /* .StatusContent > table {
+    width: 900px;
+    text-align: center;
+    margin-left: 1px;
+    margin-top: 50px;
+    color: black;
+  } */
+  /*Details*/
+  .Details {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left: 50px;
+    margin-top: 70px;
+    background-color: f5f7fa;
+    width: 380px;
+    height: 500px;
+    box-sizing: border-box;
+  }
+  .DetailsContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    margin-right: 40px;
+    margin-top: 25px;
+  }
+  .DetailsContent > h2 {
+    margin-bottom: 30px;
+  }
+  
+  .DetailsForm {
+    margin: 8px;
+    margin-left: -20px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .DetailsForm > input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 350px;
+    font-size: 14px;
+  }
+  
+  .DetailsForm :focus {
+    outline: none;
+  }
+  .DetailsForm1 :focus {
+    outline: none;
+  }
+  
+  .DetailsForm1 {
+    margin: 8px;
+    display: flex;
+    flex-direction: row;
+    margin-left: -27px;
+    margin-top: 20px;
+  }
+  .DetailsForm1 > input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 350px;
+    font-size: 14px;
+  }
+  .DetailsForm2 {
+    margin-left: 1px;
+    margin-right: 3px;
+  }
+  .DetailsForm2 > input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 172px;
+    margin-left: 1px;
+    font-size: 14px;
+  }
+  .AppStatus {
+    margin-left: 10px;
+    margin-right: 8px;
+  }
+  .AppStatus > input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 150px;
+    margin-left: 6px;
+    font-size: 14px;
+  }
+  .CancelDetails {
+    color: red;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    margin-left: -15px;
+  }
+  .DetailsButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .AddDetails {
+    color: black;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    margin-right: 20px;
+  }
+  
+  .DetailsButton > button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    transition: background-color 0.5s;
+    border-radius: 25px;
+  }
+  /*Pending Application*/
+  /* .Pending {
+    background-color: antiquewhite; 
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-grow: 0.5;
+    margin-left: 50px;
+    margin-top: 90px;
+  } */
+  
+  /* .Pending > table {
+    width: 700px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: black;
+  }  */
+  /* .Pending > th {
+    width: 80px;
+  } */

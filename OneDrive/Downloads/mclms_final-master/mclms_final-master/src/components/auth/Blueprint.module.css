@@ -1,0 +1,463 @@
+.container {
+  height: 100vh;
+  background-color: #ceddef;
+}
+.header {
+  height: 60px;
+  background-color: #5993d4;
+}
+.content {
+  height: 716px;
+  background-color: #ceddef;
+}
+
+.canvas {
+  height: 716px;
+  background-color: #ceddef;
+  box-sizing: border-box;
+  overflow-x: scroll;
+  position: relative;
+}
+.canvasContent {
+  /* width: 200vw; */
+  background-color: #5993d4;
+  width: 640px;
+  height: 716px;
+  border: 5px solid #080e5a;
+  position: relative;
+  display: flex;
+  transition: transform 1s;
+}
+
+.store {
+  height: 25px;
+  width: 25px;
+  border: 1px solid black;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Calibri", "sans-serif";
+  position: relative;
+}
+
+.store > svg {
+  position: absolute;
+  margin-left: 50%;
+  margin-right: 50%;
+  opacity: 0.5;
+  height: 35px;
+  width: 35px;
+}
+
+.stall {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  height: 50px;
+  width: 50px;
+  border: 5px solid black;
+  background-color: green;
+}
+
+.status {
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+  justify-content: center;
+  margin: 0px 0px -4px 0px;
+}
+
+.frontLeftSecondFlr {
+  display: flex;
+  border: 1px solid black;
+  position: absolute;
+  top: 30px;
+  left: 60px;
+}
+
+.frontLeftFirstFlr {
+  display: flex;
+  border: 1px solid black;
+  position: absolute;
+  top: 55px;
+  left: 60px;
+}
+
+.frontRightSecondFlr {
+  display: flex;
+  border: 1px solid black;
+  position: absolute;
+  top: 30px;
+  right: 110px;
+}
+
+.frontRightFirstFlr {
+  display: flex;
+  border: 1px solid black;
+  position: absolute;
+  top: 55px;
+  right: 110px;
+}
+
+.leftUpper {
+  display: flex;
+  flex-direction: column;
+  top: 110px;
+  left: 10px;
+  position: absolute;
+  border: 1px solid black;
+}
+
+.leftLower {
+  left: 10px;
+  position: absolute;
+  top: 480px;
+  border: 1px solid black;
+}
+
+.rightLower {
+  right: 80px;
+  top: 480px;
+  border: 1px solid black;
+  position: absolute;
+}
+
+.rightUpper {
+  display: flex;
+  flex-direction: column;
+  top: 110px;
+  right: 80px;
+  position: absolute;
+  border: 1px solid black;
+}
+
+.bottomRight {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  bottom: 30px;
+  right: 120px;
+  border: 1px solid black;
+}
+
+.bottomLeftStalls {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  bottom: 30px;
+  left: 60px;
+  border: 1px solid black;
+}
+
+.bottomLeftOffice {
+  position: absolute;
+  display: flex;
+  left: 60px;
+  bottom: 55px;
+  border: 1px solid black;
+}
+
+.office {
+  width: 35px;
+  height: 25px;
+  border: 1px solid black;
+  background-color: white;
+  font-size: 9px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alata", "sans-serif";
+}
+
+.streetLabel {
+  font-family: "Alata", "sans-serif";
+  font-size: 12px;
+  font-weight: 800;
+  top: 10px;
+  position: absolute;
+  left: 250px;
+  color: rgba(0, 0, 0, 0.526);
+}
+.hallwayLabel {
+  font-family: "Alata", "sans-serif";
+  font-size: 14px;
+  font-weight: 800;
+  top: 50px;
+  position: absolute;
+  left: 260px;
+}
+.zoomButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 10px 10px 0 10px;
+}
+.backButton {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.backButton > span {
+  color: white;
+  display: flex;
+}
+.BackA > button {
+  background-color: transparent;
+  border: none;
+  margin-top: 1px;
+  height: 50px;
+  color: black;
+  text-align: left;
+}
+.Alimodian > h2 {
+  display: flex;
+  justify-content: center;
+  margin: -20px 0px 20px 0px;
+}
+.statusItem {
+  font-family: "Alata", "sans-serif";
+  font-size: 14px;
+  font-weight: 800;
+  margin: 2px;
+  margin: -10px 18px 0px 10px;
+}
+.rectangle {
+  border: 2px solid black;
+  height: 260px;
+  width: 75px;
+  background-color: white;
+}
+
+.dryFish {
+  position: absolute;
+  left: 60px;
+  top: 110px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alata", "sans-serif";
+}
+
+.tobaccoSection {
+  position: absolute;
+  right: 125px;
+  top: 110px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alata", "sans-serif";
+}
+
+.breadSection {
+  position: absolute;
+  left: 145px;
+  top: 110px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alata", "sans-serif";
+}
+
+.rtw {
+  position: absolute;
+  right: 210px;
+  top: 110px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alata", "sans-serif";
+}
+
+.gym {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 220px;
+  width: 132px;
+  height: 320px;
+  border: 2px solid black;
+  top: 110px;
+  background-color: white;
+  font-family: "Alata", "sans-serif";
+  font-size: 20px;
+  font-weight: 800;
+}
+.permanentVendors {
+  width: 200px;
+  border: 2px solid black;
+  height: 40px;
+  position: absolute;
+  left: 60px;
+  bottom: 170px;
+  background-color: white;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alata", "sans-serif";
+}
+
+.meatSection {
+  width: 100px;
+  border: 2px solid black;
+  height: 40px;
+  position: absolute;
+  left: 60px;
+  bottom: 110px;
+  background-color: white;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alata", "sans-serif";
+}
+
+.terminal {
+  position: absolute;
+  bottom: 30px;
+  border: 2px solid black;
+  width: 200px;
+  left: 180px;
+  height: 40px;
+  background-color: white;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alata", "sans-serif";
+}
+.frozenFoods {
+  position: absolute;
+  bottom: 100px;
+  border: 2px solid black;
+  width: 190px;
+  left: 180px;
+  height: 60px;
+  background-color: white;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alata", "sans-serif";
+}
+
+.riceVendors {
+  width: 180px;
+  border: 2px solid black;
+  height: 40px;
+  position: absolute;
+  right: 125px;
+  bottom: 170px;
+  background-color: white;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alata", "sans-serif";
+}
+.fishSection {
+  width: 120px;
+  border: 2px solid black;
+  height: 40px;
+  position: absolute;
+  right: 135px;
+  bottom: 100px;
+  background-color: white;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alata", "sans-serif";
+}
+.cr2 {
+  width: 25px;
+  border: 2px solid black;
+  height: 25px;
+  position: absolute;
+  right: 105px;
+  bottom: 130px;
+  background-color: white;
+  font-size: 9px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alata", "sans-serif";
+}
+.mrf {
+  width: 25px;
+  border: 2px solid black;
+  height: 25px;
+  position: absolute;
+  right: 90px;
+  bottom: 100px;
+  background-color: white;
+  font-size: 9px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alata", "sans-serif";
+}
+.stockRoom {
+  height: 23px;
+  width: 35px;
+  position: absolute;
+  left: 345px;
+  bottom: 72px;
+  background-color: white;
+  border: 2px solid black;
+  font-size: 8px;
+  font-weight: bold;
+  font-family: "Alata", "sans-serif";
+  text-align: center;
+}
+.stage {
+  width: 75px;
+  border: 2px solid black;
+  height: 50px;
+  position: absolute;
+  left: 250px;
+  bottom: 250px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-family: "Alata", "sans-serif";
+}
+.cr1 {
+  width: 35px;
+  border: 2px solid black;
+  height: 35px;
+  position: absolute;
+  left: 272px;
+  bottom: 214px;
+  background-color: white;
+  font-size: 9px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alata", "sans-serif";
+}

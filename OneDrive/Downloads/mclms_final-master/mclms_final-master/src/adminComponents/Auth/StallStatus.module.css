@@ -1,0 +1,128 @@
+.lessee {
+  background-size: cover;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  background-image: url("../../assets/MarketName.jpg");
+  opacity: 1;
+  /* margin-left: 90px ; */
+  position: absolute;
+  z-index: 1;
+  cursor: default;
+}
+.lesseeContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #21478da4;
+}
+.tables {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: transparent; */
+  /* background-color: #f1f4fb; */
+}
+.stallContent {
+  background-color: rgba(245, 245, 245, 0.598);
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  margin-left: 240px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  margin-top: -24px;
+}
+.contents {
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+  background-color: transparent;
+  height: 360px;
+  width: calc(100vw - 280px);
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 200px; */
+  align-items: center;
+  margin: 125px 0px 50px 210px;
+}
+.search > input {
+  border-radius: 15px;
+  padding: 5px;
+  /* margin-top: 8px; */
+  width: 250px;
+  border: none;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  text-align: center;
+  font-family: "Alata", sans-serif;
+  font-size: 12px;
+}
+.search > input:focus {
+  outline: none;
+}
+.add{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  text-align: right;
+}
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Alata", sans-serif;
+  color: #0c0c0ceb;
+  letter-spacing: 1px;
+  
+}
+.picture > img{
+  display: flex;
+  width: 30vw;
+  height:200px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.contents > table :hover{
+  background-color: #ddd;
+}
+
+
+
+.Select{
+  margin-left: 1px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.Select > input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 167px;
+  margin-left: 19px;
+  font-size: 14px;
+  border-radius: 2px;
+}
+.Select > input::placeholder {
+  text-align: left;
+  padding: 8px;
+}

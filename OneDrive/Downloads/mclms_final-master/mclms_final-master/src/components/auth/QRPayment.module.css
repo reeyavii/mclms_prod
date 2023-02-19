@@ -1,0 +1,143 @@
+@import url(https://fonts.googleapis.com/css2?family=Alata&display=swap);
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(181, 212, 251, 0.811),
+    #6f90d2,
+    #1323b3e6,
+    #020841ea
+  );
+}
+.header {
+  height: 60px;
+}
+
+.BackA > button {
+  background-color: transparent;
+  border: none;
+}
+.logoGcash {
+  margin: 5px 10px 0px 0px;
+  display: grid;
+  justify-items: center;
+}
+.logoGcash > img {
+  width: 120px;
+  height: 100px;
+}
+.gcashContainer {
+  /* display: flex;
+  position: relative;
+ 
+  width: 300px;
+  height: 470px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 55px 0px 0px 30px;
+  */
+  flex: 0.5;
+  display: grid;
+  grid-template-columns: 1fr;
+  box-sizing: border-box;
+  margin: 0px 20px;
+  margin-top: 20px;
+  height: 450px;
+  background-color: white;
+  border-radius: 15px;
+}
+.download {
+  display: grid;
+  background-color: transparent;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin: 6px 0px 10px 0px;
+}
+/* .gcashContainer > div{
+  position: flex;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+
+} */
+.qr {
+  margin: 15px 0px 0px 0px;
+  display: grid;
+  justify-content: center;
+}
+.qr > img {
+  width: 160px;
+  height: 160px;
+}
+.GcashVerify {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 1px;
+}
+.GcashVerify > button {
+  color: white;
+  background-color: #5aa6f8dd;
+  background-image: linear-gradient(#020841d6, #1323b3e6);
+  border-radius: 25px;
+  width: 100px;
+  height: 30px;
+  font-family: "Alata", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.GcashAccnt {
+  width: 250px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2px 0px 0px 0px;
+}
+.GcashAccnt > input {
+  height: 30px;
+  width: 200px;
+  border: none;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 2px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+}
+.GcashAccnt > input:focus {
+  outline: none;
+}
+.GcashAccnt > p {
+  margin-bottom: -15px;
+  font-family: "Alata", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  color: #1323b3;
+}
+.Gcash {
+  height: 180px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  display: grid;
+}

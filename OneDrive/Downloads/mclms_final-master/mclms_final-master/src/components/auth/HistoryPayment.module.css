@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.historyPayment {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Alata", sans-serif;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(181, 212, 251, 0.811),
+    #6f90d2,
+    #1323b3e6,
+    #020841ea
+  );
+}
+
+.header {
+  height: 60px;
+}
+.BackA > button {
+  background-color: transparent;
+  border: none;
+}
+
+.navBar {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: transparent;
+  height: 60px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 2px 0px;
+}
+.navBar > h1 {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.831);
+  font-family: "Alata", sans-serif;
+}
+.content > div {
+  /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+  border-radius: 10px;
+  height: 65px;
+  /*width: 390px; */
+  margin: 2px 0px 2px 0px;
+  background-color: rgba(255, 255, 255, 0.756);
+  box-shadow: rgba(31, 106, 205, 0.17) 0px -23px 25px 0px inset,
+    rgba(31, 106, 205, 0.17) 0px -23px 25px 0px inset,
+    rgba(31, 106, 205, 0.17) 0px -23px 25px 0px inset,
+    rgba(237, 222, 222, 0.06) 0px 2px 1px, rgba(61, 51, 51, 0.09) 0px 4px 2px,
+    rgba(61, 51, 51, 0.09) 0px 8px 4px, rgba(71, 60, 60, 0.09) 0px 16px 8px,
+    rgba(88, 74, 74, 0.09) 0px 32px 16px;
+  flex: 0.2;
+  display: grid;
+}
+.content {
+  flex-direction: column;
+  margin: 20px 0px 10px 0px;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.date {
+  display: flex;
+  justify-content: left;
+  margin: 5px 0px 20px 20px;
+  font-size: 14px;
+}
+/* .div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px 10px 0px;
+} */
+.status {
+  display: flex;
+  justify-content: left;
+  margin: 0px 0px 5px 20px;
+}
+.amount {
+  display: flex;
+  justify-content: center;
+  margin: -8px 0px 0px 250px;
+  font-size: 14px;
+}

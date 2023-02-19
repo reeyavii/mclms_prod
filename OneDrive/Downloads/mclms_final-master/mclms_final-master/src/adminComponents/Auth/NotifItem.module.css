@@ -1,0 +1,61 @@
+.notifItem {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.Today {
+  display: flex;
+  justify-content: center;
+
+  color: black;
+  /* margin-top:90px ; */
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.message {
+  display: flex;
+  width: 300px;
+  height: 75px;
+  margin: 2px;
+  border-bottom: 2px solid rgba(87, 82, 82, 0.438);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /* background-color: rgba(63, 62, 62, 0.075); */
+  color: black;
+}
+
+.message :hover {
+  cursor: pointer;
+}
+.notifItem::after {
+  color: aquamarine;
+}
+.content {
+  width: 220px;
+  font-size: 12px;
+  margin: 12px 0px 0px 10px;
+  align-items: center;
+  text-align: left;
+  justify-content: center;
+  font-family: "Alata", sans-serif;
+}
+.mainContent {
+  font-size: 12px;
+  align-items: center;
+  height: 40px;
+  text-align: left;
+  justify-content: center;
+  font-family: "Alata", sans-serif;
+}
+.subContent {
+  display: flex;
+  font-size: 8px;
+
+  height: 20px;
+  align-items: center;
+  text-align: right;
+  justify-content: right;
+  color: rgba(165, 42, 42, 0.788);
+}
